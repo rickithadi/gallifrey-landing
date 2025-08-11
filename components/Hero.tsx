@@ -23,8 +23,8 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
-            Security-first web development that doesn't compromise on design or performance.
-            Starting at $500, because good work shouldn't break the bank.
+            Security-first web development that doesn&apos;t compromise on design or performance.
+            Starting at $500, because good work shouldn&apos;t break the bank.
           </p>
         </div>
 

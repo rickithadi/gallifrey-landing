@@ -49,7 +49,7 @@ export function Services() {
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
             Every project starts with security, performance, and user experience as non-negotiables.
-            We don't cut corners because your reputation depends on what we build.
+            We don&apos;t cut corners because your reputation depends on what we build.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export function Services() {
         <div className="text-center border-t border-border/50 pt-16">
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Ready to build something that stands the test of time?
-            Let's discuss your project over a 30-minute consultation.
+            Let&apos;s discuss your project over a 30-minute consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="px-8 py-3 bg-primary hover:bg-primary/90">

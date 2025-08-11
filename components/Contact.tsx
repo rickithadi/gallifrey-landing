@@ -19,7 +19,7 @@ export function Contact() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            Let's build something
+            Let&apos;s build something
             <span className="italic text-accent"> exceptional together</span>
           </h2>
 

@@ -70,7 +70,7 @@ export function Pricing() {
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
             No hidden fees, no surprises. Every project includes security, performance optimization,
-            and ongoing support. You only pay when you're completely satisfied.
+            and ongoing support. You only pay when you&apos;re completely satisfied.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ export function Pricing() {
             Need something different?
           </h3>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Every project is unique. Let's discuss your specific requirements and create a custom proposal
+            Every project is unique. Let&apos;s discuss your specific requirements and create a custom proposal
             that fits your budget and timeline.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
