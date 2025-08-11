@@ -169,7 +169,7 @@ export function Pricing() {
               <span className="text-accent font-semibold bg-accent/10 px-3 py-1 rounded-lg">Flexible arrangements.</span> We adapt to your budget and timeline.
             </p>
             <p className="text-muted-foreground mb-6 font-body">
-              Need something custom? Let's talk about a bespoke solution that fits your unique requirements.
+              Need something custom? Let&apos;s talk about a bespoke solution that fits your unique requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-brand hover:shadow-brand-lg transition-all duration-300">

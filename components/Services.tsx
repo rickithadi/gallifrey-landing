@@ -45,7 +45,7 @@ export function Services() {
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-6 font-body leading-relaxed">
             Our core values guide every decision, blending reliability with creativity.
-            We don't just build websites—we engineer digital fortresses with a human touch.
+            We don&apos;t just build websites—we engineer digital fortresses with a human touch.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto rounded-full"></div>
         </div>

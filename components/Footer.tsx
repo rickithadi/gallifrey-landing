@@ -16,14 +16,14 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-primary-foreground/70 leading-relaxed">
-              Your idea-to-secure-launch partner. Enterprise-grade security, boutique care, 
+              Your idea-to-secure-launch partner. Enterprise-grade security, boutique care,
               and bespoke processes that adapt to your evolving needs.
             </p>
             <p className="text-xs text-accent font-medium">
               Payment-First Digital Guardians
             </p>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4 text-accent">Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
@@ -35,7 +35,7 @@ export function Footer() {
               <li><a href="#" className="hover:text-accent transition-colors">Strategy Consulting</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4 text-accent">Our Approach</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
@@ -47,7 +47,7 @@ export function Footer() {
               <li><a href="#" className="hover:text-accent transition-colors">SEO Excellence</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-4 text-accent">Get Started</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
@@ -55,7 +55,7 @@ export function Footer() {
               <li><a href="mailto:hello@gallifreyconsulting.com" className="hover:text-accent transition-colors">hello@gallifreyconsulting.com</a></li>
               <li className="text-primary-foreground/50">Response within 24 hours</li>
             </ul>
-            
+
             <div className="mt-6 space-y-2">
               <h5 className="font-medium text-accent">Core Values</h5>
               <div className="flex flex-wrap gap-2">
@@ -66,9 +66,9 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
         <Separator className="my-12 bg-primary-foreground/10" />
-        
+
         <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
           <div className="text-center lg:text-left">
             <p className="text-sm text-primary-foreground/70">
@@ -78,7 +78,7 @@ export function Footer() {
               Mastering Digital Complexity • Fortifying Your Digital Experiences
             </p>
           </div>
-          
+
           <div className="flex flex-wrap gap-6 text-sm text-primary-foreground/70">
             <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
@@ -86,10 +86,10 @@ export function Footer() {
             <a href="#" className="hover:text-accent transition-colors">Data Protection</a>
           </div>
         </div>
-        
+
         <div className="mt-8 text-center">
           <p className="text-xs text-primary-foreground/40 italic">
-            "Build your digital TARDIS—secure, custom, ready to regenerate" ✨
+            &quot;Build your digital TARDIS—secure, custom, ready to regenerate&quot; ✨
           </p>
         </div>
       </div>

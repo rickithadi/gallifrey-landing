@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Clock, Mail, MessageCircle, Phone, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Mail, MessageCircle, Shield, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
@@ -15,7 +15,7 @@ export function Contact() {
             Ready to Build Your <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Digital Fortress?</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 font-body leading-relaxed">
-            Let's craft your secure, strategic digital presence. Get in touch for a free 30-minute consultation
+            Let&apos;s craft your secure, strategic digital presence. Get in touch for a free 30-minute consultation
             and discover how we can fortify your business online.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
@@ -40,7 +40,7 @@ export function Contact() {
               <CardHeader className="pb-8">
                 <CardTitle className="font-heading text-3xl text-primary mb-4">Start Your Digital Transformation</CardTitle>
                 <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                  Tell us about your vision and we'll craft a bespoke proposal within 24 hours.
+                  Tell us about your vision and we&apos;ll craft a bespoke proposal within 24 hours.
                 </p>
               </CardHeader>
               <CardContent>

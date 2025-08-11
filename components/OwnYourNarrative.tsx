@@ -41,7 +41,7 @@ export function OwnYourNarrative() {
             <div className="space-y-6">
               <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
                 <p className="text-xl text-muted-foreground font-body leading-relaxed">
-                  <strong className="text-primary font-semibold">A personal site is your digital home.</strong> It's the antidote to "renting" your voice on social platforms.
+                  <strong className="text-primary font-semibold">A personal site is your digital home.</strong> It&apos;s the antidote to &quot;renting&quot; your voice on social platforms.
                   Why let Instagram or LinkedIn own your story when you can control your narrative?
                 </p>
               </div>
