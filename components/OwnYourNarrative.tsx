@@ -1,145 +1,147 @@
-import { ArrowRight, CheckCircle, Globe, Home, Shield, Sparkles, TrendingUp, Users, Zap } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { ArrowRight, Globe, Monitor, Smartphone } from "lucide-react";
 
-import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
 export function OwnYourNarrative() {
-  const features = [
-    { icon: <CheckCircle className="w-5 h-5 text-accent" />, text: "Bespoke, brand-aligned design" },
-    { icon: <CheckCircle className="w-5 h-5 text-accent" />, text: "Mobile-first, SEO-optimized layout" },
-    { icon: <CheckCircle className="w-5 h-5 text-accent" />, text: "HTTPS, SSL, and core security features" },
-    { icon: <CheckCircle className="w-5 h-5 text-accent" />, text: "Privacy-compliant contact forms" },
-    { icon: <CheckCircle className="w-5 h-5 text-accent" />, text: "Social integration without ownership loss" },
-    { icon: <CheckCircle className="w-5 h-5 text-accent" />, text: "Fast, reliable hosting & maintenance" }
+  const projects = [
+    {
+      title: "E-commerce Platform",
+      description: "Custom shopping experience with integrated payments and inventory management",
+      tech: ["Next.js", "Stripe", "PostgreSQL"],
+      category: "E-commerce"
+    },
+    {
+      title: "SaaS Dashboard",
+      description: "Analytics platform with real-time data visualization and user management",
+      tech: ["React", "D3.js", "Node.js"],
+      category: "SaaS"
+    },
+    {
+      title: "Professional Portfolio",
+      description: "Personal brand website with content management and contact integration",
+      tech: ["Next.js", "Sanity CMS", "Vercel"],
+      category: "Portfolio"
+    }
   ];
 
-  const workflowSteps = [
-    { number: "01", title: "Free 30min Site Kickoff Call", description: "Discover your vision and goals" },
-    { number: "02", title: "Scoped Proposal & Design Mock", description: "Privacy plan and visual direction" },
-    { number: "03", title: "Development & Launch", description: "Go live in 1-2 weeks for small builds" },
-    { number: "04", title: "Scale & Expand", description: "Add payments, CMS, integrations as needed" }
+  const process = [
+    {
+      step: "01",
+      title: "Discovery",
+      description: "We start with a 30-minute consultation to understand your goals, audience, and technical requirements."
+    },
+    {
+      step: "02",
+      title: "Strategy",
+      description: "Detailed proposal with timeline, security plan, and design direction tailored to your needs."
+    },
+    {
+      step: "03",
+      title: "Development",
+      description: "Iterative development with regular check-ins and transparent progress updates."
+    },
+    {
+      step: "04",
+      title: "Launch & Support",
+      description: "Secure deployment with ongoing maintenance and support as your business grows."
+    }
   ];
 
   return (
-    <section id="narrative" className="py-24 px-4 bg-gradient-to-br from-background via-gallifrey-gray/10 to-accent/5">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <div className="space-y-8">
-            <div>
-              <Badge className="mb-8 bg-accent/10 text-accent border-accent/20 hover:bg-accent/20 transition-colors duration-300">
-                <Sparkles className="w-3 h-3 mr-1" />
-                Personal Sites & Digital Identity
-              </Badge>
-
-              <h2 className="text-4xl md:text-6xl mb-8">
-                <span className="font-heading text-primary">Own Your</span>{" "}
-                <span className="font-serif bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent italic">Narrative</span>
-              </h2>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
-                <p className="text-xl text-muted-foreground font-body leading-relaxed">
-                  <strong className="text-primary font-semibold">A personal site is your digital home.</strong> It&apos;s the antidote to &quot;renting&quot; your voice on social platforms.
-                  Why let Instagram or LinkedIn own your story when you can control your narrative?
-                </p>
-              </div>
-
-              <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                From microsite to masterpiece — start lean with a personal brand presence, then layer on
-                subscriptions, payments, and custom logic as you grow. Your digital fortress begins with your story.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-4 p-3 rounded-lg hover:bg-card/50 transition-colors duration-300">
-                  {feature.icon}
-                  <span className="text-muted-foreground font-body">{feature.text}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-brand-lg hover:shadow-brand-xl transition-all duration-300 group">
-                Build My Digital Home
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-              <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-brand hover:shadow-brand-lg transition-all duration-300">
-                View Personal Site Examples
-              </Button>
-            </div>
+    <section id="work" className="py-24 px-4 bg-muted/30">
+      <div className="container mx-auto max-w-6xl">
+        {/* Section header */}
+        <div className="mb-20">
+          <div className="mb-8">
+            <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
+              Selected Work
+            </p>
+            <div className="w-12 h-px bg-accent"></div>
           </div>
 
-          <div className="relative">
-            {/* Background decorative elements */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
+            Digital experiences that
+            <span className="italic text-accent"> perform and protect</span>
+          </h2>
 
-            <Card className="relative bg-gradient-to-br from-card/80 to-accent/5 border-accent/20 shadow-brand-xl backdrop-blur-sm overflow-hidden">
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+            From personal portfolios to enterprise platforms, we build with the same attention to security,
+            performance, and user experience regardless of project size.
+          </p>
+        </div>
 
-              <CardHeader className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center shadow-brand">
-                    <Home className="w-7 h-7 text-accent" />
-                  </div>
-                  <div>
-                    <CardTitle className="font-heading text-2xl text-primary">Your Digital TARDIS</CardTitle>
-                    <p className="text-accent font-medium font-body">Secure, custom, ready to regenerate</p>
-                  </div>
-                </div>
-              </CardHeader>
-
-              <CardContent className="space-y-8 relative z-10">
-                {/* Feature icons */}
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="group flex flex-col items-center gap-3 p-4 bg-background/80 backdrop-blur-sm rounded-xl border border-border/50 hover:shadow-brand transition-all duration-300">
-                    <Globe className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-sm text-center font-medium">Your Domain</span>
-                  </div>
-                  <div className="group flex flex-col items-center gap-3 p-4 bg-background/80 backdrop-blur-sm rounded-xl border border-border/50 hover:shadow-brand transition-all duration-300">
-                    <Shield className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-sm text-center font-medium">Privacy First</span>
-                  </div>
-                  <div className="group flex flex-col items-center gap-3 p-4 bg-background/80 backdrop-blur-sm rounded-xl border border-border/50 hover:shadow-brand transition-all duration-300">
-                    <Zap className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-sm text-center font-medium">Fast & Secure</span>
-                  </div>
+        {/* Project showcase */}
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {projects.map((project, index) => (
+            <div key={index} className="group">
+              <div className="bg-background border border-border/50 rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300">
+                <div className="mb-4">
+                  <span className="text-xs font-medium text-accent uppercase tracking-wider">
+                    {project.category}
+                  </span>
                 </div>
 
-                {/* Workflow */}
-                <div className="bg-background/80 backdrop-blur-sm p-6 rounded-xl border border-border/50">
-                  <h4 className="font-heading font-semibold text-lg mb-6 text-primary flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-accent" />
-                    Quick-Start Workflow
-                  </h4>
-                  <div className="space-y-4">
-                    {workflowSteps.map((step, index) => (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0">
-                          {step.number}
-                        </div>
-                        <div>
-                          <p className="font-medium text-primary">{step.title}</p>
-                          <p className="text-sm text-muted-foreground">{step.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <h3 className="font-serif text-xl font-medium mb-3 text-primary group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
 
-                {/* Pricing badge */}
-                <div className="text-center">
-                  <Badge className="bg-gradient-to-r from-accent/20 to-primary/20 text-primary border-accent/30 px-4 py-2">
-                    <Users className="w-3 h-3 mr-1" />
-                    Starting at $500 • Enterprise-grade security • Boutique care
-                  </Badge>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, techIndex) => (
+                    <span key={techIndex} className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Process section */}
+        <div className="border-t border-border/50 pt-20">
+          <div className="mb-12">
+            <h3 className="text-2xl md:text-3xl font-serif font-medium mb-4 text-primary">
+              How we work together
+            </h3>
+            <p className="text-muted-foreground max-w-2xl">
+              A transparent, collaborative process designed to deliver results without surprises.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {process.map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-accent font-medium">{item.step}</span>
+                </div>
+                <h4 className="font-serif text-lg font-medium mb-2 text-primary">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Ready to start your project? Let's discuss your requirements and create something exceptional together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button className="px-8 py-3 bg-primary hover:bg-primary/90">
+                Start your project
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+              <Button variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50">
+                View more work
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,90 +1,85 @@
-import { ArrowRight, Lock, Search, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, Shield, Users, Zap } from "lucide-react";
 
-import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
 export function Hero() {
   return (
-    <section className="relative py-32 px-4 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gallifrey-gray/30 via-background to-accent/5"></div>
+    <section className="relative py-24 md:py-32 px-4">
+      <div className="container mx-auto max-w-6xl">
+        {/* Editorial-style intro */}
+        <div className="mb-12 text-center">
+          <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
+            Digital Security & Strategy
+          </p>
+          <div className="w-12 h-px bg-accent mx-auto"></div>
+        </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
+        {/* Main headline - Faculty Dept inspired typography */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-primary">
+            We build digital experiences
+            <br />
+            <span className="italic text-accent">worth trusting</span>
+          </h1>
 
-      <div className="container mx-auto text-center max-w-6xl relative z-10">
-        <Badge className="mb-8 bg-accent/10 text-accent border-accent/20 hover:bg-accent/20 transition-colors duration-300 animate-fade-in" variant="secondary">
-          <Sparkles className="w-3 h-3 mr-1" />
-          Payment-First Digital Guardians
-        </Badge>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
+            Security-first web development that doesn't compromise on design or performance.
+            Starting at $500, because good work shouldn't break the bank.
+          </p>
+        </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl mb-8 animate-slide-up">
-          <span className="font-heading text-primary font-bold">Engineering</span>{" "}
-          <span className="font-serif text-gradient-brand font-semibold italic">
-            Digital Trust
-          </span>
-        </h1>
-
-        <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto font-body leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
-          We engineer exceptional digital experiences that are secure, strategic, and built for business growth—starting at just{" "}
-          <span className="text-accent font-semibold bg-accent/10 px-2 py-1 rounded-md">$500</span>.
-        </p>
-
-        <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto font-body animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          Fortifying your digital experiences with bullet-proof security and world-class design on every pixel.
-          Where enterprise-grade meets boutique care.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-          <Button size="lg" className="text-lg px-10 py-4 bg-primary hover:bg-primary/90 shadow-brand-lg hover:shadow-brand-xl transition-all duration-300 group">
-            Start Your Digital Fortress
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+        {/* CTA Section */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+          <Button size="lg" className="px-8 py-3 bg-primary hover:bg-primary/90 transition-colors">
+            Start a project
+            <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-10 py-4 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-brand hover:shadow-brand-lg transition-all duration-300">
-            Free 30min Kickoff Call
+          <Button size="lg" variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50">
+            30-minute consultation
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto animate-slide-up" style={{ animationDelay: '0.4s' }}>
-          <div className="group flex flex-col items-center gap-4 p-8 rounded-2xl bg-card border border-border/50 shadow-brand hover:shadow-brand-lg transition-all duration-300 hover:-translate-y-1">
-            <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Shield className="w-8 h-8 text-accent" />
+        {/* Three-column feature grid - cleaner, more editorial */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+          <div className="text-center group">
+            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
+              <Shield className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="font-heading font-semibold text-lg text-primary">Data Privacy by Design</h3>
-            <p className="text-sm text-muted-foreground text-center leading-relaxed">GDPR & CCPA compliant from day one with automated data minimization</p>
+            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Security by Design</h3>
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              GDPR compliance, data encryption, and privacy protection built into every project from day one.
+            </p>
           </div>
 
-          <div className="group flex flex-col items-center gap-4 p-8 rounded-2xl bg-card border border-border/50 shadow-brand hover:shadow-brand-lg transition-all duration-300 hover:-translate-y-1">
-            <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Search className="w-8 h-8 text-accent" />
+          <div className="text-center group">
+            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
+              <Zap className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="font-heading font-semibold text-lg text-primary">SEO as Visibility Engine</h3>
-            <p className="text-sm text-muted-foreground text-center leading-relaxed">Optimized for discovery, performance tested, and schema tagged</p>
+            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Performance First</h3>
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              Optimized for speed, SEO, and user experience. Your site loads fast and ranks well.
+            </p>
           </div>
 
-          <div className="group flex flex-col items-center gap-4 p-8 rounded-2xl bg-card border border-border/50 shadow-brand hover:shadow-brand-lg transition-all duration-300 hover:-translate-y-1">
-            <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Lock className="w-8 h-8 text-accent" />
+          <div className="text-center group">
+            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
+              <Users className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="font-heading font-semibold text-lg text-primary">Narrative Control</h3>
-            <p className="text-sm text-muted-foreground text-center leading-relaxed">Own your digital story, not rent it on social platforms</p>
+            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Human-Centered</h3>
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              We design for real people, not just metrics. Accessible, intuitive, and genuinely useful.
+            </p>
           </div>
         </div>
 
-        {/* Trust indicators */}
-        <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-accent rounded-full"></div>
-            <span>Enterprise-grade security</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-accent rounded-full"></div>
-            <span>Boutique-level care</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-accent rounded-full"></div>
-            <span>Pay only if satisfied</span>
+        {/* Trust indicators - more subtle */}
+        <div className="mt-20 pt-8 border-t border-border/50">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-xs text-muted-foreground/80 uppercase tracking-wider">
+            <span>Enterprise Security</span>
+            <span>•</span>
+            <span>Boutique Service</span>
+            <span>•</span>
+            <span>Satisfaction Guaranteed</span>
           </div>
         </div>
       </div>
