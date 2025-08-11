@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
+    "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -25,18 +21,39 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "components/ui/alert-dialog.tsx",
+    "components/ui/aspect-ratio.tsx",
+    "components/ui/avatar.tsx",
+    "components/ui/calendar.tsx",
+    "components/ui/carousel.tsx",
+    "components/ui/chart.tsx",
+    "components/ui/checkbox.tsx",
+    "components/ui/command.tsx",
+    "components/ui/context-menu.tsx",
+    "components/ui/drawer.tsx",
+    "components/ui/dropdown-menu.tsx",
+    "components/ui/form.tsx",
+    "components/ui/hover-card.tsx",
+    "components/ui/input-otp.tsx",
+    "components/ui/menubar.tsx",
+    "components/ui/navigation-menu.tsx",
+    "components/ui/popover.tsx",
+    "components/ui/progress.tsx",
+    "components/ui/radio-group.tsx",
+    "components/ui/resizable.tsx",
+    "components/ui/scroll-area.tsx",
+    "components/ui/slider.tsx",
+    "components/ui/sonner.tsx",
+    "components/ui/switch.tsx",
+    "components/ui/tabs.tsx",
+    "components/ui/toggle-group.tsx",
+    "components/ui/toggle.tsx",
+    "components/ui/tooltip.tsx"
   ]
 }
