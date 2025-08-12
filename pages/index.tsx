@@ -48,7 +48,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne custom software development with security built-in. Bespoke websites, applications, and digital solutions at reasonable prices. Plus dedicated security services: pen tests, audits, appsec.",
+        "description": "Melbourne pixel-perfect web development with obsessive attention to design detail. Custom-coded websites, bespoke design systems, and digital sovereignty solutions. Plus privacy protection and security services.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -82,8 +82,8 @@ export default function Home() {
       {
         "@type": "Service",
         "@id": "https://gallifrey.consulting/#customdevelopment",
-        "name": "Custom Software Development & Security Services",
-        "description": "Bespoke software development with security built-in, plus dedicated security services including penetration testing, security audits, and application security",
+        "name": "Pixel-Perfect Web Development & Digital Sovereignty Services",
+        "description": "Custom-coded websites with obsessive design detail, bespoke design systems, plus digital sovereignty and privacy protection services",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -99,8 +99,8 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Custom Website Development",
-                "description": "Bespoke website development with security built-in from day one"
+                "name": "Pixel-Perfect Website Development",
+                "description": "Custom-coded websites with obsessive attention to design detail and mathematical precision"
               },
               "price": "1500",
               "priceCurrency": "AUD"
@@ -109,8 +109,8 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Custom Application Development",
-                "description": "Full-stack application development with enterprise-grade security"
+                "name": "Bespoke Design Systems",
+                "description": "Hand-crafted design systems and component libraries built from scratch"
               },
               "price": "5000",
               "priceCurrency": "AUD"
@@ -119,8 +119,8 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Security Services",
-                "description": "Penetration testing, security audits, and application security consulting"
+                "name": "Digital Sovereignty Services",
+                "description": "Privacy protection, data cleanup, and platform independence solutions"
               },
               "price": "2500",
               "priceCurrency": "AUD"
@@ -133,7 +133,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#website",
         "url": "https://gallifrey.consulting",
         "name": "Gallifrey Consulting",
-        "description": "Custom Software Development Melbourne | Security-First",
+        "description": "Pixel-Perfect Web Development Melbourne | Custom Design Systems",
         "publisher": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -156,7 +156,7 @@ export default function Home() {
             "name": "What makes Gallifrey Consulting different from other development agencies?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We're custom software developers who build security in from day one, not as an afterthought. Every website, application, and digital solution we create has enterprise-grade security built-in. Plus, we offer dedicated security services like penetration testing and security audits."
+              "text": "We're pixel-perfect web developers who craft custom design systems with obsessive attention to detail. Every website and digital solution we create is hand-coded from scratch with mathematical precision. Plus, we offer digital sovereignty and privacy protection services."
             }
           },
           {
@@ -172,7 +172,7 @@ export default function Home() {
             "name": "What development and security services do you provide?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We provide custom software development (websites, applications, digital solutions) with security built-in, plus dedicated security services including penetration testing, security audits, application security consulting, GDPR compliance, and privacy-by-design architecture."
+              "text": "We provide pixel-perfect web development (custom websites, bespoke design systems, digital solutions) with obsessive design detail, plus digital sovereignty services including privacy protection, data cleanup, platform independence, and custom digital experiences."
             }
           }
         ]
@@ -183,19 +183,19 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Digital Experiences Worth Trusting | Gallifrey Digital Melbourne"
-        description="Security-first web development that doesn't compromise on design or performance. Starting at $500, because good work shouldn't break the bank."
+        title="Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne"
+        description="Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $500."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Digital Experiences Worth Trusting | Gallifrey Digital Melbourne',
-          description: 'Security-first web development that doesn\'t compromise on design or performance. Starting at $500, because good work shouldn\'t break the bank.',
+          title: 'Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne',
+          description: 'Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $500.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
               width: 1200,
               height: 630,
-              alt: 'Gallifrey Consulting - Security-First Web Development Melbourne',
+              alt: 'Gallifrey Consulting - Pixel-Perfect Web Development Melbourne',
             },
           ],
           site_name: 'Gallifrey Consulting',
@@ -203,7 +203,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'web development Melbourne, security-first development, custom websites, digital experiences, GDPR compliance, performance optimization, boutique web development, trusted web development Melbourne'
+            content: 'pixel perfect web development Melbourne, custom design systems, bespoke websites, digital sovereignty, privacy protection, hand-crafted development, boutique web development, trusted web development Melbourne'
           },
           {
             property: 'article:author',
@@ -234,6 +234,61 @@ export default function Home() {
         {/* <Work /> */}
         <Process />
         <Features />
+
+        {/* Own Your Narrative Campaign CTA */}
+        <section className="py-20 px-4 bg-gradient-to-r from-[#1a237e] to-[#00695c] relative overflow-hidden">
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
+            <div className="mb-6">
+              <span className="text-sm font-medium tracking-wider text-white/80 uppercase mb-4 block">
+                Digital Sovereignty
+              </span>
+              <div className="w-12 h-px bg-white/40 mx-auto mb-8"></div>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-white">
+              Ready to <span className="italic text-[#ffa726]">Own Your Narrative</span>?
+            </h2>
+
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
+              Stop building someone else's empire. Break free from Big Tech dependency with custom websites, data privacy protection, and complete digital independence.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/own-your-narrative"
+                className="inline-flex items-center px-8 py-3 bg-white text-[#1a237e] font-medium rounded-lg hover:bg-white/90 transition-colors"
+              >
+                Discover Digital Independence
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="/own-your-narrative"
+                className="inline-flex items-center px-8 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="mt-12 pt-8 border-t border-white/20">
+              <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-white/80">
+                <span>47 Data Brokers Removed</span>
+                <span>•</span>
+                <span>$2.3M Revenue Generated</span>
+                <span>•</span>
+                <span>100% Client Satisfaction</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#42a5f5]/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#ffa726]/20 to-transparent rounded-full blur-3xl"></div>
+        </section>
+
         <Pricing />
         <Contact />
         <Footer />

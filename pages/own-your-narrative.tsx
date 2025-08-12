@@ -23,27 +23,37 @@ export default function OwnYourNarrativePage() {
       },
       {
         "@type": "Service",
-        "@id": "https://gallifrey.consulting/own-your-narrative#personalbrandliberation",
-        "name": "Personal Brand Liberation Services",
-        "description": "Break free from social media dependency with custom websites that you own completely. Specialized services for creators, entrepreneurs, and personal brands.",
+        "@id": "https://gallifrey.consulting/own-your-narrative#digitalindependence",
+        "name": "Digital Independence & Sovereignty Services",
+        "description": "Stop building someone else's empire. Professional web development, data privacy protection, and complete digital independence at accessible prices.",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
-        "serviceType": "Personal Brand Website Development",
+        "serviceType": "Digital Independence Solutions",
         "areaServed": {
           "@type": "Country",
           "name": "Australia"
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Personal Brand Liberation Services",
+          "name": "Digital Independence Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Personal Brand Liberation",
-                "description": "Custom domain ownership with SEO-optimized content and direct audience connection"
+                "name": "Digital Independence Package",
+                "description": "Custom website with complete data ownership and privacy protection"
+              },
+              "price": "500",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Data Privacy Protection",
+                "description": "Comprehensive data cleanup and privacy protection services"
               },
               "price": "1500",
               "priceCurrency": "AUD"
@@ -52,18 +62,8 @@ export default function OwnYourNarrativePage() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Creator Economy Platform",
-                "description": "Monetization platform with subscription billing and course delivery"
-              },
-              "price": "3500",
-              "priceCurrency": "AUD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Digital Storytelling Hub",
-                "description": "Portfolio showcase with blog platform and social proof display"
+                "name": "Platform Independence Solution",
+                "description": "Break free from Big Tech with custom digital solutions"
               },
               "price": "2500",
               "priceCurrency": "AUD"
@@ -75,13 +75,13 @@ export default function OwnYourNarrativePage() {
         "@type": "WebPage",
         "@id": "https://gallifrey.consulting/own-your-narrative#webpage",
         "url": "https://gallifrey.consulting/own-your-narrative",
-        "name": "Own Your Narrative - Personal Brand Liberation",
-        "description": "Break free from social media dependency. Custom websites for creators, entrepreneurs, and personal brands who want to own their digital narrative.",
+        "name": "Own Your Narrative - Digital Independence",
+        "description": "Stop being the product. Break free from Big Tech dependency with professional web development and data privacy protection at accessible prices.",
         "isPartOf": {
           "@id": "https://gallifrey.consulting/#website"
         },
         "about": {
-          "@id": "https://gallifrey.consulting/own-your-narrative#personalbrandliberation"
+          "@id": "https://gallifrey.consulting/own-your-narrative#digitalindependence"
         }
       }
     ]
@@ -90,19 +90,19 @@ export default function OwnYourNarrativePage() {
   return (
     <>
       <NextSeo
-        title="Own Your Narrative - Personal Brand Liberation | Gallifrey Consulting"
-        description="Break free from social media dependency with custom websites that you own completely. Specialized services for creators, entrepreneurs, and personal brands ready to own their digital narrative."
+        title="Stop Being The Product - Own Your Digital Narrative | Gallifrey Consulting"
+        description="Stop building someone else's empire. Break free from Big Tech dependency with professional web development, data privacy protection, and complete digital independence at accessible prices."
         canonical="https://gallifrey.consulting/own-your-narrative"
         openGraph={{
           url: 'https://gallifrey.consulting/own-your-narrative',
-          title: 'Own Your Narrative - Personal Brand Liberation | Gallifrey Consulting',
-          description: 'Break free from social media dependency with custom websites that you own completely. Specialized services for creators, entrepreneurs, and personal brands ready to own their digital narrative.',
+          title: 'Stop Being The Product - Own Your Digital Narrative | Gallifrey Consulting',
+          description: 'Stop building someone else\'s empire. Break free from Big Tech dependency with professional web development, data privacy protection, and complete digital independence at accessible prices.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image-narrative.jpg',
               width: 1200,
               height: 630,
-              alt: 'Own Your Narrative - Personal Brand Liberation Services',
+              alt: 'Own Your Narrative - Digital Independence Services',
             },
           ],
           site_name: 'Gallifrey Consulting',
@@ -110,7 +110,7 @@ export default function OwnYourNarrativePage() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'personal brand website, creator economy platform, digital independence, social media alternative, custom domain ownership, content creator website, entrepreneur website, personal brand liberation, digital storytelling, platform independence'
+            content: 'digital independence, data ownership, privacy protection, Big Tech alternative, platform independence, digital sovereignty, custom websites, data privacy, small business websites, affordable web development, own your data, digital freedom'
           },
           {
             property: 'article:author',

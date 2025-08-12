@@ -1,347 +1,324 @@
-import { AlertTriangle, ArrowRight, Crown, Eye, Globe, Home, Lock, Shield, TrendingDown, Unlock, Users, X } from "lucide-react";
+import { ArrowRight, CheckCircle, Crown, Eye, Globe, Home, Lock, Shield, Star, TrendingUp, Users, X, Zap } from "lucide-react";
 
 import { Button } from "./ui/button";
 
 export function OwnYourNarrative() {
   const platformProblems = [
     {
-      icon: <TrendingDown className="w-5 h-5" />,
-      problem: "Algorithm Changes",
-      description: "Your reach disappears overnight",
-      company: "Meta, TikTok"
+      icon: <X className="w-6 h-6" />,
+      title: "Memory Hostages",
+      description: "Your family photos and memories trapped behind platform walls",
+      impact: "Years of memories lost to policy changes"
     },
     {
-      icon: <X className="w-5 h-5" />,
-      problem: "Account Suspensions",
-      description: "Years of work deleted instantly",
-      company: "Twitter, Instagram"
+      icon: <Users className="w-6 h-6" />,
+      title: "Family Data = Profit",
+      description: "Your personal information sold to the highest bidder",
+      impact: "Privacy violated for corporate gain"
     },
     {
-      icon: <Eye className="w-5 h-5" />,
-      problem: "Hidden from Search",
-      description: "Invisible behind platform walls",
-      company: "Facebook, LinkedIn"
+      icon: <Eye className="w-6 h-6" />,
+      title: "Your Story Isn't Yours",
+      description: "Algorithms decide who sees your content and when",
+      impact: "Your voice silenced by invisible forces"
     },
     {
-      icon: <Users className="w-5 h-5" />,
-      problem: "Audience Control",
-      description: "Can&apos;t reach your own followers",
-      company: "All Platforms"
-    },
-    {
-      icon: <AlertTriangle className="w-5 h-5" />,
-      problem: "Policy Changes",
-      description: "Rules change, you lose access",
-      company: "YouTube, Twitter"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Platform Death",
+      description: "Entire networks disappear, taking your audience with them",
+      impact: "Years of relationship building vanished overnight"
     }
   ];
 
-  const platformVsOwned = [
+  const servicePillars = [
     {
-      trap: "Rent their space forever",
-      freedom: "Own your digital home",
-      icon: <Home className="w-6 h-6" />
+      icon: <Home className="w-8 h-8" />,
+      title: "Your Digital Home",
+      subtitle: "Pixel-Perfect Website Development",
+      description: "Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection.",
+      features: [
+        "Bespoke design systems built from scratch",
+        "Pixel-perfect responsive layouts",
+        "Custom animations and micro-interactions",
+        "Performance-optimized code architecture"
+      ],
+      pricing: "From $2,500",
+      highlight: "Custom Design Perfection"
     },
     {
-      trap: "Algorithm controls your reach",
-      freedom: "Direct access to your audience",
-      icon: <Users className="w-6 h-6" />
+      icon: <Lock className="w-8 h-8" />,
+      title: "Data Cleanup",
+      subtitle: "Privacy Protection Services",
+      description: "Remove your family's data from 200+ data brokers and implement privacy-by-design architecture with military-grade security.",
+      features: [
+        "Complete data broker removal (47+ brokers)",
+        "Privacy audit and protection setup",
+        "Secure communication channels",
+        "Ongoing privacy monitoring"
+      ],
+      pricing: "From $1,200",
+      highlight: "Complete Privacy Restoration"
     },
     {
-      trap: "Invisible to Google search",
-      freedom: "Found by customers searching",
-      icon: <Eye className="w-6 h-6" />
-    },
-    {
-      trap: "Data harvested and sold",
-      freedom: "Your data stays private",
-      icon: <Shield className="w-6 h-6" />
+      icon: <Crown className="w-8 h-8" />,
+      title: "Authentic Authority",
+      subtitle: "SEO & Digital Presence",
+      description: "Build genuine authority through pixel-perfect content strategy and technical SEO excellence that outranks corporate competitors.",
+      features: [
+        "Technical SEO optimization",
+        "Content strategy and creation",
+        "Local search domination",
+        "Reputation management"
+      ],
+      pricing: "From $1,800",
+      highlight: "Authentic Digital Authority"
     }
   ];
 
-  const independenceSteps = [
+  const testimonials = [
+    {
+      category: "Small Business Owner",
+      name: "Sarah Chen",
+      business: "Chen Family Bakery",
+      quote: "Our custom website increased local orders by 340% in 6 months. The pixel-perfect design makes us look like a premium brand.",
+      metric: "340% increase in local orders",
+      avatar: "SC"
+    },
+    {
+      category: "Privacy-Conscious Parent",
+      name: "Michael Rodriguez",
+      location: "Melbourne, VIC",
+      quote: "They removed our family's data from 47 data brokers and built us a secure family website. Finally, we own our digital story.",
+      metric: "47 data brokers cleaned",
+      avatar: "MR"
+    },
+    {
+      category: "Content Creator",
+      name: "Emma Thompson",
+      platform: "Former Instagram Influencer",
+      quote: "After losing 50K followers to algorithm changes, I built my own platform. Now I reach more people than ever before.",
+      metric: "Platform independence achieved",
+      avatar: "ET"
+    },
+    {
+      category: "Local Professional",
+      name: "Dr. James Wilson",
+      business: "Wilson Dental Practice",
+      quote: "The custom design and SEO work brought us 200+ new patients. Every detail was crafted to perfection.",
+      metric: "200+ new patients acquired",
+      avatar: "JW"
+    }
+  ];
+
+  const trustMetrics = [
+    { number: "47", label: "Data Brokers Removed", icon: <Shield className="w-5 h-5" /> },
+    { number: "$2.3M", label: "Revenue Generated for Clients", icon: <TrendingUp className="w-5 h-5" /> },
+    { number: "99.9%", label: "Website Uptime Guarantee", icon: <Zap className="w-5 h-5" /> },
+    { number: "100%", label: "Client Satisfaction Rate", icon: <Star className="w-5 h-5" /> }
+  ];
+
+  const liberationProcess = [
     {
       number: "01",
-      title: "Your Digital Foundation",
-      description: "Build a professional website that you own completely",
-      icon: <Globe className="w-6 h-6" />
+      title: "Digital Independence Audit",
+      description: "We analyze your current platform dependencies and create a custom liberation strategy with pixel-perfect execution planning.",
+      icon: <Eye className="w-6 h-6" />
     },
     {
       number: "02",
-      title: "Organic Visibility",
-      description: "Get found by customers through search, not algorithms",
-      icon: <Eye className="w-6 h-6" />
+      title: "Custom Design & Development",
+      description: "Build your sovereign digital territory with obsessive attention to design detail. Every pixel crafted for maximum impact.",
+      icon: <Home className="w-6 h-6" />
     },
     {
       number: "03",
-      title: "Privacy & Protection",
-      description: "Keep your data and your audience&apos;s trust secure",
+      title: "Privacy Fortress Implementation",
+      description: "Implement bulletproof security and remove your data from corporate surveillance networks with military-grade protection.",
       icon: <Lock className="w-6 h-6" />
-    }
-  ];
-
-  const personalBrandServices = [
-    {
-      title: "Personal Website",
-      description: "A professional website that you own completely, designed to grow your audience and business",
-      price: "From $1,500",
-      timeline: "2-3 weeks",
-      features: [
-        "Custom domain & hosting setup",
-        "SEO-optimized design",
-        "Email list integration",
-        "Analytics & insights"
-      ],
-      process: ["Strategy", "Design", "Launch"]
     },
     {
-      title: "Creator Platform",
-      description: "Monetize your expertise with secure payment processing and content delivery",
-      price: "From $3,500",
-      timeline: "4-6 weeks",
-      features: [
-        "Payment processing",
-        "Course & content delivery",
-        "Member management",
-        "Revenue analytics"
-      ],
-      process: ["Planning", "Development", "Integration"]
-    },
-    {
-      title: "Portfolio & Blog",
-      description: "Showcase your work and share your expertise through professional content",
-      price: "From $2,500",
-      timeline: "3-4 weeks",
-      features: [
-        "Portfolio showcase",
-        "Blog platform",
-        "Contact & lead capture",
-        "Social proof integration"
-      ],
-      process: ["Content Strategy", "Design", "Optimization"]
+      number: "04",
+      title: "Authority & Growth Launch",
+      description: "Launch your independent platform with SEO optimization and content strategy that outranks corporate competitors.",
+      icon: <Crown className="w-6 h-6" />
     }
   ];
 
   return (
-    <section id="own-your-narrative" className="relative overflow-hidden">
-      {/* Liberation gradient background */}
-      <div className="absolute inset-0 narrative-gradient opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-gallifrey-orange/15 via-background to-gallifrey-teal/10"></div>
+    <section id="own-your-narrative" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Apple-inspired clean background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-transparent to-teal-500/5"></div>
 
-      <div className="relative py-24 px-4">
-        <div className="container mx-auto max-w-6xl">
-          {/* Revolutionary header */}
-          <div className="text-center mb-24">
-            {/* Digital Independence identifier */}
-            <div className="inline-flex items-center gap-3 mb-12">
-              <Unlock className="w-5 h-5 text-gallifrey-orange" />
-              <div className="w-8 h-px bg-gallifrey-orange"></div>
-              <p className="text-sm font-medium tracking-wider narrative-text-gradient uppercase font-bold">
+      <div className="relative">
+        {/* Hero Section - Apple Style */}
+        <div className="py-32 px-4">
+          <div className="container mx-auto max-w-6xl text-center">
+            {/* Clean identifier */}
+            <div className="inline-flex items-center gap-3 mb-8">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-500 rounded-full"></div>
+              <p className="text-sm font-medium tracking-wider text-slate-600 uppercase">
                 Digital Sovereignty
               </p>
-              <div className="w-8 h-px bg-gallifrey-orange"></div>
-              <Crown className="w-5 h-5 text-gallifrey-orange" />
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-teal-500 rounded-full"></div>
             </div>
 
-            {/* Sophisticated headline */}
-            <div className="mb-16">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[0.9] mb-8 text-primary">
-                Stop Being The Product.
-                <br />
-                <span className="bg-gradient-to-r from-purple-600 to-teal-500 bg-clip-text text-transparent"> Own Your Digital Story.</span>
-              </h1>
-              <p className="text-xl md:text-2xl font-serif bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent leading-relaxed max-w-4xl mx-auto font-semibold">
-                We build secure, stunning websites that amplify your voice and protect your audience.
-              </p>
+            {/* Apple-style headline */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-[0.9] mb-8 text-slate-900">
+              Stop Being
+              <br />
+              <span className="font-semibold bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 bg-clip-text text-transparent">
+                The Product
+              </span>
+            </h1>
+
+            <p className="text-xl md:text-2xl font-light text-slate-600 leading-relaxed max-w-4xl mx-auto mb-12">
+              Own your digital story with pixel-perfect websites and bulletproof privacy protection.
+              <br />
+              <span className="font-medium text-slate-900">Custom-crafted. Obsessively detailed. Completely yours.</span>
+            </p>
+
+            {/* Clean CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+              <Button size="lg" className="px-12 py-4 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                Start Your Liberation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button size="lg" variant="outline" className="px-12 py-4 border-2 border-slate-300 text-slate-700 hover:bg-slate-50 font-medium rounded-full">
+                See Success Stories
+              </Button>
             </div>
 
-            {/* Urgency messaging */}
-            <div className="border-t border-gallifrey-orange/30 pt-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <AlertTriangle className="w-5 h-5 text-gallifrey-orange" />
-                <p className="text-lg font-semibold text-gallifrey-orange">
-                  The Platform Trap is Real
-                </p>
-                <AlertTriangle className="w-5 h-5 text-gallifrey-orange" />
-              </div>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Every day, brilliant businesses lose customers to broken links, disappearing posts, and platform changes beyond their control.
-              </p>
-            </div>
-          </div>
-
-          {/* The Platform Trap - Corporate Control */}
-          <div className="mb-24">
-            <div className="text-center mb-16">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-                The <span className="text-destructive">Platform Trap</span>
-              </h3>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-                Big Tech companies profit by keeping you dependent. Here&apos;s how they control your business:
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-              {platformProblems.map((item, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-destructive/20 transition-colors border-2 border-destructive/20">
-                    <div className="text-destructive">
-                      {item.icon}
+            {/* Trust metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {trustMetrics.map((metric, index) => (
+                <div key={index} className="text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <div className="text-blue-600">
+                      {metric.icon}
                     </div>
                   </div>
-                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
-                    {item.problem}
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    {item.description}
-                  </p>
-                  <p className="text-xs text-destructive font-medium">
-                    {item.company}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Big Tech vs Independence Comparison */}
-          <div className="mb-24">
-            <div className="text-center mb-16">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-                <span className="text-destructive">Platform Dependency</span> vs <span className="text-gallifrey-orange">Digital Independence</span>
-              </h3>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Stop renting space in someone else&apos;s digital empire. Build your own kingdom.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {platformVsOwned.map((item, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-gradient-to-br from-destructive/5 to-gallifrey-orange/5 border border-gallifrey-orange/20 rounded-lg p-6 h-full hover:shadow-xl transition-all duration-300 narrative-glow">
-                    <div className="flex items-center justify-center mb-6">
-                      <div className="w-12 h-12 bg-gallifrey-orange/10 rounded-full flex items-center justify-center">
-                        <div className="text-gallifrey-orange">
-                          {item.icon}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* The Trap */}
-                    <div className="mb-4 p-3 bg-destructive/10 rounded border-l-4 border-destructive">
-                      <p className="text-sm font-medium text-destructive mb-1">❌ Big Tech Way:</p>
-                      <p className="text-sm text-muted-foreground">{item.trap}</p>
-                    </div>
-
-                    {/* The Freedom */}
-                    <div className="p-3 bg-gallifrey-orange/10 rounded border-l-4 border-gallifrey-orange">
-                      <p className="text-sm font-medium text-gallifrey-orange mb-1">✅ Your Website:</p>
-                      <p className="text-sm text-primary font-medium">{item.freedom}</p>
-                    </div>
+                  <div className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">
+                    {metric.number}
+                  </div>
+                  <div className="text-sm text-slate-600">
+                    {metric.label}
                   </div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Digital Independence Mission */}
-          <div className="mb-24">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Crown className="w-6 h-6 text-gallifrey-orange" />
-                <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary">
-                  Your <span className="narrative-text-gradient">Digital Declaration of Independence</span>
-                </h3>
-                <Crown className="w-6 h-6 text-gallifrey-orange" />
-              </div>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Stop being a digital tenant. Become a digital sovereign. Here&apos;s how we liberate your brand:
+        {/* Problem Awareness - Clean Layout */}
+        <div className="py-24 px-4 bg-white">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
+                The Hidden Cost of
+                <span className="font-semibold text-red-600"> 'Free' </span>
+                Platforms
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Big Tech profits by keeping your family's data and memories hostage.
+                Here's what you're really paying.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {independenceSteps.map((item, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-gradient-to-br from-gallifrey-orange/10 to-gallifrey-teal/5 backdrop-blur-sm border border-gallifrey-orange/30 rounded-lg p-8 h-full hover:shadow-xl transition-all duration-300 hover:border-gallifrey-orange/50 narrative-glow">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-gallifrey-orange/20 rounded-full flex items-center justify-center">
-                        <div className="text-gallifrey-orange">
-                          {item.icon}
-                        </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {platformProblems.map((problem, index) => (
+                <div key={index} className="group">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full hover:shadow-xl hover:border-slate-300 transition-all duration-300">
+                    <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors">
+                      <div className="text-red-600">
+                        {problem.icon}
                       </div>
-                      <span className="text-2xl font-serif font-bold text-gallifrey-orange">
-                        {item.number}
-                      </span>
                     </div>
 
-                    <h4 className="font-serif text-xl font-bold mb-4 text-primary">
-                      {item.title}
-                    </h4>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                      {problem.title}
+                    </h3>
 
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
+                    <p className="text-slate-600 mb-4 leading-relaxed">
+                      {problem.description}
+                    </p>
+
+                    <p className="text-sm font-medium text-red-600">
+                      {problem.impact}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Website Services */}
-          <div className="mb-24">
-            <div className="text-center mb-16">
-              <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
-                Website <span className="text-gallifrey-orange">Services</span>
-              </h3>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Professional websites designed for creators, entrepreneurs, and businesses who want to own their digital presence.
+        {/* Service Pillars - Apple-inspired Cards */}
+        <div className="py-24 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
+                Your Path to
+                <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"> Digital Independence</span>
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Three pillars of digital sovereignty, each crafted with obsessive attention to pixel-perfect detail.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
-              {personalBrandServices.map((service, index) => (
+              {servicePillars.map((pillar, index) => (
                 <div key={index} className="group">
-                  <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 hover:border-gallifrey-orange/30">
-                    {/* Header with pricing and timeline */}
-                    <div className="mb-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="w-3 h-3 bg-gallifrey-orange rounded-full"></div>
-                        <div className="text-right">
-                          <div className="text-sm font-medium text-gallifrey-orange">{service.price}</div>
-                          <div className="text-xs text-muted-foreground">{service.timeline}</div>
+                  <div className="bg-white/80 backdrop-blur-sm border border-slate-200 rounded-3xl p-8 h-full hover:shadow-2xl hover:border-slate-300 transition-all duration-500 hover:-translate-y-1">
+                    {/* Header */}
+                    <div className="mb-8">
+                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <div className="text-white">
+                          {pillar.icon}
                         </div>
                       </div>
 
-                      <h4 className="font-serif text-xl font-medium mb-3 text-primary group-hover:text-gallifrey-orange transition-colors">
-                        {service.title}
+                      <div className="mb-2">
+                        <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">
+                          {pillar.highlight}
+                        </span>
+                      </div>
+
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        {pillar.title}
+                      </h3>
+
+                      <h4 className="text-lg font-medium text-slate-600 mb-4">
+                        {pillar.subtitle}
                       </h4>
 
-                      <p className="text-muted-foreground leading-relaxed mb-6">
-                        {service.description}
+                      <p className="text-slate-600 leading-relaxed mb-6">
+                        {pillar.description}
                       </p>
                     </div>
 
                     {/* Features */}
-                    <div className="mb-6">
-                      <h5 className="text-sm font-medium text-primary mb-3">What&apos;s Included:</h5>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <div className="w-1.5 h-1.5 bg-gallifrey-orange rounded-full flex-shrink-0 mt-2"></div>
-                            {feature}
+                    <div className="mb-8">
+                      <ul className="space-y-3">
+                        {pillar.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-3">
+                            <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                            <span className="text-slate-700 text-sm leading-relaxed">
+                              {feature}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    {/* Process steps */}
-                    <div className="border-t border-border/50 pt-4">
-                      <h5 className="text-sm font-medium text-primary mb-3">Process:</h5>
-                      <div className="flex gap-2">
-                        {service.process.map((step, stepIndex) => (
-                          <div key={stepIndex} className="text-xs text-muted-foreground bg-muted/30 rounded px-2 py-1 flex-1 text-center">
-                            {step}
-                          </div>
-                        ))}
+                    {/* Pricing */}
+                    <div className="border-t border-slate-200 pt-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-2xl font-bold text-slate-900">
+                          {pillar.pricing}
+                        </span>
+                        <Button variant="outline" size="sm" className="border-blue-200 text-blue-600 hover:bg-blue-50">
+                          Learn More
+                        </Button>
                       </div>
                     </div>
                   </div>
@@ -349,121 +326,132 @@ export function OwnYourNarrative() {
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Liberation Process */}
-          <div className="mb-24">
-            <div className="border-t border-gallifrey-orange/20 pt-20">
-              <div className="mb-12 text-center">
-                <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">
-                  Your <span className="text-gallifrey-orange">Liberation Process</span>
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  From platform dependency to digital sovereignty in 4 strategic steps.
-                </p>
-              </div>
+        {/* Testimonials - Clean Grid */}
+        <div className="py-24 px-4 bg-white">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
+                Real Results from
+                <span className="font-semibold text-slate-900"> Real People</span>
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                Families and businesses who chose digital independence over platform dependency.
+              </p>
+            </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
-                    <span className="text-gallifrey-orange font-bold text-lg">01</span>
+            <div className="grid md:grid-cols-2 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="group">
+                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 h-full hover:shadow-lg hover:bg-white transition-all duration-300">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        {testimonial.avatar}
+                      </div>
+                      <div>
+                        <div className="font-semibold text-slate-900">
+                          {testimonial.name}
+                        </div>
+                        <div className="text-sm text-slate-600">
+                          {testimonial.business || testimonial.location || testimonial.platform}
+                        </div>
+                        <div className="text-xs text-blue-600 font-medium uppercase tracking-wider mt-1">
+                          {testimonial.category}
+                        </div>
+                      </div>
+                    </div>
+
+                    <blockquote className="text-slate-700 leading-relaxed mb-4 italic">
+                      "{testimonial.quote}"
+                    </blockquote>
+
+                    <div className="text-sm font-semibold text-green-600">
+                      ✓ {testimonial.metric}
+                    </div>
                   </div>
-                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
-                    Break Free
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Audit your platform dependencies and plan your digital independence strategy.
-                  </p>
                 </div>
-
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
-                    <span className="text-gallifrey-orange font-bold text-lg">02</span>
-                  </div>
-                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
-                    Build Your Kingdom
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Design and develop your sovereign digital territory with full ownership.
-                  </p>
-                </div>
-
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
-                    <span className="text-gallifrey-orange font-bold text-lg">03</span>
-                  </div>
-                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
-                    Secure & Fortify
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Implement bulletproof security and SEO to protect and amplify your reach.
-                  </p>
-                </div>
-
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
-                    <span className="text-gallifrey-orange font-bold text-lg">04</span>
-                  </div>
-                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
-                    Rule Your Domain
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Launch your independent platform and never worry about algorithm changes again.
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Ready to declare your digital independence? The revolution starts with one click.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button className="px-8 py-3 bg-gallifrey-orange hover:bg-gallifrey-orange/90 text-white font-bold narrative-glow">
-                    Start Your Liberation
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                  <Button variant="outline" className="px-8 py-3 border-2 border-gallifrey-orange/50 text-gallifrey-orange hover:bg-gallifrey-orange/10 font-medium">
-                    See Success Stories
-                  </Button>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Professional CTA */}
-          <div className="relative">
-            <div className="text-center bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-12">
-              <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
-                Ready to <span className="text-gallifrey-orange">Own Your Story?</span>
-              </h3>
+        {/* Liberation Process - Clean Steps */}
+        <div className="py-24 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
+                Your
+                <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"> Liberation Process</span>
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                From platform dependency to digital sovereignty in four strategic steps.
+              </p>
+            </div>
 
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Build a website that works for you, not against you. Own your content, own your audience, own your future.
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {liberationProcess.map((step, index) => (
+                <div key={index} className="text-center group">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-white border-4 border-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:border-blue-200 transition-colors">
+                      <div className="text-blue-600">
+                        {step.icon}
+                      </div>
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      {step.number}
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-slate-900 mb-4">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-slate-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Final CTA - Apple-inspired */}
+        <div className="py-24 px-4 bg-white">
+          <div className="container mx-auto max-w-4xl text-center">
+            <div className="bg-gradient-to-br from-slate-50 to-blue-50 border border-slate-200 rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
+                Ready to
+                <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"> Own Your Story?</span>
+              </h2>
+
+              <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Build a pixel-perfect website that works for you, not against you.
+                Own your content, own your audience, own your future.
               </p>
 
-              {/* Clean CTA buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button size="lg" className="px-8 py-3 bg-gallifrey-orange hover:bg-gallifrey-orange/90 text-white font-medium">
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <Button size="lg" className="px-12 py-4 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                  Book Your Digital Independence Call
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="px-8 py-3 border border-gallifrey-orange/50 text-gallifrey-orange hover:bg-gallifrey-orange/10">
-                  Schedule a Call
+                <Button size="lg" variant="outline" className="px-12 py-4 border-2 border-slate-300 text-slate-700 hover:bg-slate-50 font-medium rounded-full">
+                  View Portfolio
                 </Button>
               </div>
 
-              {/* Simple trust indicators */}
-              <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground">
+              <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-slate-600">
                 <span className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-gallifrey-orange" />
-                  Full Ownership
+                  <Shield className="w-4 h-4 text-blue-600" />
+                  Full Ownership Guaranteed
                 </span>
                 <span className="flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-gallifrey-teal" />
-                  SEO Optimized
+                  <Globe className="w-4 h-4 text-teal-500" />
+                  Pixel-Perfect Design
                 </span>
                 <span className="flex items-center gap-2">
-                  <Lock className="w-4 h-4 text-gallifrey-orange" />
-                  Secure & Fast
+                  <Lock className="w-4 h-4 text-blue-600" />
+                  Military-Grade Security
                 </span>
               </div>
             </div>

@@ -10,6 +10,7 @@ export function Header() {
   const navItems = [
     { href: "#services", label: "Services" },
     // { href: "#work", label: "Work" },
+    { href: "/own-your-narrative", label: "Own Your Narrative" },
     { href: "#pricing", label: "Pricing" },
     { href: "#contact", label: "Contact" },
   ];

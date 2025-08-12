@@ -122,29 +122,56 @@
     font-weight: 500;
   }
 
-  /* Own Your Narrative Campaign Styles */
+  /* Own Your Narrative Campaign Styles - Apple Inspired */
   .narrative-gradient {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--gallifrey-orange)) 0%,
-      hsl(var(--gallifrey-teal)) 100%
-    );
+    background: linear-gradient(135deg, #1e40af 0%, #0d9488 100%);
   }
 
   .narrative-text-gradient {
-    @apply bg-gradient-to-r from-gallifrey-orange via-gallifrey-teal to-gallifrey-orange bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 bg-clip-text text-transparent;
   }
 
   .narrative-glow {
-    box-shadow: 0 0 20px hsl(var(--gallifrey-orange) / 0.3);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
   }
 
   .narrative-border {
-    border-image: linear-gradient(
-        135deg,
-        hsl(var(--gallifrey-orange)),
-        hsl(var(--gallifrey-teal))
-      )
-      1;
+    border-image: linear-gradient(135deg, #3b82f6, #14b8a6) 1;
+  }
+
+  /* Apple-inspired glassmorphism */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card-dark {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Smooth transitions for Apple-like feel */
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Custom scrollbar for clean Apple aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
   }
 }

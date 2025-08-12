@@ -5,28 +5,28 @@ import { Button } from "./ui/button";
 export function Services() {
   const services = [
     {
-      icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Security-First Development",
-      description: "GDPR compliance, data encryption, and privacy protection built into every project from day one. No retrofitting, no compromises.",
-      details: ["PCI-DSS Compliance", "Zero-Trust Architecture", "Penetration Testing"]
-    },
-    {
       icon: <Palette className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Custom Design Systems",
-      description: "Bespoke UI components and design languages that reflect your brand identity. No templates, no shortcuts.",
-      details: ["Brand-Aligned Design", "Component Libraries", "Design Tokens"]
+      title: "Pixel-Perfect Design Systems",
+      description: "Custom-coded design systems with mathematical precision. Every element positioned purposefully, every interaction crafted to perfection. No templates, no compromises.",
+      details: ["Bespoke Visual Identity", "Custom Component Libraries", "Precision Typography Systems"]
     },
     {
       icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Performance Engineering",
-      description: "Fast, accessible, and SEO-optimized experiences that convert visitors into customers.",
-      details: ["Core Web Vitals", "Accessibility (WCAG)", "Technical SEO"]
+      title: "Hand-Crafted Development",
+      description: "Obsessively detailed code architecture built from scratch. Every line optimized for performance, every function designed for elegance and maintainability.",
+      details: ["Custom Code Architecture", "Performance Optimization", "Clean Code Principles"]
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
+      title: "Security-First Engineering",
+      description: "Military-grade security woven into every pixel and line of code. GDPR compliance, data encryption, and privacy protection built from the foundation up.",
+      details: ["Zero-Trust Architecture", "Privacy by Design", "Penetration Testing"]
     },
     {
       icon: <Users className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Ongoing Partnership",
-      description: "Transparent communication, flexible arrangements, and support that evolves with your business needs.",
-      details: ["Open Communication", "Flexible Pricing", "Long-term Support"]
+      title: "Artisan-Level Craftsmanship",
+      description: "White-glove service with obsessive attention to detail. Every project treated as a masterpiece, every client relationship built on trust and excellence.",
+      details: ["Personal Attention", "Quality Assurance", "Lifetime Support"]
     }
   ];
 
@@ -43,12 +43,12 @@ export function Services() {
           </div>
 
           <h2 id="services-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            We build digital experiences that
-            <span className="italic text-accent"> earn trust through thoughtful craftsmanship</span>
+            We craft pixel-perfect experiences with
+            <span className="italic text-accent"> obsessive attention to detail</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Every project starts with security, performance, and user experience as non-negotiables. We don&apos;t cut corners because your reputation depends on what we build.
+            Every project begins with custom design systems built from scratch. We position every pixel with mathematical precision because your brand deserves perfection, not templates.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export function Services() {
         {/* Call to action */}
         <div className="text-center border-t border-border/50 pt-16">
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Ready to build something that stands the test of time? Let&apos;s discuss your project over a 30-minute consultation.
+            Ready to create a pixel-perfect digital experience that reflects your brand's excellence? Let&apos;s discuss your vision over a 30-minute consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="px-8 py-3 bg-primary hover:bg-primary/90">

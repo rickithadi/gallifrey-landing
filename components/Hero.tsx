@@ -17,13 +17,13 @@ export function Hero() {
         {/* Main headline - Faculty Dept inspired typography */}
         <header className="text-center mb-16">
           <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-primary">
-            We build digital experiences
+            We craft pixel-perfect
             <br />
-            <span className="italic text-accent">worth trusting</span>
+            <span className="italic text-accent">digital experiences</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
-            Security-first web development that doesn&apos;t compromise on design or performance. Starting at $500, because good work shouldn&apos;t break the bank.
+            Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $500, because exceptional work shouldn&apos;t break the bank.
           </p>
         </header>
 
@@ -48,9 +48,9 @@ export function Hero() {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
               <Shield className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Security by Design</h3>
+            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Pixel-Perfect Design</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              GDPR compliance, data encryption, and privacy protection built into every project from day one.
+              Every element positioned with mathematical precision. Custom design systems built from scratch with obsessive attention to detail.
             </p>
           </div>
 
@@ -58,9 +58,9 @@ export function Hero() {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
               <Zap className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Performance First</h3>
+            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Performance Perfection</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              Optimized for speed, SEO, and user experience. Your site loads fast and ranks well.
+              Hand-optimized code architecture for lightning-fast loading. Every interaction smooth, every animation purposeful.
             </p>
           </div>
 
@@ -68,9 +68,9 @@ export function Hero() {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
               <Users className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Human-Centered</h3>
+            <h3 className="font-serif text-xl font-medium mb-4 text-primary">Security by Design</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              We design for real people, not just metrics. Accessible, intuitive, and genuinely useful.
+              Military-grade security woven into every line of code. GDPR compliance and privacy protection built from the ground up.
             </p>
           </div>
         </div>
@@ -78,11 +78,11 @@ export function Hero() {
         {/* Trust indicators - more subtle */}
         <div className="mt-20 pt-8 border-t border-border/50">
           <div className="flex flex-wrap justify-center items-center gap-8 text-xs text-muted-foreground/80 uppercase tracking-wider">
-            <span>Enterprise Security</span>
+            <span>Pixel-Perfect Craftsmanship</span>
             <span>•</span>
-            <span>Boutique Service</span>
+            <span>Custom Design Systems</span>
             <span>•</span>
-            <span>Satisfaction Guaranteed</span>
+            <span>Obsessive Attention to Detail</span>
           </div>
         </div>
       </div>
