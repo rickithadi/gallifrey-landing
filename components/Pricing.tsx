@@ -47,7 +47,7 @@ export function Pricing() {
         "Dedicated support team"
       ],
       timeline: "4-12 weeks",
-      cta: "Let's discuss"
+      cta: "Let&apos;s discuss"
     }
   ];
 
@@ -64,7 +64,7 @@ export function Pricing() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            Digital independence shouldn't
+            Digital independence shouldn&apos;t
             <span className="italic text-accent"> break the bank</span>
           </h2>
 

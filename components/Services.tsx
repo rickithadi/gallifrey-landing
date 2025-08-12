@@ -48,7 +48,7 @@ export function Services() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            We don't just build websites—we create digital sanctuaries where your brand can thrive
+            We don&apos;t just build websites—we create digital sanctuaries where your brand can thrive
             without the fear of platform changes, algorithm updates, or disappearing content.
           </p>
         </div>
