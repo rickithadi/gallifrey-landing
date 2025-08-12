@@ -47,7 +47,7 @@ export function OwnYourNarrative() {
     {
       number: "03",
       title: "Protected, Not Exposed",
-      description: "Your data and your customers' trust, safeguarded without compromise",
+      description: "Your data and your customers&apos; trust, safeguarded without compromise",
       icon: <Lock className="w-6 h-6" />
     }
   ];
@@ -125,7 +125,7 @@ export function OwnYourNarrative() {
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8">
               Your story is too important
               <br />
-              <span className="italic text-gallifrey-orange">to be buried in someone else's algorithm</span>
+              <span className="italic text-gallifrey-orange">to be buried in someone else&apos;s algorithm</span>
             </h2>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">

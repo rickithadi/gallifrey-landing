@@ -54,8 +54,11 @@ export function Header() {
               variant="outline"
               size="sm"
               className="hidden sm:flex text-sm border-muted-foreground/20 hover:bg-muted/50"
+              asChild
             >
-              Get in touch
+              <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
+                Get in touch
+              </a>
             </Button>
 
             {/* Mobile menu button */}
@@ -103,8 +106,11 @@ export function Header() {
                   variant="outline"
                   size="sm"
                   className="w-full text-sm border-muted-foreground/20"
+                  asChild
                 >
-                  Get in touch
+                  <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
+                    Get in touch
+                  </a>
                 </Button>
               </div>
             </nav>

@@ -17,25 +17,28 @@ export function Hero() {
         {/* Main headline - Faculty Dept inspired typography */}
         <header className="text-center mb-16">
           <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-primary">
-            Own Your Story.
+            We build digital experiences
             <br />
-            <span className="italic text-accent">Secure Your Future.</span>
+            <span className="italic text-accent">worth trusting</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-body">
-            For ambitious entrepreneurs who refuse to let social platforms control their story—we build secure,
-            stunning websites that amplify your voice and protect your audience.
+            Security-first web development that doesn't compromise on design or performance. Starting at $500, because good work shouldn't break the bank.
           </p>
         </header>
 
         {/* CTA Section */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
-          <Button size="lg" className="px-8 py-3 bg-primary hover:bg-primary/90 transition-colors">
-            Start a project
-            <ArrowRight className="w-4 h-4 ml-2" />
+          <Button size="lg" className="px-8 py-3 bg-primary hover:bg-primary/90 transition-colors" asChild>
+            <a href="#contact">
+              Start a project
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
           </Button>
-          <Button size="lg" variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50">
-            30-minute consultation
+          <Button size="lg" variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50" asChild>
+            <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
+              30-minute consultation
+            </a>
           </Button>
         </div>
 

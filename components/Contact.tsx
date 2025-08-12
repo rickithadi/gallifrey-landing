@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Mail, MessageCircle } from "lucide-react";
+import { ArrowRight, Calendar, Clock, Mail, MessageCircle } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 import { Button } from "./ui/button";
@@ -128,6 +128,28 @@ export function Contact() {
 
           {/* Contact info */}
           <div className="space-y-8">
+            {/* Schedule Call CTA */}
+            <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+              <div className="text-center mb-4">
+                <Calendar className="w-8 h-8 text-accent mx-auto mb-3" />
+                <h3 className="font-serif text-lg font-medium text-primary mb-2">
+                  Skip the form?
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Book a 30-minute consultation directly
+                </p>
+              </div>
+              <Button
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                asChild
+              >
+                <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
+                  Schedule a Call
+                  <Calendar className="w-4 h-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+
             <div>
               <h3 className="font-serif text-xl font-medium mb-4 text-primary">
                 Direct Contact
