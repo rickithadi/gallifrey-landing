@@ -5,18 +5,18 @@ export function Process() {
   const processSteps = [
     {
       number: "01",
-      title: "Discovery",
-      description: "We start with a 30-minute consultation to understand your goals, audience, and technical requirements."
+      title: "Discovery & Strategy",
+      description: "Understanding your goals, audience, and technical requirements. Security assessment if needed."
     },
     {
       number: "02",
-      title: "Strategy",
-      description: "Detailed proposal with timeline, security plan, and design direction tailored to your needs."
+      title: "Design & Planning",
+      description: "Detailed proposal with timeline, secure architecture design, and creative direction tailored to your needs."
     },
     {
       number: "03",
-      title: "Development",
-      description: "Iterative development with regular check-ins and transparent progress updates."
+      title: "Development & Testing",
+      description: "Iterative development with security built-in, regular check-ins, and transparent progress updates."
     },
     {
       number: "04",
@@ -34,7 +34,7 @@ export function Process() {
               How we work together
             </h3>
             <p className="text-muted-foreground max-w-2xl">
-              A transparent, collaborative process designed to deliver results without surprises.
+              A transparent, collaborative process designed to deliver exceptional results with security built-in from day one.
             </p>
           </div>
 

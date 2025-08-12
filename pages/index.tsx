@@ -47,7 +47,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $500. Own your digital narrative with custom web solutions.",
+        "description": "Melbourne custom software development with security built-in. Bespoke websites, applications, and digital solutions at reasonable prices. Plus dedicated security services: pen tests, audits, appsec.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -80,9 +80,9 @@ export default function Home() {
       },
       {
         "@type": "Service",
-        "@id": "https://gallifrey.consulting/#webdevelopment",
-        "name": "Security-First Web Development",
-        "description": "Custom web development with built-in security, GDPR compliance, and performance optimization",
+        "@id": "https://gallifrey.consulting/#customdevelopment",
+        "name": "Custom Software Development & Security Services",
+        "description": "Bespoke software development with security built-in, plus dedicated security services including penetration testing, security audits, and application security",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -92,36 +92,36 @@ export default function Home() {
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Web Development Services",
+          "name": "Custom Development & Security Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Starter Package",
-                "description": "Single-page application with basic security implementation"
+                "name": "Custom Website Development",
+                "description": "Bespoke website development with security built-in from day one"
               },
-              "price": "500",
+              "price": "1500",
               "priceCurrency": "AUD"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Professional Package",
-                "description": "Multi-page website with payment integration and advanced security"
+                "name": "Custom Application Development",
+                "description": "Full-stack application development with enterprise-grade security"
+              },
+              "price": "5000",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Security Services",
+                "description": "Penetration testing, security audits, and application security consulting"
               },
               "price": "2500",
-              "priceCurrency": "AUD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Enterprise Package",
-                "description": "Complex web applications with full security audit"
-              },
-              "price": "10000",
               "priceCurrency": "AUD"
             }
           ]
@@ -132,7 +132,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#website",
         "url": "https://gallifrey.consulting",
         "name": "Gallifrey Consulting",
-        "description": "Security-First Web Development Melbourne",
+        "description": "Custom Software Development Melbourne | Security-First",
         "publisher": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -152,10 +152,10 @@ export default function Home() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What makes Gallifrey Consulting different from other web development agencies?",
+            "name": "What makes Gallifrey Consulting different from other development agencies?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We specialize in security-first development with GDPR compliance built in from day one. Our 'Own Your Narrative' approach helps businesses move away from platform dependency to digital independence."
+              "text": "We're custom software developers who build security in from day one, not as an afterthought. Every website, application, and digital solution we create has enterprise-grade security built-in. Plus, we offer dedicated security services like penetration testing and security audits."
             }
           },
           {
@@ -168,10 +168,10 @@ export default function Home() {
           },
           {
             "@type": "Question",
-            "name": "What is included in your security-first approach?",
+            "name": "What development and security services do you provide?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our security-first approach includes GDPR compliance, data encryption, privacy protection, secure payment integration, regular security audits, and performance optimization for better SEO rankings."
+              "text": "We provide custom software development (websites, applications, digital solutions) with security built-in, plus dedicated security services including penetration testing, security audits, application security consulting, GDPR compliance, and privacy-by-design architecture."
             }
           }
         ]
@@ -182,13 +182,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Security-First Web Development Melbourne | Own Your Digital Narrative"
-        description="Melbourne web development agency specializing in secure, GDPR-compliant websites. Custom solutions starting at $500. Move from platform dependency to digital independence."
+        title="Digital Experiences Worth Trusting | Gallifrey Digital Melbourne"
+        description="Security-first web development that doesn't compromise on design or performance. Starting at $500, because good work shouldn't break the bank."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Security-First Web Development Melbourne | Own Your Digital Narrative',
-          description: 'Melbourne web development agency specializing in secure, GDPR-compliant websites. Custom solutions starting at $500. Move from platform dependency to digital independence.',
+          title: 'Digital Experiences Worth Trusting | Gallifrey Digital Melbourne',
+          description: 'Security-first web development that doesn\'t compromise on design or performance. Starting at $500, because good work shouldn\'t break the bank.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -202,7 +202,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'web development Melbourne, secure websites, GDPR compliance, custom web design, digital independence, platform migration, security-first development, Melbourne web agency, personal brand websites, creator economy, small business websites'
+            content: 'web development Melbourne, security-first development, custom websites, digital experiences, GDPR compliance, performance optimization, boutique web development, trusted web development Melbourne'
           },
           {
             property: 'article:author',

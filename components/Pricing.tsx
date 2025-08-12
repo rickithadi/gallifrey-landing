@@ -64,13 +64,12 @@ export function Pricing() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            Digital independence shouldn't
-            <span className="italic text-accent"> break the bank</span>
+            Transparent pricing for
+            <span className="italic text-accent"> exceptional work</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Fair, transparent pricing for websites that work as hard as you do. Every project includes
-            security, performance optimization, and the freedom to own your digital story completely.
+            No hidden fees, no surprises. Every project includes security, performance optimization, and ongoing support. You only pay when you're completely satisfied.
           </p>
         </div>
 

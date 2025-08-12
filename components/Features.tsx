@@ -1,6 +1,7 @@
-import { Badge } from "./ui/badge";
+import { BarChart3, Database, Palette, Rocket, Shield, Users } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
-import { Database, Users, Palette, Rocket, Shield, BarChart3 } from "lucide-react";
+
+import { Badge } from "./ui/badge";
 
 export function Features() {
   const processSteps = [
@@ -11,7 +12,7 @@ export function Features() {
       icon: <Users className="w-6 h-6" />
     },
     {
-      number: "02", 
+      number: "02",
       title: "UX/UI & Bespoke Design",
       description: "Research-driven wireframes → high-fidelity prototypes → custom style guides with consistent brand systems.",
       icon: <Palette className="w-6 h-6" />
@@ -54,7 +55,7 @@ export function Features() {
             Our Bespoke Process
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Relationship-driven development with ongoing dialogue through dedicated channels. 
+            Relationship-driven development with ongoing dialogue through dedicated channels.
             We adapt iteratively based on your feedback and evolving business needs.
           </p>
         </div>
@@ -96,7 +97,7 @@ export function Features() {
                     <p className="text-sm text-muted-foreground">Built with modern, scalable technologies</p>
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 gap-3">
                   {capabilities.map((capability, index) => (
                     <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50">
@@ -105,7 +106,7 @@ export function Features() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-6 p-4 bg-accent/5 rounded-lg border border-accent/10">
                   <div className="flex items-center gap-2 mb-2">
                     <BarChart3 className="w-4 h-4 text-accent" />

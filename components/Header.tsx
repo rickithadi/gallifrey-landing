@@ -1,7 +1,6 @@
 import { Menu, X } from "lucide-react";
 
 import { Button } from "./ui/button";
-import Link from "next/link";
 import { Logo } from "./Logo";
 import { useState } from "react";
 
@@ -10,7 +9,6 @@ export function Header() {
 
   const navItems = [
     { href: "#services", label: "Services" },
-    { href: "/own-your-narrative", label: "Own Your Narrative", isExternal: true },
     { href: "#work", label: "Work" },
     { href: "#pricing", label: "Pricing" },
     { href: "#contact", label: "Contact" },
@@ -28,23 +26,13 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.isExternal ? (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  {item.label}
-                </a>
-              )
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+              >
+                {item.label}
+              </a>
             ))}
           </nav>
 
@@ -81,25 +69,14 @@ export function Header() {
           <div className="lg:hidden py-6 border-t border-border/30">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                item.isExternal ? (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 py-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 py-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                )
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
               ))}
               <div className="pt-4 border-t border-border/30">
                 <Button
