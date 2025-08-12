@@ -56,17 +56,50 @@ export function OwnYourNarrative() {
     {
       title: "Personal Brand Liberation",
       description: "Break free from social media dependency with a website that truly represents you",
-      features: ["Custom domain ownership", "SEO-optimized content", "Direct audience connection", "No algorithm interference"]
+      price: "From $1,500",
+      timeline: "2-3 weeks",
+      successMetric: "90% reduction in platform dependency",
+      features: [
+        "Custom domain ownership & hosting setup",
+        "SEO-optimized content architecture",
+        "Direct audience connection tools",
+        "Email list integration & automation",
+        "Social media backup & migration",
+        "Analytics & performance tracking"
+      ],
+      process: ["Discovery & Brand Audit", "Content Strategy", "Design & Development", "Launch & Training"]
     },
     {
       title: "Creator Economy Platform",
       description: "Monetize your expertise with secure payment integration and subscriber management",
-      features: ["Subscription billing", "Course delivery", "Community features", "Analytics dashboard"]
+      price: "From $3,500",
+      timeline: "4-6 weeks",
+      successMetric: "3x increase in direct revenue",
+      features: [
+        "Subscription billing & payment processing",
+        "Course delivery & content protection",
+        "Community features & member portals",
+        "Analytics dashboard & revenue tracking",
+        "Automated email sequences",
+        "Mobile-responsive learning platform"
+      ],
+      process: ["Revenue Strategy", "Platform Architecture", "Payment Integration", "Content Migration"]
     },
     {
       title: "Digital Storytelling Hub",
       description: "Showcase your work, share your story, and build authentic connections",
-      features: ["Portfolio showcase", "Blog platform", "Contact integration", "Social proof display"]
+      price: "From $2,500",
+      timeline: "3-4 weeks",
+      successMetric: "5x increase in direct inquiries",
+      features: [
+        "Portfolio showcase with case studies",
+        "Blog platform with SEO optimization",
+        "Contact integration & lead capture",
+        "Social proof display & testimonials",
+        "Media kit & press resources",
+        "Speaking engagement booking system"
+      ],
+      process: ["Story Architecture", "Visual Design", "Content Creation", "SEO Optimization"]
     }
   ];
 
@@ -175,28 +208,63 @@ export function OwnYourNarrative() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8">
               {personalBrandServices.map((service, index) => (
                 <div key={index} className="group">
                   <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 hover:border-gallifrey-orange/30">
+                    {/* Header with pricing and timeline */}
                     <div className="mb-6">
-                      <div className="w-3 h-3 bg-gallifrey-orange rounded-full mb-4"></div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-3 h-3 bg-gallifrey-orange rounded-full"></div>
+                        <div className="text-right">
+                          <div className="text-sm font-medium text-gallifrey-orange">{service.price}</div>
+                          <div className="text-xs text-muted-foreground">{service.timeline}</div>
+                        </div>
+                      </div>
+
                       <h4 className="font-serif text-xl font-medium mb-3 text-primary group-hover:text-gallifrey-orange transition-colors">
                         {service.title}
                       </h4>
+
                       <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                         {service.description}
                       </p>
+
+                      {/* Success metric */}
+                      <div className="bg-gallifrey-orange/5 border border-gallifrey-orange/20 rounded-lg p-3 mb-4">
+                        <div className="text-xs font-medium text-gallifrey-orange uppercase tracking-wider mb-1">
+                          Success Metric
+                        </div>
+                        <div className="text-sm font-medium text-primary">
+                          {service.successMetric}
+                        </div>
+                      </div>
                     </div>
 
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Heart className="w-3 h-3 text-gallifrey-orange flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Features */}
+                    <div className="mb-6">
+                      <h5 className="text-sm font-medium text-primary mb-3">What's Included:</h5>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <Heart className="w-3 h-3 text-gallifrey-orange flex-shrink-0 mt-0.5" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Process steps */}
+                    <div className="border-t border-border/50 pt-4">
+                      <h5 className="text-sm font-medium text-primary mb-3">Our Process:</h5>
+                      <div className="grid grid-cols-2 gap-2">
+                        {service.process.map((step, stepIndex) => (
+                          <div key={stepIndex} className="text-xs text-muted-foreground bg-muted/30 rounded px-2 py-1">
+                            {stepIndex + 1}. {step}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}

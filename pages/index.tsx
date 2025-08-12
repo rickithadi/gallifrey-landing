@@ -5,7 +5,6 @@ import Head from 'next/head'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
-import { OwnYourNarrative } from '@/components/OwnYourNarrative'
 import { Pricing } from '@/components/Pricing'
 import { Services } from '@/components/Services'
 
@@ -230,7 +229,6 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
-        <OwnYourNarrative />
         <Features />
         <Pricing />
         <Contact />
