@@ -48,7 +48,7 @@ export function Services() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Every project starts with security, performance, and user experience as non-negotiables. We don't cut corners because your reputation depends on what we build.
+            Every project starts with security, performance, and user experience as non-negotiables. We don&apos;t cut corners because your reputation depends on what we build.
           </p>
         </div>
 

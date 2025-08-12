@@ -69,7 +69,7 @@ export function Pricing() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            No hidden fees, no surprises. Every project includes security, performance optimization, and ongoing support. You only pay when you're completely satisfied.
+            No hidden fees, no surprises. Every project includes security, performance optimization, and ongoing support. You only pay when you&apos;re completely satisfied.
           </p>
         </div>
 
