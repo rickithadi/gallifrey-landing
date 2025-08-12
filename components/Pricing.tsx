@@ -47,7 +47,7 @@ export function Pricing() {
         "Dedicated support team"
       ],
       timeline: "4-12 weeks",
-      cta: "Let's discuss"
+      cta: "Let&apos;s discuss"
     }
   ];
 

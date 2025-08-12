@@ -8,6 +8,7 @@ import { NextSeo } from 'next-seo'
 import { Pricing } from '@/components/Pricing'
 import { Process } from '@/components/Process'
 import { Services } from '@/components/Services'
+// import { Work } from '@/components/Work'
 
 export default function Home() {
   const structuredData = {
@@ -230,6 +231,7 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
+        {/* <Work /> */}
         <Process />
         <Features />
         <Pricing />

@@ -56,7 +56,7 @@ export function Process() {
 
           <div className="text-center">
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Ready to start your project? Let's discuss your requirements and create something exceptional together.
+              Ready to start your project? Let&apos;s discuss your requirements and create something exceptional together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="px-8 py-3 bg-primary hover:bg-primary/90">

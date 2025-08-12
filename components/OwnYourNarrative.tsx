@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowRight, Crown, Edit3, Eye, Globe, Heart, Home, Lock, Shield, TrendingDown, Unlock, Users, X, Zap } from "lucide-react";
+import { AlertTriangle, ArrowRight, Crown, Eye, Globe, Home, Lock, Shield, TrendingDown, Unlock, Users, X } from "lucide-react";
 
 import { Button } from "./ui/button";
 
@@ -25,7 +25,7 @@ export function OwnYourNarrative() {
     {
       icon: <Users className="w-5 h-5" />,
       problem: "Audience Control",
-      description: "Can't reach your own followers",
+      description: "Can&apos;t reach your own followers",
       company: "All Platforms"
     },
     {
@@ -75,7 +75,7 @@ export function OwnYourNarrative() {
     {
       number: "03",
       title: "Privacy & Protection",
-      description: "Keep your data and your audience's trust secure",
+      description: "Keep your data and your audience&apos;s trust secure",
       icon: <Lock className="w-6 h-6" />
     }
   ];
@@ -177,7 +177,7 @@ export function OwnYourNarrative() {
                 The <span className="text-destructive">Platform Trap</span>
               </h3>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-                Big Tech companies profit by keeping you dependent. Here's how they control your business:
+                Big Tech companies profit by keeping you dependent. Here&apos;s how they control your business:
               </p>
             </div>
 
@@ -210,7 +210,7 @@ export function OwnYourNarrative() {
                 <span className="text-destructive">Platform Dependency</span> vs <span className="text-gallifrey-orange">Digital Independence</span>
               </h3>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Stop renting space in someone else's digital empire. Build your own kingdom.
+                Stop renting space in someone else&apos;s digital empire. Build your own kingdom.
               </p>
             </div>
 
@@ -254,7 +254,7 @@ export function OwnYourNarrative() {
                 <Crown className="w-6 h-6 text-gallifrey-orange" />
               </div>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Stop being a digital tenant. Become a digital sovereign. Here's how we liberate your brand:
+                Stop being a digital tenant. Become a digital sovereign. Here&apos;s how we liberate your brand:
               </p>
             </div>
 
@@ -322,7 +322,7 @@ export function OwnYourNarrative() {
 
                     {/* Features */}
                     <div className="mb-6">
-                      <h5 className="text-sm font-medium text-primary mb-3">What's Included:</h5>
+                      <h5 className="text-sm font-medium text-primary mb-3">What&apos;s Included:</h5>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
