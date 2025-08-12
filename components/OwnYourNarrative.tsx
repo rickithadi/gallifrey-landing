@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Crown, Eye, Globe, Home, Lock, Shield, Star, TrendingUp, Users, X, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, Crown, Eye, Globe, Home, Lock, Shield, Star, TrendingUp, Zap } from "lucide-react";
 
 import { Button } from "./ui/button";
 
@@ -63,7 +63,7 @@ export function OwnYourNarrative() {
       icon: <Lock className="w-8 h-8" />,
       title: "Digital Privacy",
       subtitle: "Data Protection & Security",
-      description: "Protect your family's digital footprint with data broker removal and privacy-first website architecture that keeps your information secure.",
+      description: "Protect your family&apos;s digital footprint with data broker removal and privacy-first website architecture that keeps your information secure.",
       features: [
         "Data broker removal service",
         "Privacy-first website design",
@@ -88,7 +88,7 @@ export function OwnYourNarrative() {
       category: "Privacy-Conscious Parent",
       name: "Michael Rodriguez",
       location: "Melbourne, VIC",
-      quote: "They removed our family's data from 47 data brokers and built us a secure family website. Finally, we own our digital story.",
+      quote: "They removed our family&apos;s data from 47 data brokers and built us a secure family website. Finally, we own our digital story.",
       metric: "47 data brokers cleaned",
       avatar: "MR"
     },
@@ -218,7 +218,7 @@ export function OwnYourNarrative() {
                 <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"> Ownership</span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                When you own your digital presence, you gain control, credibility, and competitive advantages that platforms simply can't provide.
+                When you own your digital presence, you gain control, credibility, and competitive advantages that platforms simply can&apos;t provide.
               </p>
             </div>
 
@@ -361,7 +361,7 @@ export function OwnYourNarrative() {
                     </div>
 
                     <blockquote className="text-slate-700 leading-relaxed mb-4 italic">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </blockquote>
 
                     <div className="text-sm font-semibold text-green-600">

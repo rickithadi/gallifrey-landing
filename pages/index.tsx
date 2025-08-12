@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer'
 import Head from 'next/head'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { Pricing } from '@/components/Pricing'
 import { Process } from '@/components/Process'
@@ -156,7 +157,7 @@ export default function Home() {
             "name": "What makes Gallifrey Consulting different from other development agencies?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We're pixel-perfect web developers who craft custom design systems with obsessive attention to detail. Every website and digital solution we create is hand-coded from scratch with mathematical precision. Plus, we offer digital sovereignty and privacy protection services."
+              "text": "We&apos;re pixel-perfect web developers who craft custom design systems with obsessive attention to detail. Every website and digital solution we create is hand-coded from scratch with mathematical precision. Plus, we offer digital sovereignty and privacy protection services."
             }
           },
           {
@@ -164,7 +165,7 @@ export default function Home() {
             "name": "Do you serve clients outside of Melbourne?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, while we're based in Melbourne, we serve clients across Australia and internationally. All our services can be delivered remotely with excellent communication and project management."
+              "text": "Yes, while we&apos;re based in Melbourne, we serve clients across Australia and internationally. All our services can be delivered remotely with excellent communication and project management."
             }
           },
           {
@@ -250,11 +251,11 @@ export default function Home() {
             </h2>
 
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
-              Stop building someone else's empire. Break free from Big Tech dependency with custom websites, data privacy protection, and complete digital independence.
+              Stop building someone else&apos;s empire. Break free from Big Tech dependency with custom websites, data privacy protection, and complete digital independence.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/own-your-narrative"
                 className="inline-flex items-center px-8 py-3 bg-white text-[#1a237e] font-medium rounded-lg hover:bg-white/90 transition-colors"
               >
@@ -262,13 +263,13 @@ export default function Home() {
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/own-your-narrative"
                 className="inline-flex items-center px-8 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
 
             {/* Trust indicators */}

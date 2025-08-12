@@ -32,7 +32,7 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
     }, 3000); // Change word every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [adjectives.length]);
 
   return (
     <span

@@ -96,7 +96,7 @@ export default function OwnYourNarrativePage() {
         openGraph={{
           url: 'https://gallifrey.consulting/own-your-narrative',
           title: 'Stop Being The Product - Own Your Digital Narrative | Gallifrey Consulting',
-          description: 'Stop building someone else\'s empire. Break free from Big Tech dependency with professional web development, data privacy protection, and complete digital independence at accessible prices.',
+          description: 'Stop building someone else&apos;s empire. Break free from Big Tech dependency with professional web development, data privacy protection, and complete digital independence at accessible prices.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image-narrative.jpg',
