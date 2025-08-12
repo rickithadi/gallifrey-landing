@@ -1,3 +1,5 @@
+import { Logo } from "./Logo";
+
 export function Footer() {
   return (
     <footer className="bg-background border-t border-border/50">
@@ -7,12 +9,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <div>
               <div className="mb-4">
-                <span className="font-serif text-2xl font-medium text-primary tracking-tight">
-                  Gallifrey
-                </span>
-                <div className="text-xs text-muted-foreground/80 font-medium tracking-wider uppercase mt-0.5">
-                  Consulting
-                </div>
+                <Logo width={140} height={43} />
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-md">
                 We build digital experiences that earn trust through thoughtful craftsmanship,

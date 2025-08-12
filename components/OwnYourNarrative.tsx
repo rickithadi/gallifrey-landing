@@ -1,144 +1,225 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Edit3, Eye, Globe, Heart, Lock, Shield, Users, Zap } from "lucide-react";
+
 import { Button } from "./ui/button";
 
 export function OwnYourNarrative() {
-  const projects = [
+  const narrativeProblems = [
     {
-      title: "E-commerce Platform",
-      description: "Custom shopping experience with integrated payments and inventory management",
-      tech: ["Next.js", "Stripe", "PostgreSQL"],
-      category: "E-commerce"
+      icon: <Edit3 className="w-5 h-5" />,
+      problem: "Broken links",
+      description: "and disappearing posts"
     },
     {
-      title: "SaaS Dashboard",
-      description: "Analytics platform with real-time data visualization and user management",
-      tech: ["React", "D3.js", "Node.js"],
-      category: "SaaS"
+      icon: <Zap className="w-5 h-5" />,
+      problem: "Algorithm changes",
+      description: "beyond your control"
     },
     {
-      title: "Professional Portfolio",
-      description: "Personal brand website with content management and contact integration",
-      tech: ["Next.js", "Sanity CMS", "Vercel"],
-      category: "Portfolio"
+      icon: <Shield className="w-5 h-5" />,
+      problem: "Platform rule changes",
+      description: "that destroy years of work"
+    },
+    {
+      icon: <Eye className="w-5 h-5" />,
+      problem: "Poor SEO",
+      description: "hiding behind social walls"
+    },
+    {
+      icon: <Users className="w-5 h-5" />,
+      problem: "Zero ownership",
+      description: "of your audience and content"
     }
   ];
 
-  const process = [
+  const digitalIndependence = [
     {
-      step: "01",
-      title: "Discovery",
-      description: "We start with a 30-minute consultation to understand your goals, audience, and technical requirements."
+      number: "01",
+      title: "Your Story, Your Space",
+      description: "Stop paying rent to platforms that change the rules overnight",
+      icon: <Globe className="w-6 h-6" />
     },
     {
-      step: "02",
-      title: "Strategy",
-      description: "Detailed proposal with timeline, security plan, and design direction tailored to your needs."
+      number: "02",
+      title: "Found, Not Hidden",
+      description: "Websites that Google loves and customers can actually discover",
+      icon: <Eye className="w-6 h-6" />
     },
     {
-      step: "03",
-      title: "Development",
-      description: "Iterative development with regular check-ins and transparent progress updates."
+      number: "03",
+      title: "Protected, Not Exposed",
+      description: "Your data and your customers' trust, safeguarded without compromise",
+      icon: <Lock className="w-6 h-6" />
+    }
+  ];
+
+  const personalBrandServices = [
+    {
+      title: "Personal Brand Liberation",
+      description: "Break free from social media dependency with a website that truly represents you",
+      features: ["Custom domain ownership", "SEO-optimized content", "Direct audience connection", "No algorithm interference"]
     },
     {
-      step: "04",
-      title: "Launch & Support",
-      description: "Secure deployment with ongoing maintenance and support as your business grows."
+      title: "Creator Economy Platform",
+      description: "Monetize your expertise with secure payment integration and subscriber management",
+      features: ["Subscription billing", "Course delivery", "Community features", "Analytics dashboard"]
+    },
+    {
+      title: "Digital Storytelling Hub",
+      description: "Showcase your work, share your story, and build authentic connections",
+      features: ["Portfolio showcase", "Blog platform", "Contact integration", "Social proof display"]
     }
   ];
 
   return (
-    <section id="work" className="py-24 px-4 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
-        {/* Section header */}
-        <div className="mb-20">
-          <div className="mb-8">
-            <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
-              Selected Work
-            </p>
-            <div className="w-12 h-px bg-accent"></div>
-          </div>
+    <section id="own-your-narrative" className="relative overflow-hidden">
+      {/* Distinct visual identity with warm gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gallifrey-orange/5 via-background to-gallifrey-teal/5"></div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            Digital experiences that
-            <span className="italic text-accent"> perform and protect</span>
-          </h2>
-
-          <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            From personal portfolios to enterprise platforms, we build with the same attention to security,
-            performance, and user experience regardless of project size.
-          </p>
-        </div>
-
-        {/* Project showcase */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {projects.map((project, index) => (
-            <div key={index} className="group">
-              <div className="bg-background border border-border/50 rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300">
-                <div className="mb-4">
-                  <span className="text-xs font-medium text-accent uppercase tracking-wider">
-                    {project.category}
-                  </span>
-                </div>
-
-                <h3 className="font-serif text-xl font-medium mb-3 text-primary group-hover:text-accent transition-colors">
-                  {project.title}
-                </h3>
-
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {project.description}
+      <div className="relative py-32 px-4">
+        <div className="container mx-auto max-w-6xl">
+          {/* Campaign header with distinct styling */}
+          <div className="text-center mb-20">
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="w-8 h-px bg-gallifrey-orange"></div>
+                <p className="text-sm font-medium tracking-wider text-gallifrey-orange uppercase">
+                  Own Your Narrative Campaign
                 </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, techIndex) => (
-                    <span key={techIndex} className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <div className="w-8 h-px bg-gallifrey-orange"></div>
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Process section */}
-        <div className="border-t border-border/50 pt-20">
-          <div className="mb-12">
-            <h3 className="text-2xl md:text-3xl font-serif font-medium mb-4 text-primary">
-              How we work together
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8">
+              Your story is too important
+              <br />
+              <span className="italic text-gallifrey-orange">to be buried in someone else's algorithm</span>
+            </h2>
+
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
+              Every day, brilliant businesses lose customers to broken links, disappearing posts, and platform changes beyond their control.
+            </p>
+          </div>
+
+          {/* The Platform Problem - Visual grid */}
+          <div className="mb-24">
+            <h3 className="text-2xl md:text-3xl font-serif font-medium text-center mb-12 text-primary">
+              Every day, brilliant businesses lose customers to:
             </h3>
-            <p className="text-muted-foreground max-w-2xl">
-              A transparent, collaborative process designed to deliver results without surprises.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {process.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-accent font-medium">{item.step}</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+              {narrativeProblems.map((item, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-destructive/20 transition-colors">
+                    <div className="text-destructive">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <h4 className="font-serif text-lg font-medium mb-2 text-primary">
+                    {item.problem}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
-                <h4 className="font-serif text-lg font-medium mb-2 text-primary">
-                  {item.title}
-                </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Ready to start your project? Let&apos;s discuss your requirements and create something exceptional together.
+          {/* Digital Independence Mission */}
+          <div className="mb-24">
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
+                Our Mission: <span className="text-gallifrey-orange">Digital Independence</span>
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                We believe your brand deserves a home it owns, not a rented room on someone else's platform.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {digitalIndependence.map((item, index) => (
+                <div key={index} className="relative">
+                  <div className="bg-background/80 backdrop-blur-sm border border-gallifrey-orange/20 rounded-lg p-8 h-full hover:shadow-xl transition-all duration-300 hover:border-gallifrey-orange/40">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-gallifrey-orange/10 rounded-full flex items-center justify-center">
+                        <div className="text-gallifrey-orange">
+                          {item.icon}
+                        </div>
+                      </div>
+                      <span className="text-2xl font-serif font-medium text-gallifrey-orange">
+                        {item.number}
+                      </span>
+                    </div>
+
+                    <h4 className="font-serif text-xl font-medium mb-4 text-primary">
+                      {item.title}
+                    </h4>
+
+                    <p className="text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Personal Brand Services */}
+          <div className="mb-24">
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
+                Personal Brand <span className="text-gallifrey-orange">Liberation Services</span>
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Specialized offerings for creators, entrepreneurs, and personal brands ready to own their digital narrative.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {personalBrandServices.map((service, index) => (
+                <div key={index} className="group">
+                  <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 hover:border-gallifrey-orange/30">
+                    <div className="mb-6">
+                      <div className="w-3 h-3 bg-gallifrey-orange rounded-full mb-4"></div>
+                      <h4 className="font-serif text-xl font-medium mb-3 text-primary group-hover:text-gallifrey-orange transition-colors">
+                        {service.title}
+                      </h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <Heart className="w-3 h-3 text-gallifrey-orange flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Empowerment CTA */}
+          <div className="text-center bg-gradient-to-r from-gallifrey-orange/10 via-gallifrey-teal/10 to-gallifrey-orange/10 rounded-2xl p-12">
+            <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
+              Ready to <span className="text-gallifrey-orange">Own Your Narrative?</span>
+            </h3>
+
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Stop letting social platforms control your story. Build digital real estate you own completely.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="px-8 py-3 bg-primary hover:bg-primary/90">
-                Start your project
+              <Button size="lg" className="px-8 py-3 bg-gallifrey-orange hover:bg-gallifrey-orange/90 text-white">
+                Start Your Liberation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
-              <Button variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50">
-                View more work
+              <Button size="lg" variant="outline" className="px-8 py-3 border-gallifrey-orange/30 text-gallifrey-orange hover:bg-gallifrey-orange/10">
+                Free Strategy Call
               </Button>
             </div>
           </div>

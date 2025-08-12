@@ -43,13 +43,13 @@ export function Services() {
           </div>
 
           <h2 id="services-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            We build digital experiences that earn trust through
-            <span className="italic text-accent"> thoughtful craftsmanship</span>
+            Digital experiences that protect your story and
+            <span className="italic text-accent"> amplify your voice</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Every project starts with security, performance, and user experience as non-negotiables.
-            We don&apos;t cut corners because your reputation depends on what we build.
+            We don't just build websites—we create digital sanctuaries where your brand can thrive
+            without the fear of platform changes, algorithm updates, or disappearing content.
           </p>
         </div>
 

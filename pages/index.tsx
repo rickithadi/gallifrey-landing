@@ -20,9 +20,9 @@ export default function Home() {
         "url": "https://gallifrey.consulting",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://gallifrey.consulting/logo.png",
-          "width": 300,
-          "height": 100
+          "url": "https://gallifrey.consulting/gallifrey-logo.png",
+          "width": 436,
+          "height": 133
         },
         "contactPoint": {
           "@type": "ContactPoint",

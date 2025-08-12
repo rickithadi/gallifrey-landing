@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { Logo } from "./Logo";
 import { useState } from "react";
 
 export function Header() {
@@ -18,16 +18,9 @@ export function Header() {
     <header className="border-b border-border/30 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo - simplified, editorial style */}
+          {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="group">
-              <span className="font-serif text-2xl font-medium text-primary tracking-tight">
-                Gallifrey
-              </span>
-              <div className="text-xs text-muted-foreground/80 font-medium tracking-wider uppercase mt-0.5">
-                Consulting
-              </div>
-            </Link>
+            <Logo width={120} height={37} />
           </div>
 
           {/* Desktop Navigation */}

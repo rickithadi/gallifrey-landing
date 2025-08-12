@@ -121,4 +121,30 @@
     letter-spacing: 0.15em;
     font-weight: 500;
   }
+
+  /* Own Your Narrative Campaign Styles */
+  .narrative-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gallifrey-orange)) 0%,
+      hsl(var(--gallifrey-teal)) 100%
+    );
+  }
+
+  .narrative-text-gradient {
+    @apply bg-gradient-to-r from-gallifrey-orange via-gallifrey-teal to-gallifrey-orange bg-clip-text text-transparent;
+  }
+
+  .narrative-glow {
+    box-shadow: 0 0 20px hsl(var(--gallifrey-orange) / 0.3);
+  }
+
+  .narrative-border {
+    border-image: linear-gradient(
+        135deg,
+        hsl(var(--gallifrey-orange)),
+        hsl(var(--gallifrey-teal))
+      )
+      1;
+  }
 }
