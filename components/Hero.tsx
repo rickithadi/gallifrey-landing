@@ -4,19 +4,19 @@ import { Button } from "./ui/button";
 
 export function Hero() {
   return (
-    <section className="relative py-24 md:py-32 px-4">
+    <section className="relative py-24 md:py-32 px-4" aria-labelledby="hero-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Editorial-style intro */}
         <div className="mb-12 text-center">
           <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
             Digital Security & Strategy
           </p>
-          <div className="w-12 h-px bg-accent mx-auto"></div>
+          <div className="w-12 h-px bg-accent mx-auto" role="presentation"></div>
         </div>
 
         {/* Main headline - Faculty Dept inspired typography */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-primary">
+        <header className="text-center mb-16">
+          <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-primary">
             We build digital experiences
             <br />
             <span className="italic text-accent">worth trusting</span>
@@ -26,7 +26,7 @@ export function Hero() {
             Security-first web development that doesn&apos;t compromise on design or performance.
             Starting at $500, because good work shouldn&apos;t break the bank.
           </p>
-        </div>
+        </header>
 
         {/* CTA Section */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">

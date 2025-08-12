@@ -7,18 +7,18 @@ import { Textarea } from "./ui/textarea";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 px-4">
+    <section id="contact" className="py-24 px-4" aria-labelledby="contact-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
-        <div className="mb-20">
+        <header className="mb-20">
           <div className="mb-8">
             <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
               Get in Touch
             </p>
-            <div className="w-12 h-px bg-accent"></div>
+            <div className="w-12 h-px bg-accent" role="presentation"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
+          <h2 id="contact-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
             Let&apos;s build something
             <span className="italic text-accent"> exceptional together</span>
           </h2>
@@ -27,13 +27,13 @@ export function Contact() {
             Ready to start your project? Schedule a 30-minute consultation to discuss your requirements,
             timeline, and how we can help bring your vision to life.
           </p>
-        </div>
+        </header>
 
         <div className="grid lg:grid-cols-3 gap-16">
           {/* Contact form */}
           <div className="lg:col-span-2">
             <div className="bg-background border border-border/50 rounded-lg p-8">
-              <form className="space-y-6">
+              <form className="space-y-6" aria-label="Contact form">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="block text-sm font-medium text-primary">Name *</label>

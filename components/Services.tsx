@@ -5,25 +5,25 @@ import { Button } from "./ui/button";
 export function Services() {
   const services = [
     {
-      icon: <Shield className="w-6 h-6 text-accent" />,
+      icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
       title: "Security-First Development",
       description: "GDPR compliance, data encryption, and privacy protection built into every project from day one. No retrofitting, no compromises.",
       details: ["PCI-DSS Compliance", "Zero-Trust Architecture", "Penetration Testing"]
     },
     {
-      icon: <Palette className="w-6 h-6 text-accent" />,
+      icon: <Palette className="w-6 h-6 text-accent" aria-hidden="true" />,
       title: "Custom Design Systems",
       description: "Bespoke UI components and design languages that reflect your brand identity. No templates, no shortcuts.",
       details: ["Brand-Aligned Design", "Component Libraries", "Design Tokens"]
     },
     {
-      icon: <Code className="w-6 h-6 text-accent" />,
+      icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
       title: "Performance Engineering",
       description: "Fast, accessible, and SEO-optimized experiences that convert visitors into customers.",
       details: ["Core Web Vitals", "Accessibility (WCAG)", "Technical SEO"]
     },
     {
-      icon: <Users className="w-6 h-6 text-accent" />,
+      icon: <Users className="w-6 h-6 text-accent" aria-hidden="true" />,
       title: "Ongoing Partnership",
       description: "Transparent communication, flexible arrangements, and support that evolves with your business needs.",
       details: ["Open Communication", "Flexible Pricing", "Long-term Support"]
@@ -31,7 +31,7 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 px-4">
+    <section id="services" className="py-24 px-4" aria-labelledby="services-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
         <div className="mb-20">
@@ -42,7 +42,7 @@ export function Services() {
             <div className="w-12 h-px bg-accent"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
+          <h2 id="services-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
             We build digital experiences that earn trust through
             <span className="italic text-accent"> thoughtful craftsmanship</span>
           </h2>
