@@ -1,158 +1,243 @@
-import { ArrowRight, Edit3, Eye, Globe, Heart, Lock, Shield, Users, Zap } from "lucide-react";
+import { AlertTriangle, ArrowRight, Crown, Edit3, Eye, Globe, Heart, Home, Lock, Shield, TrendingDown, Unlock, Users, X, Zap } from "lucide-react";
 
 import { Button } from "./ui/button";
 
 export function OwnYourNarrative() {
-  const narrativeProblems = [
+  const platformProblems = [
     {
-      icon: <Edit3 className="w-5 h-5" />,
-      problem: "Broken links",
-      description: "and disappearing posts"
+      icon: <TrendingDown className="w-5 h-5" />,
+      problem: "Algorithm Changes",
+      description: "Your reach disappears overnight",
+      company: "Meta, TikTok"
     },
     {
-      icon: <Zap className="w-5 h-5" />,
-      problem: "Algorithm changes",
-      description: "beyond your control"
-    },
-    {
-      icon: <Shield className="w-5 h-5" />,
-      problem: "Platform rule changes",
-      description: "that destroy years of work"
+      icon: <X className="w-5 h-5" />,
+      problem: "Account Suspensions",
+      description: "Years of work deleted instantly",
+      company: "Twitter, Instagram"
     },
     {
       icon: <Eye className="w-5 h-5" />,
-      problem: "Poor SEO",
-      description: "hiding behind social walls"
+      problem: "Hidden from Search",
+      description: "Invisible behind platform walls",
+      company: "Facebook, LinkedIn"
     },
     {
       icon: <Users className="w-5 h-5" />,
-      problem: "Zero ownership",
-      description: "of your audience and content"
+      problem: "Audience Control",
+      description: "Can't reach your own followers",
+      company: "All Platforms"
+    },
+    {
+      icon: <AlertTriangle className="w-5 h-5" />,
+      problem: "Policy Changes",
+      description: "Rules change, you lose access",
+      company: "YouTube, Twitter"
     }
   ];
 
-  const digitalIndependence = [
+  const platformVsOwned = [
+    {
+      trap: "Rent their space forever",
+      freedom: "Own your digital home",
+      icon: <Home className="w-6 h-6" />
+    },
+    {
+      trap: "Algorithm controls your reach",
+      freedom: "Direct access to your audience",
+      icon: <Users className="w-6 h-6" />
+    },
+    {
+      trap: "Invisible to Google search",
+      freedom: "Found by customers searching",
+      icon: <Eye className="w-6 h-6" />
+    },
+    {
+      trap: "Data harvested and sold",
+      freedom: "Your data stays private",
+      icon: <Shield className="w-6 h-6" />
+    }
+  ];
+
+  const independenceSteps = [
     {
       number: "01",
-      title: "Your Story, Your Space",
-      description: "Stop paying rent to platforms that change the rules overnight",
+      title: "Your Digital Foundation",
+      description: "Build a professional website that you own completely",
       icon: <Globe className="w-6 h-6" />
     },
     {
       number: "02",
-      title: "Found, Not Hidden",
-      description: "Websites that Google loves and customers can actually discover",
+      title: "Organic Visibility",
+      description: "Get found by customers through search, not algorithms",
       icon: <Eye className="w-6 h-6" />
     },
     {
       number: "03",
-      title: "Protected, Not Exposed",
-      description: "Your data and your customers&apos; trust, safeguarded without compromise",
+      title: "Privacy & Protection",
+      description: "Keep your data and your audience's trust secure",
       icon: <Lock className="w-6 h-6" />
     }
   ];
 
   const personalBrandServices = [
     {
-      title: "Personal Brand Liberation",
-      description: "Break free from social media dependency with a website that truly represents you",
+      title: "Personal Website",
+      description: "A professional website that you own completely, designed to grow your audience and business",
       price: "From $1,500",
       timeline: "2-3 weeks",
-      successMetric: "90% reduction in platform dependency",
       features: [
-        "Custom domain ownership & hosting setup",
-        "SEO-optimized content architecture",
-        "Direct audience connection tools",
-        "Email list integration & automation",
-        "Social media backup & migration",
-        "Analytics & performance tracking"
+        "Custom domain & hosting setup",
+        "SEO-optimized design",
+        "Email list integration",
+        "Analytics & insights"
       ],
-      process: ["Discovery & Brand Audit", "Content Strategy", "Design & Development", "Launch & Training"]
+      process: ["Strategy", "Design", "Launch"]
     },
     {
-      title: "Creator Economy Platform",
-      description: "Monetize your expertise with secure payment integration and subscriber management",
+      title: "Creator Platform",
+      description: "Monetize your expertise with secure payment processing and content delivery",
       price: "From $3,500",
       timeline: "4-6 weeks",
-      successMetric: "3x increase in direct revenue",
       features: [
-        "Subscription billing & payment processing",
-        "Course delivery & content protection",
-        "Community features & member portals",
-        "Analytics dashboard & revenue tracking",
-        "Automated email sequences",
-        "Mobile-responsive learning platform"
+        "Payment processing",
+        "Course & content delivery",
+        "Member management",
+        "Revenue analytics"
       ],
-      process: ["Revenue Strategy", "Platform Architecture", "Payment Integration", "Content Migration"]
+      process: ["Planning", "Development", "Integration"]
     },
     {
-      title: "Digital Storytelling Hub",
-      description: "Showcase your work, share your story, and build authentic connections",
+      title: "Portfolio & Blog",
+      description: "Showcase your work and share your expertise through professional content",
       price: "From $2,500",
       timeline: "3-4 weeks",
-      successMetric: "5x increase in direct inquiries",
       features: [
-        "Portfolio showcase with case studies",
-        "Blog platform with SEO optimization",
-        "Contact integration & lead capture",
-        "Social proof display & testimonials",
-        "Media kit & press resources",
-        "Speaking engagement booking system"
+        "Portfolio showcase",
+        "Blog platform",
+        "Contact & lead capture",
+        "Social proof integration"
       ],
-      process: ["Story Architecture", "Visual Design", "Content Creation", "SEO Optimization"]
+      process: ["Content Strategy", "Design", "Optimization"]
     }
   ];
 
   return (
     <section id="own-your-narrative" className="relative overflow-hidden">
-      {/* Distinct visual identity with warm gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gallifrey-orange/5 via-background to-gallifrey-teal/5"></div>
+      {/* Liberation gradient background */}
+      <div className="absolute inset-0 narrative-gradient opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gallifrey-orange/15 via-background to-gallifrey-teal/10"></div>
 
-      <div className="relative py-32 px-4">
+      <div className="relative py-24 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* Campaign header with distinct styling */}
-          <div className="text-center mb-20">
-            <div className="mb-8">
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="w-8 h-px bg-gallifrey-orange"></div>
-                <p className="text-sm font-medium tracking-wider text-gallifrey-orange uppercase">
-                  Own Your Narrative Campaign
-                </p>
-                <div className="w-8 h-px bg-gallifrey-orange"></div>
-              </div>
+          {/* Revolutionary header */}
+          <div className="text-center mb-24">
+            {/* Digital Independence identifier */}
+            <div className="inline-flex items-center gap-3 mb-12">
+              <Unlock className="w-5 h-5 text-gallifrey-orange" />
+              <div className="w-8 h-px bg-gallifrey-orange"></div>
+              <p className="text-sm font-medium tracking-wider narrative-text-gradient uppercase font-bold">
+                Digital Sovereignty
+              </p>
+              <div className="w-8 h-px bg-gallifrey-orange"></div>
+              <Crown className="w-5 h-5 text-gallifrey-orange" />
             </div>
 
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8">
-              Your story is too important
-              <br />
-              <span className="italic text-gallifrey-orange">to be buried in someone else&apos;s algorithm</span>
-            </h2>
+            {/* Sophisticated headline */}
+            <div className="mb-16">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[0.9] mb-8 text-primary">
+                Stop Being The Product.
+                <br />
+                <span className="bg-gradient-to-r from-purple-600 to-teal-500 bg-clip-text text-transparent"> Own Your Digital Story.</span>
+              </h1>
+              <p className="text-xl md:text-2xl font-serif bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent leading-relaxed max-w-4xl mx-auto font-semibold">
+                We build secure, stunning websites that amplify your voice and protect your audience.
+              </p>
+            </div>
 
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
-              Every day, brilliant businesses lose customers to broken links, disappearing posts, and platform changes beyond their control.
-            </p>
+            {/* Urgency messaging */}
+            <div className="border-t border-gallifrey-orange/30 pt-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <AlertTriangle className="w-5 h-5 text-gallifrey-orange" />
+                <p className="text-lg font-semibold text-gallifrey-orange">
+                  The Platform Trap is Real
+                </p>
+                <AlertTriangle className="w-5 h-5 text-gallifrey-orange" />
+              </div>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Every day, brilliant businesses lose customers to broken links, disappearing posts, and platform changes beyond their control.
+              </p>
+            </div>
           </div>
 
-          {/* The Platform Problem - Visual grid */}
+          {/* The Platform Trap - Corporate Control */}
           <div className="mb-24">
-            <h3 className="text-2xl md:text-3xl font-serif font-medium text-center mb-12 text-primary">
-              Every day, brilliant businesses lose customers to:
-            </h3>
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                The <span className="text-destructive">Platform Trap</span>
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+                Big Tech companies profit by keeping you dependent. Here's how they control your business:
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
-              {narrativeProblems.map((item, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+              {platformProblems.map((item, index) => (
                 <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-destructive/20 transition-colors">
+                  <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-destructive/20 transition-colors border-2 border-destructive/20">
                     <div className="text-destructive">
                       {item.icon}
                     </div>
                   </div>
-                  <h4 className="font-serif text-lg font-medium mb-2 text-primary">
+                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
                     {item.problem}
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground mb-2">
                     {item.description}
                   </p>
+                  <p className="text-xs text-destructive font-medium">
+                    {item.company}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Big Tech vs Independence Comparison */}
+          <div className="mb-24">
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                <span className="text-destructive">Platform Dependency</span> vs <span className="text-gallifrey-orange">Digital Independence</span>
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Stop renting space in someone else's digital empire. Build your own kingdom.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {platformVsOwned.map((item, index) => (
+                <div key={index} className="relative">
+                  <div className="bg-gradient-to-br from-destructive/5 to-gallifrey-orange/5 border border-gallifrey-orange/20 rounded-lg p-6 h-full hover:shadow-xl transition-all duration-300 narrative-glow">
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="w-12 h-12 bg-gallifrey-orange/10 rounded-full flex items-center justify-center">
+                        <div className="text-gallifrey-orange">
+                          {item.icon}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* The Trap */}
+                    <div className="mb-4 p-3 bg-destructive/10 rounded border-l-4 border-destructive">
+                      <p className="text-sm font-medium text-destructive mb-1">❌ Big Tech Way:</p>
+                      <p className="text-sm text-muted-foreground">{item.trap}</p>
+                    </div>
+
+                    {/* The Freedom */}
+                    <div className="p-3 bg-gallifrey-orange/10 rounded border-l-4 border-gallifrey-orange">
+                      <p className="text-sm font-medium text-gallifrey-orange mb-1">✅ Your Website:</p>
+                      <p className="text-sm text-primary font-medium">{item.freedom}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -161,30 +246,34 @@ export function OwnYourNarrative() {
           {/* Digital Independence Mission */}
           <div className="mb-24">
             <div className="text-center mb-16">
-              <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
-                Our Mission: <span className="text-gallifrey-orange">Digital Independence</span>
-              </h3>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Crown className="w-6 h-6 text-gallifrey-orange" />
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary">
+                  Your <span className="narrative-text-gradient">Digital Declaration of Independence</span>
+                </h3>
+                <Crown className="w-6 h-6 text-gallifrey-orange" />
+              </div>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                We believe your brand deserves a home it owns, not a rented room on someone else's platform.
+                Stop being a digital tenant. Become a digital sovereign. Here's how we liberate your brand:
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {digitalIndependence.map((item, index) => (
+              {independenceSteps.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-background/80 backdrop-blur-sm border border-gallifrey-orange/20 rounded-lg p-8 h-full hover:shadow-xl transition-all duration-300 hover:border-gallifrey-orange/40">
+                  <div className="bg-gradient-to-br from-gallifrey-orange/10 to-gallifrey-teal/5 backdrop-blur-sm border border-gallifrey-orange/30 rounded-lg p-8 h-full hover:shadow-xl transition-all duration-300 hover:border-gallifrey-orange/50 narrative-glow">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-gallifrey-orange/10 rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gallifrey-orange/20 rounded-full flex items-center justify-center">
                         <div className="text-gallifrey-orange">
                           {item.icon}
                         </div>
                       </div>
-                      <span className="text-2xl font-serif font-medium text-gallifrey-orange">
+                      <span className="text-2xl font-serif font-bold text-gallifrey-orange">
                         {item.number}
                       </span>
                     </div>
 
-                    <h4 className="font-serif text-xl font-medium mb-4 text-primary">
+                    <h4 className="font-serif text-xl font-bold mb-4 text-primary">
                       {item.title}
                     </h4>
 
@@ -197,14 +286,14 @@ export function OwnYourNarrative() {
             </div>
           </div>
 
-          {/* Personal Brand Services */}
+          {/* Website Services */}
           <div className="mb-24">
             <div className="text-center mb-16">
               <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
-                Personal Brand <span className="text-gallifrey-orange">Liberation Services</span>
+                Website <span className="text-gallifrey-orange">Services</span>
               </h3>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Specialized offerings for creators, entrepreneurs, and personal brands ready to own their digital narrative.
+                Professional websites designed for creators, entrepreneurs, and businesses who want to own their digital presence.
               </p>
             </div>
 
@@ -226,19 +315,9 @@ export function OwnYourNarrative() {
                         {service.title}
                       </h4>
 
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      <p className="text-muted-foreground leading-relaxed mb-6">
                         {service.description}
                       </p>
-
-                      {/* Success metric */}
-                      <div className="bg-gallifrey-orange/5 border border-gallifrey-orange/20 rounded-lg p-3 mb-4">
-                        <div className="text-xs font-medium text-gallifrey-orange uppercase tracking-wider mb-1">
-                          Success Metric
-                        </div>
-                        <div className="text-sm font-medium text-primary">
-                          {service.successMetric}
-                        </div>
-                      </div>
                     </div>
 
                     {/* Features */}
@@ -247,7 +326,7 @@ export function OwnYourNarrative() {
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <Heart className="w-3 h-3 text-gallifrey-orange flex-shrink-0 mt-0.5" />
+                            <div className="w-1.5 h-1.5 bg-gallifrey-orange rounded-full flex-shrink-0 mt-2"></div>
                             {feature}
                           </li>
                         ))}
@@ -256,11 +335,11 @@ export function OwnYourNarrative() {
 
                     {/* Process steps */}
                     <div className="border-t border-border/50 pt-4">
-                      <h5 className="text-sm font-medium text-primary mb-3">Our Process:</h5>
-                      <div className="grid grid-cols-2 gap-2">
+                      <h5 className="text-sm font-medium text-primary mb-3">Process:</h5>
+                      <div className="flex gap-2">
                         {service.process.map((step, stepIndex) => (
-                          <div key={stepIndex} className="text-xs text-muted-foreground bg-muted/30 rounded px-2 py-1">
-                            {stepIndex + 1}. {step}
+                          <div key={stepIndex} className="text-xs text-muted-foreground bg-muted/30 rounded px-2 py-1 flex-1 text-center">
+                            {step}
                           </div>
                         ))}
                       </div>
@@ -271,24 +350,122 @@ export function OwnYourNarrative() {
             </div>
           </div>
 
-          {/* Empowerment CTA */}
-          <div className="text-center bg-gradient-to-r from-gallifrey-orange/10 via-gallifrey-teal/10 to-gallifrey-orange/10 rounded-2xl p-12">
-            <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
-              Ready to <span className="text-gallifrey-orange">Own Your Narrative?</span>
-            </h3>
+          {/* Liberation Process */}
+          <div className="mb-24">
+            <div className="border-t border-gallifrey-orange/20 pt-20">
+              <div className="mb-12 text-center">
+                <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">
+                  Your <span className="text-gallifrey-orange">Liberation Process</span>
+                </h3>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  From platform dependency to digital sovereignty in 4 strategic steps.
+                </p>
+              </div>
 
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Stop letting social platforms control your story. Build digital real estate you own completely.
-            </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div className="text-center group">
+                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
+                    <span className="text-gallifrey-orange font-bold text-lg">01</span>
+                  </div>
+                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
+                    Break Free
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Audit your platform dependencies and plan your digital independence strategy.
+                  </p>
+                </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="px-8 py-3 bg-gallifrey-orange hover:bg-gallifrey-orange/90 text-white">
-                Start Your Liberation
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline" className="px-8 py-3 border-gallifrey-orange/30 text-gallifrey-orange hover:bg-gallifrey-orange/10">
-                Free Strategy Call
-              </Button>
+                <div className="text-center group">
+                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
+                    <span className="text-gallifrey-orange font-bold text-lg">02</span>
+                  </div>
+                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
+                    Build Your Kingdom
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Design and develop your sovereign digital territory with full ownership.
+                  </p>
+                </div>
+
+                <div className="text-center group">
+                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
+                    <span className="text-gallifrey-orange font-bold text-lg">03</span>
+                  </div>
+                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
+                    Secure & Fortify
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Implement bulletproof security and SEO to protect and amplify your reach.
+                  </p>
+                </div>
+
+                <div className="text-center group">
+                  <div className="w-16 h-16 bg-gallifrey-orange/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gallifrey-orange/20 transition-colors border-2 border-gallifrey-orange/30">
+                    <span className="text-gallifrey-orange font-bold text-lg">04</span>
+                  </div>
+                  <h4 className="font-serif text-lg font-bold mb-2 text-primary">
+                    Rule Your Domain
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Launch your independent platform and never worry about algorithm changes again.
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  Ready to declare your digital independence? The revolution starts with one click.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button className="px-8 py-3 bg-gallifrey-orange hover:bg-gallifrey-orange/90 text-white font-bold narrative-glow">
+                    Start Your Liberation
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                  <Button variant="outline" className="px-8 py-3 border-2 border-gallifrey-orange/50 text-gallifrey-orange hover:bg-gallifrey-orange/10 font-medium">
+                    See Success Stories
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Professional CTA */}
+          <div className="relative">
+            <div className="text-center bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-12">
+              <h3 className="text-3xl md:text-4xl font-serif font-medium mb-6 text-primary">
+                Ready to <span className="text-gallifrey-orange">Own Your Story?</span>
+              </h3>
+
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Build a website that works for you, not against you. Own your content, own your audience, own your future.
+              </p>
+
+              {/* Clean CTA buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Button size="lg" className="px-8 py-3 bg-gallifrey-orange hover:bg-gallifrey-orange/90 text-white font-medium">
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+                <Button size="lg" variant="outline" className="px-8 py-3 border border-gallifrey-orange/50 text-gallifrey-orange hover:bg-gallifrey-orange/10">
+                  Schedule a Call
+                </Button>
+              </div>
+
+              {/* Simple trust indicators */}
+              <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground">
+                <span className="flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-gallifrey-orange" />
+                  Full Ownership
+                </span>
+                <span className="flex items-center gap-2">
+                  <Globe className="w-4 h-4 text-gallifrey-teal" />
+                  SEO Optimized
+                </span>
+                <span className="flex items-center gap-2">
+                  <Lock className="w-4 h-4 text-gallifrey-orange" />
+                  Secure & Fast
+                </span>
+              </div>
             </div>
           </div>
         </div>

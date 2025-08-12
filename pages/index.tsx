@@ -6,6 +6,7 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
 import { Pricing } from '@/components/Pricing'
+import { Process } from '@/components/Process'
 import { Services } from '@/components/Services'
 
 export default function Home() {
@@ -229,6 +230,7 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
+        <Process />
         <Features />
         <Pricing />
         <Contact />
