@@ -3,75 +3,75 @@ import { ArrowRight, CheckCircle, Crown, Eye, Globe, Home, Lock, Shield, Star, T
 import { Button } from "./ui/button";
 
 export function OwnYourNarrative() {
-  const platformProblems = [
+  const ownershipAdvantages = [
     {
-      icon: <X className="w-6 h-6" />,
-      title: "Memory Hostages",
-      description: "Your family photos and memories trapped behind platform walls",
-      impact: "Years of memories lost to policy changes"
+      icon: <Home className="w-6 h-6" />,
+      title: "Complete Control",
+      description: "Your website, your rules. No algorithm changes or policy updates affecting your business.",
+      benefit: "Predictable, stable digital presence"
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Family Data = Profit",
-      description: "Your personal information sold to the highest bidder",
-      impact: "Privacy violated for corporate gain"
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Your Story Isn't Yours",
-      description: "Algorithms decide who sees your content and when",
-      impact: "Your voice silenced by invisible forces"
+      icon: <Crown className="w-6 h-6" />,
+      title: "Professional Credibility",
+      description: "Custom domains and professional design signal quality and trustworthiness to clients.",
+      benefit: "Higher conversion rates and premium pricing"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Platform Death",
-      description: "Entire networks disappear, taking your audience with them",
-      impact: "Years of relationship building vanished overnight"
+      title: "Direct Relationships",
+      description: "Build genuine connections with your audience without platform intermediaries.",
+      benefit: "Higher lifetime customer value"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Data Ownership",
+      description: "Your customer data, analytics, and insights belong to you, not a platform.",
+      benefit: "Better business decisions and privacy"
     }
   ];
 
   const servicePillars = [
     {
       icon: <Home className="w-8 h-8" />,
-      title: "Your Digital Home",
-      subtitle: "Pixel-Perfect Website Development",
-      description: "Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection.",
+      title: "Professional Website",
+      subtitle: "Custom Development That You Own",
+      description: "Your own professional website with custom domain, hosting, and complete ownership. No monthly platform fees, no algorithm changes affecting your business.",
       features: [
-        "Bespoke design systems built from scratch",
-        "Pixel-perfect responsive layouts",
-        "Custom animations and micro-interactions",
-        "Performance-optimized code architecture"
+        "Custom domain and professional hosting",
+        "Mobile-responsive design",
+        "SEO optimization included",
+        "Complete source code ownership"
       ],
-      pricing: "From $2,500",
-      highlight: "Custom Design Perfection"
-    },
-    {
-      icon: <Lock className="w-8 h-8" />,
-      title: "Data Cleanup",
-      subtitle: "Privacy Protection Services",
-      description: "Remove your family's data from 200+ data brokers and implement privacy-by-design architecture with military-grade security.",
-      features: [
-        "Complete data broker removal (47+ brokers)",
-        "Privacy audit and protection setup",
-        "Secure communication channels",
-        "Ongoing privacy monitoring"
-      ],
-      pricing: "From $1,200",
-      highlight: "Complete Privacy Restoration"
+      pricing: "From $500",
+      highlight: "Low Barrier to Entry"
     },
     {
       icon: <Crown className="w-8 h-8" />,
-      title: "Authentic Authority",
-      subtitle: "SEO & Digital Presence",
-      description: "Build genuine authority through pixel-perfect content strategy and technical SEO excellence that outranks corporate competitors.",
+      title: "Business Growth",
+      subtitle: "Advanced Custom Development",
+      description: "Sophisticated web applications with custom functionality, e-commerce, and advanced features that grow with your business needs.",
       features: [
-        "Technical SEO optimization",
-        "Content strategy and creation",
-        "Local search domination",
-        "Reputation management"
+        "Custom web applications",
+        "E-commerce integration",
+        "Advanced functionality",
+        "Scalable architecture"
       ],
-      pricing: "From $1,800",
-      highlight: "Authentic Digital Authority"
+      pricing: "From $2,500",
+      highlight: "Professional Growth"
+    },
+    {
+      icon: <Lock className="w-8 h-8" />,
+      title: "Digital Privacy",
+      subtitle: "Data Protection & Security",
+      description: "Protect your family's digital footprint with data broker removal and privacy-first website architecture that keeps your information secure.",
+      features: [
+        "Data broker removal service",
+        "Privacy-first website design",
+        "Secure hosting and SSL",
+        "GDPR compliance setup"
+      ],
+      pricing: "From $1,200",
+      highlight: "Complete Privacy Protection"
     }
   ];
 
@@ -117,30 +117,30 @@ export function OwnYourNarrative() {
     { number: "100%", label: "Client Satisfaction Rate", icon: <Star className="w-5 h-5" /> }
   ];
 
-  const liberationProcess = [
+  const developmentProcess = [
     {
       number: "01",
-      title: "Digital Independence Audit",
-      description: "We analyze your current platform dependencies and create a custom liberation strategy with pixel-perfect execution planning.",
+      title: "Discovery & Strategy",
+      description: "We understand your business goals and create a custom development plan that fits your budget and timeline.",
       icon: <Eye className="w-6 h-6" />
     },
     {
       number: "02",
-      title: "Custom Design & Development",
-      description: "Build your sovereign digital territory with obsessive attention to design detail. Every pixel crafted for maximum impact.",
+      title: "Design & Development",
+      description: "Professional website development with modern design, mobile responsiveness, and SEO optimization built-in.",
       icon: <Home className="w-6 h-6" />
     },
     {
       number: "03",
-      title: "Privacy Fortress Implementation",
-      description: "Implement bulletproof security and remove your data from corporate surveillance networks with military-grade protection.",
-      icon: <Lock className="w-6 h-6" />
+      title: "Launch & Ownership",
+      description: "Deploy your website with your own domain and hosting. You receive all source code and complete ownership.",
+      icon: <Crown className="w-6 h-6" />
     },
     {
       number: "04",
-      title: "Authority & Growth Launch",
-      description: "Launch your independent platform with SEO optimization and content strategy that outranks corporate competitors.",
-      icon: <Crown className="w-6 h-6" />
+      title: "Growth & Support",
+      description: "Ongoing support and enhancement options to grow your digital presence as your business expands.",
+      icon: <TrendingUp className="w-6 h-6" />
     }
   ];
 
@@ -172,7 +172,7 @@ export function OwnYourNarrative() {
             </h1>
 
             <p className="text-xl md:text-2xl font-light text-slate-600 leading-relaxed max-w-4xl mx-auto mb-12">
-              Own your digital story with pixel-perfect websites and bulletproof privacy protection.
+              Professional websites and digital presence that you own completely. Starting at just $500.
               <br />
               <span className="font-medium text-slate-900">Custom-crafted. Obsessively detailed. Completely yours.</span>
             </p>
@@ -180,11 +180,11 @@ export function OwnYourNarrative() {
             {/* Clean CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
               <Button size="lg" className="px-12 py-4 bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                Start Your Liberation
+                Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button size="lg" variant="outline" className="px-12 py-4 border-2 border-slate-300 text-slate-700 hover:bg-slate-50 font-medium rounded-full">
-                See Success Stories
+                View Our Work
               </Button>
             </div>
 
@@ -209,41 +209,39 @@ export function OwnYourNarrative() {
           </div>
         </div>
 
-        {/* Problem Awareness - Clean Layout */}
+        {/* Professional Advantages - Clean Layout */}
         <div className="py-24 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
-                The Hidden Cost of
-                <span className="font-semibold text-red-600"> 'Free' </span>
-                Platforms
+                The Professional Advantage of
+                <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"> Ownership</span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Big Tech profits by keeping your family's data and memories hostage.
-                Here's what you're really paying.
+                When you own your digital presence, you gain control, credibility, and competitive advantages that platforms simply can't provide.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {platformProblems.map((problem, index) => (
+              {ownershipAdvantages.map((advantage, index) => (
                 <div key={index} className="group">
                   <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full hover:shadow-xl hover:border-slate-300 transition-all duration-300">
-                    <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors">
-                      <div className="text-red-600">
-                        {problem.icon}
+                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                      <div className="text-blue-600">
+                        {advantage.icon}
                       </div>
                     </div>
 
                     <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                      {problem.title}
+                      {advantage.title}
                     </h3>
 
                     <p className="text-slate-600 mb-4 leading-relaxed">
-                      {problem.description}
+                      {advantage.description}
                     </p>
 
-                    <p className="text-sm font-medium text-red-600">
-                      {problem.impact}
+                    <p className="text-sm font-medium text-green-600">
+                      ✓ {advantage.benefit}
                     </p>
                   </div>
                 </div>
@@ -376,21 +374,21 @@ export function OwnYourNarrative() {
           </div>
         </div>
 
-        {/* Liberation Process - Clean Steps */}
+        {/* Development Process - Clean Steps */}
         <div className="py-24 px-4 bg-gradient-to-br from-blue-50 to-slate-50">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6">
-                Your
-                <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"> Liberation Process</span>
+                Our
+                <span className="font-semibold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"> Development Process</span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                From platform dependency to digital sovereignty in four strategic steps.
+                Professional website development in four strategic steps, designed to fit your budget and timeline.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {liberationProcess.map((step, index) => (
+              {developmentProcess.map((step, index) => (
                 <div key={index} className="text-center group">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-white border-4 border-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:border-blue-200 transition-colors">
