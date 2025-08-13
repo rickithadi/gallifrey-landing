@@ -57,7 +57,7 @@ export function Contact() {
               Thank you for your message!
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We've received your inquiry and will get back to you within 24 hours.
+              We&apos;ve received your inquiry and will get back to you within 24 hours.
               In the meantime, feel free to schedule a direct consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

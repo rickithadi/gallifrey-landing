@@ -1,4 +1,4 @@
-import { ArrowRight, Briefcase, Code, Globe, Palette, Shield, Sparkles, Users, Zap } from "lucide-react";
+import { ArrowRight, Globe, Palette, Sparkles, Zap } from "lucide-react";
 
 import { Button } from "./ui/button";
 import { useState } from "react";
@@ -72,7 +72,7 @@ export function OwnYourNarrative() {
                 Why Digital Independence Matters
               </h2>
               <p className="text-lg text-stone-600 leading-relaxed">
-                When you build on someone else's platform, you're building their business, not yours.
+                When you build on someone else&apos;s platform, you&apos;re building their business, not yours.
               </p>
             </div>
 
@@ -95,12 +95,12 @@ export function OwnYourNarrative() {
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">•</span>
-                      <span>You're competing for attention in an endless feed</span>
+                      <span>You&apos;re competing for attention in an endless feed</span>
                     </div>
                   </div>
                 </div>
                 <p className="text-stone-600 mb-6 leading-relaxed">
-                  We're not here to criticize social media—it has its place. But your business deserves a foundation you control.
+                  We&apos;re not here to criticize social media—it has its place. But your business deserves a foundation you control.
                 </p>
                 <Button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
                   Learn About Our Approach
@@ -133,7 +133,7 @@ export function OwnYourNarrative() {
                       <span className="text-green-600 text-xl">✓</span>
                       <div>
                         <h4 className="font-semibold text-green-600 mb-1">Long-term Value</h4>
-                        <p className="text-sm text-stone-600">Every visitor and subscriber builds your business, not someone else's</p>
+                        <p className="text-sm text-stone-600">Every visitor and subscriber builds your business, not someone else&apos;s</p>
                       </div>
                     </div>
                   </div>
@@ -162,7 +162,7 @@ export function OwnYourNarrative() {
                 The Hidden Cost of Poor Search Results
               </h2>
               <p className="text-lg text-stone-600">
-                Every day, opportunities slip away because your digital presence doesn't reflect your true expertise
+                Every day, opportunities slip away because your digital presence doesn&apos;t reflect your true expertise
               </p>
             </div>
 
@@ -170,19 +170,19 @@ export function OwnYourNarrative() {
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
                 <div className="text-4xl mb-4">💼</div>
                 <h3 className="text-xl font-serif font-semibold mb-3 text-stone-800">Lost Client Opportunities</h3>
-                <p className="text-stone-600 text-sm">Premium clients choose competitors who "look more established" in search results</p>
+                <p className="text-stone-600 text-sm">Premium clients choose competitors who &ldquo;look more established&rdquo; in search results</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
                 <div className="text-4xl mb-4">🤝</div>
                 <h3 className="text-xl font-serif font-semibold mb-3 text-stone-800">Missed Partnerships</h3>
-                <p className="text-stone-600 text-sm">Strategic partners can't find evidence of your expertise when they research you</p>
+                <p className="text-stone-600 text-sm">Strategic partners can&apos;t find evidence of your expertise when they research you</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-xl font-serif font-semibold mb-3 text-stone-800">Undervalued Pricing</h3>
-                <p className="text-stone-600 text-sm">Can't command premium rates when search results don't establish authority</p>
+                <p className="text-stone-600 text-sm">Can&apos;t command premium rates when search results don&apos;t establish authority</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
@@ -195,12 +195,12 @@ export function OwnYourNarrative() {
             <div className="bg-white p-8 rounded-xl border border-stone-200 text-center shadow-sm">
               <h3 className="text-2xl font-serif font-semibold mb-4 text-stone-800">The Reality Check:</h3>
               <p className="text-stone-600 mb-6 text-lg">
-                <strong>You don't own your digital presence—the platforms do.</strong><br />
+                <strong>You don&apos;t own your digital presence—the platforms do.</strong><br />
                 Google, LinkedIn, and social media algorithms decide how you appear to the world.
               </p>
               <div className="bg-stone-50 p-6 rounded-lg border-l-4 border-orange-600 max-w-2xl mx-auto">
                 <p className="text-stone-800 font-semibold mb-2 italic">
-                  "I had no idea how unprofessional my search results looked until a potential investor mentioned they almost didn't take the meeting."
+                  &ldquo;I had no idea how unprofessional my search results looked until a potential investor mentioned they almost didn&apos;t take the meeting.&rdquo;
                 </p>
                 <p className="text-stone-600 text-sm">— Tech Entrepreneur, now Personal Brand Empire client</p>
               </div>
@@ -217,7 +217,7 @@ export function OwnYourNarrative() {
               Our Mission: Digital Independence
             </h2>
             <p className="text-lg text-stone-600 leading-relaxed">
-              We believe your brand deserves a home it owns, not a rented room on someone else's platform.
+              We believe your brand deserves a home it owns, not a rented room on someone else&apos;s platform.
             </p>
           </div>
         </div>
@@ -414,7 +414,7 @@ export function OwnYourNarrative() {
                 </div>
                 <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Rapid Development</h3>
                 <p className="text-sm text-stone-600 leading-relaxed">
-                  Launch quickly with core functionality, then evolve thoughtfully as your business develops. You're not locked into version 1.0.
+                  Launch quickly with core functionality, then evolve thoughtfully as your business develops. You&apos;re not locked into version 1.0.
                 </p>
               </div>
 
@@ -425,7 +425,7 @@ export function OwnYourNarrative() {
                 </div>
                 <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Complete Customization</h3>
                 <p className="text-sm text-stone-600 leading-relaxed">
-                  When you're ready for something entirely bespoke—functionality that gives you competitive advantages and positions you as the premium choice.
+                  When you&apos;re ready for something entirely bespoke—functionality that gives you competitive advantages and positions you as the premium choice.
                 </p>
               </div>
 
@@ -453,7 +453,7 @@ export function OwnYourNarrative() {
                 Ready to Own Your Digital Future?
               </h2>
               <p className="text-lg text-stone-600 leading-relaxed">
-                Let's discuss how a sophisticated digital presence can elevate your business positioning and client relationships.
+                Let&apos;s discuss how a sophisticated digital presence can elevate your business positioning and client relationships.
               </p>
             </div>
 
@@ -539,7 +539,7 @@ export function OwnYourNarrative() {
                     onChange={(e) => setMessage(e.target.value)}
                     rows={4}
                     className="w-full px-4 py-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent bg-white"
-                    placeholder="Share your business goals, what you'd like your website to accomplish, and any specific ideas you have in mind..."
+                    placeholder="Share your business goals, what you&apos;d like your website to accomplish, and any specific ideas you have in mind..."
                   />
                 </div>
 
@@ -574,7 +574,7 @@ export function OwnYourNarrative() {
               </div>
               <div className="bg-stone-100 rounded-lg p-6">
                 <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Response Time</h3>
-                <p className="text-stone-600">We'll get back to you within 24 hours</p>
+                <p className="text-stone-600">We&apos;ll get back to you within 24 hours</p>
               </div>
             </div>
             <div className="mt-8 text-center">

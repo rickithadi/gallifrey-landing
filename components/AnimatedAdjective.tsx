@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 interface AnimatedAdjectiveProps {
   className?: string;
 }
 
 export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
-  const adjectives = [
+  const adjectives = useMemo(() => [
     'secure',
     'authentic',
     'pixel-perfect',
@@ -16,7 +16,7 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
     'thoughtful',
     'cutting-edge',
     'modern'
-  ];
+  ], []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -101,7 +101,7 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [adjectives]);
 
   useEffect(() => {
     const interval = setInterval(() => {

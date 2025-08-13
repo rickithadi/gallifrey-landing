@@ -1,7 +1,5 @@
-import { ArrowRight, Code, Palette, Shield, Users } from "lucide-react";
+import { Code, Palette, Shield, Users } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
-
-import { Button } from "./ui/button";
 
 export function Services() {
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
