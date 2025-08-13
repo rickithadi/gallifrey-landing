@@ -6,7 +6,7 @@ export function Pricing() {
   const packages = [
     {
       name: "Essential",
-      price: "$500",
+      price: "$1000",
       description: "Perfect for personal brands and small businesses getting started online",
       features: [
         "Custom responsive design",

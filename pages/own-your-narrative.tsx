@@ -1,9 +1,8 @@
-import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
 import Head from 'next/head'
-import { Header } from '@/components/Header'
 import { NextSeo } from 'next-seo'
 import { OwnYourNarrative } from '@/components/OwnYourNarrative'
+import { OwnYourNarrativeHeader } from '@/components/OwnYourNarrativeHeader'
 
 export default function OwnYourNarrativePage() {
   const structuredData = {
@@ -135,9 +134,10 @@ export default function OwnYourNarrativePage() {
         />
       </Head>
       <div className="min-h-screen bg-background">
-        <Header />
-        <OwnYourNarrative />
-        <Contact />
+        <OwnYourNarrativeHeader variant="blur" />
+        <div className="pt-16 md:pt-20">
+          <OwnYourNarrative />
+        </div>
         <Footer />
       </div>
     </>
