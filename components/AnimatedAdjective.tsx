@@ -129,7 +129,7 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
         style={{
           width: containerWidth,
           display: 'inline-block',
-          textAlign: 'center'
+          textAlign: 'left'
         }}
       >
         {adjectives[currentIndex]}
