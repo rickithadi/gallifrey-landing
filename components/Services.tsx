@@ -1,6 +1,4 @@
-import { ArrowRight, Code, Palette, Shield, Users } from "lucide-react";
-
-import { Button } from "./ui/button";
+import { Code, Palette, Shield, Users } from "lucide-react";
 
 export function Services() {
   const services = [

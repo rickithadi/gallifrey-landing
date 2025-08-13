@@ -1,4 +1,4 @@
-import { BarChart3, Code2, Database, Rocket, Shield, Zap } from "lucide-react";
+import { BarChart3, Code2, Database, Rocket, Shield } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 import { ArrowRight } from "lucide-react";
@@ -125,7 +125,7 @@ export function Features() {
         {/* Call to action */}
         <div className="text-center border-t border-border/50 pt-16">
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Ready to start your project? Let's discuss your requirements and create something exceptional together.
+            Ready to start your project? Let&apos;s discuss your requirements and create something exceptional together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="px-8 py-3 bg-primary hover:bg-primary/90">

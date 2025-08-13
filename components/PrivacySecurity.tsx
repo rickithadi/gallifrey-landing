@@ -1,5 +1,5 @@
 import { Card, CardContent } from "./ui/card";
-import { Database, Eye, Lock, Search, Shield, UserCheck } from "lucide-react";
+import { Database, Lock, Search, Shield, UserCheck } from "lucide-react";
 
 import { Badge } from "./ui/badge";
 
