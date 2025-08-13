@@ -1,11 +1,84 @@
-import { ArrowRight, Calendar, Clock, Mail, MessageCircle } from "lucide-react";
+import { AlertCircle, ArrowRight, Calendar, CheckCircle, Clock, Mail, MessageCircle } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { useForm } from "@formspree/react";
+import { useState } from "react";
 
 export function Contact() {
+  const [state, handleSubmit] = useForm("mgvzdpqo");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    budget: "",
+    project: "",
+    message: "",
+    privacy: false
+  });
+
+  const handleInputChange = (field: string, value: string | boolean) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formData.privacy) {
+      return;
+    }
+    await handleSubmit(e);
+    if (state.succeeded) {
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        budget: "",
+        project: "",
+        message: "",
+        privacy: false
+      });
+    }
+  };
+
+  if (state.succeeded) {
+    return (
+      <section id="contact" className="py-24 px-4" aria-labelledby="contact-heading">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center py-16">
+            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
+            <h2 className="text-3xl font-serif font-medium text-primary mb-4">
+              Thank you for your message!
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              We've received your inquiry and will get back to you within 24 hours.
+              In the meantime, feel free to schedule a direct consultation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={() => window.location.reload()}
+                variant="outline"
+                className="px-6"
+              >
+                Send Another Message
+              </Button>
+              <Button
+                className="bg-accent hover:bg-accent/90 text-accent-foreground px-6"
+                asChild
+              >
+                <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
+                  Schedule a Call
+                  <Calendar className="w-4 h-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="contact" className="py-24 px-4" aria-labelledby="contact-heading">
       <div className="container mx-auto max-w-6xl">
@@ -33,23 +106,40 @@ export function Contact() {
           {/* Contact form */}
           <div className="lg:col-span-2">
             <div className="bg-background border border-border/50 rounded-lg p-8">
-              <form className="space-y-6" aria-label="Contact form">
+              {state.errors && Object.keys(state.errors).length > 0 && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm font-medium text-red-800 mb-1">There was an error sending your message</p>
+                    <p className="text-sm text-red-600">Please try again or contact us directly at hello@gallifreyconsulting.com</p>
+                  </div>
+                </div>
+              )}
+              <form onSubmit={onSubmit} className="space-y-6" aria-label="Contact form">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="block text-sm font-medium text-primary">Name *</label>
                     <Input
                       id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange("name", e.target.value)}
                       placeholder="Your full name"
                       className="h-11 border-border/50 focus:border-accent focus:ring-accent/20"
+                      required
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="block text-sm font-medium text-primary">Email *</label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange("email", e.target.value)}
                       placeholder="your@email.com"
                       className="h-11 border-border/50 focus:border-accent focus:ring-accent/20"
+                      required
                     />
                   </div>
                 </div>
@@ -59,13 +149,16 @@ export function Contact() {
                     <label htmlFor="company" className="block text-sm font-medium text-primary">Company</label>
                     <Input
                       id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={(e) => handleInputChange("company", e.target.value)}
                       placeholder="Your company name"
                       className="h-11 border-border/50 focus:border-accent focus:ring-accent/20"
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="budget" className="block text-sm font-medium text-primary">Budget Range</label>
-                    <Select>
+                    <Select name="budget" value={formData.budget} onValueChange={(value) => handleInputChange("budget", value)}>
                       <SelectTrigger className="h-11 border-border/50 focus:border-accent focus:ring-accent/20">
                         <SelectValue placeholder="Select budget range" />
                       </SelectTrigger>
@@ -81,7 +174,7 @@ export function Contact() {
 
                 <div className="space-y-2">
                   <label htmlFor="project" className="block text-sm font-medium text-primary">Project Type</label>
-                  <Select>
+                  <Select name="project" value={formData.project} onValueChange={(value) => handleInputChange("project", value)}>
                     <SelectTrigger className="h-11 border-border/50 focus:border-accent focus:ring-accent/20">
                       <SelectValue placeholder="What do you need?" />
                     </SelectTrigger>
@@ -100,9 +193,13 @@ export function Contact() {
                   <label htmlFor="message" className="block text-sm font-medium text-primary">Project Details *</label>
                   <Textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={(e) => handleInputChange("message", e.target.value)}
                     placeholder="Tell us about your project goals, timeline, and any specific requirements..."
                     rows={6}
                     className="border-border/50 focus:border-accent focus:ring-accent/20 resize-none"
+                    required
                   />
                 </div>
 
@@ -110,17 +207,34 @@ export function Contact() {
                   <input
                     type="checkbox"
                     id="privacy"
+                    name="privacy"
+                    checked={formData.privacy}
+                    onChange={(e) => handleInputChange("privacy", e.target.checked)}
                     className="mt-1 w-4 h-4 text-accent border-border rounded focus:ring-accent/20"
+                    required
                   />
                   <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
                     I agree to the privacy policy and understand that my information will be handled securely
-                    and used only for project communication.
+                    and used only for project communication. *
                   </label>
                 </div>
 
-                <Button className="bg-primary hover:bg-primary/90 px-8 py-3 group">
-                  Send message
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button
+                  type="submit"
+                  disabled={state.submitting || !formData.privacy}
+                  className="bg-primary hover:bg-primary/90 px-8 py-3 group disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {state.submitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send message
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
                 </Button>
               </form>
             </div>

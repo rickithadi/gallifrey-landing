@@ -81,21 +81,6 @@ export function Services() {
           ))}
         </div>
 
-        {/* Call to action */}
-        <div className="text-center border-t border-border/50 pt-16">
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Ready to create a pixel-perfect digital experience that reflects your brand&apos;s excellence? Let&apos;s discuss your vision over a 30-minute consultation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="px-8 py-3 bg-primary hover:bg-primary/90">
-              Start a conversation
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-            <Button variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50">
-              View our work
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

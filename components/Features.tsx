@@ -1,36 +1,11 @@
-import { BarChart3, Database, Palette, Rocket, Shield, Users } from "lucide-react";
+import { BarChart3, Code2, Database, Rocket, Shield, Zap } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
+import { ArrowRight } from "lucide-react";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 export function Features() {
-  const processSteps = [
-    {
-      number: "01",
-      title: "Discovery & Strategy",
-      description: "Deep stakeholder interviews, technical & privacy audits, SEO baseline, competitive analysis → strategic roadmap.",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      number: "02",
-      title: "UX/UI & Bespoke Design",
-      description: "Research-driven wireframes → high-fidelity prototypes → custom style guides with consistent brand systems.",
-      icon: <Palette className="w-6 h-6" />
-    },
-    {
-      number: "03",
-      title: "Principled Engineering & Security",
-      description: "Modern JS/TS architectures → PCI-DSS checkout flows → pentesting → zero-trust patterns for enterprise-grade security.",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      number: "04",
-      title: "Launch, Support & Partnership",
-      description: "24/7 monitoring → retainer-based sprints → feature development → performance tuning → fraud monitoring.",
-      icon: <Rocket className="w-6 h-6" />
-    }
-  ];
-
   const capabilities = [
     "Modern JavaScript/TypeScript Architecture",
     "PCI-DSS Payment Security",
@@ -44,40 +19,65 @@ export function Features() {
     "Cloud Infrastructure Management"
   ];
 
+  const processSteps = [
+    {
+      number: "01",
+      title: "Discovery & Strategy",
+      description: "Understanding your goals, audience, and technical requirements. Security assessment if needed.",
+      icon: <Database className="w-6 h-6 text-accent" />
+    },
+    {
+      number: "02",
+      title: "Design & Planning",
+      description: "Detailed proposal with timeline, secure architecture design, and creative direction tailored to your needs.",
+      icon: <Code2 className="w-6 h-6 text-accent" />
+    },
+    {
+      number: "03",
+      title: "Development & Testing",
+      description: "Iterative development with security built-in, regular check-ins, and transparent progress updates.",
+      icon: <Shield className="w-6 h-6 text-accent" />
+    },
+    {
+      number: "04",
+      title: "Launch & Support",
+      description: "Secure deployment with ongoing maintenance and support as your business grows.",
+      icon: <Rocket className="w-6 h-6 text-accent" />
+    }
+  ];
+
   return (
-    <section id="process" className="py-20 px-4 bg-secondary/30">
-      <div className="container mx-auto">
+    <section id="process" className="py-24 px-4 bg-secondary/30">
+      <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <Badge className="mb-6 bg-accent/10 text-accent border-accent/20">
-            From Strategy to Partnership
+            Technical Excellence
           </Badge>
-          <h2 className="text-3xl md:text-5xl mb-6 text-primary">
-            Our Bespoke Process
+          <h2 className="text-3xl md:text-5xl mb-6 text-primary font-serif font-medium">
+            How We Work Together
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Relationship-driven development with ongoing dialogue through dedicated channels.
-            We adapt iteratively based on your feedback and evolving business needs.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A transparent, collaborative process designed to deliver exceptional results with security built-in from day one.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
+        <div className="grid lg:grid-cols-2 gap-16 mb-16">
+          {/* Process Steps */}
           <div>
-            <h3 className="text-2xl mb-8 text-primary">Development Process</h3>
+            <h3 className="text-2xl mb-8 text-primary font-serif font-medium">Our Process</h3>
             <div className="space-y-6">
               {processSteps.map((step, index) => (
-                <div key={index} className="flex gap-6">
+                <div key={index} className="flex gap-4">
                   <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-accent-foreground font-bold mb-4">
-                      {step.number}
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                      <span className="text-accent font-medium">{step.number}</span>
                     </div>
                     {index < processSteps.length - 1 && <div className="w-px h-16 bg-border"></div>}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="text-accent">
-                        {step.icon}
-                      </div>
-                      <h4 className="font-semibold text-primary">{step.title}</h4>
+                      {step.icon}
+                      <h4 className="font-serif text-lg font-medium text-primary">{step.title}</h4>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
@@ -86,8 +86,9 @@ export function Features() {
             </div>
           </div>
 
+          {/* Technical Capabilities */}
           <div>
-            <h3 className="text-2xl mb-8 text-primary">Technical Capabilities</h3>
+            <h3 className="text-2xl mb-8 text-primary font-serif font-medium">Technical Capabilities</h3>
             <Card className="bg-card border-0 shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
@@ -118,6 +119,22 @@ export function Features() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Call to action */}
+        <div className="text-center border-t border-border/50 pt-16">
+          <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Ready to start your project? Let's discuss your requirements and create something exceptional together.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button className="px-8 py-3 bg-primary hover:bg-primary/90">
+              Start your project
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+            <Button variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50">
+              View more work
+            </Button>
           </div>
         </div>
       </div>

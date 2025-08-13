@@ -7,7 +7,7 @@ import { Hero } from '@/components/Hero'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { Pricing } from '@/components/Pricing'
-import { Process } from '@/components/Process'
+import { PrivacySecurity } from '@/components/PrivacySecurity'
 import { Services } from '@/components/Services'
 // import { Work } from '@/components/Work'
 
@@ -232,8 +232,8 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
+        <PrivacySecurity />
         {/* <Work /> */}
-        <Process />
         <Features />
 
         {/* Own Your Narrative Campaign CTA */}

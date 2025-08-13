@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 
 import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import React from 'react'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -80,6 +81,9 @@ export default function App({ Component, pageProps }: AppProps) {
         ]}
       />
       <Component {...pageProps} />
+      {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+      )}
     </>
   )
 }
