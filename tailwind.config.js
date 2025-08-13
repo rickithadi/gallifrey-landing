@@ -8,22 +8,44 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Gallifrey Brand Colors
-        "gallifrey-navy": "hsl(var(--gallifrey-navy))",
+        // ===== GALLIFREY BRAND COLORS =====
+        "gallifrey-white": "hsl(var(--gallifrey-white))",
+        "gallifrey-off-white": "hsl(var(--gallifrey-off-white))",
+        "gallifrey-light-gray": "hsl(var(--gallifrey-light-gray))",
+        "gallifrey-medium-gray": "hsl(var(--gallifrey-medium-gray))",
+        "gallifrey-dark-gray": "hsl(var(--gallifrey-dark-gray))",
+        "gallifrey-charcoal": "hsl(var(--gallifrey-charcoal))",
         "gallifrey-teal": "hsl(var(--gallifrey-teal))",
-        "gallifrey-gray": "hsl(var(--gallifrey-gray))",
-        "gallifrey-orange": "hsl(var(--gallifrey-orange))",
+        "gallifrey-teal-dark": "hsl(var(--gallifrey-teal-dark))",
+        "gallifrey-border": "hsl(var(--gallifrey-border))",
 
-        // New Warm Color Palette
-        "rich-espresso": "hsl(var(--rich-espresso))",
-        "warm-charcoal": "hsl(var(--warm-charcoal))",
-        "soft-taupe": "hsl(var(--soft-taupe))",
-        "cream-white": "hsl(var(--cream-white))",
-        "warm-terracotta": "hsl(var(--warm-terracotta))",
-        "sage-green": "hsl(var(--sage-green))",
-        "soft-amber": "hsl(var(--soft-amber))",
+        // ===== OWN YOUR NARRATIVE CAMPAIGN COLORS =====
+        "oyn-stone": {
+          50: "hsl(var(--oyn-stone-50))",
+          100: "hsl(var(--oyn-stone-100))",
+          200: "hsl(var(--oyn-stone-200))",
+          300: "hsl(var(--oyn-stone-300))",
+          400: "hsl(var(--oyn-stone-400))",
+          500: "hsl(var(--oyn-stone-500))",
+          600: "hsl(var(--oyn-stone-600))",
+          700: "hsl(var(--oyn-stone-700))",
+          800: "hsl(var(--oyn-stone-800))",
+          900: "hsl(var(--oyn-stone-900))",
+        },
+        "oyn-orange": {
+          50: "hsl(var(--oyn-orange-50))",
+          100: "hsl(var(--oyn-orange-100))",
+          200: "hsl(var(--oyn-orange-200))",
+          300: "hsl(var(--oyn-orange-300))",
+          400: "hsl(var(--oyn-orange-400))",
+          500: "hsl(var(--oyn-orange-500))",
+          600: "hsl(var(--oyn-orange-600))",
+          700: "hsl(var(--oyn-orange-700))",
+          800: "hsl(var(--oyn-orange-800))",
+          900: "hsl(var(--oyn-orange-900))",
+        },
 
-        // Semantic color mappings
+        // ===== SEMANTIC COLOR MAPPINGS =====
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: "hsl(var(--card))",
@@ -50,6 +72,16 @@ module.exports = {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+
+        // ===== LEGACY COLORS (for backward compatibility) =====
+        "pure-white": "hsl(var(--gallifrey-white))",
+        "off-white": "hsl(var(--gallifrey-off-white))",
+        "light-gray": "hsl(var(--gallifrey-light-gray))",
+        "medium-gray": "hsl(var(--gallifrey-medium-gray))",
+        "dark-gray": "hsl(var(--gallifrey-dark-gray))",
+        charcoal: "hsl(var(--gallifrey-charcoal))",
+        "teal-accent": "hsl(var(--gallifrey-teal))",
+        "teal-dark": "hsl(var(--gallifrey-teal-dark))",
       },
       fontFamily: {
         heading: ["Montserrat", "sans-serif"],

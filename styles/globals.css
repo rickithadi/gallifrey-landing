@@ -6,46 +6,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
 :root {
-  /* Gallifrey Consulting Brand Colors - Claude-Inspired Warm Palette */
-  --gallifrey-navy: 27 38 59;
-  --gallifrey-teal: 46 196 182;
-  --gallifrey-gray: 240 243 245;
-  --gallifrey-orange: 255 127 17;
+  /* ===== GALLIFREY BRAND COLORS - Production Site Clean Palette ===== */
+  --gallifrey-white: 255 255 255; /* #FFFFFF - Pure white backgrounds */
+  --gallifrey-off-white: 249 250 251; /* #F9FAFB - Subtle section backgrounds */
+  --gallifrey-light-gray: 156 163 175; /* #9CA3AF - Muted text */
+  --gallifrey-medium-gray: 107 114 128; /* #6B7280 - Secondary text */
+  --gallifrey-dark-gray: 55 65 81; /* #374151 - Body text */
+  --gallifrey-charcoal: 31 41 55; /* #1F2937 - Primary text & headings */
+  --gallifrey-teal: 46 196 182; /* #2EC4B6 - Primary accent (production site) */
+  --gallifrey-teal-dark: 20 184 166; /* #14B8A6 - Hover states */
+  --gallifrey-border: 229 231 235; /* #E5E7EB - Subtle borders */
 
-  /* New Warm Color Palette - RGB format for consistency */
-  --rich-espresso: 43 37 32; /* #2B2520 */
-  --warm-charcoal: 74 69 62; /* #4A453E */
-  --soft-taupe: 247 245 243; /* #F7F5F3 */
-  --cream-white: 254 252 250; /* #FEFCFA */
-  --warm-terracotta: 196 101 75; /* #C4654B */
-  --sage-green: 122 132 113; /* #7A8471 */
-  --soft-amber: 212 165 116; /* #D4A574 */
+  /* ===== OWN YOUR NARRATIVE CAMPAIGN COLORS - Warm Espresso Palette ===== */
+  --oyn-stone-50: 250 250 249; /* #FAFAF9 */
+  --oyn-stone-100: 245 245 244; /* #F5F5F4 */
+  --oyn-stone-200: 231 229 228; /* #E7E5E4 */
+  --oyn-stone-300: 214 211 209; /* #D6D3D1 */
+  --oyn-stone-400: 168 162 158; /* #A8A29E */
+  --oyn-stone-500: 120 113 108; /* #78716C */
+  --oyn-stone-600: 87 83 78; /* #57534E */
+  --oyn-stone-700: 68 64 60; /* #44403C */
+  --oyn-stone-800: 41 37 36; /* #292524 */
+  --oyn-stone-900: 28 25 23; /* #1C1917 */
+  --oyn-orange-50: 255 247 237; /* #FFF7ED */
+  --oyn-orange-100: 255 237 213; /* #FFEDD5 */
+  --oyn-orange-200: 254 215 170; /* #FED7AA */
+  --oyn-orange-300: 253 186 116; /* #FDBA74 */
+  --oyn-orange-400: 251 146 60; /* #FB923C */
+  --oyn-orange-500: 249 115 22; /* #F97316 */
+  --oyn-orange-600: 234 88 12; /* #EA580C */
+  --oyn-orange-700: 194 65 12; /* #C2410C */
+  --oyn-orange-800: 154 52 18; /* #9A3412 */
+  --oyn-orange-900: 124 45 18; /* #7C2D12 */
 
-  /* Semantic color mappings using warm palette */
-  --background: 254 252 250; /* cream-white */
-  --foreground: 43 37 32; /* rich-espresso */
-  --card: 254 252 250; /* cream-white */
-  --card-foreground: 43 37 32; /* rich-espresso */
-  --popover: 254 252 250; /* cream-white */
-  --popover-foreground: 43 37 32; /* rich-espresso */
-  --primary: 196 101 75; /* warm-terracotta */
-  --primary-foreground: 254 252 250; /* cream-white */
-  --secondary: 247 245 243; /* soft-taupe */
-  --secondary-foreground: 43 37 32; /* rich-espresso */
-  --muted: 247 245 243; /* soft-taupe */
-  --muted-foreground: 74 69 62; /* warm-charcoal */
-  --accent: 122 132 113; /* sage-green */
-  --accent-foreground: 254 252 250; /* cream-white */
+  /* ===== SEMANTIC COLOR MAPPINGS - Gallifrey Brand Default ===== */
+  --background: var(--gallifrey-white);
+  --foreground: var(--gallifrey-charcoal);
+  --card: var(--gallifrey-white);
+  --card-foreground: var(--gallifrey-charcoal);
+  --popover: var(--gallifrey-white);
+  --popover-foreground: var(--gallifrey-charcoal);
+  --primary: var(--gallifrey-charcoal);
+  --primary-foreground: var(--gallifrey-white);
+  --secondary: var(--gallifrey-off-white);
+  --secondary-foreground: var(--gallifrey-charcoal);
+  --muted: var(--gallifrey-off-white);
+  --muted-foreground: var(--gallifrey-medium-gray);
+  --accent: var(--gallifrey-teal);
+  --accent-foreground: var(--gallifrey-white);
   --destructive: 239 68 68; /* red-500 equivalent */
-  --destructive-foreground: 254 252 250; /* cream-white */
-  --border: 229 231 235; /* gray-200 equivalent */
-  --input: 247 245 243; /* soft-taupe */
-  --ring: 196 101 75; /* warm-terracotta */
-  --chart-1: 196 101 75; /* warm-terracotta */
-  --chart-2: 43 37 32; /* rich-espresso */
-  --chart-3: 212 165 116; /* soft-amber */
-  --chart-4: 247 245 243; /* soft-taupe */
-  --chart-5: 74 69 62; /* warm-charcoal */
+  --destructive-foreground: var(--gallifrey-white);
+  --border: var(--gallifrey-border);
+  --input: var(--gallifrey-white);
+  --ring: var(--gallifrey-teal);
+  --chart-1: var(--gallifrey-teal);
+  --chart-2: var(--gallifrey-charcoal);
+  --chart-3: var(--gallifrey-teal-dark);
+  --chart-4: var(--gallifrey-off-white);
+  --chart-5: var(--gallifrey-medium-gray);
   --radius: 0.375rem; /* 6px for friendlier feel */
 }
 
@@ -96,29 +114,87 @@
 }
 
 @layer utilities {
-  .text-gradient-brand {
-    @apply bg-gradient-to-r from-accent via-gallifrey-teal to-primary bg-clip-text text-transparent;
+  /* ===== GALLIFREY BRAND UTILITIES ===== */
+  .text-gradient-gallifrey {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gallifrey-charcoal)),
+      hsl(var(--gallifrey-teal))
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .text-gradient-elegant {
-    @apply bg-gradient-to-r from-primary via-accent to-gallifrey-teal bg-clip-text text-transparent;
+  .text-gradient-gallifrey-elegant {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gallifrey-teal)),
+      hsl(var(--gallifrey-charcoal))
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .shadow-brand {
-    box-shadow: 0 4px 6px -1px hsl(var(--gallifrey-navy) / 0.1),
-      0 2px 4px -1px hsl(var(--gallifrey-navy) / 0.06);
+  .shadow-gallifrey {
+    box-shadow: 0 4px 6px -1px hsl(var(--gallifrey-charcoal) / 0.1),
+      0 2px 4px -1px hsl(var(--gallifrey-charcoal) / 0.06);
   }
 
-  .shadow-brand-lg {
-    box-shadow: 0 10px 15px -3px hsl(var(--gallifrey-navy) / 0.1),
-      0 4px 6px -2px hsl(var(--gallifrey-navy) / 0.05);
+  .shadow-gallifrey-lg {
+    box-shadow: 0 10px 15px -3px hsl(var(--gallifrey-charcoal) / 0.1),
+      0 4px 6px -2px hsl(var(--gallifrey-charcoal) / 0.05);
   }
 
-  .shadow-brand-xl {
-    box-shadow: 0 20px 25px -5px hsl(var(--gallifrey-navy) / 0.1),
-      0 10px 10px -5px hsl(var(--gallifrey-navy) / 0.04);
+  .shadow-gallifrey-xl {
+    box-shadow: 0 20px 25px -5px hsl(var(--gallifrey-charcoal) / 0.1),
+      0 10px 10px -5px hsl(var(--gallifrey-charcoal) / 0.04);
   }
 
+  .bg-gallifrey-section {
+    background-color: hsl(var(--gallifrey-off-white));
+  }
+
+  .border-gallifrey {
+    border-color: hsl(var(--gallifrey-border));
+  }
+
+  /* ===== OWN YOUR NARRATIVE CAMPAIGN UTILITIES ===== */
+  .text-gradient-oyn {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--oyn-stone-800)),
+      hsl(var(--oyn-orange-600))
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-oyn-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--oyn-stone-100)),
+      hsl(var(--oyn-stone-50))
+    );
+  }
+
+  .bg-oyn-warm {
+    background-color: hsl(var(--oyn-stone-50));
+  }
+
+  .shadow-oyn {
+    box-shadow: 0 4px 6px -1px hsl(var(--oyn-stone-800) / 0.1),
+      0 2px 4px -1px hsl(var(--oyn-stone-800) / 0.06);
+  }
+
+  .shadow-oyn-lg {
+    box-shadow: 0 10px 15px -3px hsl(var(--oyn-stone-800) / 0.1),
+      0 4px 6px -2px hsl(var(--oyn-stone-800) / 0.05);
+  }
+
+  /* ===== SHARED TYPOGRAPHY UTILITIES ===== */
   .logo-serif {
     font-family: "Playfair Display", serif;
     font-weight: 600;
@@ -131,7 +207,28 @@
     font-weight: 500;
   }
 
-  /* Own Your Narrative Campaign Styles - Apple Inspired */
+  /* ===== LEGACY UTILITIES (for backward compatibility) ===== */
+  .text-gradient-brand {
+    @apply text-gradient-gallifrey;
+  }
+
+  .text-gradient-elegant {
+    @apply text-gradient-gallifrey-elegant;
+  }
+
+  .shadow-brand {
+    @apply shadow-gallifrey;
+  }
+
+  .shadow-brand-lg {
+    @apply shadow-gallifrey-lg;
+  }
+
+  .shadow-brand-xl {
+    @apply shadow-gallifrey-xl;
+  }
+
+  /* Own Your Narrative Campaign Styles - Keep existing for OYN section */
   .narrative-gradient {
     background: linear-gradient(135deg, #1e40af 0%, #0d9488 100%);
   }
