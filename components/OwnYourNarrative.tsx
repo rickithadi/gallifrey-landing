@@ -19,129 +19,130 @@ export function OwnYourNarrative() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-purple-50 via-white to-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-100/20 via-transparent to-orange-50/20"></div>
+      <section className="relative overflow-hidden bg-gradient-to-b from-stone-100 via-stone-50 to-stone-50">
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-100/30 via-transparent to-amber-100/10"></div>
 
         <div className="relative container mx-auto px-4 py-20 md:py-32">
           <div className="max-w-5xl mx-auto text-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-orange-100/60 backdrop-blur-sm rounded-full border border-orange-200/50">
+            <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-amber-100/50 backdrop-blur-sm rounded-full border border-amber-200">
               <Sparkles className="w-4 h-4 text-orange-600" />
-              <span className="text-sm font-medium text-orange-700">DIGITAL PRESENCE AUDIT</span>
+              <span className="text-sm font-medium text-stone-700">FOR AMBITIOUS ENTREPRENEURS</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal leading-tight mb-6 text-gray-900">
-              What do people find when they{" "}
-              <span className="text-orange-600 font-medium">Google your name</span>?
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight mb-6 text-stone-800">
+              For ambitious entrepreneurs who refuse to let{" "}
+              <span className="text-orange-600 font-medium">social platforms</span>{" "}
+              control their story
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              In 30 seconds, potential clients, investors, and partners will judge your expertise based on what appears in search results. Are you confident in what they'll discover?
+            <p className="text-xl md:text-2xl text-stone-600 mb-12 max-w-3xl mx-auto leading-relaxed font-body">
+              Your expertise deserves a home you own. We help thoughtful business owners create sophisticated digital presences that reflect their true authority—without the noise of social media.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="px-8 py-6 text-lg bg-orange-600 hover:bg-orange-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="px-8 py-6 text-lg bg-orange-600 hover:bg-orange-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Audit My Digital Presence
+                Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-lg border-gray-300 text-gray-700 hover:bg-gray-50 rounded-xl transition-all duration-300"
+                className="px-8 py-6 text-lg border-stone-300 text-stone-700 hover:bg-stone-100 rounded-lg transition-all duration-300"
               >
-                Free Brand Consultation
+                View Our Work
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The 30-Second Test Section */}
-      <section className="py-20 bg-white">
+      {/* Why Digital Independence Matters */}
+      <section className="py-20 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-normal mb-4 text-gray-900">
-                The 30-Second Test That Determines Your Success
+              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-stone-800">
+                Why Digital Independence Matters
               </h2>
-              <p className="text-lg text-gray-600">
-                Before anyone becomes your client, investor, or partner, they Google you. What story are your search results telling?
+              <p className="text-lg text-stone-600 leading-relaxed">
+                When you build on someone else's platform, you're building their business, not yours.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-gray-900">Try This Right Now:</h3>
-                <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-orange-500 mb-6">
-                  <ol className="space-y-3 text-gray-700">
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">1</span>
-                      <span>Open an incognito browser window</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">2</span>
-                      <span>Google your full name + your industry</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">3</span>
-                      <span>Look at the first page of results</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">4</span>
-                      <span>Ask yourself: "Would I hire this person?"</span>
-                    </li>
-                  </ol>
+                <h3 className="text-2xl font-serif font-medium mb-6 text-stone-800">The Platform Reality:</h3>
+                <div className="bg-stone-100 p-6 rounded-lg border-l-4 border-orange-600 mb-6">
+                  <div className="space-y-4 text-stone-600">
+                    <div className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">•</span>
+                      <span>Algorithm changes can eliminate your reach overnight</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">•</span>
+                      <span>Platform rules change without your input or consent</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">•</span>
+                      <span>Your content and audience can disappear instantly</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-semibold">•</span>
+                      <span>You're competing for attention in an endless feed</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-600 mb-6">
-                  <strong>Be honest:</strong> Do you look like the obvious expert choice, or just another option among many?
+                <p className="text-stone-600 mb-6 leading-relaxed">
+                  We're not here to criticize social media—it has its place. But your business deserves a foundation you control.
                 </p>
-                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg">
-                  Fix My Search Results
+                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
+                  Learn About Our Approach
                 </Button>
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-gray-900">What Most Entrepreneurs Find:</h3>
+                <h3 className="text-2xl font-serif font-medium mb-6 text-stone-800">What Ownership Looks Like:</h3>
                 <div className="space-y-4">
-                  <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-red-400">
+                  <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-600">
                     <div className="flex items-start gap-3">
-                      <span className="text-red-500 text-xl">❌</span>
+                      <span className="text-green-600 text-xl">✓</span>
                       <div>
-                        <h4 className="font-semibold text-red-600 mb-1">Scattered Social Media</h4>
-                        <p className="text-sm text-gray-600">Random LinkedIn posts, old Facebook content, inconsistent messaging across platforms</p>
+                        <h4 className="font-semibold text-green-600 mb-1">Your Domain, Your Rules</h4>
+                        <p className="text-sm text-stone-600">Complete control over your content, design, and user experience</p>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-red-400">
+                  <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-600">
                     <div className="flex items-start gap-3">
-                      <span className="text-red-500 text-xl">❌</span>
+                      <span className="text-green-600 text-xl">✓</span>
                       <div>
-                        <h4 className="font-semibold text-red-600 mb-1">Outdated Information</h4>
-                        <p className="text-sm text-gray-600">Old job titles, previous companies, achievements from years ago</p>
+                        <h4 className="font-semibold text-green-600 mb-1">Direct Relationships</h4>
+                        <p className="text-sm text-stone-600">Build genuine connections without algorithmic interference</p>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-red-400">
+                  <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-600">
                     <div className="flex items-start gap-3">
-                      <span className="text-red-500 text-xl">❌</span>
+                      <span className="text-green-600 text-xl">✓</span>
                       <div>
-                        <h4 className="font-semibold text-red-600 mb-1">Personal Content</h4>
-                        <p className="text-sm text-gray-600">Family photos, personal opinions, content that doesn't build professional authority</p>
+                        <h4 className="font-semibold text-green-600 mb-1">Long-term Value</h4>
+                        <p className="text-sm text-stone-600">Every visitor and subscriber builds your business, not someone else's</p>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-red-400">
+                  <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-600">
                     <div className="flex items-start gap-3">
-                      <span className="text-red-500 text-xl">❌</span>
+                      <span className="text-green-600 text-xl">✓</span>
                       <div>
-                        <h4 className="font-semibold text-red-600 mb-1">Competitor Results</h4>
-                        <p className="text-sm text-gray-600">Other people with your name, competitors appearing in your results</p>
+                        <h4 className="font-semibold text-green-600 mb-1">Professional Credibility</h4>
+                        <p className="text-sm text-stone-600">A sophisticated presence that commands respect and premium pricing</p>
                       </div>
                     </div>
                   </div>
@@ -153,55 +154,55 @@ export function OwnYourNarrative() {
       </section>
 
       {/* Hidden Cost Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-normal mb-4 text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-stone-800">
                 The Hidden Cost of Poor Search Results
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-stone-600">
                 Every day, opportunities slip away because your digital presence doesn't reflect your true expertise
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
                 <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Lost Client Opportunities</h3>
-                <p className="text-gray-600 text-sm">Premium clients choose competitors who "look more established" in search results</p>
+                <h3 className="text-xl font-serif font-semibold mb-3 text-stone-800">Lost Client Opportunities</h3>
+                <p className="text-stone-600 text-sm">Premium clients choose competitors who "look more established" in search results</p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
                 <div className="text-4xl mb-4">🤝</div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Missed Partnerships</h3>
-                <p className="text-gray-600 text-sm">Strategic partners can't find evidence of your expertise when they research you</p>
+                <h3 className="text-xl font-serif font-semibold mb-3 text-stone-800">Missed Partnerships</h3>
+                <p className="text-stone-600 text-sm">Strategic partners can't find evidence of your expertise when they research you</p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
                 <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Undervalued Pricing</h3>
-                <p className="text-gray-600 text-sm">Can't command premium rates when search results don't establish authority</p>
+                <h3 className="text-xl font-serif font-semibold mb-3 text-stone-800">Undervalued Pricing</h3>
+                <p className="text-stone-600 text-sm">Can't command premium rates when search results don't establish authority</p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-stone-200">
                 <div className="text-4xl mb-4">🎤</div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Speaking Opportunities</h3>
-                <p className="text-gray-600 text-sm">Event organizers pass you over for speakers with stronger digital presence</p>
+                <h3 className="text-xl font-serif font-semibold mb-3 text-stone-800">Speaking Opportunities</h3>
+                <p className="text-stone-600 text-sm">Event organizers pass you over for speakers with stronger digital presence</p>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-900">The Reality Check:</h3>
-              <p className="text-gray-600 mb-6 text-lg">
+            <div className="bg-white p-8 rounded-xl border border-stone-200 text-center shadow-sm">
+              <h3 className="text-2xl font-serif font-semibold mb-4 text-stone-800">The Reality Check:</h3>
+              <p className="text-stone-600 mb-6 text-lg">
                 <strong>You don't own your digital presence—the platforms do.</strong><br />
                 Google, LinkedIn, and social media algorithms decide how you appear to the world.
               </p>
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-orange-500 max-w-2xl mx-auto">
-                <p className="text-gray-900 font-semibold mb-2 italic">
+              <div className="bg-stone-50 p-6 rounded-lg border-l-4 border-orange-600 max-w-2xl mx-auto">
+                <p className="text-stone-800 font-semibold mb-2 italic">
                   "I had no idea how unprofessional my search results looked until a potential investor mentioned they almost didn't take the meeting."
                 </p>
-                <p className="text-gray-600 text-sm">— Tech Entrepreneur, now Personal Brand Empire client</p>
+                <p className="text-stone-600 text-sm">— Tech Entrepreneur, now Personal Brand Empire client</p>
               </div>
             </div>
           </div>
@@ -209,13 +210,13 @@ export function OwnYourNarrative() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-normal mb-6 text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-serif font-normal mb-6 text-stone-800">
               Our Mission: Digital Independence
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-stone-600 leading-relaxed">
               We believe your brand deserves a home it owns, not a rented room on someone else's platform.
             </p>
           </div>
@@ -223,77 +224,80 @@ export function OwnYourNarrative() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-b from-white to-purple-50/30">
+      <section id="services" className="py-20 bg-gradient-to-b from-stone-100 to-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-normal mb-4 text-gray-900">
-                Website Services
+              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-stone-800">
+                Professional Website Services
               </h2>
-              <p className="text-lg text-gray-600">
-                Professional websites designed for creators, entrepreneurs, and businesses who want to own their digital presence.
+              <p className="text-lg text-stone-600 leading-relaxed">
+                Thoughtfully designed websites for entrepreneurs who value quality, ownership, and authentic connection with their audience.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Personal Website Card */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-stone-200">
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-4">
-                    <Globe className="w-8 h-8 text-purple-600" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-50 rounded-lg mb-4">
+                    <Globe className="w-8 h-8 text-green-600" />
                   </div>
-                  <span className="text-sm font-medium text-purple-600 uppercase tracking-wider">From $1,500</span>
+                  <span className="text-sm font-medium text-orange-600 uppercase tracking-wider">From $500</span>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">Personal Website</h3>
-                <p className="text-gray-600 mb-6">
-                  Showcase your work and story with a professional website that you own. Perfect for consultants and freelancers.
+                <h3 className="text-2xl font-serif font-medium mb-4 text-stone-800">Personal Website</h3>
+                <p className="text-stone-600 mb-6 leading-relaxed">
+                  Essential digital presence for consultants and freelancers. A sophisticated foundation that establishes credibility and begins building your owned audience.
                 </p>
 
                 <div className="space-y-3 mb-8">
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Custom domain & hosting setup</span>
+                    <span className="text-sm text-stone-600">Custom design reflecting your professional brand</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Mobile-responsive design</span>
+                    <span className="text-sm text-stone-600">Mobile-responsive and fast-loading</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Contact & content management</span>
+                    <span className="text-sm text-stone-600">Professional hosting and domain setup</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">SEO optimization</span>
+                    <span className="text-sm text-stone-600">Complete ownership and source code access</span>
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full border-purple-200 text-purple-600 hover:bg-purple-50">
+                <Button variant="outline" className="w-full border-green-300 text-green-600 hover:bg-green-50 rounded-lg">
                   Get Started
                 </Button>
               </div>
 
-              {/* Creator Platform Card */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
+              {/* Custom Platform Card */}
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-orange-300 relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-medium">Most Popular</span>
+                </div>
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-2xl mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-50 rounded-lg mb-4">
                     <Zap className="w-8 h-8 text-orange-600" />
                   </div>
-                  <span className="text-sm font-medium text-orange-600 uppercase tracking-wider">From $3,500</span>
+                  <span className="text-sm font-medium text-orange-600 uppercase tracking-wider">From $2,500</span>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">Creator Platform</h3>
-                <p className="text-gray-600 mb-6">
-                  Everything you need to build your audience with special features for content creators and influencers.
+                <h3 className="text-2xl font-serif font-medium mb-4 text-stone-800">Custom Platform</h3>
+                <p className="text-stone-600 mb-6 leading-relaxed">
+                  Tailored business solutions with custom functionality designed for your specific workflow, plus strategic positioning that ensures you appear first when clients seek your expertise.
                 </p>
 
                 <div className="space-y-3 mb-8">
@@ -301,76 +305,76 @@ export function OwnYourNarrative() {
                     <div className="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Everything in Personal</span>
+                    <span className="text-sm text-stone-600">Everything in Personal Website</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Email list management</span>
+                    <span className="text-sm text-stone-600">Bespoke functionality development</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Member management</span>
+                    <span className="text-sm text-stone-600">Strategic search engine positioning</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Analytics & insights</span>
+                    <span className="text-sm text-stone-600">Integration with existing business tools</span>
                   </div>
                 </div>
 
-                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-                  Most Popular
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white rounded-lg">
+                  Start Your Project
                 </Button>
               </div>
 
               {/* Portfolio & Blog Card */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-stone-200">
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-4">
-                    <Palette className="w-8 h-8 text-blue-600" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-50 rounded-lg mb-4">
+                    <Palette className="w-8 h-8 text-amber-600" />
                   </div>
-                  <span className="text-sm font-medium text-blue-600 uppercase tracking-wider">From $2,500</span>
+                  <span className="text-sm font-medium text-amber-600 uppercase tracking-wider">From $5,000</span>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">Portfolio & Blog</h3>
-                <p className="text-gray-600 mb-6">
-                  Showcase your work and share your thoughts with a beautiful portfolio and blog platform.
+                <h3 className="text-2xl font-serif font-medium mb-4 text-stone-800">Authority Platform</h3>
+                <p className="text-stone-600 mb-6 leading-relaxed">
+                  Showcase exceptional work and establish thought leadership through sophisticated content presentation and strategic positioning as the definitive expert in your field.
                 </p>
 
                 <div className="space-y-3 mb-8">
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Everything in Personal</span>
+                    <span className="text-sm text-stone-600">Sophisticated portfolio presentation</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Portfolio showcase</span>
+                    <span className="text-sm text-stone-600">Authority-building content strategy</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Blog with categories</span>
+                    <span className="text-sm text-stone-600">Advanced search engine positioning</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-700">Comment system</span>
+                    <span className="text-sm text-stone-600">Thought leadership publishing platform</span>
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full border-blue-200 text-blue-600 hover:bg-blue-50">
-                  Get Started
+                <Button variant="outline" className="w-full border-amber-300 text-amber-600 hover:bg-amber-50 rounded-lg">
+                  Learn More
                 </Button>
               </div>
             </div>
@@ -383,56 +387,56 @@ export function OwnYourNarrative() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-normal mb-4 text-gray-900">
-                How we bring your vision to life
+              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-stone-800">
+                How We Create Something Meaningful Together
               </h2>
-              <p className="text-lg text-gray-600">
-                A streamlined process designed for creators, entrepreneurs, and growing businesses.
+              <p className="text-lg text-stone-600 leading-relaxed">
+                A thoughtful process designed for discerning entrepreneurs who value both efficiency and excellence.
               </p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-8">
               {/* Step 1 */}
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <span className="text-2xl font-semibold text-purple-600">01</span>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-50 rounded-lg mb-4">
+                  <span className="text-2xl font-serif font-medium text-orange-600">01</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">Quick Start</h3>
-                <p className="text-sm text-gray-600">
-                  Share your vision with us. We'll help you choose the perfect package for your needs.
+                <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Discovery & Vision</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">
+                  We begin with meaningful conversation about your business goals and the digital experience you envision. No lengthy questionnaires—just strategic dialogue.
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <span className="text-2xl font-semibold text-purple-600">02</span>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-50 rounded-lg mb-4">
+                  <span className="text-2xl font-serif font-medium text-green-600">02</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">Design & Build</h3>
-                <p className="text-sm text-gray-600">
-                  We create your custom website with your feedback every step of the way.
+                <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Rapid Development</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">
+                  Launch quickly with core functionality, then evolve thoughtfully as your business develops. You're not locked into version 1.0.
                 </p>
               </div>
 
               {/* Step 3 */}
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <span className="text-2xl font-semibold text-purple-600">03</span>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-50 rounded-lg mb-4">
+                  <span className="text-2xl font-serif font-medium text-amber-600">03</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">Review & Refine</h3>
-                <p className="text-sm text-gray-600">
-                  Perfect every detail together until your site exceeds expectations.
+                <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Complete Customization</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">
+                  When you're ready for something entirely bespoke—functionality that gives you competitive advantages and positions you as the premium choice.
                 </p>
               </div>
 
               {/* Step 4 */}
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <span className="text-2xl font-semibold text-purple-600">04</span>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-stone-100 rounded-lg mb-4">
+                  <span className="text-2xl font-serif font-medium text-stone-600">04</span>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">Launch & Support</h3>
-                <p className="text-sm text-gray-600">
-                  Go live with confidence and ongoing support for your success.
+                <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Ongoing Partnership</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">
+                  Your success is our success. We provide ongoing support and strategic guidance as your business grows and evolves.
                 </p>
               </div>
             </div>
@@ -441,25 +445,23 @@ export function OwnYourNarrative() {
       </section>
 
       {/* CTA Section with Form */}
-      <section id="contact" className="py-20 bg-gradient-to-b from-purple-50 to-white">
+      <section id="contact" className="py-20 bg-gradient-to-b from-stone-100 to-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-normal mb-4 text-gray-900">
-                Let's build something{" "}
-                <span className="text-purple-600 font-medium italic">exceptional</span>{" "}
-                together
+              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-stone-800">
+                Ready to Own Your Digital Future?
               </h2>
-              <p className="text-lg text-gray-600">
-                Ready to start your project? Schedule a 30-minute consultation to discuss your requirements, timeline, and how we can help bring your vision to life.
+              <p className="text-lg text-stone-600 leading-relaxed">
+                Let's discuss how a sophisticated digital presence can elevate your business positioning and client relationships.
               </p>
             </div>
 
             <div className="max-w-2xl mx-auto">
-              <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 shadow-sm border border-stone-200">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-stone-600 mb-2">
                       Your Name
                     </label>
                     <input
@@ -467,13 +469,13 @@ export function OwnYourNarrative() {
                       id="name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="John Doe"
+                      className="w-full px-4 py-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent bg-white"
+                      placeholder="Your full name"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-stone-600 mb-2">
                       Email Address
                     </label>
                     <input
@@ -481,8 +483,8 @@ export function OwnYourNarrative() {
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="john@example.com"
+                      className="w-full px-4 py-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent bg-white"
+                      placeholder="your@email.com"
                       required
                     />
                   </div>
@@ -490,66 +492,66 @@ export function OwnYourNarrative() {
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="projectType" className="block text-sm font-medium text-stone-600 mb-2">
                       Project Type
                     </label>
                     <select
                       id="projectType"
                       value={projectType}
                       onChange={(e) => setProjectType(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent bg-white"
                       required
                     >
-                      <option value="">Select a project type</option>
-                      <option value="personal">Personal Website</option>
-                      <option value="creator">Creator Platform</option>
-                      <option value="portfolio">Portfolio & Blog</option>
-                      <option value="custom">Custom Project</option>
+                      <option value="">What are you looking for?</option>
+                      <option value="personal">Personal Website ($500+)</option>
+                      <option value="custom">Custom Platform ($2,500+)</option>
+                      <option value="authority">Authority Platform ($5,000+)</option>
+                      <option value="consultation">Just exploring options</option>
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                      Budget Range
+                    <label htmlFor="budget" className="block text-sm font-medium text-stone-600 mb-2">
+                      Timeline
                     </label>
                     <select
                       id="budget"
                       value={budget}
                       onChange={(e) => setBudget(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent bg-white"
                       required
                     >
-                      <option value="">Select your budget</option>
-                      <option value="1500-2500">$1,500 - $2,500</option>
-                      <option value="2500-5000">$2,500 - $5,000</option>
-                      <option value="5000-10000">$5,000 - $10,000</option>
-                      <option value="10000+">$10,000+</option>
+                      <option value="">When do you need this?</option>
+                      <option value="asap">As soon as possible</option>
+                      <option value="month">Within a month</option>
+                      <option value="quarter">Next 2-3 months</option>
+                      <option value="exploring">Just exploring for now</option>
                     </select>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Project Details
+                  <label htmlFor="message" className="block text-sm font-medium text-stone-600 mb-2">
+                    Tell Us About Your Vision
                   </label>
                   <textarea
                     id="message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Tell us about your project goals, timeline, and any specific requirements..."
+                    className="w-full px-4 py-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent bg-white"
+                    placeholder="Share your business goals, what you'd like your website to accomplish, and any specific ideas you have in mind..."
                   />
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <p className="text-sm text-gray-500">
-                    * I agree to the privacy policy and understand my information will be handled securely and not shared with third parties.
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <p className="text-sm text-stone-600">
+                    Typically, we respond within 24 hours with initial thoughts and next steps.
                   </p>
                   <Button
                     type="submit"
-                    className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg"
+                    className="px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg transition-all duration-300"
                   >
-                    Schedule a Call
+                    Begin the Conversation
                   </Button>
                 </div>
               </form>
@@ -562,18 +564,23 @@ export function OwnYourNarrative() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-normal mb-6 text-gray-900">
-              Direct Contact
+            <h2 className="text-3xl md:text-4xl font-serif font-normal mb-6 text-stone-800">
+              Get In Touch
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">Email</h3>
-                <p className="text-gray-600">hello@gallifrey.consulting</p>
+              <div className="bg-stone-100 rounded-lg p-6">
+                <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Email</h3>
+                <p className="text-stone-600">hello@gallifrey.consulting</p>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">Response Time</h3>
-                <p className="text-gray-600">We'll get back to you within 24 hours</p>
+              <div className="bg-stone-100 rounded-lg p-6">
+                <h3 className="text-lg font-serif font-medium mb-2 text-stone-800">Response Time</h3>
+                <p className="text-stone-600">We'll get back to you within 24 hours</p>
               </div>
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-stone-600 leading-relaxed">
+                <em>Building digital independence for discerning entrepreneurs</em>
+              </p>
             </div>
           </div>
         </div>

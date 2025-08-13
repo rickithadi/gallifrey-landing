@@ -14,6 +14,15 @@ module.exports = {
         "gallifrey-gray": "hsl(var(--gallifrey-gray))",
         "gallifrey-orange": "hsl(var(--gallifrey-orange))",
 
+        // New Warm Color Palette
+        "rich-espresso": "hsl(var(--rich-espresso))",
+        "warm-charcoal": "hsl(var(--warm-charcoal))",
+        "soft-taupe": "hsl(var(--soft-taupe))",
+        "cream-white": "hsl(var(--cream-white))",
+        "warm-terracotta": "hsl(var(--warm-terracotta))",
+        "sage-green": "hsl(var(--sage-green))",
+        "soft-amber": "hsl(var(--soft-amber))",
+
         // Semantic color mappings
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

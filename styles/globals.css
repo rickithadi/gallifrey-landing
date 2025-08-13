@@ -6,38 +6,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
 :root {
-  /* Gallifrey Consulting Brand Colors */
+  /* Gallifrey Consulting Brand Colors - Claude-Inspired Warm Palette */
   --gallifrey-navy: 27 38 59;
   --gallifrey-teal: 46 196 182;
   --gallifrey-gray: 240 243 245;
   --gallifrey-orange: 255 127 17;
 
-  /* Semantic color mappings using HSL values */
-  --background: 0 0% 100%;
-  --foreground: 210 22% 22%;
-  --card: 0 0% 100%;
-  --card-foreground: 210 22% 22%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 210 22% 22%;
-  --primary: 210 22% 22%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 210 11% 96%;
-  --secondary-foreground: 210 22% 22%;
-  --muted: 210 11% 96%;
-  --muted-foreground: 215 16% 47%;
-  --accent: 174 64% 47%;
-  --accent-foreground: 0 0% 100%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-  --border: 210 22% 22% / 0.1;
-  --input: 210 11% 96%;
-  --ring: 174 64% 47%;
-  --chart-1: 174 64% 47%;
-  --chart-2: 210 22% 22%;
-  --chart-3: 22 100% 54%;
-  --chart-4: 210 11% 96%;
-  --chart-5: 215 16% 47%;
-  --radius: 0.625rem;
+  /* New Warm Color Palette - RGB format for consistency */
+  --rich-espresso: 43 37 32; /* #2B2520 */
+  --warm-charcoal: 74 69 62; /* #4A453E */
+  --soft-taupe: 247 245 243; /* #F7F5F3 */
+  --cream-white: 254 252 250; /* #FEFCFA */
+  --warm-terracotta: 196 101 75; /* #C4654B */
+  --sage-green: 122 132 113; /* #7A8471 */
+  --soft-amber: 212 165 116; /* #D4A574 */
+
+  /* Semantic color mappings using warm palette */
+  --background: 254 252 250; /* cream-white */
+  --foreground: 43 37 32; /* rich-espresso */
+  --card: 254 252 250; /* cream-white */
+  --card-foreground: 43 37 32; /* rich-espresso */
+  --popover: 254 252 250; /* cream-white */
+  --popover-foreground: 43 37 32; /* rich-espresso */
+  --primary: 196 101 75; /* warm-terracotta */
+  --primary-foreground: 254 252 250; /* cream-white */
+  --secondary: 247 245 243; /* soft-taupe */
+  --secondary-foreground: 43 37 32; /* rich-espresso */
+  --muted: 247 245 243; /* soft-taupe */
+  --muted-foreground: 74 69 62; /* warm-charcoal */
+  --accent: 122 132 113; /* sage-green */
+  --accent-foreground: 254 252 250; /* cream-white */
+  --destructive: 239 68 68; /* red-500 equivalent */
+  --destructive-foreground: 254 252 250; /* cream-white */
+  --border: 229 231 235; /* gray-200 equivalent */
+  --input: 247 245 243; /* soft-taupe */
+  --ring: 196 101 75; /* warm-terracotta */
+  --chart-1: 196 101 75; /* warm-terracotta */
+  --chart-2: 43 37 32; /* rich-espresso */
+  --chart-3: 212 165 116; /* soft-amber */
+  --chart-4: 247 245 243; /* soft-taupe */
+  --chart-5: 74 69 62; /* warm-charcoal */
+  --radius: 0.375rem; /* 6px for friendlier feel */
 }
 
 .dark {

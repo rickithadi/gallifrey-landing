@@ -69,7 +69,7 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
 
     // Clean up
     hiddenDiv.textContent = '';
-  }, []);
+  }, [adjectives]);
 
   // Handle window resize
   useEffect(() => {
