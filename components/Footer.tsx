@@ -54,6 +54,9 @@ export function Footer() {
               <p className="text-sm text-muted-foreground">
                 © 2024 Gallifrey Consulting. All rights reserved.
               </p>
+              <p className="text-xs text-muted-foreground/70 mt-1">
+                ABN: 69 696 168 286
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
