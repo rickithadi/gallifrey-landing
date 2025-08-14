@@ -76,7 +76,7 @@ export default function Home() {
           "opens": "09:00",
           "closes": "17:00"
         },
-        "priceRange": "$500-$50000",
+        "priceRange": "$800-$50000",
         "currenciesAccepted": "AUD",
         "paymentAccepted": "Cash, Credit Card, Bank Transfer"
       },
@@ -185,12 +185,12 @@ export default function Home() {
     <>
       <NextSeo
         title="Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne"
-        description="Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $500."
+        description="Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
           title: 'Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne',
-          description: 'Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $500.',
+          description: 'Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -236,8 +236,8 @@ export default function Home() {
         {/* <Work /> */}
         <Features />
 
-        {/* Own Your Narrative Campaign CTA */}
-        <section className="py-20 px-4 bg-gradient-to-r from-[#1a237e] to-[#00695c] relative overflow-hidden">
+        {/* Own Your Narrative Campaign CTA - Temporarily hidden */}
+        {/* <section className="py-20 px-4 bg-gradient-to-r from-[#1a237e] to-[#00695c] relative overflow-hidden">
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <div className="mb-6">
               <span className="text-sm font-medium tracking-wider text-white/80 uppercase mb-4 block">
@@ -272,7 +272,6 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Trust indicators */}
             <div className="mt-12 pt-8 border-t border-white/20">
               <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-white/80">
                 <span>47 Data Brokers Removed</span>
@@ -284,11 +283,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Background decoration */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#42a5f5]/20 to-transparent rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#ffa726]/20 to-transparent rounded-full blur-3xl"></div>
-        </section>
+        </section> */}
 
         <Pricing />
         <Contact />

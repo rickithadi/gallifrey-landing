@@ -6,13 +6,14 @@ export function Pricing() {
   const packages = [
     {
       name: "Essential",
-      price: "$500",
-      description: "Perfect for personal brands and small businesses getting started online",
+      price: "$800",
+      description: "Perfect for consultations, reputation management, and privacy cleanup",
       features: [
-        "Custom responsive design",
-        "Security & HTTPS setup",
-        "Basic SEO optimization",
-        "Contact form integration",
+        "Initial consultation & strategy",
+        "Reputation management audit",
+        "Privacy cleanup & data removal",
+        "Basic security hardening",
+        "Digital footprint assessment",
         "1 month support included"
       ],
       timeline: "1-2 weeks",
@@ -20,14 +21,15 @@ export function Pricing() {
     },
     {
       name: "Professional",
-      price: "$1,500–3,000",
-      description: "Comprehensive solution for growing businesses with advanced features",
+      price: "$2,500–5,000",
+      description: "Comprehensive digital solutions with business dashboards and digitalization",
       features: [
-        "Multi-page custom website",
-        "Content management system",
-        "Payment gateway integration",
-        "Advanced SEO & analytics",
+        "Custom business dashboards",
+        "Digital transformation strategy",
+        "Multi-platform integration",
+        "Advanced security hardening",
         "Performance optimization",
+        "Business process digitalization",
         "3 months support included"
       ],
       timeline: "2-4 weeks",
@@ -36,15 +38,16 @@ export function Pricing() {
     },
     {
       name: "Enterprise",
-      price: "$5,000+",
-      description: "Full-scale applications with ongoing partnership and support",
+      price: "$8,000+",
+      description: "Full-scale development with comprehensive digitalization and hardening",
       features: [
         "Custom web applications",
-        "Complex integrations",
-        "Cloud infrastructure",
-        "Security compliance",
-        "24/7 monitoring",
-        "Dedicated support team"
+        "Enterprise business dashboards",
+        "Complete digitalization suite",
+        "Advanced security hardening",
+        "Cloud infrastructure setup",
+        "24/7 monitoring & support",
+        "Dedicated development team"
       ],
       timeline: "4-12 weeks",
       cta: "Let&apos;s discuss"
