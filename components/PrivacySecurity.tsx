@@ -3,7 +3,6 @@ import { Database, Lock, Search, Shield, UserCheck } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
 
 import { Badge } from "./ui/badge";
-import { useScrollAnimation } from "@/lib/useScrollAnimation";
 
 export function PrivacySecurity() {
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
