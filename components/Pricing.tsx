@@ -50,7 +50,7 @@ export function Pricing() {
         "Dedicated development team"
       ],
       timeline: "4-12 weeks",
-      cta: "Let&apos;s discuss"
+      cta: "Let's discuss"
     }
   ];
 
