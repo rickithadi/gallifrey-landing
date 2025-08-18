@@ -1,4 +1,5 @@
 import { Contact } from '@/components/Contact'
+import { FAQ } from '@/components/FAQ'
 import { Features } from '@/components/Features'
 import { Footer } from '@/components/Footer'
 import Head from 'next/head'
@@ -8,6 +9,8 @@ import { NextSeo } from 'next-seo'
 import { Pricing } from '@/components/Pricing'
 import { PrivacySecurity } from '@/components/PrivacySecurity'
 import { Services } from '@/components/Services'
+import { Testimonials } from '@/components/Testimonials'
+import { TrustSignals } from '@/components/TrustSignals'
 // import { Work } from '@/components/Work'
 
 export default function Home() {
@@ -232,6 +235,7 @@ export default function Home() {
         <Hero />
         <Services />
         <PrivacySecurity />
+        <Testimonials />
         {/* <Work /> */}
         <Features />
 
@@ -288,7 +292,9 @@ export default function Home() {
         </section> */}
 
         <Pricing />
+        <FAQ />
         <Contact />
+        <TrustSignals />
         <Footer />
       </div>
     </>

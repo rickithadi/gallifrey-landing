@@ -5,52 +5,58 @@ import { Button } from "./ui/button";
 export function Pricing() {
   const packages = [
     {
-      name: "Essential",
-      price: "$800",
-      description: "Perfect for consultations, reputation management, and privacy cleanup",
+      name: "Foundation",
+      tagline: "Essential digital security",
+      description: "Perfect for personal brands and small businesses establishing secure online presence",
+      scope: "Ideal for: Solo professionals, small businesses, personal brands",
       features: [
-        "Initial consultation & strategy",
-        "Reputation management audit",
-        "Privacy cleanup & data removal",
-        "Basic security hardening",
+        "Comprehensive security audit & cleanup",
+        "Privacy protection & data removal",
         "Digital footprint assessment",
-        "1 month support included"
+        "Basic digital sovereignty setup",
+        "Reputation management fundamentals",
+        "1-month support & monitoring"
       ],
       timeline: "1-2 weeks",
-      cta: "Get started"
+      cta: "Get Foundation Quote",
+      investment: "Four-figure investment"
     },
     {
       name: "Professional",
-      price: "$2,500–5,000",
-      description: "Comprehensive digital solutions with business dashboards and digitalization",
+      tagline: "Complete digital transformation",
+      description: "Comprehensive solutions for established businesses and professional services",
+      scope: "Ideal for: Growing businesses, professional services, established brands",
       features: [
         "Custom business dashboards",
-        "Digital transformation strategy",
+        "Advanced security implementation",
         "Multi-platform integration",
-        "Advanced security hardening",
-        "Performance optimization",
-        "Business process digitalization",
-        "3 months support included"
+        "Digital process optimization",
+        "Performance & conversion optimization",
+        "Strategic digital sovereignty planning",
+        "3-month partnership & support"
       ],
       timeline: "2-4 weeks",
-      cta: "Start your project",
-      popular: true
+      cta: "Discuss Professional Package",
+      popular: true,
+      investment: "Mid four to five-figure investment"
     },
     {
       name: "Enterprise",
-      price: "$8,000+",
-      description: "Full-scale development with comprehensive digitalization and hardening",
+      tagline: "Total digital sovereignty",
+      description: "Full-scale solutions for organizations requiring maximum security and custom development",
+      scope: "Ideal for: Large organizations, high-security needs, complex requirements",
       features: [
-        "Custom web applications",
-        "Enterprise business dashboards",
+        "Custom web applications & systems",
+        "Enterprise infrastructure architecture",
+        "24/7 security monitoring & response",
+        "Dedicated development team",
         "Complete digitalization suite",
-        "Advanced security hardening",
-        "Cloud infrastructure setup",
-        "24/7 monitoring & support",
-        "Dedicated development team"
+        "Ongoing strategic consulting",
+        "White-glove concierge service"
       ],
       timeline: "4-12 weeks",
-      cta: "Let's discuss"
+      cta: "Explore Enterprise Solutions",
+      investment: "Five+ figure strategic investment"
     }
   ];
 
@@ -67,12 +73,12 @@ export function Pricing() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            Transparent pricing for
-            <span className="italic text-accent"> exceptional work</span>
+            Strategic partnerships for
+            <span className="italic text-accent"> exceptional outcomes</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            No hidden fees, no surprises. Every project includes security, performance optimization, and ongoing support. You only pay when you&apos;re completely satisfied.
+            Every engagement is customized to your specific requirements and goals. Our partnerships typically begin in the four-figure range, scaling with complexity and scope.
           </p>
         </div>
 
@@ -89,20 +95,28 @@ export function Pricing() {
               )}
 
               <div className="mb-6">
-                <h3 className="font-serif text-2xl font-medium mb-2 text-primary">
+                <h3 className="font-serif text-2xl font-medium mb-1 text-primary">
                   {pkg.name}
                 </h3>
-                <div className="mb-4">
-                  <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-accent font-medium text-sm mb-3">
+                  {pkg.tagline}
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   {pkg.description}
+                </p>
+                <p className="text-xs text-muted-foreground/80 italic">
+                  {pkg.scope}
                 </p>
               </div>
 
               <div className="mb-8">
-                <div className="text-xs text-muted-foreground/80 uppercase tracking-wider mb-4">
-                  Timeline: {pkg.timeline}
+                <div className="flex justify-between items-center mb-4">
+                  <span className="text-xs text-muted-foreground/80 uppercase tracking-wider">
+                    Timeline: {pkg.timeline}
+                  </span>
+                  <span className="text-xs text-accent font-medium">
+                    {pkg.investment}
+                  </span>
                 </div>
                 <ul className="space-y-3">
                   {pkg.features.map((feature, featureIndex) => (
@@ -124,22 +138,39 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Additional info */}
+        {/* Investment guidance */}
         <div className="text-center border-t border-border/50 pt-16">
           <h3 className="text-xl font-serif font-medium mb-4 text-primary">
-            Need something different?
+            Custom solutions for unique challenges
           </h3>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Every project is unique. Let&apos;s discuss your specific requirements and create a custom proposal
-            that fits your budget and timeline.
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Investment levels vary based on complexity, scope, and strategic objectives. Every engagement begins with a comprehensive discovery process to ensure perfect alignment.
           </p>
+          
+          <div className="bg-muted/30 rounded-lg p-6 mb-8 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div>
+                <div className="font-medium text-primary mb-1">Discovery Call</div>
+                <div className="text-muted-foreground">Complimentary 30-minute strategy session</div>
+              </div>
+              <div>
+                <div className="font-medium text-primary mb-1">Custom Proposal</div>
+                <div className="text-muted-foreground">Detailed scope, timeline & investment</div>
+              </div>
+              <div>
+                <div className="font-medium text-primary mb-1">Flexible Terms</div>
+                <div className="text-muted-foreground">Milestone-based payments available</div>
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="px-8 py-3 bg-primary hover:bg-primary/90">
-              Schedule consultation
+              Schedule Discovery Call
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             <Button variant="outline" className="px-8 py-3 border-muted-foreground/20 hover:bg-muted/50">
-              View case studies
+              View Success Stories
             </Button>
           </div>
         </div>

@@ -366,4 +366,55 @@
       transition: none;
     }
   }
+
+  /* Enhanced mobile touch targets */
+  @media (max-width: 768px) {
+    .mobile-touch-target {
+      min-height: 48px;
+      min-width: 48px;
+      padding: 12px 24px;
+    }
+    
+    /* Larger mobile buttons */
+    .btn-mobile {
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      min-height: 52px;
+    }
+    
+    /* Better mobile card spacing */
+    .mobile-card:hover {
+      transform: none; /* Disable hover transforms on mobile */
+    }
+    
+    /* Improved mobile navigation */
+    .mobile-nav {
+      padding: 16px;
+    }
+    
+    /* Better mobile form controls */
+    .mobile-input {
+      min-height: 48px;
+      font-size: 16px; /* Prevents zoom on iOS */
+    }
+  }
+
+  /* Enhanced hover states for desktop */
+  @media (hover: hover) {
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(var(--gallifrey-charcoal), 0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hover-scale:hover {
+      transform: scale(1.02);
+      transition: transform 0.2s ease-out;
+    }
+    
+    .hover-glow:hover {
+      box-shadow: 0 0 20px rgba(var(--gallifrey-teal), 0.3);
+      transition: box-shadow 0.3s ease-out;
+    }
+  }
 }
