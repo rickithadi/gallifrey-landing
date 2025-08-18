@@ -1,0 +1,179 @@
+/*
+ * Gallifrey Consulting Brand Colors - Implementation File
+ * Copy this entire file content to implement the brand colors
+ * Last updated: January 2025
+ */
+
+/* Google Fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Gallifrey Consulting Brand Colors */
+  --gallifrey-navy: 27 38 59;
+  --gallifrey-teal: 46 196 182;
+  --gallifrey-gray: 240 243 245;
+  --gallifrey-orange: 255 127 17;
+
+  /* Semantic color mappings using HSL values */
+  --background: 0 0% 100%;
+  --foreground: 210 22% 22%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 22% 22%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 22% 22%;
+  --primary: 210 22% 22%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 11% 96%;
+  --secondary-foreground: 210 22% 22%;
+  --muted: 210 11% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 174 64% 47%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 22% 22% / 0.1;
+  --input: 210 11% 96%;
+  --ring: 174 64% 47%;
+  --chart-1: 174 64% 47%;
+  --chart-2: 210 22% 22%;
+  --chart-3: 22 100% 54%;
+  --chart-4: 210 11% 96%;
+  --chart-5: 215 16% 47%;
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: 222 84% 5%;
+  --foreground: 210 11% 96%;
+  --card: 217 33% 17%;
+  --card-foreground: 210 11% 96%;
+  --popover: 217 33% 17%;
+  --popover-foreground: 210 11% 96%;
+  --primary: 174 64% 47%;
+  --primary-foreground: 222 84% 5%;
+  --secondary: 215 28% 17%;
+  --secondary-foreground: 210 11% 96%;
+  --muted: 215 28% 17%;
+  --muted-foreground: 217 11% 65%;
+  --accent: 22 100% 54%;
+  --accent-foreground: 222 84% 5%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 11% 96%;
+  --border: 215 28% 17%;
+  --input: 215 28% 17%;
+  --ring: 174 64% 47%;
+  --chart-1: 174 64% 47%;
+  --chart-2: 22 100% 54%;
+  --chart-3: 210 11% 96%;
+  --chart-4: 217 11% 65%;
+  --chart-5: 215 16% 57%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-accent via-gallifrey-teal to-primary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-elegant {
+    @apply bg-gradient-to-r from-primary via-accent to-gallifrey-teal bg-clip-text text-transparent;
+  }
+
+  .shadow-brand {
+    box-shadow: 0 4px 6px -1px hsl(var(--gallifrey-navy) / 0.1),
+      0 2px 4px -1px hsl(var(--gallifrey-navy) / 0.06);
+  }
+
+  .shadow-brand-lg {
+    box-shadow: 0 10px 15px -3px hsl(var(--gallifrey-navy) / 0.1),
+      0 4px 6px -2px hsl(var(--gallifrey-navy) / 0.05);
+  }
+
+  .shadow-brand-xl {
+    box-shadow: 0 20px 25px -5px hsl(var(--gallifrey-navy) / 0.1),
+      0 10px 10px -5px hsl(var(--gallifrey-navy) / 0.04);
+  }
+
+  .logo-serif {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .elegant-caps {
+    font-variant: small-caps;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+  }
+
+  /* Own Your Narrative Campaign Styles - Apple Inspired */
+  .narrative-gradient {
+    background: linear-gradient(135deg, #1e40af 0%, #0d9488 100%);
+  }
+
+  .narrative-text-gradient {
+    @apply bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .narrative-glow {
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+  }
+
+  .narrative-border {
+    border-image: linear-gradient(135deg, #3b82f6, #14b8a6) 1;
+  }
+
+  /* Apple-inspired glassmorphism */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card-dark {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Smooth transitions for Apple-like feel */
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Custom scrollbar for clean Apple aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
+  }
+}

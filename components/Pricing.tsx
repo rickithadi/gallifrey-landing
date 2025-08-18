@@ -6,8 +6,8 @@ export function Pricing() {
   const packages = [
     {
       name: "Essential",
-      price: "$1000",
-      description: "Perfect for personal brands and small businesses getting started online",
+      price: "$800",
+      description: "Perfect for consultations, reputation management, and privacy cleanup",
       features: [
         "Initial consultation & strategy",
         "Reputation management audit",
