@@ -2,12 +2,20 @@ import { AnimatedAdjective } from "./AnimatedAdjective";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { trackCTAClick } from "@/lib/analytics";
+import { trackVariantConversion } from "@/lib/ab-test";
+import { useABTest } from "./ABTestProvider";
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
 
 export function Hero() {
+  const { variant } = useABTest();
   const headlineAnimation = useScrollAnimation<HTMLHeadingElement>({ threshold: 0.1 });
   const subtitleAnimation = useScrollAnimation<HTMLParagraphElement>({ threshold: 0.1 });
   const ctaAnimation = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+
+  const handleCTAClick = (action: string) => {
+    trackCTAClick(action);
+    trackVariantConversion(variant, action);
+  };
 
   return (
     <section className="relative py-24 md:py-32 px-4 overflow-hidden" aria-labelledby="hero-heading">
@@ -47,7 +55,7 @@ export function Hero() {
           <Button size="lg" className="px-10 py-4 bg-primary hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" asChild>
             <a
               href="#contact"
-              onClick={() => trackCTAClick("hero-commission-site")}
+              onClick={() => handleCTAClick("hero-commission-site")}
             >
               Commission Your Site
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -58,7 +66,7 @@ export function Hero() {
               href="https://calendly.com/rickithadi/30min"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackCTAClick("hero-consultation")}
+              onClick={() => handleCTAClick("hero-consultation")}
             >
               30-minute consultation
             </a>

@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import React from 'react'
+import { ABTestProvider } from '@/components/ABTestProvider'
+import { VariantToggle } from '@/components/VariantToggle'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -104,7 +106,10 @@ export default function App({ Component, pageProps }: AppProps) {
           },
         ]}
       />
-      <Component {...pageProps} />
+      <ABTestProvider>
+        <Component {...pageProps} />
+        <VariantToggle />
+      </ABTestProvider>
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       )}
