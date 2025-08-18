@@ -1,6 +1,10 @@
 import { Code, Palette, Shield, Users } from "lucide-react";
+import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
 
 export function Services() {
+  const headerAnimation = useScrollAnimation<HTMLDivElement>();
+  const { ref: servicesRef, visibleItems } = useStaggeredAnimation<HTMLDivElement>(4);
+
   const services = [
     {
       icon: <Palette className="w-6 h-6 text-accent" aria-hidden="true" />,
@@ -29,10 +33,13 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 px-4" aria-labelledby="services-heading">
+    <section id="services" className="py-16 px-4" aria-labelledby="services-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
-        <div className="mb-20">
+        <div
+          ref={headerAnimation.ref}
+          className={`mb-20 animate-fade-up ${headerAnimation.isVisible ? 'visible' : ''}`}
+        >
           <div className="mb-8">
             <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
               Our Approach
@@ -51,9 +58,12 @@ export function Services() {
         </div>
 
         {/* Services grid */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
+        <div ref={servicesRef} className="grid md:grid-cols-2 gap-12 mb-20">
           {services.map((service, index) => (
-            <div key={index} className="group">
+            <div
+              key={index}
+              className={`group animate-fade-up ${visibleItems[index] ? 'visible' : ''}`}
+            >
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   {service.icon}

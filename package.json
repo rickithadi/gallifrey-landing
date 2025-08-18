@@ -7,7 +7,15 @@
     "build": "npm run lint && next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "lint:check": "next lint"
+    "lint:check": "next lint",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:codegen": "playwright codegen localhost:3000",
+    "design-review": "node scripts/design-review/design-reviewer.js",
+    "design-review:local": "node scripts/design-review/design-reviewer.js http://localhost:3000"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +45,7 @@
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.1",
     "@types/react": "^19.1.9",
     "eslint": "9.33.0",

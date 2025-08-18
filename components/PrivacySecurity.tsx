@@ -1,9 +1,15 @@
 import { Card, CardContent } from "./ui/card";
 import { Database, Lock, Search, Shield, UserCheck } from "lucide-react";
+import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
 
 import { Badge } from "./ui/badge";
 
 export function PrivacySecurity() {
+  const headerAnimation = useScrollAnimation<HTMLDivElement>();
+  const { ref: servicesRef, visibleItems } = useStaggeredAnimation<HTMLDivElement>(3);
+  const metricsAnimation = useScrollAnimation<HTMLDivElement>();
+  const { ref: featuresRef, visibleItems: featuresVisible } = useStaggeredAnimation<HTMLDivElement>(2);
+
   const services = [
     {
       icon: <Shield className="w-8 h-8 text-accent" aria-hidden="true" />,
@@ -51,7 +57,10 @@ export function PrivacySecurity() {
     <section id="privacy-security" className="py-24 px-4 bg-gradient-to-br from-secondary/20 to-secondary/5">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
-        <div className="text-center mb-20">
+        <div
+          ref={headerAnimation.ref}
+          className={`text-center mb-20 animate-fade-up ${headerAnimation.isVisible ? 'visible' : ''}`}
+        >
           <Badge className="mb-6 bg-accent/10 text-accent border-accent/20">
             Digital Privacy & Security
           </Badge>
@@ -66,9 +75,12 @@ export function PrivacySecurity() {
         </div>
 
         {/* Services grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div ref={servicesRef} className="grid lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
+            <Card
+              key={index}
+              className={`group hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm animate-fade-up ${visibleItems[index] ? 'visible' : ''}`}
+            >
               <CardContent className="p-8">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
@@ -96,7 +108,10 @@ export function PrivacySecurity() {
         </div>
 
         {/* Trust metrics */}
-        <div className="bg-card/30 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
+        <div
+          ref={metricsAnimation.ref}
+          className={`bg-card/30 backdrop-blur-sm rounded-2xl p-8 border border-border/50 animate-fade-up animate-delay-200 ${metricsAnimation.isVisible ? 'visible' : ''}`}
+        >
           <div className="text-center mb-8">
             <h3 className="text-xl font-serif font-medium text-primary mb-2">
               Proven Track Record
@@ -121,8 +136,8 @@ export function PrivacySecurity() {
         </div>
 
         {/* Additional security features */}
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <div className="flex items-start gap-4">
+        <div ref={featuresRef} className="mt-16 grid md:grid-cols-2 gap-8">
+          <div className={`flex items-start gap-4 animate-fade-up animate-delay-400 ${featuresVisible[0] ? 'visible' : ''}`}>
             <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
               <Database className="w-6 h-6 text-accent" />
             </div>
@@ -134,7 +149,7 @@ export function PrivacySecurity() {
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
+          <div className={`flex items-start gap-4 animate-fade-up animate-delay-600 ${featuresVisible[1] ? 'visible' : ''}`}>
             <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
               <Search className="w-6 h-6 text-accent" />
             </div>

@@ -4,7 +4,6 @@ import { Footer } from '@/components/Footer'
 import Head from 'next/head'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import { Pricing } from '@/components/Pricing'
 import { PrivacySecurity } from '@/components/PrivacySecurity'
@@ -228,7 +227,7 @@ export default function Home() {
           }}
         />
       </Head>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white">
         <Header />
         <Hero />
         <Services />

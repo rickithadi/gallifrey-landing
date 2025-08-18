@@ -5,9 +5,14 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useForm } from "@formspree/react";
+import { useScrollAnimation } from "@/lib/useScrollAnimation";
 import { useState } from "react";
 
 export function Contact() {
+  const headerAnimation = useScrollAnimation<HTMLElement>();
+  const formAnimation = useScrollAnimation<HTMLDivElement>();
+  const sidebarAnimation = useScrollAnimation<HTMLDivElement>();
+
   const [state, handleSubmit] = useForm("mgvzdpqo");
   const [formData, setFormData] = useState({
     name: "",
@@ -83,7 +88,10 @@ export function Contact() {
     <section id="contact" className="py-24 px-4" aria-labelledby="contact-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
-        <header className="mb-20">
+        <header
+          ref={headerAnimation.ref}
+          className={`mb-20 animate-fade-up ${headerAnimation.isVisible ? 'visible' : ''}`}
+        >
           <div className="mb-8">
             <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
               Get in Touch
@@ -104,7 +112,10 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-3 gap-16">
           {/* Contact form */}
-          <div className="lg:col-span-2">
+          <div
+            ref={formAnimation.ref}
+            className={`lg:col-span-2 animate-fade-up animate-delay-200 ${formAnimation.isVisible ? 'visible' : ''}`}
+          >
             <div className="bg-background border border-border/50 rounded-lg p-8">
               {state.errors && Object.keys(state.errors).length > 0 && (
                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
@@ -241,7 +252,10 @@ export function Contact() {
           </div>
 
           {/* Contact info */}
-          <div className="space-y-8">
+          <div
+            ref={sidebarAnimation.ref}
+            className={`space-y-8 animate-fade-up animate-delay-400 ${sidebarAnimation.isVisible ? 'visible' : ''}`}
+          >
             {/* Schedule Call CTA */}
             <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
               <div className="text-center mb-4">

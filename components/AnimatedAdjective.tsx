@@ -1,22 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 interface AnimatedAdjectiveProps {
   className?: string;
 }
 
 export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
-  const adjectives = [
+  const adjectives = useMemo(() => [
     'secure',
+    'authentic',
     'pixel-perfect',
     'trustworthy',
+    'exquisite',
     'beautiful',
     'reliable',
     'thoughtful',
+    'innovative',
     'modern'
-  ];
+  ], []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const measureRef = useRef<HTMLSpanElement>(null);
+  
+  // Find the longest word to reserve space
+  const longestWord = useMemo(() => {
+    return adjectives.reduce((longest, current) => 
+      current.length > longest.length ? current : longest
+    );
+  }, [adjectives]);
+
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,23 +40,30 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
           prevIndex === adjectives.length - 1 ? 0 : prevIndex + 1
         );
         setIsVisible(true);
-      }, 300); // Half of fade duration
+      }, 400); // Slightly longer pause for elegance
 
-    }, 3000); // Change word every 3 seconds
+    }, 4000); // Change word every 4 seconds - more sophisticated pacing
 
     return () => clearInterval(interval);
   }, [adjectives.length]);
 
   return (
-    <span
-      className={`inline-block transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
-        } ${className}`}
-      style={{
-        minWidth: '200px', // Prevents layout shift
-        textAlign: 'left'
-      }}
-    >
-      {adjectives[currentIndex]}
+    <span className="relative inline-block">
+      {/* Invisible placeholder to reserve space */}
+      <span 
+        className={`invisible ${className}`}
+        aria-hidden="true"
+      >
+        {longestWord}
+      </span>
+      
+      {/* Actual animated text */}
+      <span
+        ref={measureRef}
+        className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'} ${className}`}
+      >
+        {adjectives[currentIndex]}
+      </span>
     </span>
   );
 }

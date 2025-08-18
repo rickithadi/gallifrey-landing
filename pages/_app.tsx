@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import React from 'react'
+import { ABTestProvider } from '@/components/ABTestProvider'
+import { VariantToggle } from '@/components/VariantToggle'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -63,11 +65,35 @@ export default function App({ Component, pageProps }: AppProps) {
             name: 'ICBM',
             content: '-37.8136, 144.9631',
           },
+          {
+            name: 'theme-color',
+            content: '#1B365D',
+          },
+          {
+            name: 'msapplication-TileColor',
+            content: '#1B365D',
+          },
+          {
+            name: 'msapplication-config',
+            content: '/browserconfig.xml',
+          },
         ]}
         additionalLinkTags={[
           {
             rel: 'icon',
             href: '/favicon.ico',
+          },
+          {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '32x32',
+            href: '/favicon-32x32.png',
+          },
+          {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '16x16',
+            href: '/favicon-16x16.png',
           },
           {
             rel: 'apple-touch-icon',
@@ -80,7 +106,10 @@ export default function App({ Component, pageProps }: AppProps) {
           },
         ]}
       />
-      <Component {...pageProps} />
+      <ABTestProvider>
+        <Component {...pageProps} />
+        <VariantToggle />
+      </ABTestProvider>
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       )}

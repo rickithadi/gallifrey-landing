@@ -1,0 +1,209 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Gallifrey Consulting - Security-First Web Development":
+    - /url: /
+    - img "Gallifrey Consulting - Security-First Web Development"
+  - navigation:
+    - link "Services":
+      - /url: "#services"
+    - link "Pricing":
+      - /url: "#pricing"
+    - link "Contact":
+      - /url: "#contact"
+  - link "Get in touch":
+    - /url: https://calendly.com/rickithadi/30min
+- region "We build secure digital solutions":
+  - heading "We build secure digital solutions" [level=1]
+  - paragraph: Data services, software consultancy, and custom development. Security-first, pixel perfect solutions that scale with your business.
+  - link "Start a project":
+    - /url: "#contact"
+  - link "30-minute consultation":
+    - /url: https://calendly.com/rickithadi/30min
+- region "We craft pixel-perfect experiences with obsessive attention to detail":
+  - paragraph: Our Approach
+  - heading "We craft pixel-perfect experiences with obsessive attention to detail" [level=2]
+  - paragraph: Every project begins with custom design systems built from scratch. We position every pixel with mathematical precision because your brand deserves perfection, not templates.
+  - heading "Pixel-Perfect Design Systems" [level=3]
+  - paragraph: Custom-coded design systems with mathematical precision. Every element positioned purposefully, every interaction crafted to perfection. No templates, no compromises.
+  - text: Bespoke Visual Identity Custom Component Libraries Precision Typography Systems
+  - heading "Hand-Crafted Development" [level=3]
+  - paragraph: Obsessively detailed code architecture built from scratch. Every line optimized for performance, every function designed for elegance and maintainability.
+  - text: Custom Code Architecture Performance Optimization Clean Code Principles
+  - heading "Security-First Engineering" [level=3]
+  - paragraph: Military-grade security woven into every pixel and line of code. GDPR compliance, data encryption, and privacy protection built from the foundation up.
+  - text: Zero-Trust Architecture Privacy by Design Penetration Testing
+  - heading "Artisan-Level Craftsmanship" [level=3]
+  - paragraph: White-glove service with obsessive attention to detail. Every project treated as a masterpiece, every client relationship built on trust and excellence.
+  - text: Personal Attention Quality Assurance Lifetime Support
+- text: Digital Privacy & Security
+- heading "Protect Your Digital Identity & Own Your Narrative" [level=2]
+- paragraph: From data privacy protection to reputation management, we help you establish complete digital sovereignty. Remove unwanted information, secure your data, and build the online presence you deserve.
+- heading "Data Privacy Protection" [level=3]
+- paragraph: Comprehensive privacy audits, GDPR/CCPA compliance implementation, and data cleanup services. We remove your information from data brokers and establish robust privacy controls.
+- text: Data Broker Removal GDPR/CCPA Compliance Privacy Impact Assessments Data Minimization Strategies
+- heading "Security Engineering" [level=3]
+- paragraph: Military-grade security architecture with zero-trust principles. Penetration testing, fraud monitoring, and enterprise-level security implementations.
+- text: Zero-Trust Architecture Penetration Testing Security Audits Fraud Detection Systems
+- heading "Reputation Management" [level=3]
+- paragraph: Strategic digital presence optimization and unwanted content removal. We help establish your authoritative online narrative while removing damaging information.
+- text: Content Removal Services SEO Reputation Repair Digital Presence Strategy Brand Protection Monitoring
+- heading "Proven Track Record" [level=3]
+- paragraph: Trusted by businesses and individuals to protect their digital assets
+- text: 47+ Data Brokers Removed 99.9% Security Uptime 100% GDPR Compliance Rate 24/7 Security Monitoring
+- heading "Data Sovereignty" [level=4]
+- paragraph: Complete control over your data with custom hosting solutions and platform independence strategies.
+- heading "Continuous Monitoring" [level=4]
+- paragraph: 24/7 monitoring of your digital footprint with automated alerts for new privacy threats or reputation risks.
+- text: Technical Excellence
+- heading "How We Work Together" [level=2]
+- paragraph: A transparent, collaborative process designed to deliver exceptional results with security built-in from day one.
+- heading "Our Process" [level=3]
+- text: "01"
+- heading "Discovery & Strategy" [level=4]
+- paragraph: Understanding your goals, audience, and technical requirements. Security assessment if needed.
+- text: "02"
+- heading "Design & Planning" [level=4]
+- paragraph: Detailed proposal with timeline, secure architecture design, and creative direction tailored to your needs.
+- text: "03"
+- heading "Development & Testing" [level=4]
+- paragraph: Iterative development with security built-in, regular check-ins, and transparent progress updates.
+- text: "04"
+- heading "Launch & Support" [level=4]
+- paragraph: Secure deployment with ongoing maintenance and support as your business grows.
+- heading "Technical Capabilities" [level=3]
+- heading "Enterprise-Grade Stack" [level=4]
+- paragraph: Built with modern, scalable technologies
+- text: Modern JavaScript/TypeScript Architecture PCI-DSS Payment Security GDPR & CCPA Privacy Compliance Zero-Trust Security Patterns Performance & SEO Optimization 24/7 Security Monitoring Fraud Detection Systems Custom API Development Database Design & Optimization Cloud Infrastructure Management Performance Guarantee
+- paragraph: Every site optimized for Core Web Vitals, achieving 90+ PageSpeed scores and sub-3-second load times.
+- paragraph: Ready to start your project? Let's discuss your requirements and create something exceptional together.
+- button "Start your project"
+- button "View more work"
+- paragraph: Investment
+- heading "Transparent pricing for exceptional work" [level=2]
+- paragraph: No hidden fees, no surprises. Every project includes security, performance optimization, and ongoing support. You only pay when you're completely satisfied.
+- heading "Essential" [level=3]
+- text: $1000
+- paragraph: Perfect for personal brands and small businesses getting started online
+- text: "Timeline: 1-2 weeks"
+- list:
+  - listitem: Initial consultation & strategy
+  - listitem: Reputation management audit
+  - listitem: Privacy cleanup & data removal
+  - listitem: Basic security hardening
+  - listitem: Digital footprint assessment
+  - listitem: 1 month support included
+- button "Get started"
+- text: Most Popular
+- heading "Professional" [level=3]
+- text: $2,500–5,000
+- paragraph: Comprehensive digital solutions with business dashboards and digitalization
+- text: "Timeline: 2-4 weeks"
+- list:
+  - listitem: Custom business dashboards
+  - listitem: Digital transformation strategy
+  - listitem: Multi-platform integration
+  - listitem: Advanced security hardening
+  - listitem: Performance optimization
+  - listitem: Business process digitalization
+  - listitem: 3 months support included
+- button "Start your project"
+- heading "Enterprise" [level=3]
+- text: $8,000+
+- paragraph: Full-scale development with comprehensive digitalization and hardening
+- text: "Timeline: 4-12 weeks"
+- list:
+  - listitem: Custom web applications
+  - listitem: Enterprise business dashboards
+  - listitem: Complete digitalization suite
+  - listitem: Advanced security hardening
+  - listitem: Cloud infrastructure setup
+  - listitem: 24/7 monitoring & support
+  - listitem: Dedicated development team
+- button "Let's discuss"
+- heading "Need something different?" [level=3]
+- paragraph: Every project is unique. Let's discuss your specific requirements and create a custom proposal that fits your budget and timeline.
+- button "Schedule consultation"
+- button "View case studies"
+- region "Let's build something exceptional together":
+  - paragraph: Get in Touch
+  - heading "Let's build something exceptional together" [level=2]
+  - paragraph: Ready to start your project? Schedule a 30-minute consultation to discuss your requirements, timeline, and how we can help bring your vision to life.
+  - form "Contact form":
+    - text: Name *
+    - textbox "Name *"
+    - text: Email *
+    - textbox "Email *"
+    - text: Company
+    - textbox "Company"
+    - text: Budget Range
+    - combobox: Select budget range
+    - text: Project Type
+    - combobox: What do you need?
+    - text: Project Details *
+    - textbox "Project Details *"
+    - checkbox "I agree to the privacy policy and understand that my information will be handled securely and used only for project communication. *"
+    - text: I agree to the privacy policy and understand that my information will be handled securely and used only for project communication. *
+    - button "Send message" [disabled]
+  - heading "Skip the form?" [level=3]
+  - paragraph: Book a 30-minute consultation directly
+  - link "Schedule a Call":
+    - /url: https://calendly.com/rickithadi/30min
+  - heading "Direct Contact" [level=3]
+  - paragraph: Email
+  - paragraph: hello@gallifreyconsulting.com
+  - paragraph: Consultation
+  - paragraph: Free 30-minute strategy call
+  - paragraph: Response Time
+  - paragraph: Within 24 hours
+  - heading "What to expect" [level=4]
+  - list:
+    - listitem: Personal response within 24 hours
+    - listitem: Detailed project proposal and timeline
+    - listitem: Transparent pricing with no hidden fees
+    - listitem: Security and privacy consultation included
+- contentinfo:
+  - link "Gallifrey Consulting - Security-First Web Development":
+    - /url: /
+    - img "Gallifrey Consulting - Security-First Web Development"
+  - paragraph: We build digital experiences that earn trust through thoughtful craftsmanship, security-first development, and ongoing partnership.
+  - text: Security-First GDPR Compliant Performance Optimized
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "Custom Development":
+        - /url: "#services"
+    - listitem:
+      - link "E-commerce Platforms":
+        - /url: "#services"
+    - listitem:
+      - link "Web Applications":
+        - /url: "#services"
+    - listitem:
+      - link "Security Consulting":
+        - /url: "#services"
+    - listitem:
+      - link "Performance Optimization":
+        - /url: "#services"
+  - heading "Get Started" [level=4]
+  - list:
+    - listitem:
+      - link "Free Consultation":
+        - /url: "#contact"
+    - listitem:
+      - link "hello@gallifreyconsulting.com":
+        - /url: mailto:hello@gallifreyconsulting.com
+    - listitem: Response within 24 hours
+  - paragraph: © 2024 Gallifrey Consulting. All rights reserved.
+  - paragraph: "ABN: 69 696 168 286"
+  - link "Privacy Policy":
+    - /url: "#"
+  - link "Terms of Service":
+    - /url: "#"
+  - link "Security":
+    - /url: "#"
+- button "Open Next.js Dev Tools":
+  - img
+- alert
+```
