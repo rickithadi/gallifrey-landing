@@ -1,4 +1,4 @@
-import { ArrowRight, Award, CheckCircle, Globe, Shield, Target, Users } from "lucide-react";
+import { ArrowRight, CheckCircle, Globe, Shield, Target } from "lucide-react";
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { NextSeo } from 'next-seo';
@@ -94,7 +94,7 @@ export default function AboutPage() {
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              We're a Melbourne-based strategic consultancy specializing in enterprise security, 
+              We&apos;re a Melbourne-based strategic consultancy specializing in enterprise security, 
               digital sovereignty, and platform independence for businesses that refuse to compromise on digital excellence.
             </p>
           </div>

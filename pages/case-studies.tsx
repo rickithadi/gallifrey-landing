@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArrowRight, BarChart3, DollarSign, Shield, TrendingUp, Users } from "lucide-react";
 import { GetStaticProps } from 'next';
 import { Header } from '@/components/Header';
@@ -16,7 +17,7 @@ interface CaseStudy {
     metric: string;
     value: string;
     description: string;
-    icon: JSX.Element;
+    iconName: string;
   }[];
   testimonial: {
     quote: string;
@@ -40,25 +41,25 @@ const caseStudies: CaseStudy[] = [
         metric: 'Operational Efficiency',
         value: '40%',
         description: 'Increase in case processing speed',
-        icon: <TrendingUp className="w-6 h-6 text-accent" />
+        iconName: 'TrendingUp'
       },
       {
         metric: 'Security Incidents',
         value: '0',
         description: 'Zero breaches in 18 months',
-        icon: <Shield className="w-6 h-6 text-accent" />
+        iconName: 'Shield'
       },
       {
         metric: 'Client Satisfaction',
         value: '98%',
         description: 'Retention rate improvement',
-        icon: <Users className="w-6 h-6 text-accent" />
+        iconName: 'Users'
       },
       {
         metric: 'Revenue Growth',
         value: '65%',
         description: 'Annual revenue increase',
-        icon: <DollarSign className="w-6 h-6 text-accent" />
+        iconName: 'DollarSign'
       }
     ],
     testimonial: {
@@ -81,29 +82,29 @@ const caseStudies: CaseStudy[] = [
         metric: 'Security Uptime',
         value: '99.99%',
         description: 'System availability maintained',
-        icon: <Shield className="w-6 h-6 text-accent" />
+        iconName: 'Shield'
       },
       {
         metric: 'Compliance Score',
         value: '100%',
         description: 'Regulatory audit results',
-        icon: <BarChart3 className="w-6 h-6 text-accent" />
+        iconName: 'BarChart3'
       },
       {
         metric: 'Funding Secured',
         value: '$12M',
         description: 'Series A investment raised',
-        icon: <DollarSign className="w-6 h-6 text-accent" />
+        iconName: 'DollarSign'
       },
       {
         metric: 'User Growth',
         value: '850%',
         description: 'Platform user increase',
-        icon: <TrendingUp className="w-6 h-6 text-accent" />
+        iconName: 'TrendingUp'
       }
     ],
     testimonial: {
-      quote: \"Gallifrey transformed our digital infrastructure completely. The security improvements alone saved us from a potential breach that could have cost millions. Their expertise was crucial for our Series A success.\",
+      quote: "Gallifrey transformed our digital infrastructure completely. The security improvements alone saved us from a potential breach that could have cost millions. Their expertise was crucial for our Series A success.",
       author: 'Sarah Chen',
       role: 'CEO, TechFlow Financial Solutions'
     },
@@ -122,29 +123,29 @@ const caseStudies: CaseStudy[] = [
         metric: 'Client Retention',
         value: '95%',
         description: 'Improved retention rate',
-        icon: <Users className="w-6 h-6 text-accent" />
+        iconName: 'Users'
       },
       {
         metric: 'Revenue Stability',
         value: '300%',
         description: 'Increase in predictable revenue',
-        icon: <DollarSign className="w-6 h-6 text-accent" />
+        iconName: 'DollarSign'
       },
       {
         metric: 'Platform Risk',
         value: '-80%',
         description: 'Reduction in platform dependency',
-        icon: <Shield className="w-6 h-6 text-accent" />
+        iconName: 'Shield'
       },
       {
         metric: 'Conversion Rate',
         value: '180%',
         description: 'Website conversion improvement',
-        icon: <TrendingUp className="w-6 h-6 text-accent" />
+        iconName: 'TrendingUp'
       }
     ],
     testimonial: {
-      quote: \"Working with Gallifrey was like having a dedicated CTO. They didn't just build our website – they architected our entire digital presence with military precision. Platform independence gave us our business back.\",
+      quote: "Working with Gallifrey was like having a dedicated CTO. They didn&apos;t just build our website – they architected our entire digital presence with military precision. Platform independence gave us our business back.",
       author: 'Emma Thompson',
       role: 'Creative Director, Lifestyle Brand Collective'
     },
@@ -159,6 +160,24 @@ interface CaseStudiesPageProps {
 
 export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
+
+  const renderIcon = (iconName: string) => {
+    const iconProps = "w-6 h-6 text-accent";
+    switch (iconName) {
+      case 'TrendingUp':
+        return <TrendingUp className={iconProps} />;
+      case 'Shield':
+        return <Shield className={iconProps} />;
+      case 'Users':
+        return <Users className={iconProps} />;
+      case 'DollarSign':
+        return <DollarSign className={iconProps} />;
+      case 'BarChart3':
+        return <BarChart3 className={iconProps} />;
+      default:
+        return <Shield className={iconProps} />;
+    }
+  };
 
   return (
     <>
@@ -205,7 +224,7 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-6xl">
             <div className="space-y-20">
-              {studies.map((study, index) => (
+              {studies.map((study) => (
                 <article
                   key={study.id}
                   className="border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm overflow-hidden"
@@ -256,7 +275,7 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
                           {study.results.map((result, idx) => (
                             <div key={idx} className="text-center p-4 bg-background/50 rounded-lg">
                               <div className="flex justify-center mb-3">
-                                {result.icon}
+                                {renderIcon(result.iconName)}
                               </div>
                               <div className="text-2xl font-bold text-accent mb-1">
                                 {result.value}
@@ -271,7 +290,7 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
                         {/* Testimonial */}
                         <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
                           <p className="text-muted-foreground italic leading-relaxed mb-4">
-                            "{study.testimonial.quote}"
+                            &ldquo;{study.testimonial.quote}&rdquo;
                           </p>
                           <div>
                             <div className="font-medium text-primary text-sm">

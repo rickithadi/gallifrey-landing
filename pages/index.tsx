@@ -1,4 +1,4 @@
-import { Contact } from '@/components/Contact'
+import { ConsultativeContact } from '@/components/ConsultativeContact'
 import { FAQ } from '@/components/FAQ'
 import { Features } from '@/components/Features'
 import { Footer } from '@/components/Footer'
@@ -293,7 +293,7 @@ export default function Home() {
 
         <Pricing />
         <FAQ />
-        <Contact />
+        <ConsultativeContact />
         <TrustSignals />
         <Footer />
       </div>

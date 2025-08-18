@@ -1,6 +1,5 @@
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { NextSeo } from 'next-seo';
