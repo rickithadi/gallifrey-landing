@@ -62,7 +62,7 @@ const caseStudies: CaseStudy[] = [
       }
     ],
     testimonial: {
-      quote: \"Their approach to digital sovereignty gave us complete control over our client data. The custom dashboard they built increased our operational efficiency by 40% while ensuring absolute confidentiality.\",
+      quote: "Their approach to digital sovereignty gave us complete control over our client data. The custom dashboard they built increased our operational efficiency by 40% while ensuring absolute confidentiality.",
       author: 'Michael Rodriguez',
       role: 'Managing Partner, Rodriguez Legal'
     },
@@ -172,13 +172,13 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
           description: 'Real-world results from our digital sovereignty and enterprise security implementations.',
         }}
       />
-      
+
       <div className="min-h-screen bg-white">
         <Header />
-        
+
         {/* Hero Section */}
         <section className="py-24 px-4">
-          <div 
+          <div
             ref={headerAnimation.ref}
             className={`container mx-auto max-w-4xl text-center animate-fade-up ${headerAnimation.isVisible ? 'visible' : ''}`}
           >
@@ -188,14 +188,14 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
               </p>
               <div className="w-12 h-px bg-accent mx-auto"></div>
             </div>
-            
+
             <h1 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary">
               Proven Results in
               <span className="italic text-accent"> Digital Transformation</span>
             </h1>
-            
+
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Real-world outcomes from our strategic partnerships with Australian businesses. 
+              Real-world outcomes from our strategic partnerships with Australian businesses.
               Each engagement demonstrates measurable improvements in security, efficiency, and competitive positioning.
             </p>
           </div>
@@ -206,7 +206,7 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
           <div className="container mx-auto max-w-6xl">
             <div className="space-y-20">
               {studies.map((study, index) => (
-                <article 
+                <article
                   key={study.id}
                   className="border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm overflow-hidden"
                 >
@@ -215,7 +215,7 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
                     <div className="mb-8">
                       <div className="flex flex-wrap gap-2 mb-4">
                         {study.tags.map((tag) => (
-                          <span 
+                          <span
                             key={tag}
                             className="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full"
                           >
@@ -240,7 +240,7 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
                             {study.challenge}
                           </p>
                         </div>
-                        
+
                         <div>
                           <h3 className="font-medium text-primary mb-3">Our Solution</h3>
                           <p className="text-muted-foreground leading-relaxed">
@@ -317,7 +317,7 @@ export default function CaseStudiesPage({ studies }: CaseStudiesPageProps) {
             </div>
           </div>
         </section>
-        
+
         <Footer />
       </div>
     </>
