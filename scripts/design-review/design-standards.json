@@ -1,0 +1,126 @@
+{
+  "brandStandards": {
+    "gallifrey": {
+      "name": "Gallifrey Consulting Main Brand",
+      "colors": {
+        "primary": "#1B365D",
+        "teal": "#2EC4B6",
+        "tealDark": "#14B8A6",
+        "charcoal": "#1F2937",
+        "white": "#FFFFFF",
+        "offWhite": "#F9FAFB",
+        "lightGray": "#9CA3AF",
+        "mediumGray": "#6B7280",
+        "darkGray": "#374151",
+        "border": "#E5E7EB"
+      },
+      "typography": {
+        "heading": "Montserrat",
+        "body": "Source Sans Pro",
+        "logo": "Playfair Display"
+      },
+      "spacing": {
+        "sectionPadding": "5rem",
+        "containerMaxWidth": "1200px",
+        "borderRadius": "0.375rem"
+      }
+    },
+    "ownYourNarrative": {
+      "name": "Own Your Narrative Campaign",
+      "colors": {
+        "primaryGradient": "linear-gradient(135deg, #1B365D 0%, #00796B 100%)",
+        "stoneScale": ["#FAFAF9", "#F5F5F4", "#E7E5E4", "#D6D3D1", "#A8A29E", "#78716C", "#57534E", "#44403C", "#292524", "#1C1917"],
+        "orangeScale": ["#FFF7ED", "#FFEDD5", "#FED7AA", "#FDBA74", "#FB923C", "#F97316", "#EA580C", "#C2410C", "#9A3412", "#7C2D12"],
+        "familyGold": "#FFB74D"
+      },
+      "typography": {
+        "heading": "Montserrat",
+        "body": "Source Sans Pro",
+        "weights": ["700", "800"],
+        "emphasis": "Heavy font weights for campaign messaging"
+      },
+      "layout": {
+        "whiteSpace": "Increased white space for sophisticated minimalism",
+        "asymmetry": "Subtle asymmetrical elements"
+      }
+    }
+  },
+  "designRules": {
+    "accessibility": {
+      "contrastRatio": 4.5,
+      "focusVisible": "Required on all interactive elements",
+      "altText": "Required on all images",
+      "headingHierarchy": "Proper H1->H2->H3 structure",
+      "formLabels": "All form fields must have labels"
+    },
+    "performance": {
+      "imageOptimization": "WebP/AVIF formats preferred",
+      "criticalCSS": "Above-the-fold styles inlined",
+      "lazyLoading": "Below-the-fold images lazy loaded"
+    },
+    "responsive": {
+      "breakpoints": {
+        "mobile": "375px",
+        "tablet": "768px", 
+        "desktop": "1024px",
+        "wide": "1200px"
+      },
+      "mobileFirst": "All styles mobile-first approach"
+    },
+    "seo": {
+      "titleLength": "Under 60 characters",
+      "descriptionLength": "Under 160 characters",
+      "headingStructure": "One H1 per page",
+      "structuredData": "Required for all pages"
+    }
+  },
+  "componentStandards": {
+    "buttons": {
+      "primary": "bg-gallifrey-teal hover:bg-gallifrey-teal-dark",
+      "secondary": "border border-gallifrey-border hover:bg-gallifrey-off-white",
+      "campaign": "campaign gradient background with heavy typography"
+    },
+    "cards": {
+      "elevation": "shadow-gallifrey or shadow-oyn for campaign",
+      "padding": "p-6 or p-8",
+      "radius": "rounded-lg"
+    },
+    "sections": {
+      "padding": "py-20 px-4",
+      "container": "container mx-auto max-w-6xl",
+      "spacing": "space-y-12 between content blocks"
+    }
+  },
+  "validationChecks": [
+    {
+      "name": "Brand Color Consistency",
+      "description": "Verify correct brand colors are used for each context",
+      "selectors": ["[class*='gallifrey']", "[class*='oyn']", "[style*='#1B365D']"]
+    },
+    {
+      "name": "Typography Hierarchy",
+      "description": "Check heading structure and font families",
+      "selectors": ["h1", "h2", "h3", "h4", "h5", "h6"]
+    },
+    {
+      "name": "Component Spacing",
+      "description": "Verify consistent spacing between sections",
+      "selectors": ["section", ".container", "[class*='py-']"]
+    },
+    {
+      "name": "Interactive Elements",
+      "description": "Check buttons, links, and form elements for accessibility",
+      "selectors": ["button", "a", "input", "textarea", "select"]
+    },
+    {
+      "name": "Image Optimization",
+      "description": "Verify images have alt text and proper optimization",
+      "selectors": ["img", "picture", "[role='img']"]
+    },
+    {
+      "name": "Mobile Responsiveness",
+      "description": "Check layout adapts properly on mobile devices",
+      "viewports": ["375x812", "768x1024", "1024x768"]
+    }
+  ]
+}

@@ -33,7 +33,7 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 px-4" aria-labelledby="services-heading">
+    <section id="services" className="py-16 px-4" aria-labelledby="services-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
         <div

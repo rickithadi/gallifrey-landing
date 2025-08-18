@@ -13,8 +13,8 @@
   --gallifrey-medium-gray: 107 114 128; /* #6B7280 - Secondary text */
   --gallifrey-dark-gray: 55 65 81; /* #374151 - Body text */
   --gallifrey-charcoal: 31 41 55; /* #1F2937 - Primary text & headings */
-  --gallifrey-teal: 46 196 182; /* #2EC4B6 - Primary accent (matches production) */
-  --gallifrey-teal-dark: 20 184 166; /* #14B8A6 - Hover states */
+  --gallifrey-teal: 45 90 135; /* #2D5A87 - Steel Blue-Teal - security-focused, technical competence */
+  --gallifrey-teal-dark: 35 70 105; /* #234669 - Steel blue hover state */
   --gallifrey-border: 229 231 235; /* #E5E7EB - Subtle borders */
 
   /* ===== OWN YOUR NARRATIVE CAMPAIGN COLORS - Warm Espresso Palette ===== */
@@ -118,8 +118,8 @@
   .text-gradient-gallifrey {
     background: linear-gradient(
       135deg,
-      hsl(var(--gallifrey-charcoal)),
-      hsl(var(--gallifrey-teal))
+      rgb(var(--gallifrey-charcoal)),
+      rgb(var(--gallifrey-teal))
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -129,8 +129,8 @@
   .text-gradient-gallifrey-elegant {
     background: linear-gradient(
       135deg,
-      hsl(var(--gallifrey-teal)),
-      hsl(var(--gallifrey-charcoal))
+      rgb(var(--gallifrey-teal)),
+      rgb(var(--gallifrey-charcoal))
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -138,34 +138,34 @@
   }
 
   .shadow-gallifrey {
-    box-shadow: 0 4px 6px -1px hsl(var(--gallifrey-charcoal) / 0.1),
-      0 2px 4px -1px hsl(var(--gallifrey-charcoal) / 0.06);
+    box-shadow: 0 4px 6px -1px rgb(var(--gallifrey-charcoal) / 0.1),
+      0 2px 4px -1px rgb(var(--gallifrey-charcoal) / 0.06);
   }
 
   .shadow-gallifrey-lg {
-    box-shadow: 0 10px 15px -3px hsl(var(--gallifrey-charcoal) / 0.1),
-      0 4px 6px -2px hsl(var(--gallifrey-charcoal) / 0.05);
+    box-shadow: 0 10px 15px -3px rgb(var(--gallifrey-charcoal) / 0.1),
+      0 4px 6px -2px rgb(var(--gallifrey-charcoal) / 0.05);
   }
 
   .shadow-gallifrey-xl {
-    box-shadow: 0 20px 25px -5px hsl(var(--gallifrey-charcoal) / 0.1),
-      0 10px 10px -5px hsl(var(--gallifrey-charcoal) / 0.04);
+    box-shadow: 0 20px 25px -5px rgb(var(--gallifrey-charcoal) / 0.1),
+      0 10px 10px -5px rgb(var(--gallifrey-charcoal) / 0.04);
   }
 
   .bg-gallifrey-section {
-    background-color: hsl(var(--gallifrey-off-white));
+    background-color: rgb(var(--gallifrey-off-white));
   }
 
   .border-gallifrey {
-    border-color: hsl(var(--gallifrey-border));
+    border-color: rgb(var(--gallifrey-border));
   }
 
   /* ===== OWN YOUR NARRATIVE CAMPAIGN UTILITIES ===== */
   .text-gradient-oyn {
     background: linear-gradient(
       135deg,
-      hsl(var(--oyn-stone-800)),
-      hsl(var(--oyn-orange-600))
+      rgb(var(--oyn-stone-800)),
+      rgb(var(--oyn-orange-600))
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -175,23 +175,23 @@
   .bg-oyn-gradient {
     background: linear-gradient(
       135deg,
-      hsl(var(--oyn-stone-100)),
-      hsl(var(--oyn-stone-50))
+      rgb(var(--oyn-stone-100)),
+      rgb(var(--oyn-stone-50))
     );
   }
 
   .bg-oyn-warm {
-    background-color: hsl(var(--oyn-stone-50));
+    background-color: rgb(var(--oyn-stone-50));
   }
 
   .shadow-oyn {
-    box-shadow: 0 4px 6px -1px hsl(var(--oyn-stone-800) / 0.1),
-      0 2px 4px -1px hsl(var(--oyn-stone-800) / 0.06);
+    box-shadow: 0 4px 6px -1px rgb(var(--oyn-stone-800) / 0.1),
+      0 2px 4px -1px rgb(var(--oyn-stone-800) / 0.06);
   }
 
   .shadow-oyn-lg {
-    box-shadow: 0 10px 15px -3px hsl(var(--oyn-stone-800) / 0.1),
-      0 4px 6px -2px hsl(var(--oyn-stone-800) / 0.05);
+    box-shadow: 0 10px 15px -3px rgb(var(--oyn-stone-800) / 0.1),
+      0 4px 6px -2px rgb(var(--oyn-stone-800) / 0.05);
   }
 
   /* ===== SHARED TYPOGRAPHY UTILITIES ===== */

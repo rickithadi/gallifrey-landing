@@ -10,14 +10,14 @@ export function Hero() {
   const ctaAnimation = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <section className="relative py-32 md:py-40 px-4" aria-labelledby="hero-heading">
+    <section className="relative py-40 md:py-48 px-4" aria-labelledby="hero-heading">
       <div className="container mx-auto max-w-4xl">
         {/* Main headline - minimalist approach */}
         <header className="text-center mb-16">
           <h1
             ref={headlineAnimation.ref}
             id="hero-heading"
-            className={`text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-foreground animate-fade-up animate-delay-200 ${headlineAnimation.isVisible ? 'visible' : ''}`}
+            className={`text-4xl md:text-6xl lg:text-7xl font-heading font-medium leading-[0.9] mb-8 text-foreground animate-fade-up animate-delay-200 ${headlineAnimation.isVisible ? 'visible' : ''}`}
           >
             We build{' '}
             <AnimatedAdjective className="italic text-accent" />
@@ -38,12 +38,12 @@ export function Hero() {
           ref={ctaAnimation.ref}
           className={`flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animate-delay-600 ${ctaAnimation.isVisible ? 'visible' : ''}`}
         >
-          <Button size="lg" className="px-8 py-3 bg-primary hover:bg-primary/90 transition-colors" asChild>
+          <Button size="lg" className="px-10 py-4 bg-primary hover:bg-primary/90 transition-colors" asChild>
             <a
               href="#contact"
-              onClick={() => trackCTAClick("hero-start-project")}
+              onClick={() => trackCTAClick("hero-commission-site")}
             >
-              Start a project
+              Commission Your Site
               <ArrowRight className="w-4 h-4 ml-2" />
             </a>
           </Button>

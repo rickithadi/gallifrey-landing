@@ -1,0 +1,168 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Back to Gallifrey":
+    - /url: /
+  - link "Own Your Narrative":
+    - /url: /own-your-narrative
+  - navigation:
+    - link "Services":
+      - /url: /own-your-narrative#services
+    - link "Process":
+      - /url: /own-your-narrative#process
+    - link "Contact":
+      - /url: /own-your-narrative#contact
+    - button "Get Started"
+- text: FOR AMBITIOUS ENTREPRENEURS
+- heading "For ambitious entrepreneurs who refuse to let social platforms control their story" [level=1]
+- paragraph: Your expertise deserves a home you own. We help thoughtful business owners create sophisticated digital presences that reflect their true authority—without the noise of social media.
+- button "Start Your Project"
+- button "View Our Work"
+- heading "Why Digital Independence Matters" [level=2]
+- paragraph: When you build on someone else's platform, you're building their business, not yours.
+- heading "The Platform Reality:" [level=3]
+- text: • Algorithm changes can eliminate your reach overnight • Platform rules change without your input or consent • Your content and audience can disappear instantly • You're competing for attention in an endless feed
+- paragraph: We're not here to criticize social media—it has its place. But your business deserves a foundation you control.
+- button "Learn About Our Approach"
+- heading "What Ownership Looks Like:" [level=3]
+- text: ✓
+- heading "Your Domain, Your Rules" [level=4]
+- paragraph: Complete control over your content, design, and user experience
+- text: ✓
+- heading "Direct Relationships" [level=4]
+- paragraph: Build genuine connections without algorithmic interference
+- text: ✓
+- heading "Long-term Value" [level=4]
+- paragraph: Every visitor and subscriber builds your business, not someone else's
+- text: ✓
+- heading "Professional Credibility" [level=4]
+- paragraph: A sophisticated presence that commands respect and premium pricing
+- heading "The Hidden Cost of Poor Search Results" [level=2]
+- paragraph: Every day, opportunities slip away because your digital presence doesn't reflect your true expertise
+- text: 💼
+- heading "Lost Client Opportunities" [level=3]
+- paragraph: Premium clients choose competitors who “look more established” in search results
+- text: 🤝
+- heading "Missed Partnerships" [level=3]
+- paragraph: Strategic partners can't find evidence of your expertise when they research you
+- text: 💰
+- heading "Undervalued Pricing" [level=3]
+- paragraph: Can't command premium rates when search results don't establish authority
+- text: 🎤
+- heading "Speaking Opportunities" [level=3]
+- paragraph: Event organizers pass you over for speakers with stronger digital presence
+- heading "The Reality Check:" [level=3]
+- paragraph:
+  - strong: You don't own your digital presence—the platforms do.
+  - text: Google, LinkedIn, and social media algorithms decide how you appear to the world.
+- paragraph: “I had no idea how unprofessional my search results looked until a potential investor mentioned they almost didn't take the meeting.”
+- paragraph: — Tech Entrepreneur, now Personal Brand Empire client
+- 'heading "Our Mission: Digital Independence" [level=2]'
+- paragraph: We believe your brand deserves a home it owns, not a rented room on someone else's platform.
+- heading "Professional Website Services" [level=2]
+- paragraph: Thoughtfully designed websites for entrepreneurs who value quality, ownership, and authentic connection with their audience.
+- text: From $500
+- heading "Personal Website" [level=3]
+- paragraph: Essential digital presence for consultants and freelancers. A sophisticated foundation that establishes credibility and begins building your owned audience.
+- text: Custom design reflecting your professional brand Mobile-responsive and fast-loading Professional hosting and domain setup Complete ownership and source code access
+- button "Get Started"
+- text: Most Popular From $2,500
+- heading "Custom Platform" [level=3]
+- paragraph: Tailored business solutions with custom functionality designed for your specific workflow, plus strategic positioning that ensures you appear first when clients seek your expertise.
+- text: Everything in Personal Website Bespoke functionality development Strategic search engine positioning Integration with existing business tools
+- button "Start Your Project"
+- text: From $5,000
+- heading "Authority Platform" [level=3]
+- paragraph: Showcase exceptional work and establish thought leadership through sophisticated content presentation and strategic positioning as the definitive expert in your field.
+- text: Sophisticated portfolio presentation Authority-building content strategy Advanced search engine positioning Thought leadership publishing platform
+- button "Learn More"
+- heading "How We Create Something Meaningful Together" [level=2]
+- paragraph: A thoughtful process designed for discerning entrepreneurs who value both efficiency and excellence.
+- text: "01"
+- heading "Discovery & Vision" [level=3]
+- paragraph: We begin with meaningful conversation about your business goals and the digital experience you envision. No lengthy questionnaires—just strategic dialogue.
+- text: "02"
+- heading "Rapid Development" [level=3]
+- paragraph: Launch quickly with core functionality, then evolve thoughtfully as your business develops. You're not locked into version 1.0.
+- text: "03"
+- heading "Complete Customization" [level=3]
+- paragraph: When you're ready for something entirely bespoke—functionality that gives you competitive advantages and positions you as the premium choice.
+- text: "04"
+- heading "Ongoing Partnership" [level=3]
+- paragraph: Your success is our success. We provide ongoing support and strategic guidance as your business grows and evolves.
+- heading "Ready to Own Your Digital Future?" [level=2]
+- paragraph: Let's discuss how a sophisticated digital presence can elevate your business positioning and client relationships.
+- text: Your Name
+- textbox "Your Name"
+- text: Email Address
+- textbox "Email Address"
+- text: Project Type
+- combobox "Project Type":
+  - option "What are you looking for?" [selected]
+  - option "Personal Website ($500+)"
+  - option "Custom Platform ($2,500+)"
+  - option "Authority Platform ($5,000+)"
+  - option "Just exploring options"
+- text: Timeline
+- combobox "Timeline":
+  - option "When do you need this?" [selected]
+  - option "As soon as possible"
+  - option "Within a month"
+  - option "Next 2-3 months"
+  - option "Just exploring for now"
+- text: Tell Us About Your Vision
+- textbox "Tell Us About Your Vision"
+- paragraph: Typically, we respond within 24 hours with initial thoughts and next steps.
+- button "Begin the Conversation"
+- heading "Get In Touch" [level=2]
+- heading "Email" [level=3]
+- paragraph: hello@gallifrey.consulting
+- heading "Response Time" [level=3]
+- paragraph: We'll get back to you within 24 hours
+- paragraph:
+  - emphasis: Building digital independence for discerning entrepreneurs
+- contentinfo:
+  - link "Gallifrey Consulting - Security-First Web Development":
+    - /url: /
+    - img "Gallifrey Consulting - Security-First Web Development"
+  - paragraph: We build digital experiences that earn trust through thoughtful craftsmanship, security-first development, and ongoing partnership.
+  - text: Security-First GDPR Compliant Performance Optimized
+  - heading "Services" [level=4]
+  - list:
+    - listitem:
+      - link "Custom Development":
+        - /url: "#services"
+    - listitem:
+      - link "E-commerce Platforms":
+        - /url: "#services"
+    - listitem:
+      - link "Web Applications":
+        - /url: "#services"
+    - listitem:
+      - link "Security Consulting":
+        - /url: "#services"
+    - listitem:
+      - link "Performance Optimization":
+        - /url: "#services"
+  - heading "Get Started" [level=4]
+  - list:
+    - listitem:
+      - link "Free Consultation":
+        - /url: "#contact"
+    - listitem:
+      - link "hello@gallifreyconsulting.com":
+        - /url: mailto:hello@gallifreyconsulting.com
+    - listitem: Response within 24 hours
+  - paragraph: © 2024 Gallifrey Consulting. All rights reserved.
+  - paragraph: "ABN: 69 696 168 286"
+  - link "Privacy Policy":
+    - /url: "#"
+  - link "Terms of Service":
+    - /url: "#"
+  - link "Security":
+    - /url: "#"
+- button "Open Next.js Dev Tools":
+  - img
+- alert
+```
