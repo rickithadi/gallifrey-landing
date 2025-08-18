@@ -6,14 +6,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
 :root {
-  /* ===== GALLIFREY BRAND COLORS - Production Site Clean Palette ===== */
+  /* ===== GALLIFREY BRAND COLORS - Production Site Corporate Palette ===== */
   --gallifrey-white: 255 255 255; /* #FFFFFF - Pure white backgrounds */
   --gallifrey-off-white: 249 250 251; /* #F9FAFB - Subtle section backgrounds */
   --gallifrey-light-gray: 156 163 175; /* #9CA3AF - Muted text */
   --gallifrey-medium-gray: 107 114 128; /* #6B7280 - Secondary text */
   --gallifrey-dark-gray: 55 65 81; /* #374151 - Body text */
   --gallifrey-charcoal: 31 41 55; /* #1F2937 - Primary text & headings */
-  --gallifrey-teal: 46 196 182; /* #2EC4B6 - Primary accent (production site) */
+  --gallifrey-teal: 46 196 182; /* #2EC4B6 - Primary accent (matches production) */
   --gallifrey-teal-dark: 20 184 166; /* #14B8A6 - Hover states */
   --gallifrey-border: 229 231 235; /* #E5E7EB - Subtle borders */
 
@@ -46,7 +46,7 @@
   --card-foreground: var(--gallifrey-charcoal);
   --popover: var(--gallifrey-white);
   --popover-foreground: var(--gallifrey-charcoal);
-  --primary: var(--gallifrey-charcoal);
+  --primary: var(--gallifrey-teal);
   --primary-foreground: var(--gallifrey-white);
   --secondary: var(--gallifrey-off-white);
   --secondary-foreground: var(--gallifrey-charcoal);
@@ -100,7 +100,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-white text-foreground font-body;
   }
 
   h1,

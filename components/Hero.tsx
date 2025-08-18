@@ -17,7 +17,7 @@ export function Hero() {
           <h1
             ref={headlineAnimation.ref}
             id="hero-heading"
-            className={`text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-primary animate-fade-up animate-delay-200 ${headlineAnimation.isVisible ? 'visible' : ''}`}
+            className={`text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[0.9] mb-8 text-foreground animate-fade-up animate-delay-200 ${headlineAnimation.isVisible ? 'visible' : ''}`}
           >
             We build{' '}
             <AnimatedAdjective className="italic text-accent" />
