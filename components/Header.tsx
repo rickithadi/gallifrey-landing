@@ -2,23 +2,38 @@ import { Menu, X } from "lucide-react";
 
 import { Button } from "./ui/button";
 import { Logo } from "./Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { href: "#services", label: "Services" },
-    // { href: "#work", label: "Work" },
-    // { href: "/own-your-narrative", label: "Own Your Narrative" }, // Temporarily hidden
-    { href: "#pricing", label: "Pricing" },
-    { href: "#contact", label: "Contact" },
+    { href: "/insights", label: "Insights" },
+    { href: "/case-studies", label: "Case Studies" },
+    { href: "/about", label: "About" },
+    { href: "#pricing", label: "Investment" },
   ];
 
   return (
-    <header className="border-b border-border/30 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+    <header className={`border-b border-border/30 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/98 shadow-sm py-2' 
+        : 'bg-white/95 py-0'
+    }`}>
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? 'h-14' : 'h-16'
+        }`}>
           {/* Logo */}
           <div className="flex items-center">
             <Logo width={120} height={37} />
@@ -40,13 +55,12 @@ export function Header() {
           {/* CTA Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <Button
-              variant="outline"
               size="sm"
-              className="hidden sm:flex text-sm border-muted-foreground/20 hover:bg-muted/50"
+              className="hidden sm:flex text-sm bg-primary hover:bg-primary/90 text-primary-foreground px-6"
               asChild
             >
               <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
-                Get in touch
+                Schedule Consultation
               </a>
             </Button>
 
