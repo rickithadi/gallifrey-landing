@@ -14,94 +14,22 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
     'beautiful',
     'reliable',
     'thoughtful',
-    'cutting-edge',
+    'innovative',
     'modern'
   ], []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const [containerWidth, setContainerWidth] = useState('auto');
   const measureRef = useRef<HTMLSpanElement>(null);
-  const hiddenRef = useRef<HTMLDivElement>(null);
-
-  // Measure the width of all adjectives to find the maximum
-  useEffect(() => {
-    if (!hiddenRef.current || !measureRef.current) return;
-
-    // Create a hidden div to measure all adjectives
-    const hiddenDiv = hiddenRef.current;
-    const computedStyle = window.getComputedStyle(measureRef.current);
-
-    // Apply the same styles to the hidden div
-    hiddenDiv.style.font = computedStyle.font;
-    hiddenDiv.style.fontSize = computedStyle.fontSize;
-    hiddenDiv.style.fontWeight = computedStyle.fontWeight;
-    hiddenDiv.style.fontStyle = computedStyle.fontStyle;
-    hiddenDiv.style.fontFamily = computedStyle.fontFamily;
-    hiddenDiv.style.letterSpacing = computedStyle.letterSpacing;
-    hiddenDiv.style.position = 'absolute';
-    hiddenDiv.style.visibility = 'hidden';
-    hiddenDiv.style.whiteSpace = 'nowrap';
-    hiddenDiv.style.top = '-9999px';
-    hiddenDiv.style.left = '-9999px';
-
-    // Find the maximum width among all adjectives
-    let maxWidth = 0;
-    adjectives.forEach(adj => {
-      hiddenDiv.textContent = adj;
-      const width = hiddenDiv.offsetWidth;
-      if (width > maxWidth) {
-        maxWidth = width;
-      }
-    });
-
-    // Add some padding to ensure no clipping
-    const finalWidth = maxWidth + 20;
-
-    // Set the width based on screen size
-    const isMobile = window.innerWidth < 640;
-    if (isMobile) {
-      // On mobile, use a minimum width to prevent too much shifting
-      setContainerWidth(`${Math.max(finalWidth, 180)}px`);
-    } else {
-      setContainerWidth(`${finalWidth}px`);
-    }
-
-    // Clean up
-    hiddenDiv.textContent = '';
+  
+  // Find the longest word to reserve space
+  const longestWord = useMemo(() => {
+    return adjectives.reduce((longest, current) => 
+      current.length > longest.length ? current : longest
+    );
   }, [adjectives]);
 
-  // Handle window resize
-  useEffect(() => {
-    const handleResize = () => {
-      if (!hiddenRef.current || !measureRef.current) return;
 
-      const hiddenDiv = hiddenRef.current;
-      const computedStyle = window.getComputedStyle(measureRef.current);
-
-      hiddenDiv.style.font = computedStyle.font;
-      hiddenDiv.style.fontSize = computedStyle.fontSize;
-      hiddenDiv.style.fontWeight = computedStyle.fontWeight;
-      hiddenDiv.style.fontStyle = computedStyle.fontStyle;
-      hiddenDiv.style.fontFamily = computedStyle.fontFamily;
-
-      let maxWidth = 0;
-      adjectives.forEach(adj => {
-        hiddenDiv.textContent = adj;
-        const width = hiddenDiv.offsetWidth;
-        if (width > maxWidth) {
-          maxWidth = width;
-        }
-      });
-
-      const finalWidth = maxWidth + 20;
-      const isMobile = window.innerWidth < 640;
-      setContainerWidth(isMobile ? `${Math.max(finalWidth, 180)}px` : `${finalWidth}px`);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [adjectives]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -112,28 +40,30 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
           prevIndex === adjectives.length - 1 ? 0 : prevIndex + 1
         );
         setIsVisible(true);
-      }, 300); // Half of fade duration
+      }, 400); // Slightly longer pause for elegance
 
-    }, 3000); // Change word every 3 seconds
+    }, 4000); // Change word every 4 seconds - more sophisticated pacing
 
     return () => clearInterval(interval);
   }, [adjectives.length]);
 
   return (
-    <>
-      <div ref={hiddenRef} aria-hidden="true" />
+    <span className="relative inline-block">
+      {/* Invisible placeholder to reserve space */}
+      <span 
+        className={`invisible ${className}`}
+        aria-hidden="true"
+      >
+        {longestWord}
+      </span>
+      
+      {/* Actual animated text */}
       <span
         ref={measureRef}
-        className={`inline-block transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
-          } ${className}`}
-        style={{
-          width: containerWidth,
-          display: 'inline-block',
-          textAlign: 'left'
-        }}
+        className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'} ${className}`}
       >
         {adjectives[currentIndex]}
       </span>
-    </>
+    </span>
   );
 }
