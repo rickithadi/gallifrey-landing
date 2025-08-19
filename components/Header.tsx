@@ -18,13 +18,22 @@ export function Header() {
 
   const navItems = [
     { href: "#services", label: "Services" },
-    { href: "/case-studies", label: "Work" },
-    { href: "/about", label: "About" },
+    { href: "#testimonials", label: "Results" },
+    { href: "#pricing", label: "Investment" },
+    { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
 
   return (
-    <header className={`border-b border-border/30 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50 transition-all duration-300 ${
+    <>
+      {/* Skip to main content link for accessibility */}
+      <a 
+        href="#services" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded"
+      >
+        Skip to main content
+      </a>
+      <header className={`border-b border-border/30 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/98 shadow-sm py-2' 
         : 'bg-white/95 py-0'
@@ -39,7 +48,7 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -81,7 +90,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden py-6 border-t border-border/30">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-4" role="navigation" aria-label="Mobile navigation">
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -109,5 +118,6 @@ export function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }

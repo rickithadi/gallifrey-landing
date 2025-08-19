@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
+import { useForm } from "@formspree/react";
 
 interface FormData {
   projectType: string;
@@ -31,6 +32,7 @@ export function ConsultativeContact() {
     phone: '',
     additionalContext: ''
   });
+  const [state, handleFormspreeSubmit] = useForm("mgvzdpqo");
 
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
 
@@ -99,12 +101,82 @@ export function ConsultativeContact() {
   };
 
   const handleSubmit = async () => {
-    // In a real implementation, this would submit to your CRM/email service
-    console.log('Strategic consultation request:', formData);
+    // Format data for Formspree submission
+    const formPayload = new FormData();
     
-    // Redirect to Calendly with pre-filled information
+    // Basic contact info
+    formPayload.append('name', formData.name);
+    formPayload.append('email', formData.email);
+    formPayload.append('company', formData.company || '');
+    formPayload.append('phone', formData.phone || '');
+    
+    // Project details
+    formPayload.append('project_type', getProjectTypeLabel(formData.projectType));
+    formPayload.append('business_stage', getBusinessStageLabel(formData.businessStage));
+    formPayload.append('timeline', getTimelineLabel(formData.timeline));
+    formPayload.append('budget', getBudgetLabel(formData.budget));
+    formPayload.append('primary_concerns', formData.primaryConcerns.join(', '));
+    formPayload.append('additional_context', formData.additionalContext || '');
+    
+    // Add form type identifier
+    formPayload.append('form_type', 'Strategic Consultation Request');
+    
+    // Formatted message summary
+    const messageSummary = `
+STRATEGIC CONSULTATION REQUEST
+
+Contact Information:
+- Name: ${formData.name}
+- Email: ${formData.email}
+- Company: ${formData.company || 'Not provided'}
+- Phone: ${formData.phone || 'Not provided'}
+
+Project Details:
+- Engagement Type: ${getProjectTypeLabel(formData.projectType)}
+- Business Stage: ${getBusinessStageLabel(formData.businessStage)}
+- Timeline: ${getTimelineLabel(formData.timeline)}
+- Investment Range: ${getBudgetLabel(formData.budget)}
+
+Primary Concerns:
+${formData.primaryConcerns.map(concern => `- ${concern}`).join('\n')}
+
+Additional Context:
+${formData.additionalContext || 'None provided'}
+    `.trim();
+    
+    formPayload.append('message', messageSummary);
+    
+    // Submit to Formspree
+    try {
+      await handleFormspreeSubmit(formPayload);
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
+    
+    // Also redirect to Calendly with pre-filled information
     const calendlyUrl = `https://calendly.com/rickithadi/strategic-discovery?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`;
     window.open(calendlyUrl, '_blank');
+  };
+
+  // Helper functions to get readable labels
+  const getProjectTypeLabel = (id: string) => {
+    const type = projectTypes.find(t => t.id === id);
+    return type ? type.title : id;
+  };
+
+  const getBusinessStageLabel = (id: string) => {
+    const stage = businessStages.find(s => s.id === id);
+    return stage ? stage.label : id;
+  };
+
+  const getTimelineLabel = (id: string) => {
+    const timeline = timelines.find(t => t.id === id);
+    return timeline ? timeline.label : id;
+  };
+
+  const getBudgetLabel = (id: string) => {
+    const budget = budgetRanges.find(b => b.id === id);
+    return budget ? `${budget.label} (${budget.range})` : id;
   };
 
   const renderStep = () => {
@@ -387,8 +459,59 @@ export function ConsultativeContact() {
     }
   };
 
+  // Success state
+  if (state.succeeded) {
+    return (
+      <section id="contact" className="py-24 px-4 bg-gradient-to-br from-secondary/10 to-background" aria-labelledby="contact-heading">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center py-16">
+            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
+            <h2 className="text-3xl font-serif font-medium text-primary mb-4">
+              Strategic Consultation Request Received!
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Thank you for the detailed information. We&apos;ve received your strategic consultation request and will prepare a tailored discussion based on your requirements. We&apos;ll be in touch within 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={() => {
+                  setStep(1);
+                  setFormData({
+                    projectType: '',
+                    businessStage: '',
+                    timeline: '',
+                    budget: '',
+                    primaryConcerns: [],
+                    name: '',
+                    email: '',
+                    company: '',
+                    phone: '',
+                    additionalContext: ''
+                  });
+                }}
+                variant="outline"
+                className="px-6"
+              >
+                Submit Another Request
+              </Button>
+              <Button
+                className="bg-accent hover:bg-accent/90 text-accent-foreground px-6"
+                asChild
+              >
+                <a href="https://calendly.com/rickithadi/strategic-discovery" target="_blank" rel="noopener noreferrer">
+                  Schedule Discovery Call
+                  <Calendar className="w-4 h-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section id="contact" className="py-24 px-4 bg-gradient-to-br from-secondary/10 to-background">
+    <section id="contact" className="py-24 px-4 bg-gradient-to-br from-secondary/10 to-background" aria-labelledby="contact-heading">
       <div className="container mx-auto max-w-4xl">
         <div
           ref={headerAnimation.ref}
@@ -401,7 +524,7 @@ export function ConsultativeContact() {
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary">
+          <h2 id="contact-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary">
             Start Your Strategic
             <span className="italic text-accent"> Digital Transformation</span>
           </h2>
@@ -414,6 +537,13 @@ export function ConsultativeContact() {
 
         <Card className="bg-card/50 backdrop-blur-sm border-border/50">
           <CardContent className="p-8">
+            {/* Error handling */}
+            {state.errors && Object.keys(state.errors).length > 0 && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-sm font-medium text-red-800 mb-1">There was an error submitting your request</p>
+                <p className="text-sm text-red-600">Please try again or contact us directly at hello@gallifreyconsulting.com</p>
+              </div>
+            )}
             {/* Progress indicator */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
@@ -457,11 +587,20 @@ export function ConsultativeContact() {
               ) : (
                 <Button
                   onClick={handleSubmit}
-                  disabled={!canProceed()}
+                  disabled={!canProceed() || state.submitting}
                   className="px-6 bg-accent hover:bg-accent/90"
                 >
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Schedule Discovery Call
+                  {state.submitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Submit & Schedule Discovery Call
+                    </>
+                  )}
                 </Button>
               )}
             </div>

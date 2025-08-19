@@ -8,32 +8,32 @@ export function Services() {
   const services = [
     {
       icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Bespoke Web Development",
-      description: "Hand-crafted websites and applications built from scratch with obsessive attention to detail. No templates, no WordPress, no shortcuts. We leverage AI-assisted development to accelerate delivery while maintaining the human expertise that creates truly custom, security-first solutions.",
-      details: ["AI-Enhanced Custom Development", "Security-First Architecture", "Human-Guided Precision"]
+      title: "Artisanal Web Development",
+      description: "Every website meticulously crafted from blank canvas to pixel-perfect completion. Bespoke HTML, CSS, and JavaScript architectures built with purposeful precision. No templates, no builders, no compromises—just pure custom development where every element serves both form and function with mathematical exactness.",
+      details: ["100% Custom Code Architecture", "Pixel-Perfect Design Implementation", "Mathematical Precision Layouts"]
     },
     {
       icon: <Palette className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Custom Design Systems",
-      description: "Meticulously crafted visual identities and design systems with mathematical precision. Every pixel positioned purposefully, every interaction designed to perfection. Bespoke typography, custom iconography, and cohesive brand experiences that set you apart.",
-      details: ["Bespoke Visual Identity", "Mathematical Precision Design", "Custom Component Libraries"]
+      title: "Bespoke Design Systems",
+      description: "Bespoke visual languages built from foundational principles. Every typeface selection, color palette, and spacing system designed with intentional precision. Custom iconography, meticulously balanced layouts, and sophisticated component libraries that elevate your brand above the template-driven masses.",
+      details: ["Curated Typography Systems", "Custom Iconography & Illustrations", "Precision-Crafted Component Libraries"]
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Privacy & Security Services",
-      description: "Military-grade security and privacy protection woven into every aspect of your digital presence. GDPR compliance, data encryption, security audits, and comprehensive privacy protection. Your data sovereignty is our priority.",
-      details: ["GDPR Compliance & Privacy", "Security Audits & Protection", "Data Encryption & Control"]
+      title: "Privacy, Security & SEO Services",
+      description: "Control your digital narrative both ways - build positive SEO presence while removing negative exposure through comprehensive security and privacy cleanup. We remove data from brokers, implement enterprise security, GDPR compliance, and optimize your digital reputation to protect and promote your organization's interests.",
+      details: ["Data Broker Removal & Security Audits", "SEO Reputation Management & Brand Protection", "GDPR Compliance & Digital Narrative Control"]
     },
     {
       icon: <Users className="w-6 h-6 text-accent" aria-hidden="true" />,
       title: "Strategic Digital Consulting", 
-      description: "White-glove consultation on technology decisions, AI integration strategy, and digital transformation. Personal attention to your unique challenges with strategic guidance that leverages emerging technologies while protecting your independence and competitive advantage.",
-      details: ["AI Integration Strategy", "Platform Independence Consulting", "Future-Proof Technology Planning"]
+      description: "Bespoke consulting tailored to your specific industry challenges and growth objectives. Custom-designed technology strategies, curated tool recommendations, and personally crafted implementation roadmaps. No cookie-cutter solutions—just thoughtful, strategic guidance built around your unique business architecture.",
+      details: ["Custom Technology Architecture", "Curated Tool Integration", "Personalized Growth Strategies"]
     }
   ];
 
   return (
-    <section id="services" className="py-16 px-4" aria-labelledby="services-heading">
+    <section id="services" className="py-16 px-4" aria-labelledby="services-heading" role="main">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
         <div
@@ -53,8 +53,8 @@ export function Services() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            We build custom websites, design systems, and provide data security and privacy consulting.
-            Combining human expertise with AI-enhanced development - no templates, no shortcuts, everything built specifically for your business.
+            Every solution meticulously handcrafted from first principles. Custom code architecture, bespoke design systems, and comprehensive digital narrative control—all built with the precision and attention to detail that only comes from artisanal development practices.
+            Zero shortcuts, zero templates, zero compromises.
           </p>
         </div>
 

@@ -11,10 +11,11 @@ export function Pricing() {
       scope: "Ideal for: Solo professionals, small businesses, personal brands",
       features: [
         "Comprehensive security audit & cleanup",
-        "Privacy protection & data removal",
-        "Digital footprint assessment",
-        "Basic digital sovereignty setup",
-        "Reputation management fundamentals",
+        "Data broker removal from 50+ sources",
+        "SEO reputation monitoring & brand protection",
+        "Digital footprint assessment & control",
+        "Enterprise security implementation",
+        "Privacy protection & GDPR compliance",
         "1-month support & monitoring"
       ],
       timeline: "1-2 weeks",
@@ -29,9 +30,10 @@ export function Pricing() {
       features: [
         "Custom business dashboards",
         "Advanced security implementation",
-        "Multi-platform integration",
+        "Comprehensive data broker removal",
+        "SEO reputation management & monitoring",
+        "Multi-platform integration & cleanup",
         "AI-enhanced digital process optimization",
-        "Performance & conversion optimization",
         "Strategic digital sovereignty planning",
         "3-month partnership & support"
       ],
@@ -48,6 +50,8 @@ export function Pricing() {
       features: [
         "Custom web applications & systems",
         "AI-integrated enterprise infrastructure",
+        "Enterprise-grade security & privacy cleanup",
+        "Advanced SEO reputation & narrative control",
         "24/7 security monitoring & response",
         "Dedicated development team",
         "Complete digitalization suite",
@@ -61,7 +65,7 @@ export function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-24 px-4">
+    <section id="pricing" className="py-24 px-4" aria-labelledby="pricing-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
         <div className="mb-20">
@@ -72,7 +76,7 @@ export function Pricing() {
             <div className="w-12 h-px bg-accent"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary max-w-4xl tracking-tight">
+          <h2 id="pricing-heading" className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary max-w-4xl tracking-tight">
             Strategic partnerships for
             <span className="italic text-accent font-medium"> exceptional outcomes</span>
           </h2>

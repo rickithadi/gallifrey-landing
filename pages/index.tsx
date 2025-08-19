@@ -48,7 +48,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne pixel-perfect web development with obsessive attention to design detail. Custom-coded websites, bespoke design systems, and digital sovereignty solutions. Plus privacy protection and security services.",
+        "description": "Melbourne's premier web development agency specializing in security-first, custom-coded websites with AI-enhanced development workflows. Complete digital sovereignty, enterprise security, and platform independence solutions.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -133,7 +133,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#website",
         "url": "https://gallifrey.consulting",
         "name": "Gallifrey Consulting",
-        "description": "Pixel-Perfect Web Development Melbourne | Custom Design Systems",
+        "description": "Custom Web Development Melbourne | Security-First Digital Solutions",
         "publisher": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -183,13 +183,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne"
-        description="Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800."
+        title="Melbourne Web Development Agency | Custom Security-First Websites | SEO & Digital Marketing | Gallifrey Consulting"
+        description="Melbourne's premier web development agency delivering measurable results: 340% SEO traffic growth, custom security-first websites, and complete digital narrative control. Hand-coded solutions with enterprise-grade privacy protection."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne',
-          description: 'Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800.',
+          title: 'Melbourne Web Development Agency | Custom Security-First Websites | SEO & Digital Marketing | Gallifrey Consulting',
+          description: 'Melbourne\'s premier web development agency delivering measurable results: 340% SEO traffic growth, custom security-first websites, and complete digital narrative control. Hand-coded solutions with enterprise-grade privacy protection.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -203,7 +203,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'pixel perfect web development Melbourne, custom design systems, bespoke websites, digital sovereignty, privacy protection, hand-crafted development, boutique web development, trusted web development Melbourne'
+            content: 'Melbourne web development agency, custom website design Melbourne, SEO services Melbourne, digital marketing Melbourne, security-first web development, enterprise web solutions, hand-coded websites, bespoke web development, GDPR compliance, digital narrative control, data broker removal, privacy cleanup, Melbourne web design agency, AI-enhanced development, local SEO Melbourne'
           },
           {
             property: 'article:author',

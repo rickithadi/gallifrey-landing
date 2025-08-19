@@ -1,4 +1,3 @@
-import { AnimatedAdjective } from "./AnimatedAdjective";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { trackCTAClick } from "@/lib/analytics";
@@ -19,12 +18,29 @@ export function Hero() {
 
   return (
     <section className="relative py-24 md:py-32 px-4 overflow-hidden" aria-labelledby="hero-heading">
-      {/* Enhanced background with more texture and animations */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-accent/5 to-primary/10 pointer-events-none animate-pulse"></div>
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none animate-float"></div>
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-accent/15 rounded-full blur-2xl pointer-events-none animate-float-delayed"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-accent/5 to-transparent pointer-events-none animate-shimmer"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,rgba(120,119,198,0.1),transparent)] pointer-events-none"></div>
+      {/* Sophisticated geometric background pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/4 via-background to-accent/3 pointer-events-none"></div>
+      
+      {/* Geometric grid pattern */}
+      <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(30, 41, 59, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(30, 41, 59, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px'
+        }}></div>
+      </div>
+      
+      {/* Subtle floating elements */}
+      <div className="absolute top-20 right-20 w-2 h-2 bg-accent/20 rounded-full animate-pulse"></div>
+      <div className="absolute top-40 right-60 w-1 h-1 bg-primary/30 rounded-full animate-pulse delay-300"></div>
+      <div className="absolute bottom-32 left-16 w-1.5 h-1.5 bg-accent/25 rounded-full animate-pulse delay-700"></div>
+      <div className="absolute bottom-60 left-80 w-1 h-1 bg-primary/20 rounded-full animate-pulse delay-1000"></div>
+      
+      {/* Elegant diagonal accent */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-accent/[0.02] to-transparent pointer-events-none transform rotate-12"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-primary/[0.02] to-transparent pointer-events-none transform -rotate-12"></div>
       
       <div className="container mx-auto max-w-4xl relative z-10">
         {/* Main headline - minimalist approach */}
@@ -34,15 +50,15 @@ export function Hero() {
             id="hero-heading"
             className={`text-3xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight mb-8 text-primary text-center animate-fade-up animate-delay-200 ${headlineAnimation.isVisible ? 'visible' : ''}`}
           >
-            <span className="inline-block animate-slide-in-left">We craft tasteful, secure websites</span>
-            <span className="block italic text-accent mt-2 animate-slide-in-right animate-delay-500"> that you actually own</span>
+            <span className="inline-block animate-slide-in-left">We craft bespoke, security-first websites</span>
+            <span className="block italic text-accent mt-2 animate-slide-in-right animate-delay-500"> with obsessive attention to detail</span>
           </h1>
 
           <p
             ref={subtitleAnimation.ref}
             className={`text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-up animate-delay-400 ${subtitleAnimation.isVisible ? 'visible' : ''}`}
           >
-            Hand-crafted websites with obsessive attention to design detail and enterprise security built-in from day one. No templates, no WordPress, no vendor lock-in. Complete ownership of your code, data, and digital future.
+            Every line of code written from scratch, every pixel positioned with mathematical precision. Custom-built digital solutions with enterprise security architecture, bespoke design systems, and comprehensive digital narrative control. No templates, no shortcuts—just artisanal web development that delivers complete ownership of your code, data, and digital future.
           </p>
         </header>
 

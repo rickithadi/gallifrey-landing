@@ -3,77 +3,50 @@ import { Logo } from "./Logo";
 export function Footer() {
   return (
     <footer className="bg-background border-t border-border/50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
-          <div className="lg:col-span-2 space-y-6">
-            <div>
-              <div className="mb-4">
-                <Logo width={140} height={43} />
-              </div>
-              <p className="text-muted-foreground leading-relaxed max-w-md">
-                We build digital experiences that earn trust through thoughtful craftsmanship,
-                security-first development, and ongoing partnership.
-              </p>
+          <div className="space-y-4">
+            <div className="mb-4">
+              <Logo width={140} height={43} />
             </div>
-
-            <div className="flex flex-wrap gap-3">
-              <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">Security-First</span>
-              <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">GDPR Compliant</span>
-              <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">Performance Optimized</span>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="font-serif text-lg font-medium mb-6 text-primary">Services</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#services" className="hover:text-accent transition-colors">Custom Development</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">E-commerce Platforms</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Web Applications</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Security Consulting</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Performance Optimization</a></li>
-            </ul>
+            <p className="text-muted-foreground leading-relaxed text-sm max-w-sm">
+              Bespoke digital solutions with enterprise-grade security and comprehensive digital narrative control.
+            </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-lg font-medium mb-6 text-primary">Get Started</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <h4 className="font-serif text-lg font-medium mb-4 text-primary">Get Started</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#contact" className="hover:text-accent transition-colors">Free Consultation</a></li>
               <li><a href="mailto:hello@gallifreyconsulting.com" className="hover:text-accent transition-colors">hello@gallifreyconsulting.com</a></li>
-              <li className="text-muted-foreground/70">Response within 24 hours</li>
             </ul>
           </div>
-        </div>
 
-        {/* Compliance section */}
-        <div className="border-t border-border/50 mt-16 pt-6 pb-6">
-          <div className="text-center">
-            <div className="text-xs text-muted-foreground mb-2">
-              <span className="font-medium text-primary">Compliance:</span> ISO 27001 • OWASP • GDPR • SOC 2 • Zero Trust • Australian Privacy
+          {/* Compliance badges */}
+          <div>
+            <h4 className="font-serif text-lg font-medium mb-4 text-primary">Security Standards</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">GDPR Compliant</span>
+              <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">Enterprise Security</span>
+              <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">Zero Trust</span>
             </div>
-            <p className="text-xs text-muted-foreground">
-              Every solution maintains your digital independence and strengthens your competitive positioning
-            </p>
           </div>
         </div>
 
         {/* Bottom section */}
-        <div className="border-t border-border/50 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="border-t border-border/50 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-sm text-muted-foreground">
-                © 2024 Gallifrey Consulting. All rights reserved.
-              </p>
-              <p className="text-xs text-muted-foreground/70 mt-1">
-                ABN: 69 696 168 286
+                © 2024 Gallifrey Consulting. All rights reserved. ABN: 69 696 168 286
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
+            <div className="flex gap-6 text-sm text-muted-foreground">
+              <a href="#" className="hover:text-accent transition-colors">Privacy</a>
+              <a href="#" className="hover:text-accent transition-colors">Terms</a>
               <a href="#" className="hover:text-accent transition-colors">Security</a>
             </div>
           </div>

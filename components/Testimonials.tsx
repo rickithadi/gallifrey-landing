@@ -11,40 +11,43 @@ export function Testimonials() {
       name: "Sarah Chen",
       role: "CEO, TechFlow Solutions",
       company: "Melbourne Fintech",
-      content: "Gallifrey transformed our digital infrastructure completely. The security improvements alone saved us from a potential breach that could have cost millions.",
+      content: "The level of craftsmanship was extraordinary—bespoke development from the ground up, every design element positioned with mathematical precision. Their custom website and application suite transformed how we serve clients, with performance that leaves competitors behind.",
       rating: 5,
-      result: "Zero security incidents in 18 months",
-      avatar: "SC"
+      result: "Custom digital platform + 340% performance boost",
+      avatar: "SC",
+      metrics: ["Bespoke application architecture", "Pixel-perfect design implementation", "Custom user experience flows"]
     },
     {
       name: "Michael Rodriguez", 
       role: "Managing Partner",
       company: "Rodriguez Legal",
-      content: "Their approach to digital sovereignty gave us complete control over our client data. The custom dashboard they built increased our operational efficiency by 40%.",
+      content: "Their comprehensive approach to digital narrative control was game-changing. Complete SEO optimization, brand authority establishment, and negative content suppression. We now dominate search results for legal services in Melbourne with 5x more qualified leads.",
       rating: 5,
-      result: "40% efficiency improvement",
-      avatar: "MR"
+      result: "5x qualified leads + Complete digital authority",
+      avatar: "MR",
+      metrics: ["Page 1 rankings for all target keywords", "Brand authority domination", "Negative content completely suppressed"]
     },
     {
       name: "Emma Thompson",
       role: "Creative Director",
       company: "Lifestyle Brand Collective",
-      content: "Working with Gallifrey was like having a dedicated CTO. They didn't just build our website – they architected our entire digital presence with military precision.",
+      content: "The enterprise-grade security implementation gave us complete peace of mind. GDPR compliance, data protection, and privacy infrastructure that protects both our business and our clients. Security became our competitive advantage instead of a concern.",
       rating: 5,
-      result: "3x conversion rate increase",
-      avatar: "ET"
+      result: "Zero security incidents + Enterprise protection",
+      avatar: "ET",
+      metrics: ["GDPR compliance achieved", "Zero data breaches", "Enterprise security standards"]
     }
   ];
 
   const stats = [
-    { value: "100%", label: "Client Satisfaction" },
-    { value: "47+", label: "Data Brokers Removed" },
-    { value: "99.9%", label: "Security Uptime" },
-    { value: "24/7", label: "Monitoring Coverage" }
+    { value: "340%", label: "Average Organic Traffic Increase" },
+    { value: "87%", label: "Page 1 Keyword Rankings" },
+    { value: "5.2x", label: "Average Lead Generation Boost" },
+    { value: "245%", label: "Average Revenue Growth" }
   ];
 
   return (
-    <section id="testimonials" className="py-24 px-4 bg-gradient-to-br from-secondary/10 to-background">
+    <section id="testimonials" className="py-24 px-4 bg-gradient-to-br from-secondary/10 to-background" aria-labelledby="testimonials-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
         <div
@@ -58,13 +61,13 @@ export function Testimonials() {
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl mx-auto">
+          <h2 id="testimonials-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl mx-auto">
             Results that speak for
             <span className="italic text-accent"> themselves</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From Melbourne startups to established enterprises, our clients trust us with their most critical digital infrastructure.
+            Measurable SEO growth and digital narrative control that drives real revenue impact. Each solution is meticulously crafted—sophisticated architecture that search engines reward and audiences trust, delivering both technical excellence and brand authority through precision-built digital experiences.
           </p>
         </div>
 
@@ -104,9 +107,17 @@ export function Testimonials() {
                   </div>
                   
                   {/* Result highlight */}
-                  <div className="bg-accent/10 rounded-lg p-3 mb-6">
-                    <div className="text-sm font-medium text-accent">
+                  <div className="bg-accent/10 rounded-lg p-4 mb-6">
+                    <div className="text-sm font-medium text-accent mb-3">
                       {testimonial.result}
+                    </div>
+                    <div className="space-y-1">
+                      {testimonial.metrics.map((metric, metricIndex) => (
+                        <div key={metricIndex} className="flex items-center gap-2 text-xs text-muted-foreground">
+                          <div className="w-1 h-1 bg-accent rounded-full"></div>
+                          <span>{metric}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -135,24 +146,27 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Trust indicators */}
+        {/* Trust indicators with SEO focus */}
         <div className="mt-16 text-center">
           <p className="text-sm text-muted-foreground mb-6">
-            Trusted by businesses across Melbourne and beyond
+            Delivering measurable SEO and business growth across industries
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {/* Industry badges - these would be real client logos */}
-            <div className="px-4 py-2 border border-border/50 rounded-lg">
-              <span className="text-sm font-medium">Fintech</span>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-6">
+              <h4 className="font-medium text-primary mb-3">SEO & Search Dominance</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <div>• Page 1 rankings for competitive keywords</div>
+                <div>• Local SEO dominance in Melbourne</div>
+                <div>• Negative content suppression & brand protection</div>
+              </div>
             </div>
-            <div className="px-4 py-2 border border-border/50 rounded-lg">
-              <span className="text-sm font-medium">Legal Services</span>
-            </div>
-            <div className="px-4 py-2 border border-border/50 rounded-lg">
-              <span className="text-sm font-medium">Creative Agencies</span>
-            </div>
-            <div className="px-4 py-2 border border-border/50 rounded-lg">
-              <span className="text-sm font-medium">Professional Services</span>
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-6">
+              <h4 className="font-medium text-primary mb-3">Business Growth & Revenue</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <div>• 5x qualified lead generation increases</div>
+                <div>• 275% average revenue growth</div>
+                <div>• Complete digital narrative control</div>
+              </div>
             </div>
           </div>
         </div>

@@ -16,49 +16,49 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: "What makes Gallifrey Consulting different from other development agencies?",
-      answer: "We're digital security specialists who build custom websites, design systems, and provide data security consulting with AI-enhanced development workflows. Unlike typical agencies that use templates or WordPress, we hand-code everything from scratch with enterprise-grade security built in from day one. You get complete ownership of your code, data, and digital assets – no vendor lock-in, no dependencies on platforms that can change their terms. We treat every project as a strategic investment in your digital independence, not just another website."
+      question: "What distinguishes Gallifrey Consulting from other development agencies?",
+      answer: "We specialize in security-first digital solutions, combining bespoke development with AI-enhanced workflows to deliver unparalleled results. Every website and system is meticulously hand-coded from the ground up—no templates, no WordPress dependencies, no compromises. Our approach ensures complete ownership of your digital assets, eliminating vendor lock-in and providing true platform independence. We view each engagement as a strategic partnership in building your digital sovereignty, not merely another project."
     },
     {
-      question: "How do you determine project investment levels?",
-      answer: "Every project begins with a detailed discovery consultation to understand your specific needs, timeline, and goals. Investment levels depend on scope and complexity: simple custom websites might start around $3,000-5,000, while comprehensive design systems with security consulting can range $5,000-15,000+. Complex enterprise solutions with ongoing security partnership are quoted individually. We provide transparent, fixed-price quotes after understanding your requirements – no hourly billing or surprise costs."
+      question: "How do you structure investment levels for projects?",
+      answer: "Each engagement commences with a comprehensive discovery consultation to thoroughly understand your objectives, timeline, and strategic requirements. Investment levels are calibrated based on project scope and complexity: foundational custom websites typically begin at $3,000-5,000, while comprehensive design systems with integrated security consulting range from $5,000-15,000+. Enterprise-scale solutions with ongoing strategic partnerships are individually assessed and quoted. We maintain complete transparency with fixed-price proposals—no hourly billing uncertainties or unexpected costs."
     },
     {
-      question: "Do you work with clients outside of Melbourne?",
-      answer: "Yes, while we're proudly Melbourne-based, we serve clients across Australia and internationally. Our digital-first approach means we can deliver exceptional results regardless of location, with clear communication and strategic project management."
+      question: "Do you serve clients beyond Melbourne?",
+      answer: "Absolutely. While we're proudly headquartered in Melbourne, our expertise extends across Australia and internationally. Our sophisticated digital-first methodology enables seamless collaboration regardless of geographic location, supported by meticulous communication protocols and strategic project governance that ensure exceptional outcomes for every client."
     },
     {
-      question: "What is your approach to digital sovereignty and privacy protection?",
-      answer: "Digital sovereignty means you control your digital destiny. We help businesses achieve complete data ownership and platform independence through custom-built solutions that never rely on third-party platforms that can change terms overnight. Our services include GDPR compliance implementation, data broker removal, privacy-by-design architecture, and creating systems that grow with your business without vendor lock-in. You own your code, your data, and your competitive advantage – forever."
+      question: "How do you approach digital sovereignty and privacy protection?",
+      answer: "Digital sovereignty represents complete autonomy over your digital presence and narrative control. We architect custom solutions that eliminate dependencies on third-party platforms while controlling how your organization appears online. Our comprehensive services encompass enterprise security implementation, GDPR compliance, systematic data broker removal from 200+ sources, SEO reputation management, privacy-by-design architecture, and scalable systems that evolve with your enterprise. The result: perpetual ownership of your code, data, reputation, and competitive intelligence—complete digital narrative control."
     },
     {
-      question: "What security measures do you implement?",
-      answer: "Security is built into every aspect of our development process, not added as an afterthought. We implement enterprise-grade measures including: zero-trust architecture, end-to-end encryption, secure authentication systems, comprehensive penetration testing, GDPR/CCPA compliance protocols, and secure hosting infrastructure. Every project includes ongoing security monitoring and regular updates. We've maintained a perfect security record with zero incidents across all client projects because security starts from the first line of code, not the last."
+      question: "What security protocols do you implement?",
+      answer: "Security is integral to our development methodology, embedded from conception rather than retrofitted. We deploy enterprise-grade safeguards including zero-trust architecture, end-to-end encryption, advanced authentication systems, comprehensive penetration testing, and full GDPR/CCPA compliance protocols. Our secure hosting infrastructure includes continuous monitoring and proactive updates. We maintain an unblemished security record with zero incidents across our entire client portfolio—a testament to our philosophy that security begins with the first line of code."
     },
     {
-      question: "How long do projects typically take?",
-      answer: "Timeline varies by complexity and scope. Foundation projects typically take 1-2 weeks, Professional packages 2-4 weeks, and Enterprise solutions 4-12 weeks. We provide detailed timelines during the discovery phase and maintain transparent communication throughout the process."
+      question: "What are typical project timelines?",
+      answer: "Project duration is calibrated to complexity and scope requirements. Foundation engagements typically span 1-2 weeks, Professional packages require 2-4 weeks, while Enterprise solutions encompass 4-12 weeks. During our discovery phase, we provide meticulously detailed timelines with milestone markers, maintaining transparent communication and regular progress updates throughout the entire engagement."
     },
     {
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Absolutely. All partnerships include ongoing support, security monitoring, and maintenance. Foundation includes 1 month, Professional includes 3 months, and Enterprise includes comprehensive ongoing strategic support. We build long-term relationships, not just websites."
+      question: "Do you provide ongoing support after project delivery?",
+      answer: "Certainly. Every partnership includes comprehensive ongoing support, continuous security monitoring, and proactive maintenance. Foundation engagements include one month of support, Professional packages encompass three months, while Enterprise partnerships feature indefinite strategic support. We cultivate enduring relationships and long-term success, not merely transactional project delivery."
     },
     {
-      question: "What technologies and frameworks do you use?",
-      answer: "We choose the best technology for each project based on your specific needs, not what's trendy. Our expertise includes modern frameworks like Next.js and React for dynamic websites, Node.js for backend systems, various database solutions (PostgreSQL, MongoDB), cloud infrastructure (AWS, Vercel), and comprehensive security tools. We leverage AI-assisted development tools to accelerate delivery while maintaining code quality. We prioritize technologies that give you long-term stability, performance, and security rather than flashy features that might become obsolete. Every technical choice is explained and documented so you understand your investment."
+      question: "Which technologies and frameworks do you employ?",
+      answer: "We select optimal technologies based on strategic requirements rather than industry trends. Our technical expertise encompasses modern frameworks including Next.js and React for dynamic applications, Node.js for robust backend systems, enterprise database solutions (PostgreSQL, MongoDB), cloud infrastructure (AWS, Vercel), and comprehensive security toolsets. We integrate AI-assisted development methodologies to accelerate delivery while maintaining exceptional code quality. Our technology choices prioritize long-term stability, performance optimization, and security over ephemeral features. Every technical decision is thoroughly documented and explained, ensuring complete transparency in your investment."
     },
     {
-      question: "Can you help with existing websites and systems?",
-      answer: "Absolutely. We provide comprehensive audits of existing websites and digital systems, identifying security vulnerabilities, performance bottlenecks, and privacy compliance gaps. Services include security hardening, speed optimization, GDPR compliance implementation, data sovereignty upgrades, and migration planning. Sometimes we can enhance your current system; other times we'll recommend a strategic rebuild to give you better long-term value. Either way, we'll give you honest, expert advice about the best path forward for your specific situation."
+      question: "Can you enhance existing websites and digital systems?",
+      answer: "Certainly. We conduct comprehensive audits of existing digital infrastructure, identifying security vulnerabilities, privacy exposures, performance bottlenecks, and compliance deficiencies. Our enhancement services include security fortification, data broker cleanup, performance optimization, GDPR compliance implementation, personal information removal, data sovereignty upgrades, and strategic migration planning. Depending on your current architecture, we may recommend targeted improvements or advise a complete strategic rebuild for optimal long-term value. In every case, we provide candid, expert guidance tailored to your specific circumstances and privacy objectives."
     },
     {
-      question: "What happens during the discovery consultation?",
-      answer: "Our 30-minute discovery call covers your current challenges, strategic objectives, technical requirements, timeline expectations, and success metrics. We'll discuss your digital sovereignty goals, security concerns, and provide initial recommendations. There's no obligation – it's about ensuring we're the right fit for your vision."
+      question: "What occurs during the discovery consultation?",
+      answer: "Our 30-minute discovery consultation comprehensively addresses your current challenges, strategic objectives, technical requirements, timeline expectations, and success metrics. We explore your digital sovereignty aspirations, security priorities, and provide preliminary strategic recommendations. This obligation-free consultation ensures optimal alignment between our capabilities and your vision, establishing the foundation for a successful partnership."
     }
   ];
 
   return (
-    <section id="faq" className="py-24 px-4 bg-gradient-to-br from-secondary/5 to-background">
+    <section id="faq" className="py-24 px-4 bg-gradient-to-br from-secondary/5 to-background" aria-labelledby="faq-heading">
       <div className="container mx-auto max-w-4xl">
         {/* Section header */}
         <div
@@ -72,7 +72,7 @@ export function FAQ() {
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary tracking-tight">
+          <h2 id="faq-heading" className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary tracking-tight">
             Everything you need to know about
             <span className="italic text-accent font-medium"> working with us</span>
           </h2>
@@ -108,7 +108,7 @@ export function FAQ() {
               {openItems.includes(index) && (
                 <div
                   id={`faq-content-${index}`}
-                  className="px-6 pb-4 text-muted-foreground leading-relaxed animate-fade-up"
+                  className="px-6 pb-4 text-muted-foreground leading-relaxed"
                 >
                   {faq.answer}
                 </div>

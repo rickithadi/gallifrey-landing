@@ -1,4 +1,4 @@
-import { Award, CheckCircle, MapPin, Shield, Star, Target, Zap } from "lucide-react";
+import { Award, MapPin, Shield, Star, Target, Zap } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
 
 export function TrustAndSecurity() {
@@ -9,7 +9,7 @@ export function TrustAndSecurity() {
     {
       icon: <Target className="w-6 h-6 text-accent" />,
       title: "You Own Everything",
-      description: "Complete ownership of your code, your data, and your digital assets. No vendor lock-in, no dependencies on platforms that can change their terms overnight. Your investment is truly yours."
+      description: "Complete ownership of meticulously crafted code, custom-built architecture, and bespoke digital assets. No vendor lock-in, no template dependencies, no platform risks. Every element developed specifically for you—your investment is truly yours."
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" />,
@@ -29,12 +29,12 @@ export function TrustAndSecurity() {
     {
       icon: <Star className="w-6 h-6 text-accent" />,
       title: "Built to Scale With You",
-      description: "Your digital infrastructure grows and evolves as your business does. AI-assisted optimization ensures peak performance as you scale. No rebuilding from scratch, no platform migrations - just continuous enhancement of what already works perfectly."
+      description: "Your custom-built digital infrastructure grows and evolves as your business does. Bespoke architecture designed for seamless scalability. No rebuilding from scratch, no platform migrations—just continuous refinement of the custom systems built specifically for your success."
     },
     {
       icon: <Zap className="w-6 h-6 text-accent" />,
       title: "Performance That Impresses",
-      description: "Blazing-fast loading times, pixel-perfect design, and flawless user experiences that make your brand look exceptional. Your website becomes a powerful sales and credibility tool."
+      description: "Blazing-fast loading times from optimized bespoke code, pixel-perfect design with mathematical precision, and flawless user experiences meticulously crafted. Your custom website becomes a powerful sales and credibility tool that reflects true quality."
     }
   ];
 
@@ -47,7 +47,7 @@ export function TrustAndSecurity() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-br from-secondary/5 to-background">
+    <section id="why-choose-us" className="py-24 px-4 bg-gradient-to-br from-secondary/5 to-background" aria-labelledby="trust-security-heading">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div
@@ -61,7 +61,7 @@ export function TrustAndSecurity() {
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary tracking-tight">
+          <h2 id="trust-security-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary tracking-tight">
             Built for Your Success &
             <span className="italic text-accent"> Digital Independence</span>
           </h2>
