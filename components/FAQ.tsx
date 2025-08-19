@@ -17,11 +17,11 @@ export function FAQ() {
   const faqs = [
     {
       question: "What makes Gallifrey Consulting different from other development agencies?",
-      answer: "We're not just developers – we're digital security specialists who approach every project with enterprise-grade security, pixel-perfect design precision, and complete digital sovereignty principles. Every solution is custom-built from scratch, never using templates or compromising on quality."
+      answer: "We're digital security specialists who build custom websites, design systems, and provide data security consulting with AI-enhanced development workflows. Unlike typical agencies that use templates or WordPress, we hand-code everything from scratch with enterprise-grade security built in from day one. You get complete ownership of your code, data, and digital assets – no vendor lock-in, no dependencies on platforms that can change their terms. We treat every project as a strategic investment in your digital independence, not just another website."
     },
     {
       question: "How do you determine project investment levels?",
-      answer: "Our partnerships typically begin with a comprehensive discovery process to understand your specific requirements, scope, and strategic objectives. Investment levels vary based on complexity, timeline, and desired outcomes. Foundation projects typically start in the four-figure range, while enterprise solutions scale based on requirements."
+      answer: "Every project begins with a detailed discovery consultation to understand your specific needs, timeline, and goals. Investment levels depend on scope and complexity: simple custom websites might start around $3,000-5,000, while comprehensive design systems with security consulting can range $5,000-15,000+. Complex enterprise solutions with ongoing security partnership are quoted individually. We provide transparent, fixed-price quotes after understanding your requirements – no hourly billing or surprise costs."
     },
     {
       question: "Do you work with clients outside of Melbourne?",
@@ -29,11 +29,11 @@ export function FAQ() {
     },
     {
       question: "What is your approach to digital sovereignty and privacy protection?",
-      answer: "We believe in complete data ownership and platform independence. Our digital sovereignty services include removing your information from data brokers, implementing privacy-by-design architecture, and creating custom solutions that ensure you're never dependent on third-party platforms that could change terms or disappear."
+      answer: "Digital sovereignty means you control your digital destiny. We help businesses achieve complete data ownership and platform independence through custom-built solutions that never rely on third-party platforms that can change terms overnight. Our services include GDPR compliance implementation, data broker removal, privacy-by-design architecture, and creating systems that grow with your business without vendor lock-in. You own your code, your data, and your competitive advantage – forever."
     },
     {
       question: "What security measures do you implement?",
-      answer: "Every project includes enterprise-grade security from the foundation up: zero-trust architecture, comprehensive penetration testing, GDPR/CCPA compliance implementation, secure hosting infrastructure, and ongoing security monitoring. Security isn't an add-on – it's built into everything we create."
+      answer: "Security is built into every aspect of our development process, not added as an afterthought. We implement enterprise-grade measures including: zero-trust architecture, end-to-end encryption, secure authentication systems, comprehensive penetration testing, GDPR/CCPA compliance protocols, and secure hosting infrastructure. Every project includes ongoing security monitoring and regular updates. We've maintained a perfect security record with zero incidents across all client projects because security starts from the first line of code, not the last."
     },
     {
       question: "How long do projects typically take?",
@@ -45,11 +45,11 @@ export function FAQ() {
     },
     {
       question: "What technologies and frameworks do you use?",
-      answer: "We're technology-agnostic and choose the best tools for each specific project. Our expertise spans modern frameworks (Next.js, React, Node.js), robust databases, cloud infrastructure (AWS, Vercel), and cutting-edge security implementations. Every technical decision is made based on your specific requirements and long-term goals."
+      answer: "We choose the best technology for each project based on your specific needs, not what's trendy. Our expertise includes modern frameworks like Next.js and React for dynamic websites, Node.js for backend systems, various database solutions (PostgreSQL, MongoDB), cloud infrastructure (AWS, Vercel), and comprehensive security tools. We leverage AI-assisted development tools to accelerate delivery while maintaining code quality. We prioritize technologies that give you long-term stability, performance, and security rather than flashy features that might become obsolete. Every technical choice is explained and documented so you understand your investment."
     },
     {
       question: "Can you help with existing websites and systems?",
-      answer: "Yes, we provide comprehensive audits and improvements for existing digital infrastructure. This includes security hardening, performance optimization, privacy compliance implementation, and digital sovereignty upgrades. We can work with your current systems or recommend strategic rebuilds when necessary."
+      answer: "Absolutely. We provide comprehensive audits of existing websites and digital systems, identifying security vulnerabilities, performance bottlenecks, and privacy compliance gaps. Services include security hardening, speed optimization, GDPR compliance implementation, data sovereignty upgrades, and migration planning. Sometimes we can enhance your current system; other times we'll recommend a strategic rebuild to give you better long-term value. Either way, we'll give you honest, expert advice about the best path forward for your specific situation."
     },
     {
       question: "What happens during the discovery consultation?",
@@ -66,15 +66,15 @@ export function FAQ() {
           className={`text-center mb-16 animate-fade-up ${headerAnimation.isVisible ? 'visible' : ''}`}
         >
           <div className="mb-8">
-            <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
+            <p className="text-sm font-medium tracking-[0.08em] text-muted-foreground uppercase mb-4">
               Frequently Asked Questions
             </p>
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary">
+          <h2 className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary tracking-tight">
             Everything you need to know about
-            <span className="italic text-accent"> working with us</span>
+            <span className="italic text-accent font-medium"> working with us</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">

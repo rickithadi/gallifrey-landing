@@ -18,10 +18,9 @@ export function Header() {
 
   const navItems = [
     { href: "#services", label: "Services" },
-    { href: "/insights", label: "Insights" },
-    { href: "/case-studies", label: "Case Studies" },
+    { href: "/case-studies", label: "Work" },
     { href: "/about", label: "About" },
-    { href: "#pricing", label: "Investment" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -60,7 +59,7 @@ export function Header() {
               asChild
             >
               <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
-                Schedule Consultation
+                Get Started
               </a>
             </Button>
 
@@ -101,7 +100,7 @@ export function Header() {
                   asChild
                 >
                   <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
-                    Get in touch
+                    Get Started
                   </a>
                 </Button>
               </div>

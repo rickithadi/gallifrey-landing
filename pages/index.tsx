@@ -1,17 +1,14 @@
 import { ConsultativeContact } from '@/components/ConsultativeContact'
 import { FAQ } from '@/components/FAQ'
-import { Features } from '@/components/Features'
 import { Footer } from '@/components/Footer'
 import Head from 'next/head'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
 import { Pricing } from '@/components/Pricing'
-import { PrivacySecurity } from '@/components/PrivacySecurity'
 import { Services } from '@/components/Services'
 import { Testimonials } from '@/components/Testimonials'
-import { TrustSignals } from '@/components/TrustSignals'
-// import { Work } from '@/components/Work'
+import { TrustAndSecurity } from '@/components/TrustAndSecurity'
 
 export default function Home() {
   const structuredData = {
@@ -234,67 +231,11 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
-        <PrivacySecurity />
         <Testimonials />
-        {/* <Work /> */}
-        <Features />
-
-        {/* Own Your Narrative Campaign CTA - Temporarily hidden */}
-        {/* <section className="py-20 px-4 bg-gradient-to-r from-[#1a237e] to-[#00695c] relative overflow-hidden">
-          <div className="container mx-auto max-w-4xl text-center relative z-10">
-            <div className="mb-6">
-              <span className="text-sm font-medium tracking-wider text-white/80 uppercase mb-4 block">
-                Digital Sovereignty
-              </span>
-              <div className="w-12 h-px bg-white/40 mx-auto mb-8"></div>
-            </div>
-
-            <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-white">
-              Ready to <span className="italic text-[#ffa726]">Own Your Narrative</span>?
-            </h2>
-
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
-              Stop building someone else&apos;s empire. Break free from Big Tech dependency with custom websites, data privacy protection, and complete digital independence.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/own-your-narrative"
-                className="inline-flex items-center px-8 py-3 bg-white text-[#1a237e] font-medium rounded-lg hover:bg-white/90 transition-colors"
-              >
-                Discover Digital Independence
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link
-                href="/own-your-narrative"
-                className="inline-flex items-center px-8 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-white/20">
-              <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-white/80">
-                <span>47 Data Brokers Removed</span>
-                <span>•</span>
-                <span>$2.3M Revenue Generated</span>
-                <span>•</span>
-                <span>100% Client Satisfaction</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#42a5f5]/20 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#ffa726]/20 to-transparent rounded-full blur-3xl"></div>
-        </section> */}
-
+        <TrustAndSecurity />
         <Pricing />
         <FAQ />
         <ConsultativeContact />
-        <TrustSignals />
         <Footer />
       </div>
     </>

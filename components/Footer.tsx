@@ -47,8 +47,20 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Compliance section */}
+        <div className="border-t border-border/50 mt-16 pt-6 pb-6">
+          <div className="text-center">
+            <div className="text-xs text-muted-foreground mb-2">
+              <span className="font-medium text-primary">Compliance:</span> ISO 27001 • OWASP • GDPR • SOC 2 • Zero Trust • Australian Privacy
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Every solution maintains your digital independence and strengthens your competitive positioning
+            </p>
+          </div>
+        </div>
+
         {/* Bottom section */}
-        <div className="border-t border-border/50 mt-16 pt-8">
+        <div className="border-t border-border/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <p className="text-sm text-muted-foreground">

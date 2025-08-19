@@ -1,4 +1,4 @@
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, MessageSquare, FileText, CreditCard } from "lucide-react";
 
 import { Button } from "./ui/button";
 
@@ -30,7 +30,7 @@ export function Pricing() {
         "Custom business dashboards",
         "Advanced security implementation",
         "Multi-platform integration",
-        "Digital process optimization",
+        "AI-enhanced digital process optimization",
         "Performance & conversion optimization",
         "Strategic digital sovereignty planning",
         "3-month partnership & support"
@@ -47,7 +47,7 @@ export function Pricing() {
       scope: "Ideal for: Large organizations, high-security needs, complex requirements",
       features: [
         "Custom web applications & systems",
-        "Enterprise infrastructure architecture",
+        "AI-integrated enterprise infrastructure",
         "24/7 security monitoring & response",
         "Dedicated development team",
         "Complete digitalization suite",
@@ -66,15 +66,15 @@ export function Pricing() {
         {/* Section header */}
         <div className="mb-20">
           <div className="mb-8">
-            <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
+            <p className="text-sm font-medium tracking-[0.12em] text-muted-foreground uppercase mb-4">
               Investment
             </p>
             <div className="w-12 h-px bg-accent"></div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
+          <h2 className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary max-w-4xl tracking-tight">
             Strategic partnerships for
-            <span className="italic text-accent"> exceptional outcomes</span>
+            <span className="italic text-accent font-medium"> exceptional outcomes</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
@@ -95,7 +95,7 @@ export function Pricing() {
               )}
 
               <div className="mb-6">
-                <h3 className="font-serif text-2xl font-medium mb-1 text-primary">
+                <h3 className="font-serif text-2xl font-light mb-1 text-primary tracking-tight">
                   {pkg.name}
                 </h3>
                 <p className="text-accent font-medium text-sm mb-3">
@@ -140,27 +140,50 @@ export function Pricing() {
 
         {/* Investment guidance */}
         <div className="text-center border-t border-border/50 pt-16">
-          <h3 className="text-xl font-serif font-medium mb-4 text-primary">
-            Custom solutions for unique challenges
+          <div className="mb-8">
+            <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
+              Investment Process
+            </p>
+            <div className="w-12 h-px bg-accent mx-auto"></div>
+          </div>
+
+          <h3 className="text-3xl md:text-4xl font-serif font-medium leading-tight mb-6 text-primary">
+            Custom Solutions for
+            <span className="italic text-accent"> Unique Challenges</span>
           </h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Investment levels vary based on complexity, scope, and strategic objectives. Every engagement begins with a comprehensive discovery process to ensure perfect alignment.
+          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            Investment levels vary based on complexity, scope, and strategic objectives. Every engagement begins with a comprehensive discovery process to ensure perfect alignment with your vision.
           </p>
           
-          <div className="bg-muted/30 rounded-lg p-6 mb-8 max-w-3xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div>
-                <div className="font-medium text-primary mb-1">Discovery Call</div>
-                <div className="text-muted-foreground">Complimentary 30-minute strategy session</div>
+          <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-accent" />
               </div>
-              <div>
-                <div className="font-medium text-primary mb-1">Custom Proposal</div>
-                <div className="text-muted-foreground">Detailed scope, timeline & investment</div>
+              <h4 className="font-serif text-lg font-medium text-primary mb-2">Discovery Call</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Complimentary 30-minute strategy session to understand your goals, challenges, and requirements
+              </p>
+            </div>
+            
+            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-8 h-8 text-accent" />
               </div>
-              <div>
-                <div className="font-medium text-primary mb-1">Flexible Terms</div>
-                <div className="text-muted-foreground">Milestone-based payments available</div>
+              <h4 className="font-serif text-lg font-medium text-primary mb-2">Custom Proposal</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Detailed scope, timeline, and investment breakdown tailored specifically to your project
+              </p>
+            </div>
+            
+            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <CreditCard className="w-8 h-8 text-accent" />
               </div>
+              <h4 className="font-serif text-lg font-medium text-primary mb-2">Flexible Terms</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Milestone-based payments and flexible terms that align with your project timeline and budget
+              </p>
             </div>
           </div>
           

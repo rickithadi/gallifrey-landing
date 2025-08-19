@@ -7,28 +7,28 @@ export function Services() {
 
   const services = [
     {
-      icon: <Palette className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Pixel-Perfect Design Systems",
-      description: "Custom-coded design systems with mathematical precision. Every element positioned purposefully, every interaction crafted to perfection. No templates, no compromises.",
-      details: ["Bespoke Visual Identity", "Custom Component Libraries", "Precision Typography Systems"]
+      icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
+      title: "Bespoke Web Development",
+      description: "Hand-crafted websites and applications built from scratch with obsessive attention to detail. No templates, no WordPress, no shortcuts. We leverage AI-assisted development to accelerate delivery while maintaining the human expertise that creates truly custom, security-first solutions.",
+      details: ["AI-Enhanced Custom Development", "Security-First Architecture", "Human-Guided Precision"]
     },
     {
-      icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Hand-Crafted Development",
-      description: "Obsessively detailed code architecture built from scratch. Every line optimized for performance, every function designed for elegance and maintainability.",
-      details: ["Custom Code Architecture", "Performance Optimization", "Clean Code Principles"]
+      icon: <Palette className="w-6 h-6 text-accent" aria-hidden="true" />,
+      title: "Custom Design Systems",
+      description: "Meticulously crafted visual identities and design systems with mathematical precision. Every pixel positioned purposefully, every interaction designed to perfection. Bespoke typography, custom iconography, and cohesive brand experiences that set you apart.",
+      details: ["Bespoke Visual Identity", "Mathematical Precision Design", "Custom Component Libraries"]
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Security-First Engineering",
-      description: "Military-grade security woven into every pixel and line of code. GDPR compliance, data encryption, and privacy protection built from the foundation up.",
-      details: ["Zero-Trust Architecture", "Privacy by Design", "Penetration Testing"]
+      title: "Privacy & Security Services",
+      description: "Military-grade security and privacy protection woven into every aspect of your digital presence. GDPR compliance, data encryption, security audits, and comprehensive privacy protection. Your data sovereignty is our priority.",
+      details: ["GDPR Compliance & Privacy", "Security Audits & Protection", "Data Encryption & Control"]
     },
     {
       icon: <Users className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Artisan-Level Craftsmanship",
-      description: "White-glove service with obsessive attention to detail. Every project treated as a masterpiece, every client relationship built on trust and excellence.",
-      details: ["Personal Attention", "Quality Assurance", "Lifetime Support"]
+      title: "Strategic Digital Consulting", 
+      description: "White-glove consultation on technology decisions, AI integration strategy, and digital transformation. Personal attention to your unique challenges with strategic guidance that leverages emerging technologies while protecting your independence and competitive advantage.",
+      details: ["AI Integration Strategy", "Platform Independence Consulting", "Future-Proof Technology Planning"]
     }
   ];
 
@@ -41,19 +41,20 @@ export function Services() {
           className={`mb-20 animate-fade-up ${headerAnimation.isVisible ? 'visible' : ''}`}
         >
           <div className="mb-8">
-            <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
-              Our Approach
+            <p className="text-sm font-medium tracking-[0.1em] text-muted-foreground uppercase mb-4">
+              What We Do
             </p>
             <div className="w-12 h-px bg-accent"></div>
           </div>
 
-          <h2 id="services-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
-            We craft pixel-perfect experiences with
-            <span className="italic text-accent"> obsessive attention to detail</span>
+          <h2 id="services-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl tracking-tight">
+            Development, Design &
+            <span className="italic text-accent"> Consulting Services</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Every project begins with custom design systems built from scratch. We position every pixel with mathematical precision because your brand deserves perfection, not templates.
+            We build custom websites, design systems, and provide data security and privacy consulting.
+            Combining human expertise with AI-enhanced development - no templates, no shortcuts, everything built specifically for your business.
           </p>
         </div>
 
@@ -69,7 +70,7 @@ export function Services() {
                   {service.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl font-medium mb-3 text-primary">
+                  <h3 className="font-serif text-xl font-medium mb-3 text-primary tracking-tight">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
