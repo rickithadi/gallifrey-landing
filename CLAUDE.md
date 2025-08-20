@@ -262,3 +262,44 @@ The design review workflow runs automatically on:
 - Some components may show TypeScript errors but are intentionally excluded
 - Console.log statements are removed in production builds
 - Google Analytics errors in development environment are expected and filtered out in tests
+
+## Multi-Agent Development Workflow
+
+### Overview
+This project implements a multi-agent development workflow using Claude Code, where specialized AI agents collaborate on the codebase through shared documentation files.
+
+### Agent Architecture
+- **Frontend Architecture Agent**: Component structure, state management, performance
+- **Backend/API Agent**: API routes, server logic, data flow optimization  
+- **UX/Design Agent**: User experience, accessibility, design consistency
+- **Code Review Agent**: Cross-cutting concerns, code quality, integration issues
+
+### Multi-Agent Commands
+- `npm run dev-with-agents` - Start development server with all agents
+- `npm run start-agents` - Start all four agents independently
+- `npm run agent:frontend` - Start frontend architecture agent
+- `npm run agent:backend` - Start backend/API agent  
+- `npm run agent:ux` - Start UX/design agent
+- `npm run agent:reviewer` - Start code review agent
+
+### Agent Communication
+Agents communicate asynchronously through markdown files in `./collaboration/`:
+- `frontend-notes.md` - Component and state management discussions
+- `backend-notes.md` - API and server-side architecture notes
+- `ux-notes.md` - User experience and design feedback
+- `review-notes.md` - Code review comments and integration concerns
+- `decisions.md` - Major architectural decisions and consensus
+
+### Agent Contexts
+Each agent has specialized context files in `./claude-contexts/` that define:
+- Specific roles and responsibilities
+- Communication protocols and formatting
+- Focus areas and technical concerns
+- File watch patterns for their domain
+
+### Benefits
+- **Continuous feedback** on code changes across multiple disciplines
+- **Asynchronous collaboration** between specialized perspectives
+- **Documentation** of design decisions and architectural evolution
+- **Learning opportunities** from diverse agent insights
+- **Consistency** in code quality and design patterns

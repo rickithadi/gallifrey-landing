@@ -15,7 +15,13 @@
     "test:report": "playwright show-report",
     "test:codegen": "playwright codegen localhost:3000",
     "design-review": "node scripts/design-review/design-reviewer.js",
-    "design-review:local": "node scripts/design-review/design-reviewer.js http://localhost:3000"
+    "design-review:local": "node scripts/design-review/design-reviewer.js http://localhost:3000",
+    "dev-with-agents": "concurrently \"npm run dev\" \"npm run start-agents\"",
+    "start-agents": "concurrently \"npm run agent:frontend\" \"npm run agent:backend\" \"npm run agent:ux\" \"npm run agent:reviewer\"",
+    "agent:frontend": "claude-code --context='./claude-contexts/frontend-agent.md' --watch='src/components/**,src/hooks/**,src/pages/**'",
+    "agent:backend": "claude-code --context='./claude-contexts/backend-agent.md' --watch='src/pages/api/**,lib/**'",
+    "agent:ux": "claude-code --context='./claude-contexts/ux-agent.md' --watch='src/components/**,src/styles/**'",
+    "agent:reviewer": "claude-code --context='./claude-contexts/review-agent.md' --watch='src/**'"
   },
   "keywords": [],
   "author": "",
@@ -48,6 +54,7 @@
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.1",
     "@types/react": "^19.1.9",
+    "concurrently": "^9.2.0",
     "eslint": "9.33.0",
     "eslint-config-next": "15.4.6",
     "typescript": "^5.9.2"
