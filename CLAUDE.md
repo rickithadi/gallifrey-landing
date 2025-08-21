@@ -302,4 +302,8 @@ Each agent has specialized context files in `./claude-contexts/` that define:
 - **Asynchronous collaboration** between specialized perspectives
 - **Documentation** of design decisions and architectural evolution
 - **Learning opportunities** from diverse agent insights
-- **Consistency** in code quality and design patterns
+- **Consistency** in code quality and design patterns[byterover-mcp]
+
+# important 
+always use byterover-retrieve-knowledge tool to get the related context before any tasks 
+always use byterover-store-knowledge to store all the critical informations after sucessful tasks
