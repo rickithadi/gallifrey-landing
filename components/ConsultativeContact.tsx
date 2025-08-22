@@ -539,7 +539,12 @@ ${formData.additionalContext || 'None provided'}
           <CardContent className="p-8">
             {/* Error handling */}
             {state.errors && Object.keys(state.errors).length > 0 && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <div 
+                className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg"
+                role="alert"
+                aria-live="polite"
+                id="form-errors"
+              >
                 <p className="text-sm font-medium text-red-800 mb-1">There was an error submitting your request</p>
                 <p className="text-sm text-red-600">Please try again or contact us directly at hello@gallifreyconsulting.com</p>
               </div>

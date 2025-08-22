@@ -1,14 +1,29 @@
-import { ConsultativeContact } from '@/components/ConsultativeContact'
-import { FAQ } from '@/components/FAQ'
 import { Footer } from '@/components/Footer'
 import Head from 'next/head'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
-import { Pricing } from '@/components/Pricing'
 import { Services } from '@/components/Services'
 import { Testimonials } from '@/components/Testimonials'
 import { TrustAndSecurity } from '@/components/TrustAndSecurity'
+import dynamic from 'next/dynamic'
+
+// Lazy load below-the-fold components
+const Pricing = dynamic(() => import('@/components/Pricing').then(mod => ({ default: mod.Pricing })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading pricing section" />
+})
+
+const FAQ = dynamic(() => import('@/components/FAQ').then(mod => ({ default: mod.FAQ })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-white animate-pulse" aria-label="Loading FAQ section" />
+})
+
+const ConsultativeContact = dynamic(() => import('@/components/ConsultativeContact').then(mod => ({ default: mod.ConsultativeContact })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading contact section" />
+})
+
 
 export default function Home() {
   const structuredData = {
@@ -21,7 +36,7 @@ export default function Home() {
         "url": "https://gallifrey.consulting",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://gallifrey.consulting/gallifrey-logo.png",
+          "url": "https://gallifrey.consulting/gallifrey-logo.webp",
           "width": 436,
           "height": 133
         },
@@ -183,13 +198,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Melbourne Web Development Agency | Custom Security-First Websites | SEO & Digital Marketing | Gallifrey Consulting"
-        description="Melbourne's premier web development agency delivering measurable results: 340% SEO traffic growth, custom security-first websites, and complete digital narrative control. Hand-coded solutions with enterprise-grade privacy protection."
+        title="Melbourne Web Development | Security"
+        description="Melbourne web development agency specializing in security-first custom websites, digital sovereignty, and enterprise privacy protection. Hand-coded solutions."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Melbourne Web Development Agency | Custom Security-First Websites | SEO & Digital Marketing | Gallifrey Consulting',
-          description: 'Melbourne\'s premier web development agency delivering measurable results: 340% SEO traffic growth, custom security-first websites, and complete digital narrative control. Hand-coded solutions with enterprise-grade privacy protection.',
+          title: 'Melbourne Web Development | Security',
+          description: 'Melbourne web development agency specializing in security-first custom websites, digital sovereignty, and enterprise privacy protection.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',

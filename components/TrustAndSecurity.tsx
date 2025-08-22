@@ -61,7 +61,7 @@ export function TrustAndSecurity() {
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 id="trust-security-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary tracking-tight">
+          <h2 id="trust-security-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary tracking-tight">
             Built for Your Success &
             <span className="italic text-accent"> Digital Independence</span>
           </h2>

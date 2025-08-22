@@ -165,9 +165,11 @@ The project supports two distinct brand identities:
 
 ## Testing & Quality Assurance
 
-### Playwright Test Suite
-The project includes comprehensive end-to-end testing with Playwright:
+### Testing Strategy - Hybrid Approach
 
+The project implements a sophisticated dual-testing strategy combining Playwright for automation and MCP-Chrome for interactive development testing:
+
+#### Playwright Test Suite (CI/CD & Automation)
 **Test Scripts:**
 - `npm test` - Run all Playwright tests
 - `npm run test:ui` - Run tests with Playwright UI mode
@@ -175,6 +177,21 @@ The project includes comprehensive end-to-end testing with Playwright:
 - `npm run test:debug` - Debug tests step by step
 - `npm run test:report` - Show HTML test report
 - `npm run test:codegen` - Generate test code interactively
+
+#### MCP-Chrome Integration (Development & Interactive Testing)
+**New Testing Scripts:**
+- `npm run test:mcp` - Test mcp-chrome-bridge installation
+- `npm run test:interactive` - Start interactive testing with mcp-chrome
+- `npm run test:design-system` - Real-time design system validation
+- `npm run test:performance` - Live performance monitoring
+
+**Advantages of MCP-Chrome:**
+- Real-time testing in actual browser environment
+- Preserved login states and user sessions
+- AI-powered semantic content analysis
+- Cross-tab context management
+- Live performance monitoring
+- Interactive debugging capabilities
 
 **Test Categories:**
 - **Landing Page Tests** (`tests/landing-page.spec.ts`): Core functionality, navigation, responsive design

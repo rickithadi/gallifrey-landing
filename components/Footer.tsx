@@ -1,6 +1,7 @@
+import React from "react";
 import { Logo } from "./Logo";
 
-export function Footer() {
+export const Footer = React.memo(function Footer() {
   return (
     <footer className="bg-background border-t border-border/50">
       <div className="container mx-auto px-4 py-12">
@@ -54,4 +55,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+});

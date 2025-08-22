@@ -15,7 +15,7 @@ export function Work() {
             <div className="w-12 h-px bg-accent"></div>
           </div>
 
-          <h2 id="work-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
+          <h2 id="work-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl">
             Projects that
             <span className="italic text-accent"> speak for themselves</span>
           </h2>
@@ -79,7 +79,7 @@ export function Work() {
                       <p className="text-sm text-accent font-medium mb-2">
                         Client Industry • Project Type
                       </p>
-                      <h3 className="font-serif text-xl font-medium mb-3 text-primary group-hover:text-accent transition-colors">
+                      <h3 className="font-heading text-xl font-medium mb-3 text-primary group-hover:text-accent transition-colors">
                         Project Title
                       </h3>
                       <p className="text-muted-foreground leading-relaxed text-sm mb-4">
@@ -119,7 +119,7 @@ export function Work() {
 
         {/* Call to action */}
         <div className="text-center border-t border-border/50 pt-16">
-          <h3 className="text-2xl font-serif font-medium mb-4 text-primary">
+          <h3 className="text-2xl font-heading font-medium mb-4 text-primary">
             Ready to start your project?
           </h3>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

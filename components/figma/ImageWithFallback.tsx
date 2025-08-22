@@ -9,16 +9,22 @@ interface ImageWithFallbackProps extends Omit<React.ImgHTMLAttributes<HTMLImageE
   width?: number
   height?: number
   src?: string
+  fallbackSrc?: string
 }
 
 export function ImageWithFallback(props: ImageWithFallbackProps) {
   const [didError, setDidError] = useState(false)
+  const [currentSrc, setCurrentSrc] = useState(props.src)
 
   const handleError = () => {
-    setDidError(true)
+    if (props.fallbackSrc && currentSrc !== props.fallbackSrc) {
+      setCurrentSrc(props.fallbackSrc)
+    } else {
+      setDidError(true)
+    }
   }
 
-  const { src, alt, style, className, width = 100, height = 100, ...rest } = props
+  const { src, alt, style, className, width = 100, height = 100, fallbackSrc, ...rest } = props
 
   return didError ? (
     <div
@@ -31,7 +37,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
     </div>
   ) : (
     <Image
-      src={src || ''}
+      src={currentSrc || src || ''}
       alt={alt || ''}
       width={width}
       height={height}

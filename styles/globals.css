@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Google Fonts import */
+/* Google Fonts import with optimized loading */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/* Font display optimization for performance */
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-display: swap;
+}
 
 :root {
   /* ===== GALLIFREY BRAND COLORS - Production Site Corporate Palette ===== */
@@ -110,6 +126,8 @@
   h5,
   h6 {
     @apply font-heading;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -209,6 +227,53 @@
     0% { transform: translate(-50%, -50%) scaleX(0); }
     50% { transform: translate(-50%, -50%) scaleX(1); }
     100% { transform: translate(-50%, -50%) scaleX(0); }
+  }
+
+  /* ===== CURSOR FOLLOWING ANIMATIONS ===== */
+  @keyframes cursor-glow {
+    0%, 100% { 
+      opacity: 0.3; 
+      transform: translate(-50%, -50%) scale(0.8); 
+    }
+    50% { 
+      opacity: 0.8; 
+      transform: translate(-50%, -50%) scale(1.2); 
+    }
+  }
+
+  @keyframes security-pulse {
+    0%, 100% { 
+      opacity: 0.4; 
+      transform: translate(-50%, -50%) scale(1); 
+    }
+    50% { 
+      opacity: 0.8; 
+      transform: translate(-50%, -50%) scale(1.1); 
+    }
+  }
+
+  @keyframes network-connect {
+    0% { 
+      stroke-dashoffset: 20; 
+      opacity: 0.2; 
+    }
+    100% { 
+      stroke-dashoffset: 0; 
+      opacity: 0.6; 
+    }
+  }
+
+  .animate-cursor-glow {
+    animation: cursor-glow 2s ease-in-out infinite;
+  }
+
+  .animate-security-pulse {
+    animation: security-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-network-connect {
+    stroke-dasharray: 20;
+    animation: network-connect 0.8s ease-out forwards;
   }
   
   @keyframes slide-in-left {
@@ -400,16 +465,31 @@
     transition-delay: 600ms;
   }
 
-  /* Performance optimizations */
+  /* Performance optimizations with will-change */
   .animate-fade-up,
   .animate-scale-in,
-  .animate-slide-left {
+  .animate-slide-left,
+  .animate-fade-in-up,
+  .animate-float,
+  .animate-shimmer,
+  .animate-bounce-in {
     will-change: transform, opacity;
   }
 
   .animate-fade-up.visible,
   .animate-scale-in.visible,
-  .animate-slide-left.visible {
+  .animate-slide-left.visible,
+  .animate-fade-in-up.visible {
+    will-change: auto;
+  }
+
+  /* Hero specific animation optimizations */
+  .hero-animation {
+    will-change: transform, opacity;
+    contain: layout style paint;
+  }
+
+  .hero-animation.complete {
     will-change: auto;
   }
 
@@ -456,6 +536,64 @@
     }
   }
 
+  /* Cursor Following Animations */
+  @keyframes cursor-glow {
+    0% { 
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% { 
+      transform: scale(1.5);
+      opacity: 0.3;
+    }
+    100% { 
+      transform: scale(1);
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes security-pulse {
+    0% { 
+      transform: scale(1);
+      filter: drop-shadow(0 0 4px currentColor);
+    }
+    50% { 
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 12px currentColor);
+    }
+    100% { 
+      transform: scale(1);
+      filter: drop-shadow(0 0 4px currentColor);
+    }
+  }
+
+  @keyframes network-connect {
+    0% { 
+      stroke-dashoffset: 100;
+      opacity: 0.3;
+    }
+    50% { 
+      opacity: 0.8;
+    }
+    100% { 
+      stroke-dashoffset: 0;
+      opacity: 0.3;
+    }
+  }
+
+  .cursor-glow {
+    animation: cursor-glow 2s ease-in-out infinite;
+  }
+
+  .security-pulse {
+    animation: security-pulse 0.6s ease-out;
+  }
+
+  .security-node:hover {
+    animation: network-connect 1s ease-in-out;
+    stroke-dasharray: 100;
+  }
+
   /* Enhanced hover states for desktop */
   @media (hover: hover) {
     .hover-lift:hover {
@@ -472,6 +610,117 @@
     .hover-glow:hover {
       box-shadow: 0 0 20px rgba(var(--gallifrey-teal), 0.3);
       transition: box-shadow 0.3s ease-out;
+    }
+  }
+
+  /* Form UX enhancements */
+  .form-submitting {
+    pointer-events: none;
+    opacity: 0.7;
+    position: relative;
+  }
+  
+  .form-submitting::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+  }
+
+  /* Loading spinner animation */
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Success state animations */
+  @keyframes checkmark {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+  }
+  
+  .animate-checkmark {
+    stroke-dasharray: 100;
+    animation: checkmark 0.6s ease-in-out forwards;
+  }
+
+  /* Campaign page performance optimizations */
+  .campaign-gradient {
+    contain: layout style paint;
+    will-change: transform;
+  }
+  
+  .campaign-cta {
+    min-height: 48px;
+    padding: 16px 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .campaign-cta {
+      min-height: 52px;
+      padding: 18px 28px;
+      font-size: 1.1rem;
+    }
+  }
+
+  /* Accessibility enhancements */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .btn {
+      border: 2px solid currentColor;
+    }
+    
+    .card {
+      border: 2px solid currentColor;
+    }
+  }
+
+  /* Reduced data mode optimizations */
+  @media (prefers-reduced-data: reduce) {
+    .animate-fade-up,
+    .animate-scale-in,
+    .animate-slide-left,
+    .animate-float,
+    .animate-shimmer {
+      animation: none;
+      transition: none;
+    }
+    
+    .glass-card,
+    .glass-card-dark {
+      backdrop-filter: none;
+      background: rgba(255, 255, 255, 0.95);
     }
   }
 }

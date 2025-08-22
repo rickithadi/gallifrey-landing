@@ -1,0 +1,142 @@
+# Page snapshot
+
+```yaml
+- link "Skip to main content":
+  - /url: "#services"
+- banner:
+  - link "Gallifrey Consulting - Security-First Web Development":
+    - /url: /
+    - img "Gallifrey Consulting - Security-First Web Development"
+  - navigation "Main navigation":
+    - link "Services":
+      - /url: "#services"
+    - link "Results":
+      - /url: "#testimonials"
+    - link "Investment":
+      - /url: "#pricing"
+    - link "FAQ":
+      - /url: "#faq"
+    - link "Contact":
+      - /url: "#contact"
+  - link "Get Started":
+    - /url: https://calendly.com/rickithadi/30min
+- region "We build trustworthy websites you actually own.":
+  - heading "We build trustworthy websites you actually own." [level=1]
+  - link "Commission Your Site":
+    - /url: "#contact"
+- main "Development, Design & Consulting Services":
+  - paragraph: What We Do
+  - heading "Development, Design & Consulting Services" [level=2]
+  - paragraph: Every solution meticulously handcrafted from first principles. Custom code architecture, bespoke design systems, and comprehensive digital narrative control—all built with the precision and attention to detail that only comes from artisanal development practices. Zero shortcuts, zero templates, zero compromises.
+  - heading "Artisanal Web Development" [level=3]
+  - paragraph: Every website meticulously crafted from blank canvas to pixel-perfect completion. Bespoke HTML, CSS, and JavaScript architectures built with purposeful precision. No templates, no builders, no compromises—just pure custom development where every element serves both form and function with mathematical exactness.
+  - text: 100% Custom Code Architecture Pixel-Perfect Design Implementation Mathematical Precision Layouts
+  - heading "Bespoke Design Systems" [level=3]
+  - paragraph: Bespoke visual languages built from foundational principles. Every typeface selection, color palette, and spacing system designed with intentional precision. Custom iconography, meticulously balanced layouts, and sophisticated component libraries that elevate your brand above the template-driven masses.
+  - text: Curated Typography Systems Custom Iconography & Illustrations Precision-Crafted Component Libraries
+  - heading "Privacy, Security & SEO Services" [level=3]
+  - paragraph: Control your digital narrative both ways - build positive SEO presence while removing negative exposure through comprehensive security and privacy cleanup. We remove data from brokers, implement enterprise security, GDPR compliance, and optimize your digital reputation to protect and promote your organization's interests.
+  - text: Data Broker Removal & Security Audits SEO Reputation Management & Brand Protection GDPR Compliance & Digital Narrative Control
+  - heading "Strategic Digital Consulting" [level=3]
+  - paragraph: Bespoke consulting tailored to your specific industry challenges and growth objectives. Custom-designed technology strategies, curated tool recommendations, and personally crafted implementation roadmaps. No cookie-cutter solutions—just thoughtful, strategic guidance built around your unique business architecture.
+  - text: Custom Technology Architecture Curated Tool Integration Personalized Growth Strategies
+- region "Results that speak for themselves":
+  - paragraph: Trusted by Leaders
+  - heading "Results that speak for themselves" [level=2]
+  - paragraph: Measurable SEO growth and digital narrative control that drives real revenue impact. Each solution is meticulously crafted—sophisticated architecture that search engines reward and audiences trust, delivering both technical excellence and brand authority through precision-built digital experiences.
+  - text: 340% Average Organic Traffic Increase 87% Page 1 Keyword Rankings 5.2x Average Lead Generation Boost 245% Average Revenue Growth
+  - paragraph: “The level of craftsmanship was extraordinary—bespoke development from the ground up, every design element positioned with mathematical precision. Their custom website and application suite transformed how we serve clients, with performance that leaves competitors behind.”
+  - text: Custom digital platform + 340% performance boost Bespoke application architecture Pixel-perfect design implementation Custom user experience flows SC Sarah Chen CEO, TechFlow Solutions Melbourne Fintech
+  - paragraph: “Their comprehensive approach to digital narrative control was game-changing. Complete SEO optimization, brand authority establishment, and negative content suppression. We now dominate search results for legal services in Melbourne with 5x more qualified leads.”
+  - text: 5x qualified leads + Complete digital authority Page 1 rankings for all target keywords Brand authority domination Negative content completely suppressed MR Michael Rodriguez Managing Partner Rodriguez Legal
+  - paragraph: “The enterprise-grade security implementation gave us complete peace of mind. GDPR compliance, data protection, and privacy infrastructure that protects both our business and our clients. Security became our competitive advantage instead of a concern.”
+  - text: Zero security incidents + Enterprise protection GDPR compliance achieved Zero data breaches Enterprise security standards ET Emma Thompson Creative Director Lifestyle Brand Collective
+  - paragraph: Delivering measurable SEO and business growth across industries
+  - heading "SEO & Search Dominance" [level=4]
+  - text: • Page 1 rankings for competitive keywords • Local SEO dominance in Melbourne • Negative content suppression & brand protection
+  - heading "Business Growth & Revenue" [level=4]
+  - text: • 5x qualified lead generation increases • 275% average revenue growth • Complete digital narrative control
+- region "Built for Your Success & Digital Independence":
+  - paragraph: Why Choose Us
+  - heading "Built for Your Success & Digital Independence" [level=2]
+  - paragraph: Your business deserves digital solutions that amplify your strengths and protect your interests. We craft bespoke, security-first websites and systems using AI-accelerated development processes that give you complete control over your digital presence, your data, and your competitive advantage.
+  - heading "You Own Everything" [level=3]
+  - paragraph: Complete ownership of meticulously crafted code, custom-built architecture, and bespoke digital assets. No vendor lock-in, no template dependencies, no platform risks. Every element developed specifically for you—your investment is truly yours.
+  - heading "Security as Your Advantage" [level=3]
+  - paragraph: While competitors worry about data breaches and compliance headaches, you operate with confidence. Enterprise-grade security built from day one becomes your competitive moat.
+  - heading "Premium Market Position" [level=3]
+  - paragraph: GDPR compliance and data sovereignty aren't just checkboxes - they position you as the premium, trustworthy choice. Win clients who value privacy and professionalism.
+  - heading "Melbourne Advantage" [level=3]
+  - paragraph: Local expertise that understands Australian business culture, privacy laws, and market dynamics. Plus the responsiveness and accountability that comes with working locally.
+  - heading "Built to Scale With You" [level=3]
+  - paragraph: Your custom-built digital infrastructure grows and evolves as your business does. Bespoke architecture designed for seamless scalability. No rebuilding from scratch, no platform migrations—just continuous refinement of the custom systems built specifically for your success.
+  - heading "Performance That Impresses" [level=3]
+  - paragraph: Blazing-fast loading times from optimized bespoke code, pixel-perfect design with mathematical precision, and flawless user experiences meticulously crafted. Your custom website becomes a powerful sales and credibility tool that reflects true quality.
+  - text: 0 Security Incidents 100% Custom Security Frameworks GDPR Compliant by Design 24/7 Security Monitoring
+- contentinfo:
+  - link "Gallifrey Consulting - Security-First Web Development":
+    - /url: /
+    - img "Gallifrey Consulting - Security-First Web Development"
+  - paragraph: Bespoke digital solutions with enterprise-grade security and comprehensive digital narrative control.
+  - heading "Get Started" [level=4]
+  - list:
+    - listitem:
+      - link "Free Consultation":
+        - /url: "#contact"
+    - listitem:
+      - link "hello@gallifreyconsulting.com":
+        - /url: mailto:hello@gallifreyconsulting.com
+  - heading "Security Standards" [level=4]
+  - text: GDPR Compliant Enterprise Security Zero Trust
+  - paragraph: "© 2024 Gallifrey Consulting. All rights reserved. ABN: 69 696 168 286"
+  - link "Privacy":
+    - /url: "#"
+  - link "Terms":
+    - /url: "#"
+  - link "Security":
+    - /url: "#"
+- text: "🎨 A/B Test: Color Variants"
+- button "Deep Corporate Teal Sophisticated, premium consulting feel"
+- button "Steel Blue-Teal Security-focused, technical competence"
+- text: "Current: Deep Corporate Teal Test with:"
+- code: "?variant=corporate-teal"
+- text: or
+- code: "?variant=steel-blue-teal"
+- button "Open Next.js Dev Tools":
+  - img
+- button "Open issues overlay": 1 Issue
+- button "Collapse issues badge":
+  - img
+- navigation:
+  - button "previous" [disabled]:
+    - img "previous"
+  - text: 1/1
+  - button "next" [disabled]:
+    - img "next"
+- img
+- link "Next.js 15.4.6 (stale) Webpack":
+  - /url: https://nextjs.org/docs/messages/version-staleness
+  - img
+  - text: Next.js 15.4.6 (stale) Webpack
+- img
+- dialog "Recoverable Error":
+  - text: Recoverable Error
+  - button "Copy Stack Trace":
+    - img
+  - link "Go to related documentation":
+    - /url: https://nextjs.org/docs/messages/react-hydration-error
+    - img
+  - link "Learn more about enabling Node.js inspector for server code with Chrome DevTools":
+    - /url: https://nextjs.org/docs/app/building-your-application/configuring/debugging#server-side-code
+    - img
+  - paragraph: "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:"
+  - paragraph: "- A server/client branch `if (typeof window !== 'undefined')`. - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called. - Date formatting in a user's locale which doesn't match the server. - External changing data without sending a snapshot of it along with the HTML. - Invalid HTML tag nesting. It can also happen if the client has a browser extension installed which messes with the HTML before React loaded."
+  - paragraph:
+    - text: "See more info here:"
+    - link "https://nextjs.org/docs/messages/react-hydration-error":
+      - /url: https://nextjs.org/docs/messages/react-hydration-error
+  - button "complete Component Stack":
+    - img
+  - code: "... <App pageProps={{}} Component={function Home} err={undefined} router={{sdc:{},sbc:{}, ...}}> <DefaultSeo> <ABTestProvider> <LayoutABTestProvider> <Home> <NextSeo> <Head> <div className=\"min-h-scre...\"> <Header> <Hero> <section className=\"relative p...\" aria-labelledby=\"hero-heading\" data-testid=\"hero-secti...\"> <PerformanceProfiler> <CursorGlow position={{x:0,y:0}} mode=\"attract\" isActive={false} chargeLevel={0} clickIntensity={0}> <div style={{ + left: -16 + top: -16 + width: 32 + height: 32 + backgroundColor: \"rgba(45, 90, 135, 0.4)\" + boxShadow: \"0 0 20px rgba(45, 90, 135, 0.3)\" + opacity: 0.6 + transform: \"rotate(0deg) scale(1) \" + transition: \"transform 0.3s ease-out\" }} + aria-hidden=\"true\" - aria-hidden={null} + className={\"jsx-d6fd690f302fe10d fixed pointer-events-none z-0 rounded-full transition-all dura...\"} - className=\"container mx-auto max-w-4xl relative z-10\" > - <header className=\"text-center mb-16\"> - <div className={\"flex justify-center animate-fade-up animate-delay-600 \"}> ... ... ... ... ..."
+- alert
+```

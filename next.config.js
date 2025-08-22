@@ -4,6 +4,55 @@ module.exports = {
   compress: true,
   poweredByHeader: false,
 
+  // Webpack optimization for Three.js and performance
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Optimize Three.js and related libraries
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'three/examples/jsm': 'three/examples/jsm',
+    };
+
+    // Bundle analyzer in development
+    if (dev && !isServer) {
+      config.plugins.push(
+        new webpack.DefinePlugin({
+          'process.env.BUNDLE_ANALYZE': JSON.stringify(process.env.BUNDLE_ANALYZE || 'false'),
+        })
+      );
+    }
+
+    // Optimize chunk splitting for Three.js
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          three: {
+            name: 'three',
+            test: /[\\/]node_modules[\\/](three|@react-three)[\\/]/,
+            chunks: 'all',
+            priority: 30,
+          },
+          postprocessing: {
+            name: 'postprocessing',
+            test: /[\\/]node_modules[\\/]postprocessing[\\/]/,
+            chunks: 'all',
+            priority: 25,
+          },
+          vendor: {
+            name: 'vendor',
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'all',
+            priority: 10,
+            enforce: true,
+          },
+        },
+      };
+    }
+
+    return config;
+  },
+
   // Image optimization
   images: {
     remotePatterns: [
@@ -96,6 +145,7 @@ module.exports = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
+    webpackBuildWorker: true,
   },
 
   // Compiler options

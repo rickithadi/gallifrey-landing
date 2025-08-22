@@ -74,7 +74,7 @@ export function FAQ() {
 
           <h2 id="faq-heading" className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary tracking-tight">
             Everything you need to know about
-            <span className="italic text-accent font-medium"> working with us</span>
+            <span className="italic text-accent font-bold tracking-wide"> working with us</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -95,7 +95,7 @@ export function FAQ() {
                 aria-expanded={openItems.includes(index)}
                 aria-controls={`faq-content-${index}`}
               >
-                <span className="font-medium text-primary pr-4">
+                <span className="font-semibold text-primary pr-4 tracking-wide">
                   {faq.question}
                 </span>
                 {openItems.includes(index) ? (
@@ -108,7 +108,7 @@ export function FAQ() {
               {openItems.includes(index) && (
                 <div
                   id={`faq-content-${index}`}
-                  className="px-6 pb-4 text-muted-foreground leading-relaxed"
+                  className="px-6 pb-4 text-muted-foreground leading-relaxed tracking-wide"
                 >
                   {faq.answer}
                 </div>
@@ -119,10 +119,10 @@ export function FAQ() {
 
         {/* Still have questions CTA */}
         <div className="text-center mt-16 p-8 bg-accent/5 border border-accent/20 rounded-lg">
-          <h3 className="font-serif text-xl font-medium text-primary mb-3">
+          <h3 className="font-serif text-xl font-bold text-primary mb-3 tracking-wide">
             Still have questions?
           </h3>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted-foreground mb-6 tracking-wide leading-relaxed">
             Schedule a free 30-minute consultation to discuss your specific requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -47,7 +47,7 @@ export function Services() {
             <div className="w-12 h-px bg-accent"></div>
           </div>
 
-          <h2 id="services-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl tracking-tight">
+          <h2 id="services-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl tracking-tight">
             Development, Design &
             <span className="italic text-accent"> Consulting Services</span>
           </h2>
@@ -70,7 +70,7 @@ export function Services() {
                   {service.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-serif text-xl font-medium mb-3 text-primary tracking-tight">
+                  <h3 className="font-heading text-xl font-medium mb-3 text-primary tracking-tight">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
