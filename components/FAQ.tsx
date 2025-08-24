@@ -72,7 +72,7 @@ export function FAQ() {
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 id="faq-heading" className="text-3xl md:text-5xl font-serif font-light leading-tight mb-6 text-primary tracking-tight">
+          <h2 id="faq-heading" className="text-3xl md:text-5xl font-heading font-light leading-tight mb-6 text-primary tracking-tight">
             Everything you need to know about
             <span className="italic text-accent font-bold tracking-wide"> working with us</span>
           </h2>
@@ -119,7 +119,7 @@ export function FAQ() {
 
         {/* Still have questions CTA */}
         <div className="text-center mt-16 p-8 bg-accent/5 border border-accent/20 rounded-lg">
-          <h3 className="font-serif text-xl font-bold text-primary mb-3 tracking-wide">
+          <h3 className="font-heading text-xl font-bold text-primary mb-3 tracking-wide">
             Still have questions?
           </h3>
           <p className="text-muted-foreground mb-6 tracking-wide leading-relaxed">

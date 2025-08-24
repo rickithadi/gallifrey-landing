@@ -60,30 +60,30 @@ export const Hero = React.memo(function Hero() {
           chargeLevel={interactionState.chargeLevel}
           clickIntensity={clickIntensity}
         />
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-xl text-center md:text-left">
+        <div className="container mx-auto relative z-20">
+          <div className="max-w-xl text-center md:text-left mx-auto md:mx-0">
             <header className="mb-8">
               <h1
                 ref={headlineAnimation.ref}
                 id="hero-heading"
-                className={`text-4xl md:text-6xl lg:text-7xl font-heading font-medium leading-tight text-primary animate-fade-in-up hero-animation ${
+                className={`text-5xl md:text-6xl lg:text-7xl font-heading font-light leading-tight text-gallifrey-charcoal tracking-wide animate-fade-in-up hero-animation ${
                   headlineAnimation.isVisible ? "visible complete" : ""
                 }`}
               >
-                We build <AnimatedAdjective className="text-accent italic font-bold" />{" "}
+                We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" />{" "}
                 websites you actually own.
               </h1>
             </header>
 
             <div
               ref={ctaAnimation.ref}
-              className={`flex justify-center md:justify-start animate-fade-in-up delay-300 ${
+              className={`flex justify-center md:block animate-fade-in-up delay-300 ${
                 ctaAnimation.isVisible ? "visible" : ""
               }`}
             >
               <Button
                 size="lg"
-                className="px-10 py-4 bg-primary hover:bg-primary/90 text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-medium tracking-wide group"
+                className="px-10 py-4 bg-gallifrey-teal hover:bg-gallifrey-teal-dark text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-semibold tracking-wide group"
                 asChild
               >
                 <a
@@ -120,30 +120,30 @@ export const Hero = React.memo(function Hero() {
         clickIntensity={clickIntensity}
       />
 
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center md:text-left max-w-4xl">
+      <div className="container mx-auto max-w-6xl relative z-20">
+        <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">
           <header className="mb-12 md:mb-16">
             <h1
               ref={headlineAnimation.ref}
               id="hero-heading"
-              className={`text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-8 text-primary animate-fade-up animate-delay-200 hero-animation ${
+              className={`text-5xl md:text-6xl lg:text-7xl font-heading font-light leading-tight mb-8 text-gallifrey-charcoal tracking-wide animate-fade-up animate-delay-200 hero-animation ${
                 headlineAnimation.isVisible ? "visible complete" : ""
               }`}
             >
-              We build <AnimatedAdjective className="text-accent italic font-bold" /> websites
+              We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> websites
               you actually own
             </h1>
           </header>
 
           <div
             ref={ctaAnimation.ref}
-            className={`flex justify-center md:justify-start animate-fade-up animate-delay-600 ${
+            className={`flex justify-center md:block animate-fade-up animate-delay-600 ${
               ctaAnimation.isVisible ? "visible" : ""
             }`}
         >
           <Button
             size="lg"
-            className="px-10 py-4 bg-primary hover:bg-primary/90 text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-medium tracking-wide animate-bounce-in animate-delay-700 group"
+            className="px-10 py-4 bg-gallifrey-teal hover:bg-gallifrey-teal-dark text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-semibold tracking-wide animate-bounce-in animate-delay-700 group"
             asChild
           >
             <a

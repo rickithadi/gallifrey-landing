@@ -96,8 +96,9 @@ export class ProgressiveLoader {
     const req = stage.requirements;
     
     if (req.minGPUTier && capabilities) {
-      const tierOrder = { low: 0, medium: 1, high: 2, ultra: 3 };
-      if (tierOrder[capabilities.gpuTier] < tierOrder[req.minGPUTier]) {
+      const tierOrder = { low: 0, medium: 1, high: 2, ultra: 3 } as const;
+      const caps = capabilities as { gpuTier: keyof typeof tierOrder };
+      if (caps.gpuTier && tierOrder[caps.gpuTier] < tierOrder[req.minGPUTier as keyof typeof tierOrder]) {
         return false;
       }
     }

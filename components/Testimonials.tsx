@@ -61,7 +61,7 @@ export function Testimonials() {
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
-          <h2 id="testimonials-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl mx-auto">
+          <h2 id="testimonials-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl mx-auto">
             Results that speak for
             <span className="italic text-accent"> themselves</span>
           </h2>

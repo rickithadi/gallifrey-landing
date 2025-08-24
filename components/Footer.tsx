@@ -18,7 +18,7 @@ export const Footer = React.memo(function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-lg font-medium mb-4 text-primary">Get Started</h4>
+            <h4 className="font-heading text-lg font-medium mb-4 text-primary">Get Started</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#contact" className="hover:text-accent transition-colors">Free Consultation</a></li>
               <li><a href="mailto:hello@gallifreyconsulting.com" className="hover:text-accent transition-colors">hello@gallifreyconsulting.com</a></li>
@@ -27,7 +27,7 @@ export const Footer = React.memo(function Footer() {
 
           {/* Compliance badges */}
           <div>
-            <h4 className="font-serif text-lg font-medium mb-4 text-primary">Security Standards</h4>
+            <h4 className="font-heading text-lg font-medium mb-4 text-primary">Security Standards</h4>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">GDPR Compliant</span>
               <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">Enterprise Security</span>

@@ -31,7 +31,7 @@ export function OwnYourNarrative() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight mb-6 text-oyn-stone-800">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-light leading-tight mb-6 text-oyn-stone-800">
               For ambitious entrepreneurs who refuse to let{" "}
               <span className="text-oyn-orange-600 font-medium">social platforms</span>{" "}
               control their story
@@ -68,7 +68,7 @@ export function OwnYourNarrative() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-oyn-stone-800">
+              <h2 className="text-3xl md:text-4xl font-heading font-medium mb-4 text-oyn-stone-800">
                 Why Digital Independence Matters
               </h2>
               <p className="text-lg text-oyn-stone-600 leading-relaxed">
@@ -78,7 +78,7 @@ export function OwnYourNarrative() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-serif font-medium mb-6 text-oyn-stone-800">The Platform Reality:</h3>
+                <h3 className="text-2xl font-heading font-medium mb-6 text-oyn-stone-800">The Platform Reality:</h3>
                 <div className="bg-oyn-stone-100 p-6 rounded-lg border-l-4 border-oyn-orange-600 mb-6">
                   <div className="space-y-4 text-oyn-stone-600">
                     <div className="flex items-start gap-3">
@@ -108,7 +108,7 @@ export function OwnYourNarrative() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-serif font-medium mb-6 text-oyn-stone-800">What Ownership Looks Like:</h3>
+                <h3 className="text-2xl font-heading font-medium mb-6 text-oyn-stone-800">What Ownership Looks Like:</h3>
                 <div className="space-y-4">
                   <div className="bg-oyn-orange-50 p-5 rounded-lg border-l-4 border-oyn-orange-600">
                     <div className="flex items-start gap-3">
@@ -158,7 +158,7 @@ export function OwnYourNarrative() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-oyn-stone-800">
+              <h2 className="text-3xl md:text-4xl font-heading font-medium mb-4 text-oyn-stone-800">
                 The Hidden Cost of Poor Search Results
               </h2>
               <p className="text-lg text-oyn-stone-600">
@@ -169,31 +169,31 @@ export function OwnYourNarrative() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-oyn-stone-200">
                 <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-serif font-semibold mb-3 text-oyn-stone-800">Lost Client Opportunities</h3>
+                <h3 className="text-xl font-heading font-medium mb-3 text-oyn-stone-800">Lost Client Opportunities</h3>
                 <p className="text-oyn-stone-600 text-sm">Premium clients choose competitors who &ldquo;look more established&rdquo; in search results</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-oyn-stone-200">
                 <div className="text-4xl mb-4">🤝</div>
-                <h3 className="text-xl font-serif font-semibold mb-3 text-oyn-stone-800">Missed Partnerships</h3>
+                <h3 className="text-xl font-heading font-medium mb-3 text-oyn-stone-800">Missed Partnerships</h3>
                 <p className="text-oyn-stone-600 text-sm">Strategic partners can&apos;t find evidence of your expertise when they research you</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-oyn-stone-200">
                 <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-xl font-serif font-semibold mb-3 text-oyn-stone-800">Undervalued Pricing</h3>
+                <h3 className="text-xl font-heading font-medium mb-3 text-oyn-stone-800">Undervalued Pricing</h3>
                 <p className="text-oyn-stone-600 text-sm">Can&apos;t command premium rates when search results don&apos;t establish authority</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow border border-oyn-stone-200">
                 <div className="text-4xl mb-4">🎤</div>
-                <h3 className="text-xl font-serif font-semibold mb-3 text-oyn-stone-800">Speaking Opportunities</h3>
+                <h3 className="text-xl font-heading font-medium mb-3 text-oyn-stone-800">Speaking Opportunities</h3>
                 <p className="text-oyn-stone-600 text-sm">Event organizers pass you over for speakers with stronger digital presence</p>
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-xl border border-oyn-stone-200 text-center shadow-sm">
-              <h3 className="text-2xl font-serif font-semibold mb-4 text-oyn-stone-800">The Reality Check:</h3>
+              <h3 className="text-2xl font-heading font-medium mb-4 text-oyn-stone-800">The Reality Check:</h3>
               <p className="text-oyn-stone-600 mb-6 text-lg">
                 <strong>You don&apos;t own your digital presence—the platforms do.</strong><br />
                 Google, LinkedIn, and social media algorithms decide how you appear to the world.
@@ -213,7 +213,7 @@ export function OwnYourNarrative() {
       <section className="py-20 bg-oyn-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-normal mb-6 text-oyn-stone-800">
+            <h2 className="text-3xl md:text-4xl font-heading font-medium mb-6 text-oyn-stone-800">
               Our Mission: Digital Independence
             </h2>
             <p className="text-lg text-oyn-stone-600 leading-relaxed">
@@ -228,7 +228,7 @@ export function OwnYourNarrative() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-oyn-stone-800">
+              <h2 className="text-3xl md:text-4xl font-heading font-medium mb-4 text-oyn-stone-800">
                 Professional Website Services
               </h2>
               <p className="text-lg text-oyn-stone-600 leading-relaxed">
@@ -246,7 +246,7 @@ export function OwnYourNarrative() {
                   <span className="text-sm font-medium text-oyn-orange-600 uppercase tracking-wider">From $500</span>
                 </div>
 
-                <h3 className="text-2xl font-serif font-medium mb-4 text-oyn-stone-800">Personal Website</h3>
+                <h3 className="text-2xl font-heading font-medium mb-4 text-oyn-stone-800">Personal Website</h3>
                 <p className="text-oyn-stone-600 mb-6 leading-relaxed">
                   Essential digital presence for consultants and freelancers. A sophisticated foundation that establishes credibility and begins building your owned audience.
                 </p>
@@ -295,7 +295,7 @@ export function OwnYourNarrative() {
                   <span className="text-sm font-medium text-oyn-orange-600 uppercase tracking-wider">From $2,500</span>
                 </div>
 
-                <h3 className="text-2xl font-serif font-medium mb-4 text-oyn-stone-800">Custom Platform</h3>
+                <h3 className="text-2xl font-heading font-medium mb-4 text-oyn-stone-800">Custom Platform</h3>
                 <p className="text-oyn-stone-600 mb-6 leading-relaxed">
                   Tailored business solutions with custom functionality designed for your specific workflow, plus strategic positioning that ensures you appear first when clients seek your expertise.
                 </p>
@@ -341,7 +341,7 @@ export function OwnYourNarrative() {
                   <span className="text-sm font-medium text-oyn-orange-600 uppercase tracking-wider">From $5,000</span>
                 </div>
 
-                <h3 className="text-2xl font-serif font-medium mb-4 text-oyn-stone-800">Authority Platform</h3>
+                <h3 className="text-2xl font-heading font-medium mb-4 text-oyn-stone-800">Authority Platform</h3>
                 <p className="text-oyn-stone-600 mb-6 leading-relaxed">
                   Showcase exceptional work and establish thought leadership through sophisticated content presentation and strategic positioning as the definitive expert in your field.
                 </p>
@@ -387,7 +387,7 @@ export function OwnYourNarrative() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-oyn-stone-800">
+              <h2 className="text-3xl md:text-4xl font-heading font-medium mb-4 text-oyn-stone-800">
                 How We Create Something Meaningful Together
               </h2>
               <p className="text-lg text-oyn-stone-600 leading-relaxed">
@@ -399,9 +399,9 @@ export function OwnYourNarrative() {
               {/* Step 1 */}
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-oyn-orange-50 rounded-lg mb-4">
-                  <span className="text-2xl font-serif font-medium text-oyn-orange-600">01</span>
+                  <span className="text-2xl font-heading font-medium text-oyn-orange-600">01</span>
                 </div>
-                <h3 className="text-lg font-serif font-medium mb-2 text-oyn-stone-800">Discovery & Vision</h3>
+                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Discovery & Vision</h3>
                 <p className="text-sm text-oyn-stone-600 leading-relaxed">
                   We begin with meaningful conversation about your business goals and the digital experience you envision. No lengthy questionnaires—just strategic dialogue.
                 </p>
@@ -410,9 +410,9 @@ export function OwnYourNarrative() {
               {/* Step 2 */}
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-oyn-orange-50 rounded-lg mb-4">
-                  <span className="text-2xl font-serif font-medium text-oyn-orange-600">02</span>
+                  <span className="text-2xl font-heading font-medium text-oyn-orange-600">02</span>
                 </div>
-                <h3 className="text-lg font-serif font-medium mb-2 text-oyn-stone-800">Rapid Development</h3>
+                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Rapid Development</h3>
                 <p className="text-sm text-oyn-stone-600 leading-relaxed">
                   Launch quickly with core functionality, then evolve thoughtfully as your business develops. You&apos;re not locked into version 1.0.
                 </p>
@@ -421,9 +421,9 @@ export function OwnYourNarrative() {
               {/* Step 3 */}
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-50 rounded-lg mb-4">
-                  <span className="text-2xl font-serif font-medium text-amber-600">03</span>
+                  <span className="text-2xl font-heading font-medium text-amber-600">03</span>
                 </div>
-                <h3 className="text-lg font-serif font-medium mb-2 text-oyn-stone-800">Complete Customization</h3>
+                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Complete Customization</h3>
                 <p className="text-sm text-oyn-stone-600 leading-relaxed">
                   When you&apos;re ready for something entirely bespoke—functionality that gives you competitive advantages and positions you as the premium choice.
                 </p>
@@ -432,9 +432,9 @@ export function OwnYourNarrative() {
               {/* Step 4 */}
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-oyn-stone-100 rounded-lg mb-4">
-                  <span className="text-2xl font-serif font-medium text-oyn-stone-600">04</span>
+                  <span className="text-2xl font-heading font-medium text-oyn-stone-600">04</span>
                 </div>
-                <h3 className="text-lg font-serif font-medium mb-2 text-oyn-stone-800">Ongoing Partnership</h3>
+                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Ongoing Partnership</h3>
                 <p className="text-sm text-oyn-stone-600 leading-relaxed">
                   Your success is our success. We provide ongoing support and strategic guidance as your business grows and evolves.
                 </p>
@@ -449,7 +449,7 @@ export function OwnYourNarrative() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-oyn-stone-800">
+              <h2 className="text-3xl md:text-4xl font-heading font-medium mb-4 text-oyn-stone-800">
                 Ready to Own Your Digital Future?
               </h2>
               <p className="text-lg text-oyn-stone-600 leading-relaxed">
@@ -564,16 +564,16 @@ export function OwnYourNarrative() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-normal mb-6 text-oyn-stone-800">
+            <h2 className="text-3xl md:text-4xl font-heading font-medium mb-6 text-oyn-stone-800">
               Get In Touch
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-oyn-stone-100 rounded-lg p-6">
-                <h3 className="text-lg font-serif font-medium mb-2 text-oyn-stone-800">Email</h3>
+                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Email</h3>
                 <p className="text-oyn-stone-600">hello@gallifrey.consulting</p>
               </div>
               <div className="bg-oyn-stone-100 rounded-lg p-6">
-                <h3 className="text-lg font-serif font-medium mb-2 text-oyn-stone-800">Response Time</h3>
+                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Response Time</h3>
                 <p className="text-oyn-stone-600">We&apos;ll get back to you within 24 hours</p>
               </div>
             </div>
