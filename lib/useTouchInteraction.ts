@@ -61,13 +61,13 @@ export function useTouchInteraction(options: UseTouchInteractionOptions = {}) {
   // Refs for tracking
   const touchHistory = useRef<TouchPosition[][]>([]);
   const gestureStartTime = useRef<number>(0);
-  const holdTimeout = useRef<NodeJS.Timeout>();
-  const chargeTimeout = useRef<NodeJS.Timeout>();
+  const holdTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
+  const chargeTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
   const initialDistance = useRef<number>(0);
   const initialAngle = useRef<number>(0);
   const tapCount = useRef<number>(0);
   const lastTapTime = useRef<number>(0);
-  const transitionTimeout = useRef<NodeJS.Timeout>();
+  const transitionTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
 
   // Utility functions
   const getTouchDistance = useCallback((touch1: TouchPosition, touch2: TouchPosition): number => {
@@ -271,6 +271,11 @@ export function useTouchInteraction(options: UseTouchInteractionOptions = {}) {
     // Check if device supports touch
     if (!('ontouchstart' in window) && navigator.maxTouchPoints === 0) return;
 
+    // Capture timeout refs at the start of the effect for cleanup
+    const holdTimeoutRef = holdTimeout;
+    const chargeTimeoutRef = chargeTimeout;
+    const transitionTimeoutRef = transitionTimeout;
+
     const handleTouchStart = (event: TouchEvent) => {
       event.preventDefault(); // Prevent scrolling/zooming
       
@@ -433,10 +438,13 @@ export function useTouchInteraction(options: UseTouchInteractionOptions = {}) {
       document.removeEventListener('touchend', handleTouchEnd);
       document.removeEventListener('touchcancel', handleTouchEnd);
       
-      const holdTimeoutValue = holdTimeout.current;
+      const holdTimeoutValue = holdTimeoutRef.current;
+      const chargeTimeoutValue = chargeTimeoutRef.current;
+      const transitionTimeoutValue = transitionTimeoutRef.current;
+      
       if (holdTimeoutValue) clearTimeout(holdTimeoutValue);
-      if (chargeTimeout.current) clearTimeout(chargeTimeout.current);
-      if (transitionTimeout.current) clearTimeout(transitionTimeout.current);
+      if (chargeTimeoutValue) clearTimeout(chargeTimeoutValue);
+      if (transitionTimeoutValue) clearTimeout(transitionTimeoutValue);
     };
   }, [
     disabled, 

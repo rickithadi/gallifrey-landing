@@ -69,8 +69,8 @@ export function usePerformanceMonitor(options: PerformanceOptions = {}) {
       // Check memory usage if available
       let memoryUsage = 0;
       if ('memory' in performance) {
-        // @ts-expect-error - performance.memory is non-standard but widely supported
-        const memory = performance.memory;
+        // performance.memory is non-standard but widely supported
+        const memory = (performance as Performance & { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         memoryUsage = Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100);
       }
       

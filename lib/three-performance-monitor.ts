@@ -97,12 +97,12 @@ export class ThreePerformanceMonitor {
       this.frameHistory.shift();
     }
 
-    const metrics = this.calculateMetrics(frameTime);
+    const metrics = this.calculateMetrics();
     
     // Check memory usage
     if ('memory' in performance) {
-      // @ts-expect-error - performance.memory is non-standard but widely supported
-      const memory = performance.memory;
+      // performance.memory is non-standard but widely supported
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory;
       const memoryMB = memory.usedJSHeapSize / (1024 * 1024);
       this.memoryHistory.push(memoryMB);
       if (this.memoryHistory.length > this.HISTORY_SIZE) {
@@ -122,7 +122,7 @@ export class ThreePerformanceMonitor {
   /**
    * Calculate comprehensive performance metrics
    */
-  private calculateMetrics(frameTime: number): ThreePerformanceMetrics {
+  private calculateMetrics(): ThreePerformanceMetrics {
     const avgFrameTime = this.frameHistory.reduce((a, b) => a + b, 0) / this.frameHistory.length;
     const fps = 1000 / avgFrameTime;
 
@@ -154,14 +154,15 @@ export class ThreePerformanceMonitor {
         if (object instanceof THREE.InstancedMesh) {
           metrics.instances += object.count;
         }
-        if (object.material) {
-          if (Array.isArray(object.material)) {
-            object.material.forEach(mat => {
+        const mesh = object as THREE.Mesh;
+        if (mesh.material) {
+          if (Array.isArray(mesh.material)) {
+            mesh.material.forEach(mat => {
               if (mat instanceof THREE.ShaderMaterial) {
                 metrics.shaderMaterials++;
               }
             });
-          } else if (object.material instanceof THREE.ShaderMaterial) {
+          } else if (mesh.material instanceof THREE.ShaderMaterial) {
             metrics.shaderMaterials++;
           }
         }
@@ -382,7 +383,7 @@ export class ThreePerformanceMonitor {
    */
   getOptimizationSuggestions(): string[] {
     const suggestions: string[] = [];
-    const metrics = this.calculateMetrics(16.67); // Assume current frame time
+    const metrics = this.calculateMetrics();
     
     if (metrics.fps < this.budget.targetFPS * 0.8) {
       suggestions.push('Consider reducing particle count');

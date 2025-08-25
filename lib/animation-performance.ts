@@ -225,8 +225,8 @@ export class AnimationPerformanceMonitor {
 
   private getMemoryUsage(): number {
     if ('memory' in performance) {
-      // @ts-expect-error - performance.memory is non-standard but widely supported
-      const memory = performance.memory;
+      // performance.memory is non-standard but widely supported
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number } }).memory;
       return Math.round(memory.usedJSHeapSize / (1024 * 1024)); // MB
     }
     return 0;

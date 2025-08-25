@@ -39,7 +39,7 @@ export function useAudioReactive(options: UseAudioReactiveOptions = {}) {
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
   const microphoneRef = useRef<MediaStreamAudioSourceNode | null>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number>(0);
   const dataArrayRef = useRef<Float32Array | null>(null);
 
   const initializeAudioContext = useCallback(async () => {
@@ -87,7 +87,9 @@ export function useAudioReactive(options: UseAudioReactiveOptions = {}) {
     if (!analyserRef.current || !dataArrayRef.current) return;
 
     // Get frequency data
-    analyserRef.current.getFloatFrequencyData(dataArrayRef.current);
+    const buffer = new Float32Array(analyserRef.current.frequencyBinCount);
+    analyserRef.current.getFloatFrequencyData(buffer);
+    dataArrayRef.current = buffer;
     
     const frequencyData = dataArrayRef.current;
     const bufferLength = frequencyData.length;

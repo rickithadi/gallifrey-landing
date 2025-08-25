@@ -5,10 +5,8 @@ import { trackCTAClick } from "@/lib/analytics";
 import { useLayoutABTest } from "./LayoutABTestProvider";
 import { trackLayoutVariantConversion } from "@/lib/layout-ab-test";
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
-import { useCursorTracking } from "@/lib/useCursorTracking";
 import { AnimatedAdjective } from "./AnimatedAdjective";
 import { PlaceholderAnimation } from "./PlaceholderAnimation";
-import { CursorGlow } from "./CursorGlow";
 import { PerformanceProfiler } from "./PerformanceProfiler";
 import dynamic from "next/dynamic";
 
@@ -23,14 +21,6 @@ const HeroThreeBackground = dynamic(
 
 export const Hero = React.memo(function Hero() {
   const { variant } = useLayoutABTest();
-  const { 
-    position: mousePosition,
-    velocity,
-    gesture,
-    interactionState,
-    trail,
-    clickIntensity
-  } = useCursorTracking();
   const headlineAnimation = useScrollAnimation<HTMLHeadingElement>({
     threshold: 0.1,
   });
@@ -53,13 +43,6 @@ export const Hero = React.memo(function Hero() {
             <HeroThreeBackground className="opacity-30 md:opacity-60" />
           </Suspense>
         </PerformanceProfiler>
-        <CursorGlow 
-          position={mousePosition}
-          mode={interactionState.mode}
-          isActive={interactionState.isActive}
-          chargeLevel={interactionState.chargeLevel}
-          clickIntensity={clickIntensity}
-        />
         <div className="container mx-auto relative z-20">
           <div className="max-w-xl text-center md:text-left mx-auto md:mx-0">
             <header className="mb-8">
@@ -112,13 +95,6 @@ export const Hero = React.memo(function Hero() {
           <HeroThreeBackground className="opacity-40 md:opacity-70" />
         </Suspense>
       </PerformanceProfiler>
-      <CursorGlow 
-        position={mousePosition}
-        mode={interactionState.mode}
-        isActive={interactionState.isActive}
-        chargeLevel={interactionState.chargeLevel}
-        clickIntensity={clickIntensity}
-      />
 
       <div className="container mx-auto max-w-6xl relative z-20">
         <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">

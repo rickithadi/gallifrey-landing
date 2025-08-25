@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useCursorTracking } from './useCursorTracking';
 import { useScrollAnimation } from './useScrollAnimation';
 import { useAnimationPerformance } from './animation-performance';
 import { useTouchInteraction } from './useTouchInteraction';
@@ -51,18 +50,16 @@ export interface UnifiedAnimationState {
       id: number;
       x: number;
       y: number;
-      startX: number;
-      startY: number;
-      startTime: number;
     }>;
     gesture: {
-      type: 'none' | 'tap' | 'swipe' | 'pinch' | 'hold' | 'multi-touch';
+      type: 'none' | 'tap' | 'hold' | 'swipe' | 'pinch' | 'rotate' | 'multi-tap';
       intensity: number;
       direction?: { x: number; y: number };
       center?: { x: number; y: number };
       scale?: number;
       rotation?: number;
       touchCount: number;
+      velocity?: { x: number; y: number };
     };
     isActive: boolean;
   };
@@ -118,10 +115,8 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
     autoQualityAdjustment = true,
     targetFPS = 60,
     maxMemoryUsage = 50,
-    enableCursorTracking = true,
     enableTouchInteraction = true,
     enableScrollAnimation = true,
-    enableGestures = true,
     autoPlay = true,
     enableEffects = true,
     qualityTiers = {
@@ -138,13 +133,7 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
   const [isPaused, setIsPaused] = useState(false);
   const [quality, setQuality] = useState<'low' | 'medium' | 'high' | 'ultra'>('medium');
 
-  // Interaction hooks
-  const cursor = useCursorTracking({
-    disabled: !enableCursorTracking,
-    enableGestures,
-    enableInteractions: true
-  });
-
+  // Interaction hooks (cursor tracking removed)
   const { ref: scrollRef, isVisible, hasAnimated } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: false
@@ -159,7 +148,7 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
   });
 
   // Performance monitoring
-  const performance = useAnimationPerformance();
+  const animationPerformance = useAnimationPerformance();
 
   // Quality management based on performance
   const adjustQuality = useCallback((metrics: { deviceCapabilities?: { tier?: string }; frameRate?: number; memoryUsage?: number }) => {
@@ -203,15 +192,15 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
   // Start performance monitoring
   useEffect(() => {
     if (enablePerformanceMonitoring && isPlaying && !isPaused) {
-      performance.startMonitoring();
+      animationPerformance.startMonitoring();
     } else {
-      performance.stopMonitoring();
+      animationPerformance.stopMonitoring();
     }
 
     return () => {
-      performance.stopMonitoring();
+      animationPerformance.stopMonitoring();
     };
-  }, [enablePerformanceMonitoring, isPlaying, isPaused, performance]);
+  }, [enablePerformanceMonitoring, isPlaying, isPaused, animationPerformance]);
 
   // Animation loop for global time
   useEffect(() => {
@@ -237,12 +226,12 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
         cancelAnimationFrame(animationId);
       }
     };
-  }, [isPlaying, isPaused]);
+  }, [isPlaying, isPaused, animationPerformance]);
 
   // Calculate dynamic values based on quality
   const animationConfig = useMemo(() => {
     const tierConfig = qualityTiers[quality];
-    const deviceTier = performance.metrics?.deviceCapabilities?.tier || 'medium';
+    const deviceTier = animationPerformance.metrics?.deviceCapabilities?.tier || 'medium';
     
     // Adjust particle count based on device capabilities
     let particleMultiplier = 1;
@@ -256,18 +245,18 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
       renderDistance: quality === 'low' ? 15 : quality === 'medium' ? 20 : 25,
       updateFrequency: quality === 'low' ? 30 : quality === 'medium' ? 60 : 120
     };
-  }, [quality, qualityTiers, enableEffects, performance.metrics?.deviceCapabilities?.tier]);
+  }, [quality, qualityTiers, enableEffects, animationPerformance.metrics?.deviceCapabilities?.tier]);
 
   // Unified state object
   const state: UnifiedAnimationState = useMemo(() => ({
     cursor: {
-      position: cursor.position,
-      isMoving: cursor.isMoving,
-      velocity: cursor.velocity,
-      gesture: cursor.gesture,
-      interactionState: cursor.interactionState,
-      trail: cursor.trail,
-      clickIntensity: cursor.clickIntensity
+      position: { x: 0, y: 0 },
+      isMoving: false,
+      velocity: { x: 0, y: 0 },
+      gesture: { type: 'none', intensity: 0 },
+      interactionState: { mode: 'attract', isActive: false, chargeLevel: 0 },
+      trail: [],
+      clickIntensity: 0
     },
     scroll: {
       scrollY: scroll.scrollY,
@@ -282,13 +271,13 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
     touch: {
       touches: touch.touches,
       gesture: touch.gesture,
-      isActive: touch.isActive
+      isActive: touch.interactionState.isActive
     },
     performance: {
-      frameRate: performance.metrics?.frameRate || 0,
-      memoryUsage: performance.metrics?.memoryUsage || 0,
-      isMonitoring: performance.isMonitoring,
-      deviceTier: performance.metrics?.deviceCapabilities?.tier || 'medium',
+      frameRate: animationPerformance.metrics?.frameRate || 0,
+      memoryUsage: animationPerformance.metrics?.memoryUsage || 0,
+      isMonitoring: animationPerformance.isMonitoring,
+      deviceTier: animationPerformance.metrics?.deviceCapabilities?.tier || 'medium',
       qualityLevel: quality === 'low' ? 'minimal' : 
                    quality === 'medium' ? 'standard' : 
                    quality === 'high' ? 'enhanced' : 'enhanced'
@@ -302,7 +291,7 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
       effectsEnabled: animationConfig.effectsEnabled
     }
   }), [
-    cursor, scroll, touch, performance, isPlaying, isPaused, quality, 
+    scroll, touch, animationPerformance, isPlaying, isPaused, quality, 
     isVisible, hasAnimated, animationConfig
   ]);
 
@@ -321,14 +310,14 @@ export function useUnifiedAnimation(options: UnifiedAnimationOptions = {}) {
     setQuality: (newQuality: 'low' | 'medium' | 'high' | 'ultra') => {
       setQuality(newQuality);
     },
-    getPerformanceReport: performance.getReport,
+    getPerformanceReport: animationPerformance.getReport,
     resetPerformanceMetrics: () => {
-      performance.stopMonitoring();
+      animationPerformance.stopMonitoring();
       if (enablePerformanceMonitoring && isPlaying) {
-        performance.startMonitoring();
+        animationPerformance.startMonitoring();
       }
     }
-  }), [performance, enablePerformanceMonitoring, isPlaying]);
+  }), [animationPerformance, enablePerformanceMonitoring, isPlaying]);
 
   return {
     state,
@@ -354,8 +343,8 @@ export function useThreeAnimation(options: UnifiedAnimationOptions = {}) {
   // Memoize values that Three.js components care about
   const threeState = useMemo(() => ({
     mousePosition3D: {
-      x: (animation.state.cursor.position.x / (typeof window !== 'undefined' ? window.innerWidth : 1920)) * 2 - 1,
-      y: -(animation.state.cursor.position.y / (typeof window !== 'undefined' ? window.innerHeight : 1080)) * 2 + 1,
+      x: 0,
+      y: 0,
       z: 0
     },
     time: animation.state.animation.globalTime,

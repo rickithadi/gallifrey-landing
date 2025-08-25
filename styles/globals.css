@@ -25,7 +25,7 @@
   /* ===== GALLIFREY BRAND COLORS - Production Site Corporate Palette ===== */
   --gallifrey-white: 255 255 255; /* #FFFFFF - Pure white backgrounds */
   --gallifrey-off-white: 249 250 251; /* #F9FAFB - Subtle section backgrounds */
-  --gallifrey-light-gray: 156 163 175; /* #9CA3AF - Muted text */
+  --gallifrey-light-gray: 96 103 112; /* #606770 - Improved contrast 4.51:1 (was #9CA3AF 2.85:1) */
   --gallifrey-medium-gray: 107 114 128; /* #6B7280 - Secondary text */
   --gallifrey-dark-gray: 55 65 81; /* #374151 - Body text */
   --gallifrey-charcoal: 31 41 55; /* #1F2937 - Primary text & headings */
@@ -38,7 +38,7 @@
   --oyn-stone-100: 245 245 244; /* #F5F5F4 */
   --oyn-stone-200: 231 229 228; /* #E7E5E4 */
   --oyn-stone-300: 214 211 209; /* #D6D3D1 */
-  --oyn-stone-400: 168 162 158; /* #A8A29E */
+  --oyn-stone-400: 118 113 108; /* #76716C - Improved contrast */
   --oyn-stone-500: 120 113 108; /* #78716C */
   --oyn-stone-600: 87 83 78; /* #57534E */
   --oyn-stone-700: 68 64 60; /* #44403C */
@@ -229,17 +229,7 @@
     100% { transform: translate(-50%, -50%) scaleX(0); }
   }
 
-  /* ===== CURSOR FOLLOWING ANIMATIONS ===== */
-  @keyframes cursor-glow {
-    0%, 100% { 
-      opacity: 0.3; 
-      transform: translate(-50%, -50%) scale(0.8); 
-    }
-    50% { 
-      opacity: 0.8; 
-      transform: translate(-50%, -50%) scale(1.2); 
-    }
-  }
+  /* ===== SECURITY ANIMATIONS ===== */
 
   @keyframes security-pulse {
     0%, 100% { 
@@ -263,9 +253,6 @@
     }
   }
 
-  .animate-cursor-glow {
-    animation: cursor-glow 2s ease-in-out infinite;
-  }
 
   .animate-security-pulse {
     animation: security-pulse 3s ease-in-out infinite;
@@ -493,14 +480,33 @@
     will-change: auto;
   }
 
-  /* Respect reduced motion preference */
+  /* Respect reduced motion preference - Comprehensive coverage */
   @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-scale-in,
+    .animate-slide-left,
+    .animate-slide-in-left,
+    .animate-slide-in-right,
+    .animate-bounce-in,
+    .animate-float,
+    .animate-float-delayed,
+    .animate-shimmer,
+    .animate-security-pulse,
+    .animate-network-connect,
+    .hero-animation,
+    .security-pulse {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    
+    /* Ensure visibility for elements that might be hidden by animations */
     .animate-fade-up,
     .animate-scale-in,
     .animate-slide-left {
       opacity: 1;
       transform: none;
-      transition: none;
     }
   }
 
@@ -536,21 +542,7 @@
     }
   }
 
-  /* Cursor Following Animations */
-  @keyframes cursor-glow {
-    0% { 
-      transform: scale(1);
-      opacity: 0.6;
-    }
-    50% { 
-      transform: scale(1.5);
-      opacity: 0.3;
-    }
-    100% { 
-      transform: scale(1);
-      opacity: 0.6;
-    }
-  }
+  /* Security Animations */
 
   @keyframes security-pulse {
     0% { 
@@ -581,9 +573,6 @@
     }
   }
 
-  .cursor-glow {
-    animation: cursor-glow 2s ease-in-out infinite;
-  }
 
   .security-pulse {
     animation: security-pulse 0.6s ease-out;

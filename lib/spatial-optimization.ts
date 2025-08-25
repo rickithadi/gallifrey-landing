@@ -110,9 +110,9 @@ export class SpatialHashGrid {
    */
   getStats(): { totalCells: number; totalParticles: number; averageParticlesPerCell: number } {
     let totalParticles = 0;
-    for (const particles of this.grid.values()) {
+    Array.from(this.grid.values()).forEach(particles => {
       totalParticles += particles.length;
-    }
+    });
 
     return {
       totalCells: this.grid.size,
@@ -195,9 +195,9 @@ export class Vector3Pool {
    * Release all vectors back to pool (call at end of frame)
    */
   releaseAll(): void {
-    for (const vector of this.inUse) {
+    Array.from(this.inUse).forEach(vector => {
       this.pool.push(vector);
-    }
+    });
     this.inUse.clear();
   }
 

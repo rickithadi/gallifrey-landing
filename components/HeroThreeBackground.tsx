@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -8,6 +8,18 @@ interface HeroThreeBackgroundProps {
 
 function GallifreyanRings() {
   const groupRef = useRef<THREE.Group>(null);
+  const [motionAllowed, setMotionAllowed] = useState(true);
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setMotionAllowed(!mediaQuery.matches);
+    
+    const handleChange = () => setMotionAllowed(!mediaQuery.matches);
+    mediaQuery.addListener(handleChange);
+    
+    return () => mediaQuery.removeListener(handleChange);
+  }, []);
   
   // Gallifreyan timepiece-inspired rings with subtle, sophisticated movement
   const rings = useMemo(() => {
@@ -28,7 +40,7 @@ function GallifreyanRings() {
   }, []);
 
   useFrame((state) => {
-    if (groupRef.current) {
+    if (groupRef.current && motionAllowed) {
       // Gentle floating motion for the entire group
       groupRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
       
@@ -101,20 +113,38 @@ function Scene() {
 }
 
 export function HeroThreeBackground({ className = "" }: HeroThreeBackgroundProps) {
+  const [motionAllowed, setMotionAllowed] = useState(true);
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setMotionAllowed(!mediaQuery.matches);
+    
+    const handleChange = () => setMotionAllowed(!mediaQuery.matches);
+    mediaQuery.addListener(handleChange);
+    
+    return () => mediaQuery.removeListener(handleChange);
+  }, []);
+
   return (
     <div className={`absolute inset-0 pointer-events-none ${className}`} style={{ zIndex: 0 }}>
-      <Canvas
-        camera={{ position: [0, 0, 10], fov: 50 }}
-        gl={{
-          antialias: true,
-          alpha: true,
-          powerPreference: 'high-performance',
-        }}
-        dpr={typeof window !== 'undefined' ? Math.min(window.devicePixelRatio, 2) : 1}
-        performance={{ min: 0.5, max: 1 }}
-      >
-        <Scene />
-      </Canvas>
+      {motionAllowed ? (
+        <Canvas
+          camera={{ position: [0, 0, 10], fov: 50 }}
+          gl={{
+            antialias: true,
+            alpha: true,
+            powerPreference: 'high-performance',
+          }}
+          dpr={typeof window !== 'undefined' ? Math.min(window.devicePixelRatio, 2) : 1}
+          performance={{ min: 0.5, max: 1 }}
+        >
+          <Scene />
+        </Canvas>
+      ) : (
+        // Static fallback for reduced motion users
+        <div className="absolute inset-0 bg-gradient-to-br from-gallifrey-teal/5 to-gallifrey-charcoal/5" />
+      )}
     </div>
   );
 }

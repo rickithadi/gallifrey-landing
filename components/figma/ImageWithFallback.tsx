@@ -24,7 +24,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
     }
   }
 
-  const { src, alt, style, className, width = 100, height = 100, fallbackSrc, ...rest } = props
+  const { src, alt, style, className, width = 100, height = 100, ...rest } = props
 
   return didError ? (
     <div

@@ -17,8 +17,8 @@ export function useScrollInteraction(options: UseScrollInteractionOptions = {}) 
   
   const lastScrollRef = useRef(0);
   const lastTimeRef = useRef(Date.now());
-  const throttleRef = useRef<NodeJS.Timeout>();
-  const scrollTimeoutRef = useRef<NodeJS.Timeout>();
+  const throttleRef = useRef<NodeJS.Timeout | undefined>(undefined);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const updateScrollMetrics = useCallback(() => {
     const currentScroll = window.scrollY;

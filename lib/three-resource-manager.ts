@@ -220,11 +220,11 @@ export class ThreeResourceManager {
     const resourcesToCleanup: string[] = [];
 
     // Find resources that haven't been used recently
-    for (const [id, info] of this.resourceInfo.entries()) {
+    Array.from(this.resourceInfo.entries()).forEach(([id, info]) => {
       if (now - info.lastUsed > this.maxUnusedAge && info.references === 0) {
         resourcesToCleanup.push(id);
       }
-    }
+    });
 
     // Dispose unused resources
     for (const id of resourcesToCleanup) {
@@ -242,31 +242,31 @@ export class ThreeResourceManager {
    */
   forceCleanup(): void {
     // Dispose all geometries
-    for (const [id, geometry] of this.geometries.entries()) {
+    Array.from(this.geometries.entries()).forEach(([id, geometry]) => {
       geometry.dispose();
       this.resourceInfo.delete(id);
-    }
+    });
     this.geometries.clear();
 
     // Dispose all materials
-    for (const [id, material] of this.materials.entries()) {
+    Array.from(this.materials.entries()).forEach(([id, material]) => {
       material.dispose();
       this.resourceInfo.delete(id);
-    }
+    });
     this.materials.clear();
 
     // Dispose all textures
-    for (const [id, texture] of this.textures.entries()) {
+    Array.from(this.textures.entries()).forEach(([id, texture]) => {
       texture.dispose();
       this.resourceInfo.delete(id);
-    }
+    });
     this.textures.clear();
 
     // Dispose all render targets
-    for (const [id, renderTarget] of this.renderTargets.entries()) {
+    Array.from(this.renderTargets.entries()).forEach(([id, renderTarget]) => {
       renderTarget.dispose();
       this.resourceInfo.delete(id);
-    }
+    });
     this.renderTargets.clear();
 
     // Clear meshes
@@ -285,12 +285,12 @@ export class ThreeResourceManager {
     let oldestUnused = 0;
     const now = Date.now();
 
-    for (const info of this.resourceInfo.values()) {
+    Array.from(this.resourceInfo.values()).forEach(info => {
       if (info.references === 0) {
         const age = now - info.lastUsed;
         oldestUnused = Math.max(oldestUnused, age);
       }
-    }
+    });
 
     return {
       totalGeometries: this.geometries.size,
@@ -406,42 +406,42 @@ export class ThreeResourceManager {
 
   private cleanupPools(): void {
     // Clean up geometry pools
-    for (const [type, pool] of this.geometryPool.entries()) {
+    Array.from(this.geometryPool.entries()).forEach(([type, pool]) => {
       if (pool.length === 0) {
         this.geometryPool.delete(type);
       }
-    }
+    });
 
     // Clean up material pools
-    for (const [type, pool] of this.materialPool.entries()) {
+    Array.from(this.materialPool.entries()).forEach(([type, pool]) => {
       if (pool.length === 0) {
         this.materialPool.delete(type);
       }
-    }
+    });
 
     // Clean up mesh pools
-    for (const [type, pool] of this.meshPool.entries()) {
+    Array.from(this.meshPool.entries()).forEach(([type, pool]) => {
       if (pool.length === 0) {
         this.meshPool.delete(type);
       }
-    }
+    });
   }
 
   private clearAllPools(): void {
     // Dispose all pooled geometries
-    for (const pool of this.geometryPool.values()) {
+    Array.from(this.geometryPool.values()).forEach(pool => {
       for (const geometry of pool) {
         geometry.dispose();
       }
-    }
+    });
     this.geometryPool.clear();
 
     // Dispose all pooled materials
-    for (const pool of this.materialPool.values()) {
+    Array.from(this.materialPool.values()).forEach(pool => {
       for (const material of pool) {
         material.dispose();
       }
-    }
+    });
     this.materialPool.clear();
 
     // Clear mesh pools
@@ -482,10 +482,24 @@ export class ThreeResourceManager {
   private estimateMaterialSize(material: THREE.Material): number {
     let size = 1024; // Base material size estimate
     
-    // Estimate texture sizes
-    material.traverse((child) => {
-      if (child instanceof THREE.Texture) {
-        size += this.estimateTextureSize(child);
+    // Check for textures in common material properties
+    const materialWithTextures = material as THREE.Material & { 
+      map?: THREE.Texture; 
+      normalMap?: THREE.Texture; 
+      roughnessMap?: THREE.Texture; 
+      metalnessMap?: THREE.Texture;
+      emissiveMap?: THREE.Texture;
+      aoMap?: THREE.Texture;
+      displacementMap?: THREE.Texture;
+    };
+    const textureProperties: Array<keyof typeof materialWithTextures> = [
+      'map', 'normalMap', 'roughnessMap', 'metalnessMap', 'emissiveMap', 'aoMap', 'displacementMap'
+    ];
+    
+    textureProperties.forEach(prop => {
+      const texture = materialWithTextures[prop];
+      if (texture && texture instanceof THREE.Texture) {
+        size += this.estimateTextureSize(texture);
       }
     });
     

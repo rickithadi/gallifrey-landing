@@ -2,7 +2,7 @@ import { ProfilerOnRenderCallback } from 'react';
 
 interface PerformanceData {
   id: string;
-  phase: 'mount' | 'update';
+  phase: 'mount' | 'update' | 'nested-update';
   actualDuration: number;
   baseDuration: number;
   startTime: number;

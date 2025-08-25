@@ -173,8 +173,8 @@ export class PerformanceMonitor {
 
   private getMemoryUsage(): number {
     if ('memory' in performance) {
-      // @ts-expect-error - performance.memory API is non-standard but widely supported
-      return performance.memory.usedJSHeapSize / (1024 * 1024); // MB
+      // performance.memory API is non-standard but widely supported
+      return (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize / (1024 * 1024); // MB
     }
     return 0;
   }

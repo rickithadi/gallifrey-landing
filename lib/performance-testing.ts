@@ -127,8 +127,8 @@ export class PerformanceBenchmark {
 
   private getMemoryInfo(): { usedJSHeapSize: number; totalJSHeapSize: number } {
     if ('memory' in performance) {
-      // @ts-expect-error - performance.memory is non-standard but widely supported
-      const memory = performance.memory;
+      // performance.memory is non-standard but widely supported
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
       return {
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
@@ -149,7 +149,7 @@ export class PerformanceBenchmark {
     return Math.min(100, (standardDeviation / average) * 100);
   }
 
-  private getAverageMeasurement(name: string): number {
+  public getAverageMeasurement(name: string): number {
     const values = this.measurements.get(name);
     if (!values || values.length === 0) return 0;
     return values.reduce((sum, value) => sum + value, 0) / values.length;
@@ -361,7 +361,7 @@ export class ParticleSystemBenchmarkSuite {
     console.log('Particles | Original | Spatial Grid | Web Worker | Full Optimization');
     console.log('-'.repeat(80));
 
-    const particleCounts = [...new Set(this.results.map(r => r.particleCount))].sort((a, b) => a - b);
+    const particleCounts = Array.from(new Set(this.results.map(r => r.particleCount))).sort((a, b) => a - b);
     
     particleCounts.forEach(count => {
       const configResults = Array.from(configGroups.keys()).map(configKey => {

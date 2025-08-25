@@ -317,20 +317,20 @@ export class AdvancedPerformanceBenchmark {
           const interactions = this.metrics.interactionEvents;
           
           // Calculate FPS statistics
-          const fpsList = frames.map(f => f.fps).filter(fps => fps < 200); // Filter out invalid FPS values
-          const averageFPS = fpsList.length > 0 ? fpsList.reduce((a, b) => a + b, 0) / fpsList.length : 0;
+          const fpsList = frames.map((f: any) => f.fps).filter((fps: number) => fps < 200); // Filter out invalid FPS values
+          const averageFPS = fpsList.length > 0 ? fpsList.reduce((a: number, b: number) => a + b, 0) / fpsList.length : 0;
           const minFPS = fpsList.length > 0 ? Math.min(...fpsList) : 0;
           const maxFPS = fpsList.length > 0 ? Math.max(...fpsList) : 0;
           
           // Calculate FPS stability (standard deviation)
           const fpsVariance = fpsList.length > 0 
-            ? fpsList.reduce((acc, fps) => acc + Math.pow(fps - averageFPS, 2), 0) / fpsList.length
+            ? fpsList.reduce((acc: number, fps: number) => acc + Math.pow(fps - averageFPS, 2), 0) / fpsList.length
             : 0;
           const fpsStability = Math.sqrt(fpsVariance);
           
           // Calculate frame time statistics
-          const frameTimes = frames.map(f => f.frameTime);
-          const averageFrameTime = frameTimes.length > 0 ? frameTimes.reduce((a, b) => a + b, 0) / frameTimes.length : 0;
+          const frameTimes = frames.map((f: any) => f.frameTime);
+          const averageFrameTime = frameTimes.length > 0 ? frameTimes.reduce((a: number, b: number) => a + b, 0) / frameTimes.length : 0;
           
           // Memory trend analysis
           let memoryTrend: 'stable' | 'increasing' | 'decreasing' = 'stable';
@@ -343,9 +343,9 @@ export class AdvancedPerformanceBenchmark {
           }
           
           // Stability metrics
-          const frameDrops = frameTimes.filter(time => time > 33).length; // Frames longer than ~30fps
-          const largeFrameTimes = frameTimes.filter(time => time > 50).length; // Frames longer than ~20fps
-          const memorySpikes = memories.filter((mem, i) => {
+          const frameDrops = frameTimes.filter((time: number) => time > 33).length; // Frames longer than ~30fps
+          const largeFrameTimes = frameTimes.filter((time: number) => time > 50).length; // Frames longer than ~20fps
+          const memorySpikes = memories.filter((mem: any, i: number) => {
             if (i === 0) return false;
             const prevMem = memories[i - 1];
             return (mem.used - prevMem.used) / prevMem.used > 0.2; // 20% memory spike
@@ -445,8 +445,8 @@ export class AdvancedPerformanceBenchmark {
       return {
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        loadComplete: navigationEntries[0]?.loadEventEnd || 0,
-        domContentLoaded: navigationEntries[0]?.domContentLoadedEventEnd || 0,
+        loadComplete: (navigationEntries[0] as any)?.loadEventEnd || 0,
+        domContentLoaded: (navigationEntries[0] as any)?.domContentLoadedEventEnd || 0,
         timeToInteractive: 0 // Would need more complex calculation
       };
     });
