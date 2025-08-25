@@ -1,4 +1,4 @@
-import { ArrowRight, Check, MessageSquare, FileText, CreditCard, Search, Cpu, Code, Users } from "lucide-react";
+import { ArrowRight, Check, MessageSquare, FileText, Code, Users } from "lucide-react";
 
 import { Button } from "./ui/button";
 
@@ -142,116 +142,38 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Our Methodology */}
-        <div className="text-center border-t border-border/50 pt-20 pb-16">
+        {/* Strategic Partnership Methodology */}
+        <div className="text-center border-t border-border/50 pt-20">
           <div className="mb-8">
             <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
-              Our Methodology
+              Partnership Process
             </p>
             <div className="w-12 h-px bg-accent mx-auto"></div>
           </div>
 
           <h3 className="text-3xl md:text-4xl font-heading font-medium leading-tight mb-6 text-primary">
-            Strategic Engagement
-            <span className="italic text-accent"> Methodology</span>
+            From Discovery to
+            <span className="italic text-accent"> Long-term Success</span>
           </h3>
           <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Every engagement follows our proven four-phase methodology designed to deliver measurable outcomes through strategic planning, technical excellence, and ongoing partnership.
+            Our proven methodology combines strategic discovery, technical excellence, and ongoing partnership to deliver measurable outcomes that grow with your business.
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 max-w-6xl mx-auto">
-            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-accent" />
-              </div>
-              <h4 className="font-heading text-lg font-medium text-primary mb-2">Strategic Discovery</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Comprehensive analysis of digital infrastructure, strategic objectives, and competitive positioning
-              </p>
-              <ul className="text-xs text-muted-foreground/80 space-y-1">
-                <li>• Infrastructure audit</li>
-                <li>• Strategic assessment</li>
-                <li>• Risk analysis</li>
-                <li>• Opportunity mapping</li>
-              </ul>
-            </div>
-            
-            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Cpu className="w-8 h-8 text-accent" />
-              </div>
-              <h4 className="font-heading text-lg font-medium text-primary mb-2">Architecture Design</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Custom solution architecture balancing security, scalability, and business requirements
-              </p>
-              <ul className="text-xs text-muted-foreground/80 space-y-1">
-                <li>• Technical architecture</li>
-                <li>• Security framework</li>
-                <li>• Implementation roadmap</li>
-                <li>• Risk mitigation strategy</li>
-              </ul>
-            </div>
-            
-            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Code className="w-8 h-8 text-accent" />
-              </div>
-              <h4 className="font-heading text-lg font-medium text-primary mb-2">Implementation</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Agile development with continuous security validation and iterative refinement
-              </p>
-              <ul className="text-xs text-muted-foreground/80 space-y-1">
-                <li>• Custom development</li>
-                <li>• Security implementation</li>
-                <li>• Testing protocols</li>
-                <li>• Performance optimization</li>
-              </ul>
-            </div>
-            
-            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-accent" />
-              </div>
-              <h4 className="font-heading text-lg font-medium text-primary mb-2">Strategic Partnership</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Ongoing strategic support, security monitoring, and infrastructure evolution
-              </p>
-              <ul className="text-xs text-muted-foreground/80 space-y-1">
-                <li>• Continuous monitoring</li>
-                <li>• Strategic consultation</li>
-                <li>• Evolution planning</li>
-                <li>• Incident response</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Investment guidance */}
-        <div className="text-center border-t border-border/50 pt-16">
-          <div className="mb-8">
-            <p className="text-sm font-medium tracking-wider text-muted-foreground uppercase mb-4">
-              Investment Process
-            </p>
-            <div className="w-12 h-px bg-accent mx-auto"></div>
-          </div>
-
-          <h3 className="text-3xl md:text-4xl font-heading font-medium leading-tight mb-6 text-primary">
-            Custom Solutions for
-            <span className="italic text-accent"> Unique Challenges</span>
-          </h3>
-          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Investment levels vary based on complexity, scope, and strategic objectives. Every engagement begins with a comprehensive discovery process to ensure perfect alignment with your vision.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-6xl mx-auto">
             <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MessageSquare className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="font-heading text-lg font-medium text-primary mb-2">Discovery Call</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Complimentary 30-minute strategy session to understand your goals, challenges, and requirements
+              <h4 className="font-heading text-lg font-medium text-primary mb-2">Strategic Discovery</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Comprehensive 30-minute strategy session analyzing your infrastructure, objectives, and competitive positioning
               </p>
+              <ul className="text-xs text-muted-foreground/80 space-y-1">
+                <li>• Goals & requirements analysis</li>
+                <li>• Strategic assessment</li>
+                <li>• Risk & opportunity mapping</li>
+                <li>• Investment alignment</li>
+              </ul>
             </div>
             
             <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
@@ -259,19 +181,47 @@ export function Pricing() {
                 <FileText className="w-8 h-8 text-accent" />
               </div>
               <h4 className="font-heading text-lg font-medium text-primary mb-2">Custom Proposal</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Detailed scope, timeline, and investment breakdown tailored specifically to your project
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Detailed architecture design balancing security, scalability, and business requirements with transparent pricing
               </p>
+              <ul className="text-xs text-muted-foreground/80 space-y-1">
+                <li>• Technical architecture</li>
+                <li>• Security framework</li>
+                <li>• Timeline & milestones</li>
+                <li>• Flexible payment terms</li>
+              </ul>
             </div>
             
             <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <CreditCard className="w-8 h-8 text-accent" />
+                <Code className="w-8 h-8 text-accent" />
               </div>
-              <h4 className="font-heading text-lg font-medium text-primary mb-2">Flexible Terms</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Milestone-based payments and flexible terms that align with your project timeline and budget
+              <h4 className="font-heading text-lg font-medium text-primary mb-2">Expert Implementation</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Agile development with continuous security validation, regular updates, and iterative refinement
               </p>
+              <ul className="text-xs text-muted-foreground/80 space-y-1">
+                <li>• Custom development</li>
+                <li>• Security implementation</li>
+                <li>• Testing & optimization</li>
+                <li>• Performance validation</li>
+              </ul>
+            </div>
+            
+            <div className="text-center p-6 border border-border/50 rounded-lg bg-card/30 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-accent" />
+              </div>
+              <h4 className="font-heading text-lg font-medium text-primary mb-2">Ongoing Partnership</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Strategic support, security monitoring, and infrastructure evolution as your business grows
+              </p>
+              <ul className="text-xs text-muted-foreground/80 space-y-1">
+                <li>• Continuous monitoring</li>
+                <li>• Strategic consultation</li>
+                <li>• Evolution planning</li>
+                <li>• Incident response</li>
+              </ul>
             </div>
           </div>
           

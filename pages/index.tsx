@@ -63,7 +63,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne web development agency specializing in security-first custom websites, GDPR compliance, and digital protection services. Enterprise security built in from day one.",
+        "description": "Melbourne enterprise web development agency specializing in digital sovereignty, security-first custom solutions, GDPR compliance, and enterprise-grade digital protection services.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -97,8 +97,8 @@ export default function Home() {
       {
         "@type": "Service",
         "@id": "https://gallifrey.consulting/#customdevelopment",
-        "name": "Pixel-Perfect Web Development & Digital Sovereignty Services",
-        "description": "Custom-coded websites with obsessive design detail, bespoke design systems, plus digital sovereignty and privacy protection services",
+        "name": "Enterprise Web Development & Digital Sovereignty Services",
+        "description": "Enterprise-grade web development with security-first architecture, custom digital solutions, and comprehensive digital sovereignty services for business continuity",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -108,14 +108,14 @@ export default function Home() {
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Custom Development & Security Services",
+          "name": "Enterprise Development & Digital Sovereignty Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Pixel-Perfect Website Development",
-                "description": "Custom-coded websites with obsessive attention to design detail and mathematical precision"
+                "name": "Enterprise Website Development",
+                "description": "Security-first custom web development with enterprise-grade architecture and comprehensive digital protection"
               },
               "price": "1500",
               "priceCurrency": "AUD"
@@ -124,8 +124,8 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Bespoke Design Systems",
-                "description": "Hand-crafted design systems and component libraries built from scratch"
+                "name": "Enterprise Design Systems",
+                "description": "Scalable design systems and component libraries with enterprise-grade security and accessibility standards"
               },
               "price": "5000",
               "priceCurrency": "AUD"
@@ -134,8 +134,8 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Digital Sovereignty Services",
-                "description": "Privacy protection, data cleanup, and platform independence solutions"
+                "name": "Digital Sovereignty & Privacy Protection",
+                "description": "Comprehensive digital independence solutions including data protection, platform migration, and enterprise privacy compliance"
               },
               "price": "2500",
               "priceCurrency": "AUD"
@@ -148,7 +148,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#website",
         "url": "https://gallifrey.consulting",
         "name": "Gallifrey Consulting",
-        "description": "Custom Web Development Melbourne | Security-First Digital Solutions",
+        "description": "Enterprise Web Development Melbourne | Digital Sovereignty & Security Solutions",
         "publisher": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -198,13 +198,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Melbourne Web Development | Security"
-        description="Melbourne web development agency specializing in security-first custom websites, GDPR compliance, and digital protection services. Enterprise security built in from day one."
+        title="Melbourne Web Development | Security-First Digital Solutions"
+        description="Melbourne's premier web agency. Security-first development, GDPR compliance, digital sovereignty. Professional web solutions with enterprise protection."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Melbourne Web Development | Security',
-          description: 'Melbourne web development agency specializing in security-first custom websites, GDPR compliance, and digital protection services.',
+          title: 'Melbourne Web Development | Security-First Digital Solutions',
+          description: 'Melbourne web agency specializing in security-first development, GDPR compliance, and digital sovereignty solutions.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -218,7 +218,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'Melbourne web development agency, custom website design Melbourne, SEO services Melbourne, digital marketing Melbourne, security-first web development, enterprise web solutions, hand-coded websites, bespoke web development, GDPR compliance, digital narrative control, data broker removal, privacy cleanup, Melbourne web design agency, AI-enhanced development, local SEO Melbourne'
+            content: 'Melbourne enterprise web development, digital sovereignty Melbourne, security-first development, GDPR compliance Melbourne, enterprise web solutions, custom website design Melbourne, data protection services, platform independence, digital narrative control, Melbourne web development agency, bespoke web development, privacy compliance, digital security consulting, enterprise security Melbourne'
           },
           {
             property: 'article:author',
@@ -241,6 +241,10 @@ export default function Home() {
             __html: JSON.stringify(structuredData),
           }}
         />
+        {/* Preload critical resources for better Core Web Vitals */}
+        <link rel="preload" href="/gallifrey-logo.webp" as="image" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       </Head>
       <div className="min-h-screen bg-white">
         <Header />

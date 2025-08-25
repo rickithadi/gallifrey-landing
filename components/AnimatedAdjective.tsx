@@ -6,16 +6,16 @@ interface AnimatedAdjectiveProps {
 
 export const AnimatedAdjective = React.memo(function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
   const adjectives = useMemo(() => [
-    { word: 'secure', style: 'tracking-wide' },
-    { word: 'authentic', style: 'tracking-wider' },
-    { word: 'pixel-perfect', style: 'tracking-tight' },
-    { word: 'trustworthy', style: 'tracking-normal' },
-    { word: 'exquisite', style: 'tracking-wide' },
-    { word: 'beautiful', style: 'tracking-wider' },
-    { word: 'reliable', style: 'tracking-normal' },
-    { word: 'thoughtful', style: 'tracking-wide' },
-    { word: 'innovative', style: 'tracking-tight' },
-    { word: 'modern', style: 'tracking-wider' }
+    { word: 'sophisticated', style: 'tracking-wide' },
+    { word: 'thoughtful', style: 'tracking-normal' },
+    { word: 'purposeful', style: 'tracking-wide' },
+    { word: 'refined', style: 'tracking-wide' },
+    { word: 'meticulous', style: 'tracking-normal' },
+    { word: 'distinguished', style: 'tracking-tight' },
+    { word: 'considered', style: 'tracking-normal' },
+    { word: 'exceptional', style: 'tracking-normal' },
+    { word: 'deliberate', style: 'tracking-normal' },
+    { word: 'artful', style: 'tracking-wide' }
   ], []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,9 +40,9 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
           prevIndex === adjectives.length - 1 ? 0 : prevIndex + 1
         );
         setIsVisible(true);
-      }, 400); // Slightly longer pause for elegance
+      }, 600); // Executive pause for readability and authority building
 
-    }, 4000); // Change word every 4 seconds - more sophisticated pacing
+    }, 6000); // Executive-paced 6 seconds for thoughtful scanning
 
     return () => clearInterval(interval);
   }, [adjectives.length]);
@@ -60,7 +60,12 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
       {/* Actual animated text */}
       <span
         ref={measureRef}
-        className={`absolute inset-0 flex items-center justify-start transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'} ${adjectives[currentIndex]?.style || ''} ${className}`}
+        className={`absolute inset-0 flex items-center justify-start transition-all duration-900 ease-out ${isVisible ? 'opacity-100 translate-y-0 font-medium' : 'opacity-0 translate-y-1 font-normal'} ${adjectives[currentIndex]?.style || ''} ${className}`}
+        style={{
+          transitionTimingFunction: 'cubic-bezier(0.23, 1, 0.32, 1)', // Executive confidence curve
+          textShadow: isVisible ? '0 1px 2px rgba(45, 90, 135, 0.1)' : 'none', // Subtle authority shadow
+          letterSpacing: isVisible ? '0.02em' : '-0.01em' // Authority spacing
+        }}
       >
         {adjectives[currentIndex]?.word || ''}
       </span>

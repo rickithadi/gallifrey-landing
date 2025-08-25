@@ -382,63 +382,78 @@ export function OwnYourNarrative() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Liberation Process Section */}
       <section id="process" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-medium mb-4 text-oyn-stone-800">
-                How We Create Something Meaningful Together
+                Your Journey to Digital Independence
               </h2>
               <p className="text-lg text-oyn-stone-600 leading-relaxed">
-                A thoughtful process designed for discerning entrepreneurs who value both efficiency and excellence.
+                Breaking free from platform dependency through strategic design and authentic brand development.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-3 gap-12">
               {/* Step 1 */}
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-oyn-orange-50 rounded-lg mb-4">
-                  <span className="text-2xl font-heading font-medium text-oyn-orange-600">01</span>
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-oyn-orange-100 to-oyn-orange-50 rounded-xl mb-6 shadow-sm">
+                  <span className="text-2xl font-heading font-bold text-oyn-orange-700">🔓</span>
                 </div>
-                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Discovery & Vision</h3>
-                <p className="text-sm text-oyn-stone-600 leading-relaxed">
-                  We begin with meaningful conversation about your business goals and the digital experience you envision. No lengthy questionnaires—just strategic dialogue.
+                <h3 className="text-xl font-heading font-medium mb-3 text-oyn-stone-800">Platform Liberation</h3>
+                <p className="text-sm text-oyn-stone-600 leading-relaxed mb-4">
+                  Audit your current digital presence, identify platform dependencies, and create a migration strategy that puts you back in control.
                 </p>
+                <div className="text-xs text-oyn-stone-500 bg-oyn-stone-50 p-3 rounded-lg">
+                  <strong>Timeline:</strong> 1-2 weeks<br />
+                  <strong>Focus:</strong> Digital sovereignty assessment
+                </div>
               </div>
 
               {/* Step 2 */}
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-oyn-orange-50 rounded-lg mb-4">
-                  <span className="text-2xl font-heading font-medium text-oyn-orange-600">02</span>
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-oyn-orange-100 to-oyn-orange-50 rounded-xl mb-6 shadow-sm">
+                  <span className="text-2xl font-heading font-bold text-oyn-orange-700">🏗️</span>
                 </div>
-                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Rapid Development</h3>
-                <p className="text-sm text-oyn-stone-600 leading-relaxed">
-                  Launch quickly with core functionality, then evolve thoughtfully as your business develops. You&apos;re not locked into version 1.0.
+                <h3 className="text-xl font-heading font-medium mb-3 text-oyn-stone-800">Authority Building</h3>
+                <p className="text-sm text-oyn-stone-600 leading-relaxed mb-4">
+                  Craft a sophisticated digital presence that reflects your true expertise, with professional design that commands premium pricing and respect.
                 </p>
+                <div className="text-xs text-oyn-stone-500 bg-oyn-stone-50 p-3 rounded-lg">
+                  <strong>Timeline:</strong> 2-4 weeks<br />
+                  <strong>Focus:</strong> Professional credibility & positioning
+                </div>
               </div>
 
               {/* Step 3 */}
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-50 rounded-lg mb-4">
-                  <span className="text-2xl font-heading font-medium text-amber-600">03</span>
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-oyn-orange-100 to-oyn-orange-50 rounded-xl mb-6 shadow-sm">
+                  <span className="text-2xl font-heading font-bold text-oyn-orange-700">🚀</span>
                 </div>
-                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Complete Customization</h3>
-                <p className="text-sm text-oyn-stone-600 leading-relaxed">
-                  When you&apos;re ready for something entirely bespoke—functionality that gives you competitive advantages and positions you as the premium choice.
+                <h3 className="text-xl font-heading font-medium mb-3 text-oyn-stone-800">Sustainable Growth</h3>
+                <p className="text-sm text-oyn-stone-600 leading-relaxed mb-4">
+                  Implement systems that grow your owned audience, build direct relationships, and create long-term value without algorithmic interference.
                 </p>
+                <div className="text-xs text-oyn-stone-500 bg-oyn-stone-50 p-3 rounded-lg">
+                  <strong>Timeline:</strong> Ongoing partnership<br />
+                  <strong>Focus:</strong> Long-term independence & growth
+                </div>
               </div>
+            </div>
 
-              {/* Step 4 */}
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-oyn-stone-100 rounded-lg mb-4">
-                  <span className="text-2xl font-heading font-medium text-oyn-stone-600">04</span>
-                </div>
-                <h3 className="text-lg font-heading font-medium mb-2 text-oyn-stone-800">Ongoing Partnership</h3>
-                <p className="text-sm text-oyn-stone-600 leading-relaxed">
-                  Your success is our success. We provide ongoing support and strategic guidance as your business grows and evolves.
-                </p>
-              </div>
+            {/* Campaign CTA */}
+            <div className="text-center mt-16 p-8 bg-gradient-to-r from-oyn-stone-50 to-oyn-orange-50 rounded-xl border border-oyn-orange-200">
+              <h3 className="text-2xl font-heading font-medium mb-4 text-oyn-stone-800">
+                Ready to Own Your Story?
+              </h3>
+              <p className="text-oyn-stone-600 mb-6 max-w-2xl mx-auto">
+                Stop building someone else&apos;s empire. Every day you wait is another day your competitors control the narrative about your industry.
+              </p>
+              <Button className="bg-oyn-orange-600 hover:bg-oyn-orange-700 text-white px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                Begin Your Digital Liberation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
             </div>
           </div>
         </div>

@@ -89,13 +89,13 @@ export default function OwnYourNarrativePage() {
   return (
     <>
       <NextSeo
-        title="Own Your Digital Narrative"
-        description="Stop building someone else's empire. Break free from Big Tech with professional web development, data privacy protection, and digital independence."
+        title="Own Your Digital Narrative | Platform Independence"
+        description="Stop building someone else's empire. Break free from Big Tech with professional web development and digital independence solutions."
         canonical="https://gallifrey.consulting/own-your-narrative"
         openGraph={{
           url: 'https://gallifrey.consulting/own-your-narrative',
-          title: 'Own Your Digital Narrative',
-          description: 'Stop building someone else&apos;s empire. Break free from Big Tech with professional web development, data privacy protection, and digital independence.',
+          title: 'Own Your Digital Narrative | Platform Independence',
+          description: 'Stop building someone else&apos;s empire. Break free from Big Tech with professional web development and digital independence solutions.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image-narrative.jpg',

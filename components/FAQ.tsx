@@ -17,7 +17,7 @@ export function FAQ() {
   const faqs = [
     {
       question: "What distinguishes Gallifrey Consulting from other development agencies?",
-      answer: "We specialize in security-first digital solutions, combining bespoke development with AI-enhanced workflows to deliver unparalleled results. Every website and system is meticulously hand-coded from the ground up—no templates, no WordPress dependencies, no compromises. Our approach ensures complete ownership of your digital assets, eliminating vendor lock-in and providing true platform independence. We view each engagement as a strategic partnership in building your digital sovereignty, not merely another project."
+      answer: "We architect enterprise digital assets through three core pillars: precision-engineered systems that become proprietary IP, complete market authority through strategic search positioning, and enterprise security that opens Fortune 500 partnerships. Our bespoke approach ensures total ownership of your digital assets with zero vendor dependencies—building your digital sovereignty, not just another website."
     },
     {
       question: "How do you structure investment levels for projects?",
@@ -28,12 +28,12 @@ export function FAQ() {
       answer: "Absolutely. While we're proudly headquartered in Melbourne, our expertise extends across Australia and internationally. Our sophisticated digital-first methodology enables seamless collaboration regardless of geographic location, supported by meticulous communication protocols and strategic project governance that ensure exceptional outcomes for every client."
     },
     {
-      question: "How do you approach digital sovereignty and privacy protection?",
-      answer: "Digital sovereignty represents complete autonomy over your digital presence and narrative control. We architect custom solutions that eliminate dependencies on third-party platforms while controlling how your organization appears online. Our comprehensive services encompass enterprise security implementation, GDPR compliance, systematic data broker removal from 200+ sources, SEO reputation management, privacy-by-design architecture, and scalable systems that evolve with your enterprise. The result: perpetual ownership of your code, data, reputation, and competitive intelligence—complete digital narrative control."
+      question: "How does your Complete Market Authority Through Search pillar work?",
+      answer: "Our second pillar combines strategic search positioning with comprehensive narrative control. We remove negative content from 100+ sources, eliminate data broker exposure, and strategically position your preferred narrative across all digital channels. The result: market authority that generates enterprise leads while controlling how your organization appears online."
     },
     {
-      question: "What security protocols do you implement?",
-      answer: "Security is integral to our development methodology, embedded from conception rather than retrofitted. We deploy enterprise-grade safeguards including zero-trust architecture, end-to-end encryption, advanced authentication systems, comprehensive penetration testing, and full GDPR/CCPA compliance protocols. Our secure hosting infrastructure includes continuous monitoring and proactive updates. We maintain an unblemished security record with zero incidents across our entire client portfolio—a testament to our philosophy that security begins with the first line of code."
+      question: "How does your Enterprise Security & Business Continuity pillar work?",
+      answer: "Our third pillar delivers zero-incident compliance architecture that meets Fortune 500 standards. We implement zero-trust frameworks, enterprise authentication, and comprehensive compliance protocols from the ground up. Our unblemished security record across all client engagements demonstrates our commitment to business continuity that enables new market opportunities."
     },
     {
       question: "What are typical project timelines?",
@@ -48,8 +48,8 @@ export function FAQ() {
       answer: "We select optimal technologies based on strategic requirements rather than industry trends. Our technical expertise encompasses modern frameworks including Next.js and React for dynamic applications, Node.js for robust backend systems, enterprise database solutions (PostgreSQL, MongoDB), cloud infrastructure (AWS, Vercel), and comprehensive security toolsets. We integrate AI-assisted development methodologies to accelerate delivery while maintaining exceptional code quality. Our technology choices prioritize long-term stability, performance optimization, and security over ephemeral features. Every technical decision is thoroughly documented and explained, ensuring complete transparency in your investment."
     },
     {
-      question: "Can you enhance existing websites and digital systems?",
-      answer: "Certainly. We conduct comprehensive audits of existing digital infrastructure, identifying security vulnerabilities, privacy exposures, performance bottlenecks, and compliance deficiencies. Our enhancement services include security fortification, data broker cleanup, performance optimization, GDPR compliance implementation, personal information removal, data sovereignty upgrades, and strategic migration planning. Depending on your current architecture, we may recommend targeted improvements or advise a complete strategic rebuild for optimal long-term value. In every case, we provide candid, expert guidance tailored to your specific circumstances and privacy objectives."
+      question: "How does your Precision-Engineered Digital Assets pillar create value?",
+      answer: "Our first pillar transforms custom development into appreciating business assets. Every system is engineered to enterprise specifications with zero technical debt, creating proprietary IP that competitors cannot replicate. Our architecture becomes a competitive moat—scalable, vendor-independent, and designed to unlock enterprise opportunities."
     },
     {
       question: "What occurs during the discovery consultation?",
@@ -123,7 +123,7 @@ export function FAQ() {
             Still have questions?
           </h3>
           <p className="text-muted-foreground mb-6 tracking-wide leading-relaxed">
-            Schedule a free 30-minute consultation to discuss your specific requirements.
+            Schedule a competitive advantage assessment to explore how our three pillars can transform your enterprise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

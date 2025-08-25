@@ -232,8 +232,9 @@ export function Contact() {
 
                 <Button
                   type="submit"
+                  variant="gallifrey"
                   disabled={state.submitting || !formData.privacy}
-                  className="bg-primary hover:bg-primary/90 px-8 py-4 text-base min-h-[48px] group disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-8 py-4 text-base min-h-[48px] group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {state.submitting ? (
                     <>

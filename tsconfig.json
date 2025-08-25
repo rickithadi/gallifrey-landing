@@ -58,6 +58,7 @@
     "components/ui/brand-card.tsx",
     "components/ui/section.tsx",
     "components/CursorFollowingElements.tsx",
+    "components/HeroThreeBackground.tsx",
     "components/three/*.tsx",
     "lib/useCursorTracking.ts"
   ]

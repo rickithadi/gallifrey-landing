@@ -12,7 +12,7 @@ export const Footer = React.memo(function Footer() {
               <Logo width={140} height={43} />
             </div>
             <p className="text-muted-foreground leading-relaxed text-sm max-w-sm">
-              Bespoke digital solutions with enterprise-grade security and comprehensive digital narrative control.
+              Precision-engineered digital assets, search authority, and enterprise security that create competitive advantage.
             </p>
           </div>
 
@@ -20,7 +20,7 @@ export const Footer = React.memo(function Footer() {
           <div>
             <h4 className="font-heading text-lg font-medium mb-4 text-primary">Get Started</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#contact" className="hover:text-accent transition-colors">Free Consultation</a></li>
+              <li><a href="#contact" className="hover:text-accent transition-colors">Competitive Advantage Assessment</a></li>
               <li><a href="mailto:hello@gallifreyconsulting.com" className="hover:text-accent transition-colors">hello@gallifreyconsulting.com</a></li>
             </ul>
           </div>

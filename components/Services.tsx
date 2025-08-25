@@ -1,4 +1,4 @@
-import { Code, Palette, Shield, Users } from "lucide-react";
+import { Code, Shield, Target } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
 
 export function Services() {
@@ -8,21 +8,21 @@ export function Services() {
   const services = [
     {
       icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Secure Web Development",
-      description: "Custom websites with enterprise security built in from day one. GDPR compliance, privacy protection, and platform independence designed into every project. No third-party dependencies that compromise your data security.",
-      details: ["Custom coded with built-in security", "GDPR & privacy compliance by design", "No third-party tracking or dependencies", "Complete platform independence"]
+      title: "Precision-Engineered Digital Assets",
+      description: "Bespoke systems engineered to become proprietary IP. Custom architecture built to enterprise specifications with zero technical debt. Every line of code is an asset that appreciates over time, creating defensible competitive moats.",
+      details: ["Custom architecture becomes proprietary IP", "Zero technical debt from day one", "Enterprise-grade scalability without vendor lock-in", "Unique integrations that competitors cannot replicate"]
+    },
+    {
+      icon: <Target className="w-6 h-6 text-accent" aria-hidden="true" />,
+      title: "Complete Market Authority Through Search",
+      description: "Strategic narrative control and content dominance that generates enterprise leads 24/7. We remove negative content, eliminate data broker exposure, and push your preferred narrative across all digital channels to establish definitive market authority.",
+      details: ["Data broker removal from 100+ sources", "Negative content removal and suppression", "Strategic narrative positioning across search results", "24/7 enterprise lead generation through authority content"]
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Digital Protection Services",
-      description: "Comprehensive privacy cleanup and ongoing protection. We remove your data from brokers, monitor your digital reputation, and implement security measures to protect your business from digital threats.",
-      details: ["Data broker removal from 100+ sources", "SEO reputation management & monitoring", "Privacy audit & security implementation", "Ongoing digital threat protection"]
-    },
-    {
-      icon: <Users className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Strategic Consulting", 
-      description: "Technology strategy and digital sovereignty planning tailored to your business. We help you achieve complete digital independence through custom architecture and strategic implementation roadmaps.",
-      details: ["Digital sovereignty planning", "Custom technology architecture", "Strategic implementation roadmaps", "Ongoing security consultation"]
+      title: "Enterprise Security & Business Continuity",
+      description: "Zero-incident compliance architecture that opens new markets. Our security framework meets the highest enterprise standards, enabling partnerships with Fortune 500 clients and government contracts that require bulletproof digital infrastructure.",
+      details: ["Zero-incident security track record", "Enterprise compliance that opens new markets", "Fortune 500-grade risk mitigation", "Business continuity guarantees with liability coverage"]
     }
   ];
 
@@ -42,12 +42,12 @@ export function Services() {
           </div>
 
           <h2 id="services-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl tracking-tight">
-            Security-First Web Development &
-            <span className="italic text-accent"> Digital Protection</span>
+            Enterprise Digital Assets That
+            <span className="italic text-accent"> Generate Competitive Advantage</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Custom development with enterprise security built in from day one. We protect your business through secure websites, privacy compliance, and comprehensive digital protection services.
+            Three strategic pillars that create measurable competitive advantage and unlock enterprise opportunities.
           </p>
         </div>
 

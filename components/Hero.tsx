@@ -10,9 +10,9 @@ import { PlaceholderAnimation } from "./PlaceholderAnimation";
 import { PerformanceProfiler } from "./PerformanceProfiler";
 import dynamic from "next/dynamic";
 
-// Dynamic import for performant green rings background
+// Use simple background for production build
 const HeroThreeBackground = dynamic(
-  () => import("./HeroThreeBackground").then(mod => ({ default: mod.HeroThreeBackground })),
+  () => import("./HeroThreeBackgroundSimple").then(mod => ({ default: mod.HeroThreeBackground })),
   { 
     ssr: false, 
     loading: () => <PlaceholderAnimation />
@@ -53,9 +53,19 @@ export const Hero = React.memo(function Hero() {
                   headlineAnimation.isVisible ? "visible complete" : ""
                 }`}
               >
-                We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" />{" "}
-                websites that protect your business.
+                We create <AnimatedAdjective className="text-gallifrey-teal italic font-medium" />{" "}
+                digital foundations for discerning enterprises.
               </h1>
+              <p className="text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mt-8 leading-relaxed max-w-2xl">
+                Bespoke systems, strategic positioning, enterprise-grade security.
+              </p>
+              <div className="flex items-center gap-1 mt-8 text-sm text-gallifrey-charcoal/60 font-light">
+                <span>Melbourne</span>
+                <span className="mx-2">·</span>
+                <span>Security certified</span>
+                <span className="mx-2">·</span>
+                <span>Zero incidents since 2019</span>
+              </div>
             </header>
 
             <div
@@ -66,15 +76,16 @@ export const Hero = React.memo(function Hero() {
             >
               <Button
                 size="lg"
-                className="px-10 py-4 bg-gallifrey-teal hover:bg-gallifrey-teal-dark text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-semibold tracking-wide group"
+                variant="gallifrey"
+                className="px-8 py-3 font-medium tracking-wide group"
                 asChild
               >
                 <a
                   href="#contact"
-                  onClick={() => handleCTAClick("hero-commission-site")}
+                  onClick={() => handleCTAClick("hero-executive-briefing")}
                 >
-                  Get Security Assessment
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  Begin conversation
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </Button>
             </div>
@@ -106,9 +117,20 @@ export const Hero = React.memo(function Hero() {
                 headlineAnimation.isVisible ? "visible complete" : ""
               }`}
             >
-              We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> websites
-              that protect your business
+              We architect <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> digital experiences
+              for organizations that value excellence
             </h1>
+            <p className="text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mb-12 leading-relaxed max-w-2xl">
+              Thoughtfully crafted systems that elevate your digital presence with
+              uncompromising attention to detail.
+            </p>
+            <div className="flex items-center gap-1 mb-12 text-sm text-gallifrey-charcoal/60 font-light">
+              <span>Melbourne</span>
+              <span className="mx-3">·</span>
+              <span>Security certified</span>
+              <span className="mx-3">·</span>
+              <span>Zero incidents since 2019</span>
+            </div>
           </header>
 
           <div
@@ -119,15 +141,16 @@ export const Hero = React.memo(function Hero() {
         >
           <Button
             size="lg"
-            className="px-10 py-4 bg-gallifrey-teal hover:bg-gallifrey-teal-dark text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-semibold tracking-wide animate-bounce-in animate-delay-700 group"
+            variant="gallifrey"
+            className="px-8 py-3 font-medium tracking-wide group"
             asChild
           >
             <a
               href="#contact"
-              onClick={() => handleCTAClick("hero-commission-site")}
+              onClick={() => handleCTAClick("hero-executive-briefing")}
             >
-              Commission Your Site
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              Begin conversation
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
             </a>
           </Button>
           </div>

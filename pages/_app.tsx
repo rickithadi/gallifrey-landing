@@ -2,12 +2,37 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ABTestProvider } from '@/components/ABTestProvider';
 import { LayoutABTestProvider } from '@/components/LayoutABTestProvider';
 import { VariantToggle } from '@/components/VariantToggle';
+import { initWebVitalsMonitoring, initCustomPerformanceMonitoring, generatePerformanceReport } from '@/lib/web-vitals';
 
 export default function App({ Component, pageProps }: AppProps) {
+  // Initialize Core Web Vitals and performance monitoring
+  useEffect(() => {
+    // Initialize Web Vitals monitoring on client side
+    initWebVitalsMonitoring();
+    initCustomPerformanceMonitoring();
+    
+    // Generate performance report after page load
+    const handleLoad = () => {
+      setTimeout(() => {
+        generatePerformanceReport();
+      }, 1000); // Wait for all resources to settle
+    };
+    
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+    
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <>
       <DefaultSeo

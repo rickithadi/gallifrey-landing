@@ -82,3 +82,43 @@ export const trackScrollDepth = (percentage: number) => {
     value: percentage,
   });
 };
+
+// Core Web Vitals tracking
+export const trackCoreWebVitals = (name: string, value: number, id?: string) => {
+  event({
+    action: "core_web_vital",
+    category: "performance",
+    label: name,
+    value: Math.round(value),
+  });
+  
+  // Also track with specific event name for detailed analysis
+  event({
+    action: name.toLowerCase().replace(/\s+/g, '_'),
+    category: "web_vitals",
+    label: id || "unknown",
+    value: Math.round(value),
+  });
+};
+
+// Performance metrics tracking
+export const trackPerformanceMetric = (metric: string, value: number, context?: string) => {
+  event({
+    action: "performance_metric",
+    category: "performance",
+    label: `${metric}${context ? `_${context}` : ''}`,
+    value: Math.round(value),
+  });
+};
+
+// Three.js performance tracking
+export const trackThreeJSMetrics = (fps: number, renderTime: number, mobile: boolean) => {
+  event({
+    action: "threejs_performance",
+    category: "performance",
+    label: mobile ? "mobile" : "desktop",
+    value: Math.round(fps),
+  });
+  
+  trackPerformanceMetric("threejs_render_time", renderTime, mobile ? "mobile" : "desktop");
+};

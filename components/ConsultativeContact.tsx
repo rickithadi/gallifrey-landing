@@ -526,11 +526,11 @@ ${formData.additionalContext || 'None provided'}
 
           <h2 id="contact-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary">
             Get Your
-            <span className="italic text-accent"> Security Assessment</span>
+            <span className="italic text-accent"> Competitive Advantage Assessment</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Start with a free 30-minute consultation to understand your security needs and explore how we can protect your business.
+            Discover how our three strategic pillars can create measurable competitive advantage for your enterprise.
           </p>
         </div>
 
