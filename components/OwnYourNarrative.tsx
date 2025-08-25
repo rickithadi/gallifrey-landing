@@ -1,7 +1,8 @@
-import { ArrowRight, Globe, Palette, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, Globe, Palette, Sparkles, Zap, CheckCircle } from "lucide-react";
 
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { useForm } from "@formspree/react";
 
 export function OwnYourNarrative() {
   const [email, setEmail] = useState("");
@@ -9,11 +10,23 @@ export function OwnYourNarrative() {
   const [projectType, setProjectType] = useState("");
   const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
+  const [state, handleFormspreeSubmit] = useForm("mzzprpkq"); // Campaign form ID
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log({ email, name, projectType, budget, message });
+    
+    // Create FormData for Formspree
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('project_type', projectType);
+    formData.append('budget', budget);
+    formData.append('message', message);
+    formData.append('form_type', 'Own Your Narrative Campaign');
+    formData.append('_subject', `Own Your Narrative: ${projectType} inquiry from ${name}`);
+    
+    // Submit to Formspree
+    await handleFormspreeSubmit(formData);
   };
 
   return (
@@ -473,7 +486,39 @@ export function OwnYourNarrative() {
             </div>
 
             <div className="max-w-2xl mx-auto">
+              {/* Success State */}
+              {state.succeeded ? (
+                <div className="bg-white rounded-lg p-8 shadow-sm border border-oyn-stone-200 text-center">
+                  <CheckCircle className="w-16 h-16 text-oyn-orange-600 mx-auto mb-6" />
+                  <h3 className="text-2xl font-heading font-medium text-oyn-stone-800 mb-4">
+                    Thank you! We&apos;ll be in touch soon.
+                  </h3>
+                  <p className="text-oyn-stone-600 mb-8">
+                    Your inquiry has been received. We&apos;ll review your project requirements and respond within 24 hours with next steps for your digital independence journey.
+                  </p>
+                  <Button
+                    onClick={() => {
+                      setName('');
+                      setEmail('');
+                      setProjectType('');
+                      setBudget('');
+                      setMessage('');
+                    }}
+                    variant="outline"
+                    className="border-oyn-orange-300 text-oyn-orange-600 hover:bg-oyn-orange-50"
+                  >
+                    Submit Another Inquiry
+                  </Button>
+                </div>
+              ) : (
               <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 shadow-sm border border-oyn-stone-200">
+                {/* Error handling */}
+                {state.errors && Object.keys(state.errors).length > 0 && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg" role="alert">
+                    <p className="text-sm font-medium text-red-800 mb-1">There was an error submitting your inquiry</p>
+                    <p className="text-sm text-red-600">Please try again or contact us directly at hello@gallifreyconsulting.com</p>
+                  </div>
+                )}
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-oyn-stone-600 mb-2">
@@ -564,12 +609,21 @@ export function OwnYourNarrative() {
                   </p>
                   <Button
                     type="submit"
-                    className="px-8 py-3 bg-oyn-orange-600 hover:bg-oyn-orange-700 text-white rounded-lg transition-all duration-300"
+                    disabled={state.submitting}
+                    className="px-8 py-3 bg-oyn-orange-600 hover:bg-oyn-orange-700 text-white rounded-lg transition-all duration-300 disabled:opacity-50"
                   >
-                    Begin the Conversation
+                    {state.submitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                        Sending...
+                      </>
+                    ) : (
+                      'Begin the Conversation'
+                    )}
                   </Button>
                 </div>
               </form>
+              )}
             </div>
           </div>
         </div>

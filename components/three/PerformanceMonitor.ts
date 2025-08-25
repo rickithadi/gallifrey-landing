@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
 export interface DeviceCapabilities {
   isHighPerformance: boolean;
@@ -8,7 +8,7 @@ export interface DeviceCapabilities {
   maxFragmentUniforms: number;
   maxVertexUniforms: number;
   maxRenderBufferSize: number;
-  gpuTier: 'low' | 'medium' | 'high' | 'ultra';
+  gpuTier: "low" | "medium" | "high" | "ultra";
   estimatedVRAM: number; // in MB
 }
 
@@ -26,7 +26,7 @@ export interface PerformanceMetrics {
 export interface QualitySettings {
   particleCount: number;
   connectionLines: boolean;
-  animationComplexity: 'low' | 'medium' | 'high';
+  animationComplexity: "low" | "medium" | "high";
   renderScale: number;
   shadowsEnabled: boolean;
   antialiasing: boolean;
@@ -59,11 +59,11 @@ export class PerformanceMonitor {
   }
 
   private detectCapabilities(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    const canvas = document.createElement('canvas');
-    const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
-    
+    const canvas = document.createElement("canvas");
+    const gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
+
     if (!gl) {
       this.capabilities = {
         isHighPerformance: false,
@@ -73,54 +73,59 @@ export class PerformanceMonitor {
         maxFragmentUniforms: 16,
         maxVertexUniforms: 128,
         maxRenderBufferSize: 1024,
-        gpuTier: 'low',
-        estimatedVRAM: 128
+        gpuTier: "low",
+        estimatedVRAM: 128,
       };
       return;
     }
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-                    window.innerWidth < 768;
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      ) || window.innerWidth < 768;
 
     const maxTextureSize = gl.getParameter(gl.MAX_TEXTURE_SIZE);
-    const maxFragmentUniforms = gl.getParameter(gl.MAX_FRAGMENT_UNIFORM_VECTORS);
+    const maxFragmentUniforms = gl.getParameter(
+      gl.MAX_FRAGMENT_UNIFORM_VECTORS
+    );
     const maxVertexUniforms = gl.getParameter(gl.MAX_VERTEX_UNIFORM_VECTORS);
     const maxRenderBufferSize = gl.getParameter(gl.MAX_RENDERBUFFER_SIZE);
 
     // Estimate GPU tier based on capabilities
-    let gpuTier: 'low' | 'medium' | 'high' | 'ultra' = 'low';
+    let gpuTier: "low" | "medium" | "high" | "ultra" = "low";
     let estimatedVRAM = 128;
 
     if (maxTextureSize >= 16384 && !isMobile) {
-      gpuTier = 'ultra';
+      gpuTier = "ultra";
       estimatedVRAM = 8192;
     } else if (maxTextureSize >= 8192 && !isMobile) {
-      gpuTier = 'high';
+      gpuTier = "high";
       estimatedVRAM = 4096;
     } else if (maxTextureSize >= 4096) {
-      gpuTier = 'medium';
+      gpuTier = "medium";
       estimatedVRAM = 1024;
     } else {
-      gpuTier = 'low';
+      gpuTier = "low";
       estimatedVRAM = 256;
     }
 
     // Additional mobile adjustments
     if (isMobile) {
-      gpuTier = gpuTier === 'ultra' ? 'high' : gpuTier === 'high' ? 'medium' : 'low';
+      gpuTier =
+        gpuTier === "ultra" ? "high" : gpuTier === "high" ? "medium" : "low";
       estimatedVRAM = Math.min(estimatedVRAM, 2048);
     }
 
     this.capabilities = {
-      isHighPerformance: !isMobile && gpuTier !== 'low',
+      isHighPerformance: !isMobile && gpuTier !== "low",
       isMobile,
-      hasWebGL2: !!canvas.getContext('webgl2'),
+      hasWebGL2: !!canvas.getContext("webgl2"),
       maxTextureSize,
       maxFragmentUniforms,
       maxVertexUniforms,
       maxRenderBufferSize,
       gpuTier,
-      estimatedVRAM
+      estimatedVRAM,
     };
 
     // Set initial quality based on capabilities
@@ -134,31 +139,40 @@ export class PerformanceMonitor {
   public updateMetrics(): PerformanceMetrics {
     const currentTime = performance.now();
     const deltaTime = currentTime - this.lastTime;
-    
-    if (deltaTime >= 16.67) { // ~60fps threshold
+
+    if (deltaTime >= 16.67) {
+      // ~60fps threshold
       this.frameCount++;
       const fps = 1000 / deltaTime;
-      
+
       this.fpsHistory.push(fps);
       if (this.fpsHistory.length > this.maxHistoryLength) {
         this.fpsHistory.shift();
       }
-      
+
       this.lastTime = currentTime;
 
       // Adaptive quality adjustment
-      if (this.adaptiveQualityEnabled && currentTime - this.lastQualityCheck > this.qualityCheckInterval) {
+      if (
+        this.adaptiveQualityEnabled &&
+        currentTime - this.lastQualityCheck > this.qualityCheckInterval
+      ) {
         this.adjustQuality();
         this.lastQualityCheck = currentTime;
       }
     }
 
-    const averageFPS = this.fpsHistory.length > 0 
-      ? this.fpsHistory.reduce((sum, fps) => sum + fps, 0) / this.fpsHistory.length
-      : 60;
+    const averageFPS =
+      this.fpsHistory.length > 0
+        ? this.fpsHistory.reduce((sum, fps) => sum + fps, 0) /
+          this.fpsHistory.length
+        : 60;
 
     const metrics: PerformanceMetrics = {
-      fps: this.fpsHistory.length > 0 ? this.fpsHistory[this.fpsHistory.length - 1] : 60,
+      fps:
+        this.fpsHistory.length > 0
+          ? this.fpsHistory[this.fpsHistory.length - 1]
+          : 60,
       averageFPS,
       frameTime: deltaTime,
       memoryUsage: this.getMemoryUsage(),
@@ -172,9 +186,13 @@ export class PerformanceMonitor {
   }
 
   private getMemoryUsage(): number {
-    if ('memory' in performance) {
+    if ("memory" in performance) {
       // performance.memory API is non-standard but widely supported
-      return (performance as Performance & { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize / (1024 * 1024); // MB
+      return (
+        (performance as Performance & { memory: { usedJSHeapSize: number } })
+          .memory.usedJSHeapSize /
+        (1024 * 1024)
+      ); // MB
     }
     return 0;
   }
@@ -182,9 +200,11 @@ export class PerformanceMonitor {
   private adjustQuality(): void {
     if (!this.capabilities) return;
 
-    const averageFPS = this.fpsHistory.length > 0 
-      ? this.fpsHistory.reduce((sum, fps) => sum + fps, 0) / this.fpsHistory.length
-      : 60;
+    const averageFPS =
+      this.fpsHistory.length > 0
+        ? this.fpsHistory.reduce((sum, fps) => sum + fps, 0) /
+          this.fpsHistory.length
+        : 60;
 
     if (averageFPS < this.minFPS) {
       // Reduce quality
@@ -197,32 +217,43 @@ export class PerformanceMonitor {
 
   private reduceQuality(): void {
     const current = this.currentQuality;
-    
+
     // Progressive quality reduction
     if (current.connectionLines) {
       current.connectionLines = false;
     } else if (current.particleCount > 20) {
-      current.particleCount = Math.max(20, Math.floor(current.particleCount * 0.75));
+      current.particleCount = Math.max(
+        20,
+        Math.floor(current.particleCount * 0.75)
+      );
     } else if (current.renderScale > 0.5) {
       current.renderScale = Math.max(0.5, current.renderScale - 0.1);
-    } else if (current.animationComplexity !== 'low') {
-      current.animationComplexity = current.animationComplexity === 'high' ? 'medium' : 'low';
+    } else if (current.animationComplexity !== "low") {
+      current.animationComplexity =
+        current.animationComplexity === "high" ? "medium" : "low";
     }
   }
 
   private increaseQuality(): void {
     if (!this.capabilities) return;
-    
+
     const current = this.currentQuality;
     const maxQuality = this.getQualityForTier(this.capabilities.gpuTier);
-    
+
     // Progressive quality increase
     if (current.animationComplexity !== maxQuality.animationComplexity) {
-      current.animationComplexity = current.animationComplexity === 'low' ? 'medium' : 'high';
+      current.animationComplexity =
+        current.animationComplexity === "low" ? "medium" : "high";
     } else if (current.renderScale < maxQuality.renderScale) {
-      current.renderScale = Math.min(maxQuality.renderScale, current.renderScale + 0.1);
+      current.renderScale = Math.min(
+        maxQuality.renderScale,
+        current.renderScale + 0.1
+      );
     } else if (current.particleCount < maxQuality.particleCount) {
-      current.particleCount = Math.min(maxQuality.particleCount, Math.floor(current.particleCount * 1.25));
+      current.particleCount = Math.min(
+        maxQuality.particleCount,
+        Math.floor(current.particleCount * 1.25)
+      );
     } else if (!current.connectionLines && maxQuality.connectionLines) {
       current.connectionLines = true;
     }
@@ -230,10 +261,10 @@ export class PerformanceMonitor {
 
   private canIncreaseQuality(): boolean {
     if (!this.capabilities) return false;
-    
+
     const current = this.currentQuality;
     const maxQuality = this.getQualityForTier(this.capabilities.gpuTier);
-    
+
     return (
       current.particleCount < maxQuality.particleCount ||
       current.renderScale < maxQuality.renderScale ||
@@ -246,61 +277,63 @@ export class PerformanceMonitor {
     return {
       particleCount: 50,
       connectionLines: false,
-      animationComplexity: 'medium',
+      animationComplexity: "medium",
       renderScale: 1.0,
       shadowsEnabled: false,
       antialiasing: true,
       particleSize: 0.02,
-      maxConnections: 100
+      maxConnections: 100,
     };
   }
 
-  private getQualityForTier(tier: 'low' | 'medium' | 'high' | 'ultra'): QualitySettings {
+  private getQualityForTier(
+    tier: "low" | "medium" | "high" | "ultra"
+  ): QualitySettings {
     switch (tier) {
-      case 'ultra':
+      case "ultra":
         return {
           particleCount: 300,
           connectionLines: true,
-          animationComplexity: 'high',
+          animationComplexity: "high",
           renderScale: 1.0,
           shadowsEnabled: true,
           antialiasing: true,
           particleSize: 0.03,
-          maxConnections: 500
+          maxConnections: 500,
         };
-      case 'high':
+      case "high":
         return {
           particleCount: 200,
           connectionLines: true,
-          animationComplexity: 'high',
+          animationComplexity: "high",
           renderScale: 1.0,
           shadowsEnabled: false,
           antialiasing: true,
           particleSize: 0.025,
-          maxConnections: 300
+          maxConnections: 300,
         };
-      case 'medium':
+      case "medium":
         return {
           particleCount: 100,
           connectionLines: true,
-          animationComplexity: 'medium',
+          animationComplexity: "medium",
           renderScale: 1.0,
           shadowsEnabled: false,
           antialiasing: true,
           particleSize: 0.02,
-          maxConnections: 200
+          maxConnections: 200,
         };
-      case 'low':
+      case "low":
       default:
         return {
           particleCount: 30,
           connectionLines: false,
-          animationComplexity: 'low',
+          animationComplexity: "low",
           renderScale: 0.8,
           shadowsEnabled: false,
           antialiasing: false,
           particleSize: 0.015,
-          maxConnections: 50
+          maxConnections: 50,
         };
     }
   }
@@ -318,10 +351,12 @@ export class PerformanceMonitor {
   }
 
   public getPerformanceScore(): number {
-    const averageFPS = this.fpsHistory.length > 0 
-      ? this.fpsHistory.reduce((sum, fps) => sum + fps, 0) / this.fpsHistory.length
-      : 60;
-    
+    const averageFPS =
+      this.fpsHistory.length > 0
+        ? this.fpsHistory.reduce((sum, fps) => sum + fps, 0) /
+          this.fpsHistory.length
+        : 60;
+
     // Score from 0-100 based on FPS performance
     return Math.min(100, Math.max(0, (averageFPS / this.targetFPS) * 100));
   }
