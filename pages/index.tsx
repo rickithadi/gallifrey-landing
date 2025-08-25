@@ -198,7 +198,7 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Melbourne Web Development | Security-First Digital Solutions"
+        title="Custom Development Melbourne | Enterprise Security"
         description="Melbourne's premier web agency. Security-first development, GDPR compliance, digital sovereignty. Professional web solutions with enterprise protection."
         canonical="https://gallifrey.consulting"
         openGraph={{

@@ -34,7 +34,8 @@ export const Hero = React.memo(function Hero() {
   if (variant === "lightweight") {
     return (
       <section
-        className="relative h-screen px-4 overflow-hidden flex items-center"
+        className="relative min-h-screen px-4 overflow-hidden flex items-center"
+        style={{ minHeight: 'calc(100vh - 4rem)' }}
         aria-labelledby="hero-heading"
         data-testid="hero-section-lightweight"
       >
@@ -97,7 +98,8 @@ export const Hero = React.memo(function Hero() {
 
   return (
     <section
-      className="relative py-24 md:py-32 px-4 overflow-hidden"
+      className="relative min-h-screen px-4 overflow-hidden flex items-center"
+      style={{ minHeight: 'calc(100vh - 4rem)' }}
       aria-labelledby="hero-heading"
       data-testid="hero-section-original"
     >

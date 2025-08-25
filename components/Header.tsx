@@ -1,4 +1,5 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "./ui/button";
 import { Logo } from "./Logo";
@@ -62,6 +63,15 @@ export function Header() {
 
           {/* CTA Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
+            {/* For Creators Link */}
+            <Link
+              href="/own-your-narrative"
+              className="hidden md:flex items-center gap-1.5 text-sm font-medium text-oyn-orange-600 hover:text-oyn-orange-700 transition-colors duration-200"
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>For Creators</span>
+            </Link>
+            
             <Button
               size="sm"
               className="hidden sm:flex text-sm bg-primary hover:bg-primary/90 text-primary-foreground px-6"
@@ -101,6 +111,14 @@ export function Header() {
                   {item.label}
                 </a>
               ))}
+              <Link
+                href="/own-your-narrative"
+                className="text-sm font-medium text-oyn-orange-600 hover:text-oyn-orange-700 transition-colors duration-200 py-2 flex items-center gap-1.5"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>For Creators</span>
+              </Link>
               <div className="pt-4 border-t border-border/30">
                 <Button
                   variant="outline"

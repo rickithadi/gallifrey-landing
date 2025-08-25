@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle, MapPin, Shield, Target, Users } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle, Clock, MapPin, Shield, Target, Users } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
@@ -532,6 +532,16 @@ ${formData.additionalContext || 'None provided'}
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Discover how our three strategic pillars can create measurable competitive advantage for your enterprise.
           </p>
+          
+          {/* Urgency Element */}
+          <div className="mt-6 flex justify-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
+              <Clock className="w-4 h-4 text-accent" />
+              <span className="text-sm font-medium text-accent">
+                Limited consultation availability
+              </span>
+            </div>
+          </div>
         </div>
 
         <Card className="bg-card/50 backdrop-blur-sm border-border/50">
@@ -568,6 +578,22 @@ ${formData.additionalContext || 'None provided'}
 
             {renderStep()}
 
+            {/* Trust Signals */}
+            <div className="flex items-center justify-center gap-4 mt-6 mb-4 text-xs text-muted-foreground">
+              <div className="flex items-center gap-1">
+                <Shield className="w-3 h-3 text-accent" />
+                <span>GDPR Compliant</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <CheckCircle className="w-3 h-3 text-accent" />
+                <span>Zero Incidents Since 2019</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Calendar className="w-3 h-3 text-accent" />
+                <span>24hr Response</span>
+              </div>
+            </div>
+            
             {/* Navigation buttons */}
             <div className="flex justify-between items-center mt-8">
               <Button
