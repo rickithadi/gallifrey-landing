@@ -1,14 +1,29 @@
-import { Contact } from '@/components/Contact'
-import { Features } from '@/components/Features'
 import { Footer } from '@/components/Footer'
 import Head from 'next/head'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
-import { Pricing } from '@/components/Pricing'
-import { PrivacySecurity } from '@/components/PrivacySecurity'
 import { Services } from '@/components/Services'
-// import { Work } from '@/components/Work'
+import { Testimonials } from '@/components/Testimonials'
+import { TrustAndSecurity } from '@/components/TrustAndSecurity'
+import dynamic from 'next/dynamic'
+
+// Lazy load below-the-fold components
+const Pricing = dynamic(() => import('@/components/Pricing').then(mod => ({ default: mod.Pricing })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading pricing section" />
+})
+
+const FAQ = dynamic(() => import('@/components/FAQ').then(mod => ({ default: mod.FAQ })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-white animate-pulse" aria-label="Loading FAQ section" />
+})
+
+const ConsultativeContact = dynamic(() => import('@/components/ConsultativeContact').then(mod => ({ default: mod.ConsultativeContact })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading contact section" />
+})
+
 
 export default function Home() {
   const structuredData = {
@@ -21,7 +36,7 @@ export default function Home() {
         "url": "https://gallifrey.consulting",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://gallifrey.consulting/gallifrey-logo.png",
+          "url": "https://gallifrey.consulting/gallifrey-logo.webp",
           "width": 436,
           "height": 133
         },
@@ -48,7 +63,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne pixel-perfect web development with obsessive attention to design detail. Custom-coded websites, bespoke design systems, and digital sovereignty solutions. Plus privacy protection and security services.",
+        "description": "Melbourne's premier web development agency specializing in security-first, custom-coded websites with AI-enhanced development workflows. Complete digital sovereignty, enterprise security, and platform independence solutions.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -133,7 +148,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#website",
         "url": "https://gallifrey.consulting",
         "name": "Gallifrey Consulting",
-        "description": "Pixel-Perfect Web Development Melbourne | Custom Design Systems",
+        "description": "Custom Web Development Melbourne | Security-First Digital Solutions",
         "publisher": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -183,13 +198,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne"
-        description="Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800."
+        title="Melbourne Web Development | Security"
+        description="Melbourne web development agency specializing in security-first custom websites, digital sovereignty, and enterprise privacy protection. Hand-coded solutions."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne',
-          description: 'Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800.',
+          title: 'Melbourne Web Development | Security',
+          description: 'Melbourne web development agency specializing in security-first custom websites, digital sovereignty, and enterprise privacy protection.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -203,7 +218,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'pixel perfect web development Melbourne, custom design systems, bespoke websites, digital sovereignty, privacy protection, hand-crafted development, boutique web development, trusted web development Melbourne'
+            content: 'Melbourne web development agency, custom website design Melbourne, SEO services Melbourne, digital marketing Melbourne, security-first web development, enterprise web solutions, hand-coded websites, bespoke web development, GDPR compliance, digital narrative control, data broker removal, privacy cleanup, Melbourne web design agency, AI-enhanced development, local SEO Melbourne'
           },
           {
             property: 'article:author',
@@ -231,64 +246,11 @@ export default function Home() {
         <Header />
         <Hero />
         <Services />
-        <PrivacySecurity />
-        {/* <Work /> */}
-        <Features />
-
-        {/* Own Your Narrative Campaign CTA - Temporarily hidden */}
-        {/* <section className="py-20 px-4 bg-gradient-to-r from-[#1a237e] to-[#00695c] relative overflow-hidden">
-          <div className="container mx-auto max-w-4xl text-center relative z-10">
-            <div className="mb-6">
-              <span className="text-sm font-medium tracking-wider text-white/80 uppercase mb-4 block">
-                Digital Sovereignty
-              </span>
-              <div className="w-12 h-px bg-white/40 mx-auto mb-8"></div>
-            </div>
-
-            <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-white">
-              Ready to <span className="italic text-[#ffa726]">Own Your Narrative</span>?
-            </h2>
-
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
-              Stop building someone else&apos;s empire. Break free from Big Tech dependency with custom websites, data privacy protection, and complete digital independence.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/own-your-narrative"
-                className="inline-flex items-center px-8 py-3 bg-white text-[#1a237e] font-medium rounded-lg hover:bg-white/90 transition-colors"
-              >
-                Discover Digital Independence
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link
-                href="/own-your-narrative"
-                className="inline-flex items-center px-8 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-white/20">
-              <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-white/80">
-                <span>47 Data Brokers Removed</span>
-                <span>•</span>
-                <span>$2.3M Revenue Generated</span>
-                <span>•</span>
-                <span>100% Client Satisfaction</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#42a5f5]/20 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#ffa726]/20 to-transparent rounded-full blur-3xl"></div>
-        </section> */}
-
+        <Testimonials />
+        <TrustAndSecurity />
         <Pricing />
-        <Contact />
+        <FAQ />
+        <ConsultativeContact />
         <Footer />
       </div>
     </>

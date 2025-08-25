@@ -84,15 +84,30 @@ module.exports = {
         "teal-dark": "rgb(var(--gallifrey-teal-dark))",
       },
       fontFamily: {
-        heading: ["Montserrat", "sans-serif"],
-        body: ["Source Sans Pro", "sans-serif"],
-        serif: ["Playfair Display", "serif"],
-        logo: ["Playfair Display", "serif"],
+        heading: ["Montserrat", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        body: ["Source Sans Pro", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        serif: ["Playfair Display", "Georgia", "Times New Roman", "serif"],
+        logo: ["Playfair Display", "Georgia", "Times New Roman", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "gradient-x": {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
+      },
+      animation: {
+        "gradient-x": "gradient-x 15s ease infinite",
       },
     },
   },

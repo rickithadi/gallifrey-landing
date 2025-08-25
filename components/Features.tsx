@@ -53,7 +53,7 @@ export function Features() {
           <Badge className="mb-6 bg-accent/10 text-accent border-accent/20">
             Technical Excellence
           </Badge>
-          <h2 className="text-3xl md:text-5xl mb-6 text-primary font-serif font-medium">
+          <h2 className="text-3xl md:text-5xl mb-6 text-primary font-heading font-medium">
             How We Work Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -64,7 +64,7 @@ export function Features() {
         <div className="grid lg:grid-cols-2 gap-16 mb-16">
           {/* Process Steps */}
           <div>
-            <h3 className="text-2xl mb-8 text-primary font-serif font-medium">Our Process</h3>
+            <h3 className="text-2xl mb-8 text-primary font-heading font-medium">Our Process</h3>
             <div className="space-y-6">
               {processSteps.map((step, index) => (
                 <div key={index} className="flex gap-4">
@@ -88,7 +88,7 @@ export function Features() {
 
           {/* Technical Capabilities */}
           <div>
-            <h3 className="text-2xl mb-8 text-primary font-serif font-medium">Technical Capabilities</h3>
+            <h3 className="text-2xl mb-8 text-primary font-heading font-medium">Technical Capabilities</h3>
             <Card className="bg-card border-0 shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">

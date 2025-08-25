@@ -19,11 +19,15 @@ export function useScrollAnimation<T extends HTMLElement = HTMLElement>(
     const element = ref.current;
     if (!element) return;
 
-    // Check for reduced motion preference
+    // Check for reduced motion and reduced data preferences
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    if (prefersReducedMotion) {
+    const prefersReducedData = window.matchMedia(
+      "(prefers-reduced-data: reduce)"
+    ).matches;
+    
+    if (prefersReducedMotion || prefersReducedData) {
       setIsVisible(true);
       setHasAnimated(true);
       return;

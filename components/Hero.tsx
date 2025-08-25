@@ -1,78 +1,138 @@
-import { AnimatedAdjective } from "./AnimatedAdjective";
+import React, { Suspense, useCallback } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { trackCTAClick } from "@/lib/analytics";
-import { trackVariantConversion } from "@/lib/ab-test";
-import { useABTest } from "./ABTestProvider";
+import { useLayoutABTest } from "./LayoutABTestProvider";
+import { trackLayoutVariantConversion } from "@/lib/layout-ab-test";
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
+import { AnimatedAdjective } from "./AnimatedAdjective";
+import { PlaceholderAnimation } from "./PlaceholderAnimation";
+import { PerformanceProfiler } from "./PerformanceProfiler";
+import dynamic from "next/dynamic";
 
-export function Hero() {
-  const { variant } = useABTest();
-  const headlineAnimation = useScrollAnimation<HTMLHeadingElement>({ threshold: 0.1 });
-  const subtitleAnimation = useScrollAnimation<HTMLParagraphElement>({ threshold: 0.1 });
+// Dynamic import for performant green rings background
+const HeroThreeBackground = dynamic(
+  () => import("./HeroThreeBackground").then(mod => ({ default: mod.HeroThreeBackground })),
+  { 
+    ssr: false, 
+    loading: () => <PlaceholderAnimation />
+  }
+);
+
+export const Hero = React.memo(function Hero() {
+  const { variant } = useLayoutABTest();
+  const headlineAnimation = useScrollAnimation<HTMLHeadingElement>({
+    threshold: 0.1,
+  });
   const ctaAnimation = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
-  const handleCTAClick = (action: string) => {
+  const handleCTAClick = useCallback((action: string) => {
     trackCTAClick(action);
-    trackVariantConversion(variant, action);
-  };
+    trackLayoutVariantConversion(variant, action);
+  }, [variant]);
+
+  if (variant === "lightweight") {
+    return (
+      <section
+        className="relative h-screen px-4 overflow-hidden flex items-center"
+        aria-labelledby="hero-heading"
+        data-testid="hero-section-lightweight"
+      >
+        <PerformanceProfiler id="HeroThreeBackground-lightweight">
+          <Suspense fallback={<PlaceholderAnimation />}>
+            <HeroThreeBackground className="opacity-30 md:opacity-60" />
+          </Suspense>
+        </PerformanceProfiler>
+        <div className="container mx-auto relative z-20">
+          <div className="max-w-xl text-center md:text-left mx-auto md:mx-0">
+            <header className="mb-8">
+              <h1
+                ref={headlineAnimation.ref}
+                id="hero-heading"
+                className={`text-5xl md:text-6xl lg:text-7xl font-heading font-light leading-tight text-gallifrey-charcoal tracking-wide animate-fade-in-up hero-animation ${
+                  headlineAnimation.isVisible ? "visible complete" : ""
+                }`}
+              >
+                We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" />{" "}
+                websites you actually own.
+              </h1>
+            </header>
+
+            <div
+              ref={ctaAnimation.ref}
+              className={`flex justify-center md:block animate-fade-in-up delay-300 ${
+                ctaAnimation.isVisible ? "visible" : ""
+              }`}
+            >
+              <Button
+                size="lg"
+                className="px-10 py-4 bg-gallifrey-teal hover:bg-gallifrey-teal-dark text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-semibold tracking-wide group"
+                asChild
+              >
+                <a
+                  href="#contact"
+                  onClick={() => handleCTAClick("hero-commission-site")}
+                >
+                  Commission Your Site
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
-    <section className="relative py-24 md:py-32 px-4 overflow-hidden" aria-labelledby="hero-heading">
-      {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-primary/5 pointer-events-none"></div>
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-accent/10 rounded-full blur-2xl pointer-events-none"></div>
-      
-      <div className="container mx-auto max-w-4xl relative z-10">
-        {/* Main headline - minimalist approach */}
-        <header className="text-center mb-16">
-          <h1
-            ref={headlineAnimation.ref}
-            id="hero-heading"
-            className={`text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-[1.1] mb-8 text-foreground text-center animate-fade-up animate-delay-200 ${headlineAnimation.isVisible ? 'visible' : ''}`}
-          >
-            <span className="block">We build</span>
-            <span className="block">
-              <AnimatedAdjective className="italic text-accent" />
-            </span>
-            <span className="block">digital solutions</span>
-          </h1>
+    <section
+      className="relative py-24 md:py-32 px-4 overflow-hidden"
+      aria-labelledby="hero-heading"
+      data-testid="hero-section-original"
+    >
+      <PerformanceProfiler id="HeroThreeBackground-original">
+        <Suspense fallback={<PlaceholderAnimation />}>
+          <HeroThreeBackground className="opacity-40 md:opacity-70" />
+        </Suspense>
+      </PerformanceProfiler>
 
-          <p
-            ref={subtitleAnimation.ref}
-            className={`text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-body animate-fade-up animate-delay-400 ${subtitleAnimation.isVisible ? 'visible' : ''}`}
-          >
-            Data services, software consultancy, and custom development. Security-first, pixel perfect solutions that scale with your business.
-          </p>
-        </header>
+      <div className="container mx-auto max-w-6xl relative z-20">
+        <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">
+          <header className="mb-12 md:mb-16">
+            <h1
+              ref={headlineAnimation.ref}
+              id="hero-heading"
+              className={`text-5xl md:text-6xl lg:text-7xl font-heading font-light leading-tight mb-8 text-gallifrey-charcoal tracking-wide animate-fade-up animate-delay-200 hero-animation ${
+                headlineAnimation.isVisible ? "visible complete" : ""
+              }`}
+            >
+              We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> websites
+              you actually own
+            </h1>
+          </header>
 
-        {/* CTA Section */}
-        <div
-          ref={ctaAnimation.ref}
-          className={`flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animate-delay-600 ${ctaAnimation.isVisible ? 'visible' : ''}`}
+          <div
+            ref={ctaAnimation.ref}
+            className={`flex justify-center md:block animate-fade-up animate-delay-600 ${
+              ctaAnimation.isVisible ? "visible" : ""
+            }`}
         >
-          <Button size="lg" className="px-10 py-4 bg-primary hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" asChild>
+          <Button
+            size="lg"
+            className="px-10 py-4 bg-gallifrey-teal hover:bg-gallifrey-teal-dark text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] font-semibold tracking-wide animate-bounce-in animate-delay-700 group"
+            asChild
+          >
             <a
               href="#contact"
               onClick={() => handleCTAClick("hero-commission-site")}
             >
               Commission Your Site
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="px-8 py-3 border-muted-foreground/30 text-muted-foreground hover:bg-muted/30 hover:border-muted-foreground/40" asChild>
-            <a
-              href="https://calendly.com/rickithadi/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => handleCTAClick("hero-consultation")}
-            >
-              30-minute consultation
-            </a>
-          </Button>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+});

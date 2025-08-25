@@ -1,11 +1,11 @@
-import '@/styles/globals.css'
-
-import type { AppProps } from 'next/app'
-import { DefaultSeo } from 'next-seo'
-import { GoogleAnalytics } from '@next/third-parties/google'
-import React from 'react'
-import { ABTestProvider } from '@/components/ABTestProvider'
-import { VariantToggle } from '@/components/VariantToggle'
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import React from 'react';
+import { ABTestProvider } from '@/components/ABTestProvider';
+import { LayoutABTestProvider } from '@/components/LayoutABTestProvider';
+import { VariantToggle } from '@/components/VariantToggle';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -104,11 +104,22 @@ export default function App({ Component, pageProps }: AppProps) {
             rel: 'manifest',
             href: '/site.webmanifest',
           },
+          {
+            rel: 'preconnect',
+            href: 'https://fonts.googleapis.com',
+          },
+          {
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossOrigin: 'anonymous',
+          },
         ]}
       />
       <ABTestProvider>
-        <Component {...pageProps} />
-        <VariantToggle />
+        <LayoutABTestProvider>
+          <Component {...pageProps} />
+          <VariantToggle />
+        </LayoutABTestProvider>
       </ABTestProvider>
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />

@@ -4,18 +4,18 @@ interface AnimatedAdjectiveProps {
   className?: string;
 }
 
-export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
+export const AnimatedAdjective = React.memo(function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
   const adjectives = useMemo(() => [
-    'secure',
-    'authentic',
-    'pixel-perfect',
-    'trustworthy',
-    'exquisite',
-    'beautiful',
-    'reliable',
-    'thoughtful',
-    'innovative',
-    'modern'
+    { word: 'secure', style: 'tracking-wide' },
+    { word: 'authentic', style: 'tracking-wider' },
+    { word: 'pixel-perfect', style: 'tracking-tight' },
+    { word: 'trustworthy', style: 'tracking-normal' },
+    { word: 'exquisite', style: 'tracking-wide' },
+    { word: 'beautiful', style: 'tracking-wider' },
+    { word: 'reliable', style: 'tracking-normal' },
+    { word: 'thoughtful', style: 'tracking-wide' },
+    { word: 'innovative', style: 'tracking-tight' },
+    { word: 'modern', style: 'tracking-wider' }
   ], []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,7 +25,7 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
   // Find the longest word to reserve space
   const longestWord = useMemo(() => {
     return adjectives.reduce((longest, current) => 
-      current.length > longest.length ? current : longest
+      current.word.length > longest.word.length ? current : longest
     );
   }, [adjectives]);
 
@@ -54,16 +54,16 @@ export function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
         className={`invisible ${className}`}
         aria-hidden="true"
       >
-        {longestWord}
+        {longestWord.word}
       </span>
       
       {/* Actual animated text */}
       <span
         ref={measureRef}
-        className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'} ${className}`}
+        className={`absolute inset-0 flex items-center justify-start transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'} ${adjectives[currentIndex]?.style || ''} ${className}`}
       >
-        {adjectives[currentIndex]}
+        {adjectives[currentIndex]?.word || ''}
       </span>
     </span>
   );
-}
+});

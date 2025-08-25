@@ -64,7 +64,7 @@ export function PrivacySecurity() {
           <Badge className="mb-6 bg-accent/10 text-accent border-accent/20">
             Digital Privacy & Security
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary">
+          <h2 className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary">
             Protect Your Digital Identity &
             <span className="italic text-accent"> Own Your Narrative</span>
           </h2>

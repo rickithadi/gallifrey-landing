@@ -12,7 +12,8 @@ export function Logo({ className = "", width = 150, height = 46 }: LogoProps) {
     <Link href="/" className={`group ${className}`}>
       <div className="flex items-center">
         <ImageWithFallback
-          src="/gallifrey-logo.png"
+          src="/gallifrey-logo.webp"
+          fallbackSrc="/gallifrey-logo.png"
           alt="Gallifrey Consulting - Security-First Web Development"
           width={width}
           height={height}
