@@ -54,7 +54,7 @@ export const Hero = React.memo(function Hero() {
                 }`}
               >
                 We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" />{" "}
-                websites you actually own.
+                websites that protect your business.
               </h1>
             </header>
 
@@ -73,7 +73,7 @@ export const Hero = React.memo(function Hero() {
                   href="#contact"
                   onClick={() => handleCTAClick("hero-commission-site")}
                 >
-                  Commission Your Site
+                  Get Security Assessment
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
@@ -107,7 +107,7 @@ export const Hero = React.memo(function Hero() {
               }`}
             >
               We build <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> websites
-              you actually own
+              that protect your business
             </h1>
           </header>
 

@@ -1,0 +1,4 @@
+
+> gallifrey-landing@1.0.0 test
+> playwright test --grep=SEO optimization --reporter=json
+

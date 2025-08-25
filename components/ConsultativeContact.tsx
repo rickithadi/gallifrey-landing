@@ -525,13 +525,12 @@ ${formData.additionalContext || 'None provided'}
           </div>
 
           <h2 id="contact-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary">
-            Start Your Strategic
-            <span className="italic text-accent"> Digital Transformation</span>
+            Get Your
+            <span className="italic text-accent"> Security Assessment</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Every engagement begins with understanding your unique challenges and strategic objectives. 
-            Let&apos;s explore how digital sovereignty and enterprise security can strengthen your competitive position.
+            Start with a free 30-minute consultation to understand your security needs and explore how we can protect your business.
           </p>
         </div>
 

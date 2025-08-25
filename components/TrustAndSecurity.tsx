@@ -8,33 +8,33 @@ export function TrustAndSecurity() {
   const uniqueApproach = [
     {
       icon: <Target className="w-6 h-6 text-accent" />,
-      title: "You Own Everything",
-      description: "Complete ownership of meticulously crafted code, custom-built architecture, and bespoke digital assets. No vendor lock-in, no template dependencies, no platform risks. Every element developed specifically for you—your investment is truly yours."
+      title: "Complete Ownership",
+      description: "Custom code and architecture with no vendor lock-in. You own everything we build for your business."
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" />,
-      title: "Security as Your Advantage", 
-      description: "While competitors worry about data breaches and compliance headaches, you operate with confidence. Enterprise-grade security built from day one becomes your competitive moat."
+      title: "Security First", 
+      description: "Enterprise-grade security and GDPR compliance built in from day one. Protect your business from digital threats."
     },
     {
       icon: <Award className="w-6 h-6 text-accent" />,
-      title: "Premium Market Position",
-      description: "GDPR compliance and data sovereignty aren't just checkboxes - they position you as the premium, trustworthy choice. Win clients who value privacy and professionalism."
+      title: "Premium Positioning",
+      description: "Stand out as the trustworthy choice with privacy-focused, professional digital presence."
     },
     {
       icon: <MapPin className="w-6 h-6 text-accent" />,
-      title: "Melbourne Advantage",
-      description: "Local expertise that understands Australian business culture, privacy laws, and market dynamics. Plus the responsiveness and accountability that comes with working locally."
+      title: "Melbourne Based",
+      description: "Local expertise with Australian business knowledge and compliance. Direct communication and accountability."
     },
     {
       icon: <Star className="w-6 h-6 text-accent" />,
-      title: "Built to Scale With You",
-      description: "Your custom-built digital infrastructure grows and evolves as your business does. Bespoke architecture designed for seamless scalability. No rebuilding from scratch, no platform migrations—just continuous refinement of the custom systems built specifically for your success."
+      title: "Scalable Architecture",
+      description: "Custom systems that grow with your business. No rebuilding or platform migrations required."
     },
     {
       icon: <Zap className="w-6 h-6 text-accent" />,
-      title: "Performance That Impresses",
-      description: "Blazing-fast loading times from optimized bespoke code, pixel-perfect design with mathematical precision, and flawless user experiences meticulously crafted. Your custom website becomes a powerful sales and credibility tool that reflects true quality."
+      title: "Optimized Performance",
+      description: "Fast-loading, professional websites that impress visitors and convert them into customers."
     }
   ];
 
@@ -62,19 +62,17 @@ export function TrustAndSecurity() {
           </div>
 
           <h2 id="trust-security-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary tracking-tight">
-            Built for Your Success &
-            <span className="italic text-accent"> Digital Independence</span>
+            Why Choose
+            <span className="italic text-accent"> Gallifrey Consulting</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Your business deserves digital solutions that amplify your strengths and protect your interests. 
-            We craft bespoke, security-first websites and systems using AI-accelerated development processes that give you complete control over your digital presence, 
-            your data, and your competitive advantage.
+            Melbourne businesses choose us for secure, custom websites that protect their data and give them complete control over their digital presence.
           </p>
         </div>
 
         {/* Unique Approach */}
-        <div ref={featuresRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div ref={featuresRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20">
           {uniqueApproach.map((feature, index) => (
             <div
               key={index}

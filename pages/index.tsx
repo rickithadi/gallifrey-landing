@@ -63,7 +63,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne's premier web development agency specializing in security-first, custom-coded websites with AI-enhanced development workflows. Complete digital sovereignty, enterprise security, and platform independence solutions.",
+        "description": "Melbourne web development agency specializing in security-first custom websites, GDPR compliance, and digital protection services. Enterprise security built in from day one.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -199,12 +199,12 @@ export default function Home() {
     <>
       <NextSeo
         title="Melbourne Web Development | Security"
-        description="Melbourne web development agency specializing in security-first custom websites, digital sovereignty, and enterprise privacy protection. Hand-coded solutions."
+        description="Melbourne web development agency specializing in security-first custom websites, GDPR compliance, and digital protection services. Enterprise security built in from day one."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
           title: 'Melbourne Web Development | Security',
-          description: 'Melbourne web development agency specializing in security-first custom websites, digital sovereignty, and enterprise privacy protection.',
+          description: 'Melbourne web development agency specializing in security-first custom websites, GDPR compliance, and digital protection services.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',

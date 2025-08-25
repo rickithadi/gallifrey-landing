@@ -1,5 +1,5 @@
 import { Card, CardContent } from "./ui/card";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, Shield, Target } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
 
 export function Testimonials() {
@@ -11,31 +11,31 @@ export function Testimonials() {
       name: "Sarah Chen",
       role: "CEO, TechFlow Solutions",
       company: "Melbourne Fintech",
-      content: "The level of craftsmanship was extraordinary—bespoke development from the ground up, every design element positioned with mathematical precision. Their custom website and application suite transformed how we serve clients, with performance that leaves competitors behind.",
+      content: "Custom website and application development that transformed how we serve clients. The performance improvements were immediate and significant.",
       rating: 5,
-      result: "Custom digital platform + 340% performance boost",
+      result: "340% performance improvement",
       avatar: "SC",
-      metrics: ["Bespoke application architecture", "Pixel-perfect design implementation", "Custom user experience flows"]
+      metrics: ["Custom application architecture", "Optimized performance", "Enhanced user experience"]
     },
     {
       name: "Michael Rodriguez", 
       role: "Managing Partner",
       company: "Rodriguez Legal",
-      content: "Their comprehensive approach to digital narrative control was game-changing. Complete SEO optimization, brand authority establishment, and negative content suppression. We now dominate search results for legal services in Melbourne with 5x more qualified leads.",
+      content: "Complete SEO optimization and digital reputation management. We now dominate search results for legal services in Melbourne with 5x more qualified leads.",
       rating: 5,
-      result: "5x qualified leads + Complete digital authority",
+      result: "5x increase in qualified leads",
       avatar: "MR",
-      metrics: ["Page 1 rankings for all target keywords", "Brand authority domination", "Negative content completely suppressed"]
+      metrics: ["Page 1 search rankings", "Brand authority established", "Reputation protection"]
     },
     {
       name: "Emma Thompson",
       role: "Creative Director",
       company: "Lifestyle Brand Collective",
-      content: "The enterprise-grade security implementation gave us complete peace of mind. GDPR compliance, data protection, and privacy infrastructure that protects both our business and our clients. Security became our competitive advantage instead of a concern.",
+      content: "Enterprise security implementation gave us complete peace of mind. GDPR compliance and data protection that protects both our business and clients.",
       rating: 5,
-      result: "Zero security incidents + Enterprise protection",
+      result: "Zero security incidents",
       avatar: "ET",
-      metrics: ["GDPR compliance achieved", "Zero data breaches", "Enterprise security standards"]
+      metrics: ["GDPR compliance", "Data protection", "Enterprise security"]
     }
   ];
 
@@ -62,12 +62,12 @@ export function Testimonials() {
           </div>
 
           <h2 id="testimonials-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl mx-auto">
-            Results that speak for
-            <span className="italic text-accent"> themselves</span>
+            Proven
+            <span className="italic text-accent"> Results</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Measurable SEO growth and digital narrative control that drives real revenue impact. Each solution is meticulously crafted—sophisticated architecture that search engines reward and audiences trust, delivering both technical excellence and brand authority through precision-built digital experiences.
+            Melbourne businesses see measurable growth through our secure, custom websites and digital protection services.
           </p>
         </div>
 
@@ -146,26 +146,46 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Trust indicators with SEO focus */}
+        {/* Trust signals */}
         <div className="mt-16 text-center">
-          <p className="text-sm text-muted-foreground mb-6">
-            Delivering measurable SEO and business growth across industries
+          <p className="text-sm text-muted-foreground mb-8">
+            Trusted by Melbourne businesses across industries
           </p>
+          
+          {/* Client types */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-12">
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-4">
+              <div className="text-sm font-medium text-primary mb-2">Legal Firms</div>
+              <div className="text-xs text-muted-foreground">GDPR compliance & reputation management</div>
+            </div>
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-4">
+              <div className="text-sm font-medium text-primary mb-2">Financial Services</div>
+              <div className="text-xs text-muted-foreground">Enterprise security & custom platforms</div>
+            </div>
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-4">
+              <div className="text-sm font-medium text-primary mb-2">Healthcare Providers</div>
+              <div className="text-xs text-muted-foreground">Privacy protection & secure systems</div>
+            </div>
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-4">
+              <div className="text-sm font-medium text-primary mb-2">Creative Agencies</div>
+              <div className="text-xs text-muted-foreground">Custom development & brand protection</div>
+            </div>
+          </div>
+
+          {/* Guarantees */}
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-6">
-              <h4 className="font-medium text-primary mb-3">SEO & Search Dominance</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div>• Page 1 rankings for competitive keywords</div>
-                <div>• Local SEO dominance in Melbourne</div>
-                <div>• Negative content suppression & brand protection</div>
+              <Shield className="w-8 h-8 text-accent mx-auto mb-3" />
+              <h4 className="font-medium text-primary mb-3">Security Guarantee</h4>
+              <div className="text-sm text-muted-foreground">
+                Zero security incidents across all client projects. Enterprise-grade protection built in from day one.
               </div>
             </div>
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-6">
-              <h4 className="font-medium text-primary mb-3">Business Growth & Revenue</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div>• 5x qualified lead generation increases</div>
-                <div>• 275% average revenue growth</div>
-                <div>• Complete digital narrative control</div>
+              <Target className="w-8 h-8 text-accent mx-auto mb-3" />
+              <h4 className="font-medium text-primary mb-3">Results Guarantee</h4>
+              <div className="text-sm text-muted-foreground">
+                Measurable improvements in performance, security, and search rankings or we keep working until we get them.
               </div>
             </div>
           </div>
