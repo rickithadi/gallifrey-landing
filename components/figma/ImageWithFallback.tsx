@@ -21,7 +21,8 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
     }
   }
 
-  const { src, alt, width = 100, height = 100, fallbackSrc, ...imageProps } = props
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { src, alt, width = 100, height = 100, fallbackSrc: _fallbackSrc, ...imageProps } = props
 
   return didError ? (
     <div

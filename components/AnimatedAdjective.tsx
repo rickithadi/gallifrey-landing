@@ -6,15 +6,15 @@ interface AnimatedAdjectiveProps {
 
 export const AnimatedAdjective = React.memo(function AnimatedAdjective({ className = "" }: AnimatedAdjectiveProps) {
   const adjectives = useMemo(() => [
-    { word: 'sophisticated', style: 'tracking-wide' },
-    { word: 'thoughtful', style: 'tracking-normal' },
-    { word: 'purposeful', style: 'tracking-wide' },
     { word: 'refined', style: 'tracking-wide' },
-    { word: 'meticulous', style: 'tracking-normal' },
-    { word: 'distinguished', style: 'tracking-tight' },
-    { word: 'considered', style: 'tracking-normal' },
-    { word: 'exceptional', style: 'tracking-normal' },
-    { word: 'deliberate', style: 'tracking-normal' },
+    { word: 'precise', style: 'tracking-normal' },
+    { word: 'elegant', style: 'tracking-wide' },
+    { word: 'focused', style: 'tracking-normal' },
+    { word: 'polished', style: 'tracking-normal' },
+    { word: 'strategic', style: 'tracking-tight' },
+    { word: 'crafted', style: 'tracking-normal' },
+    { word: 'premium', style: 'tracking-wide' },
+    { word: 'tailored', style: 'tracking-normal' },
     { word: 'artful', style: 'tracking-wide' }
   ], []);
 
@@ -24,35 +24,33 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
   const measureRef = useRef<HTMLSpanElement>(null);
   const hiddenMeasureRef = useRef<HTMLSpanElement>(null);
   
-  // Find the longest word to reserve space
-  const longestWord = useMemo(() => {
-    return adjectives.reduce((longest, current) => 
-      current.word.length > longest.word.length ? current : longest
-    );
-  }, [adjectives]);
-
-  // Calculate the actual rendered width of the longest word
+  // Calculate width for current word (simpler approach)
   useLayoutEffect(() => {
     if (hiddenMeasureRef.current) {
       const width = hiddenMeasureRef.current.getBoundingClientRect().width;
       setCalculatedWidth(width);
     }
-  }, [longestWord, className]);
+  }, [currentIndex, className, adjectives]);
 
 
 
   useEffect(() => {
     const interval = setInterval(() => {
+      // Start fade out
       setIsVisible(false);
 
       setTimeout(() => {
+        // Change to next word
         setCurrentIndex((prevIndex) =>
           prevIndex === adjectives.length - 1 ? 0 : prevIndex + 1
         );
-        setIsVisible(true);
-      }, 600); // Executive pause for readability and authority building
+        
+        setTimeout(() => {
+          setIsVisible(true);
+        }, 100); // Small delay to ensure width is calculated
+      }, 250); // Quick transition
 
-    }, 6000); // Executive-paced 6 seconds for thoughtful scanning
+    }, 4000); // Clean 4-second intervals
 
     return () => clearInterval(interval);
   }, [adjectives.length]);
@@ -66,25 +64,26 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
         aria-hidden="true"
         style={{ top: '-9999px' }}
       >
-        {longestWord.word}
+        {adjectives[currentIndex]?.word || ''}
       </span>
       
-      {/* Space reservation container */}
+      {/* Space reservation container - simpler with consistent sizing */}
       <span 
-        className="inline-block"
+        className="inline-block transition-all duration-200 ease-out"
         style={{ 
           width: calculatedWidth ? `${calculatedWidth}px` : 'auto',
-          minWidth: calculatedWidth ? `${calculatedWidth}px` : '12ch' // Fallback
+          minWidth: '9ch' // Consistent baseline for shorter words
         }}
       >
         {/* Actual animated text */}
         <span
           ref={measureRef}
-          className={`absolute left-0 top-0 whitespace-nowrap transition-all duration-900 ease-out ${isVisible ? 'opacity-100 translate-y-0 font-medium' : 'opacity-0 translate-y-1 font-normal'} ${adjectives[currentIndex]?.style || ''} ${className}`}
+          className={`absolute left-0 top-0 whitespace-nowrap transition-all duration-400 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95'} ${adjectives[currentIndex]?.style || ''} ${className}`}
           style={{
-            transitionTimingFunction: 'cubic-bezier(0.23, 1, 0.32, 1)',
-            textShadow: isVisible ? '0 1px 2px rgba(45, 90, 135, 0.1)' : 'none',
-            letterSpacing: isVisible ? '0.02em' : '-0.01em'
+            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+            textShadow: isVisible ? '0 1px 3px rgba(45, 90, 135, 0.12)' : 'none',
+            letterSpacing: isVisible ? '0.01em' : '0em',
+            fontWeight: isVisible ? '500' : '400'
           }}
         >
           {adjectives[currentIndex]?.word || ''}

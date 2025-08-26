@@ -331,30 +331,30 @@ function Scene() {
 }
 
 export function HeroThreeBackground({ className = "" }: HeroThreeBackgroundProps) {
-  const [motionAllowed, setMotionAllowed] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLowPerformance, setIsLowPerformance] = useState(false);
+  // const [motionAllowed, setMotionAllowed] = useState(true);
+  // const [isMobile, setIsMobile] = useState(false);
+  // const [isLowPerformance, setIsLowPerformance] = useState(false);
 
-  useEffect(() => {
-    // Check for reduced motion preference
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setMotionAllowed(!mediaQuery.matches);
-    
-    const handleChange = () => setMotionAllowed(!mediaQuery.matches);
-    mediaQuery.addListener(handleChange);
+  // useEffect(() => {
+  //   // Check for reduced motion preference
+  //   const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  //   setMotionAllowed(!mediaQuery.matches);
+  //   
+  //   const handleChange = () => setMotionAllowed(!mediaQuery.matches);
+  //   mediaQuery.addListener(handleChange);
 
-    // Detect mobile devices for performance optimization
-    const mobileCheck = window.matchMedia('(max-width: 768px)');
-    setIsMobile(mobileCheck.matches);
+  //   // Detect mobile devices for performance optimization
+  //   const mobileCheck = window.matchMedia('(max-width: 768px)');
+  //   setIsMobile(mobileCheck.matches);
 
-    // Enhanced business device detection
-    const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
-    const isSlowConnection = Boolean(connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g'));
-    const isLowEndDevice = Boolean(navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2);
-    setIsLowPerformance(isSlowConnection || isLowEndDevice);
+  //   // Enhanced business device detection
+  //   const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
+  //   const isSlowConnection = Boolean(connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g'));
+  //   const isLowEndDevice = Boolean(navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2);
+  //   setIsLowPerformance(isSlowConnection || isLowEndDevice);
 
-    return () => mediaQuery.removeListener(handleChange);
-  }, []);
+  //   return () => mediaQuery.removeListener(handleChange);
+  // }, []);
 
   // Enhanced decision logic for enterprise contexts
   // Temporarily disable Three.js for build

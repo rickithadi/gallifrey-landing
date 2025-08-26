@@ -10,9 +10,9 @@ import { PlaceholderAnimation } from "./PlaceholderAnimation";
 import { PerformanceProfiler } from "./PerformanceProfiler";
 import dynamic from "next/dynamic";
 
-// Use simple background for production build
+// Use Gallifreyan Three.js background
 const HeroThreeBackground = dynamic(
-  () => import("./HeroThreeBackgroundSimple").then(mod => ({ default: mod.HeroThreeBackground })),
+  () => import("./GallifreyanThreeBackground").then(mod => ({ default: mod.GallifreyanThreeBackground })),
   { 
     ssr: false, 
     loading: () => <PlaceholderAnimation />
