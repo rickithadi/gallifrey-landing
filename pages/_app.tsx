@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <DefaultSeo
         titleTemplate="%s | Gallifrey Consulting"
         defaultTitle="Gallifrey Consulting - Security-First Web Development Melbourne"
-        description="Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $500. Own your digital narrative with custom web solutions."
+        description="Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $1000. Own your digital narrative with custom web solutions."
         canonical="https://gallifrey.consulting"
         openGraph={{
           type: 'website',
@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
           url: 'https://gallifrey.consulting',
           site_name: 'Gallifrey Consulting',
           title: 'Gallifrey Consulting - Security-First Web Development Melbourne',
-          description: 'Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $500. Own your digital narrative with custom web solutions.',
+          description: 'Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $1000. Own your digital narrative with custom web solutions.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',

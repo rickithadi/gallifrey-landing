@@ -36,10 +36,10 @@ Gallifrey Consulting operates a dual-brand strategy (Nike-inspired model):
 - Mission: Breaking free from Big Tech dependency through platform-independent solutions
 
 ### Service Packages ("Own Your Narrative")
-- **Family Protection Starter** ($500): Platform-proof family memories
+- **Personal Website** ($1000): Platform-proof digital foundation
 - **Creator Liberation** ($1,200): Escape platform prison
 - **Professional Authority** ($2,500): Business continuity guarantee
-- **Enterprise Digital Sovereignty** ($5,000+): Complete platform independence
+- **Enterprise Digital Footprint Assessment** ($5,000+): Complete platform independence
 
 ### Core Messaging Framework
 - **Problem**: De-platforming risk, algorithm manipulation, data exploitation
@@ -77,7 +77,7 @@ The project supports two distinct brand identities:
 
 **Own Your Narrative Campaign**
 - `oyn-stone-*`, `oyn-orange-*` color scales
-- Warm espresso palette for digital sovereignty messaging
+- Warm espresso palette for digital footprint assessment messaging
 - Used in `/own-your-narrative` page
 
 #### Typography
@@ -144,7 +144,7 @@ The project supports two distinct brand identities:
 #### Own Your Narrative
 - Separate page at `/own-your-narrative`
 - Distinct visual identity with warm color palette
-- Digital sovereignty and creator economy messaging
+- Digital footprint assessment and creator economy messaging
 - Temporarily hidden CTAs in main landing page
 
 ### Development Guidelines

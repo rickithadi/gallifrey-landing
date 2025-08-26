@@ -111,17 +111,17 @@ let sharedMaterials: Record<string, THREE.Material> | null = null;
 
 function getSharedMaterials() {
   if (!sharedMaterials) {
-    // Subtle but visible unified Gallifrey Teal color scheme
+    // Darker, more prominent Gallifrey Teal color scheme
     sharedMaterials = {
-      tealPrimary1: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.4 }),
-      tealPrimary2: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.35 }),
-      tealPrimary3: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.3 }),
-      tealPrimary4: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.25 }),
-      tealAccent: new THREE.MeshBasicMaterial({ color: 0x3A6B93, transparent: true, opacity: 0.2 }), // Subtle lighter teal
-      tealGlow1: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.15 }),
-      tealGlow2: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.12 }),
-      tealGlow3: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.1 }),
-      tealGlow4: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.08 }),
+      tealPrimary1: new THREE.MeshBasicMaterial({ color: 0x234669, transparent: true, opacity: 0.6 }),
+      tealPrimary2: new THREE.MeshBasicMaterial({ color: 0x234669, transparent: true, opacity: 0.5 }),
+      tealPrimary3: new THREE.MeshBasicMaterial({ color: 0x1B365D, transparent: true, opacity: 0.45 }),
+      tealPrimary4: new THREE.MeshBasicMaterial({ color: 0x1B365D, transparent: true, opacity: 0.4 }),
+      tealAccent: new THREE.MeshBasicMaterial({ color: 0x2D5A87, transparent: true, opacity: 0.35 }), // Darker accent
+      tealGlow1: new THREE.MeshBasicMaterial({ color: 0x234669, transparent: true, opacity: 0.25 }),
+      tealGlow2: new THREE.MeshBasicMaterial({ color: 0x234669, transparent: true, opacity: 0.2 }),
+      tealGlow3: new THREE.MeshBasicMaterial({ color: 0x1B365D, transparent: true, opacity: 0.18 }),
+      tealGlow4: new THREE.MeshBasicMaterial({ color: 0x1B365D, transparent: true, opacity: 0.15 }),
     };
   }
   return sharedMaterials;
@@ -160,7 +160,8 @@ function TraversingRing3D({
   scale,
   speed,
   spinSpeed,
-  quality
+  quality,
+  mousePosition
 }: {
   startPosition: [number, number, number];
   endPosition: [number, number, number];
@@ -169,6 +170,7 @@ function TraversingRing3D({
   speed: number;
   spinSpeed: number;
   quality: QualitySettings;
+  mousePosition: React.RefObject<THREE.Vector2>;
 }) {
   const groupRef = useRef<THREE.Group>(null);
   const innerElementsRef = useRef<THREE.Group>(null);
@@ -200,12 +202,36 @@ function TraversingRing3D({
     }
     
     // Interpolate position between start and end
-    const currentPos = new THREE.Vector3().lerpVectors(
+    const basePos = new THREE.Vector3().lerpVectors(
       new THREE.Vector3(...startPosition),
       new THREE.Vector3(...endPosition),
       progress.current
     );
-    groupRef.current.position.copy(currentPos);
+    
+    // Apply mouse repel effect
+    if (mousePosition.current) {
+      const mouse3D = new THREE.Vector3(
+        mousePosition.current.x * 6, // Scale to match camera distance
+        mousePosition.current.y * 4,
+        0
+      );
+      
+      // Calculate distance from mouse to ring
+      const distance = basePos.distanceTo(mouse3D);
+      const repelStrength = Math.max(0, 1 - distance / 8); // Repel within 8 units
+      
+      if (repelStrength > 0) {
+        // Calculate repel direction (away from mouse)
+        const repelDirection = new THREE.Vector3()
+          .subVectors(basePos, mouse3D)
+          .normalize()
+          .multiplyScalar(repelStrength * 2); // Repel distance
+          
+        basePos.add(repelDirection);
+      }
+    }
+    
+    groupRef.current.position.copy(basePos);
     
     // Set base rotation from config
     groupRef.current.rotation.set(...rotation);
@@ -334,6 +360,8 @@ function GallifreyanScene() {
   const groupRef = useRef<THREE.Group>(null);
   const [motionAllowed, setMotionAllowed] = useState(true);
   const [currentQuality, setCurrentQuality] = useState<QualitySettings>(QUALITY_PRESETS.medium);
+  const mousePos = useRef(new THREE.Vector2(0, 0));
+  const targetMousePos = useRef(new THREE.Vector2(0, 0));
 
   useEffect(() => {
     // Respect user's motion preferences
@@ -355,10 +383,30 @@ function GallifreyanScene() {
       setCurrentQuality(QUALITY_PRESETS.high);
     }
 
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
+    // Mouse tracking for repel effect
+    const handleMouseMove = (event: MouseEvent) => {
+      if (!motionAllowed) return;
+      
+      // Convert mouse position to normalized device coordinates (-1 to +1)
+      targetMousePos.current.x = (event.clientX / window.innerWidth) * 2 - 1;
+      targetMousePos.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    };
 
-  // No global rotation needed - rings move individually
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [motionAllowed]);
+
+  // Smooth mouse position interpolation
+  useFrame(() => {
+    if (!motionAllowed) return;
+    
+    // Smoothly interpolate mouse position for natural movement
+    mousePos.current.lerp(targetMousePos.current, 0.05);
+  });
 
   return (
     <group ref={groupRef}>
@@ -373,6 +421,7 @@ function GallifreyanScene() {
           speed={motionAllowed ? config.speed : 0}
           spinSpeed={motionAllowed ? config.spinSpeed : 0}
           quality={currentQuality}
+          mousePosition={mousePos}
         />
       ))}
       

@@ -28,11 +28,12 @@ export function OwnYourNarrativeHeader({ variant = "blur" }: OwnYourNarrativeHea
               <span className="hidden md:inline text-sm font-medium">Back to Gallifrey</span>
             </Link>
 
-            {/* Logo/Brand for Own Your Narrative */}
+            {/* Campaign Brand - Typography Focus */}
             <div className="ml-4 pl-4 border-l border-gray-200">
-              <Link href="/own-your-narrative" className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-oyn-orange-600 to-oyn-orange-500 rounded-lg"></div>
-                <span className="font-semibold text-gray-900 hidden sm:inline">Own Your Narrative</span>
+              <Link href="/own-your-narrative" className="group">
+                <span className="font-heading font-medium text-gray-900 group-hover:text-oyn-orange-600 transition-colors">
+                  Own Your <span className="text-oyn-orange-600 font-semibold">Narrative</span>
+                </span>
               </Link>
             </div>
           </div>

@@ -154,7 +154,7 @@ ${formData.additionalContext || 'None provided'}
     }
     
     // Also redirect to Calendly with pre-filled information
-    const calendlyUrl = `https://calendly.com/rickithadi/strategic-discovery?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`;
+    const calendlyUrl = `https://calendly.com/rickithadi/30min?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`;
     window.open(calendlyUrl, '_blank');
   };
 
@@ -498,7 +498,7 @@ ${formData.additionalContext || 'None provided'}
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-6"
                 asChild
               >
-                <a href="https://calendly.com/rickithadi/strategic-discovery" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
                   Schedule Discovery Call
                   <Calendar className="w-4 h-4 ml-2" />
                 </a>

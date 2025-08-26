@@ -22,7 +22,7 @@ export function TrustSignals() {
     {
       icon: <Target className="w-6 h-6 text-accent" />,
       title: "Strategic Consulting",
-      subtitle: "Digital Sovereignty Focus",
+      subtitle: "Digital Footprint Assessment Focus",
       description: "Platform independence and competitive positioning expertise"
     },
     {

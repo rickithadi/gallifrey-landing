@@ -256,7 +256,7 @@ export function OwnYourNarrative() {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-oyn-orange-50 rounded-lg mb-4">
                     <Globe className="w-8 h-8 text-oyn-orange-600" />
                   </div>
-                  <span className="text-sm font-medium text-oyn-orange-600 uppercase tracking-wider">From $500</span>
+                  <span className="text-sm font-medium text-oyn-orange-600 uppercase tracking-wider">From $1000</span>
                 </div>
 
                 <h3 className="text-2xl font-heading font-medium mb-4 text-oyn-stone-800">Personal Website</h3>
@@ -563,7 +563,7 @@ export function OwnYourNarrative() {
                       required
                     >
                       <option value="">What are you looking for?</option>
-                      <option value="personal">Personal Website ($500+)</option>
+                      <option value="personal">Personal Website ($1000+)</option>
                       <option value="custom">Custom Platform ($2,500+)</option>
                       <option value="authority">Authority Platform ($5,000+)</option>
                       <option value="consultation">Just exploring options</option>

@@ -67,12 +67,12 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
         {adjectives[currentIndex]?.word || ''}
       </span>
       
-      {/* Space reservation container - simpler with consistent sizing */}
+      {/* Space reservation container - minimal reserved space */}
       <span 
-        className="inline-block transition-all duration-200 ease-out"
+        className="inline-block transition-all duration-150 ease-out"
         style={{ 
           width: calculatedWidth ? `${calculatedWidth}px` : 'auto',
-          minWidth: '9ch' // Consistent baseline for shorter words
+          minWidth: calculatedWidth ? `${calculatedWidth}px` : 'auto' // No fallback - trust the calculation
         }}
       >
         {/* Actual animated text */}
