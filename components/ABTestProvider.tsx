@@ -16,7 +16,7 @@ interface ABTestContextType {
 const ABTestContext = createContext<ABTestContextType | undefined>(undefined);
 
 export function ABTestProvider({ children }: { children: React.ReactNode }) {
-  const [variant, setVariant] = useState<ColorVariant>('steel-blue-teal');
+  const [variant, setVariant] = useState<ColorVariant>('corporate-teal');
 
   useEffect(() => {
     const assignedVariant = getColorVariant();

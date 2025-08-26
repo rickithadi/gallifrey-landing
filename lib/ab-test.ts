@@ -25,10 +25,10 @@ export const COLOR_VARIANTS: Record<ColorVariant, ColorConfig> = {
   },
 };
 
-// Get variant from URL parameter or random assignment
+// Get variant from URL parameter or default to corporate-teal
 export function getColorVariant(): ColorVariant {
   if (typeof window === 'undefined') {
-    return 'steel-blue-teal'; // Default for SSR
+    return 'corporate-teal'; // Default for SSR - commit to green variant
   }
 
   // Check URL parameter first (for manual testing)
@@ -38,20 +38,13 @@ export function getColorVariant(): ColorVariant {
     return urlVariant;
   }
 
-  // Check localStorage for existing assignment
-  const stored = localStorage.getItem('color-variant') as ColorVariant;
-  if (stored && COLOR_VARIANTS[stored]) {
-    return stored;
-  }
-
-  // Random assignment (50/50 split)
-  const variants: ColorVariant[] = ['corporate-teal', 'steel-blue-teal'];
-  const randomVariant = variants[Math.floor(Math.random() * variants.length)];
+  // Default to corporate-teal (green) variant - A/B test concluded
+  const selectedVariant: ColorVariant = 'corporate-teal';
   
   // Store assignment
-  localStorage.setItem('color-variant', randomVariant);
+  localStorage.setItem('color-variant', selectedVariant);
   
-  return randomVariant;
+  return selectedVariant;
 }
 
 // Apply color variant to CSS variables
