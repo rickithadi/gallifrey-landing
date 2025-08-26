@@ -1,31 +1,55 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "./ui/button";
 import { Logo } from "./Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { href: "#services", label: "Services" },
-    // { href: "#work", label: "Work" },
-    // { href: "/own-your-narrative", label: "Own Your Narrative" }, // Temporarily hidden
-    { href: "#pricing", label: "Pricing" },
+    { href: "#testimonials", label: "Results" },
+    { href: "#pricing", label: "Investment" },
+    { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
 
   return (
-    <header className="border-b border-border/30 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+    <>
+      {/* Skip to main content link for accessibility */}
+      <a 
+        href="#services" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded"
+      >
+        Skip to main content
+      </a>
+      <header className={`border-b border-border/30 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/98 shadow-sm py-2' 
+        : 'bg-white/95 py-0'
+    }`}>
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? 'h-14' : 'h-16'
+        }`}>
           {/* Logo */}
           <div className="flex items-center">
             <Logo width={120} height={37} />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -39,14 +63,22 @@ export function Header() {
 
           {/* CTA Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
+            {/* For Creators Link */}
+            <Link
+              href="/own-your-narrative"
+              className="hidden md:flex items-center gap-1.5 text-sm font-medium text-oyn-orange-600 hover:text-oyn-orange-700 transition-colors duration-200"
+            >
+              <Sparkles className="w-4 h-4" />
+              <span>For Creators</span>
+            </Link>
+            
             <Button
-              variant="outline"
               size="sm"
-              className="hidden sm:flex text-sm border-muted-foreground/20 hover:bg-muted/50"
+              className="hidden sm:flex text-sm bg-primary hover:bg-primary/90 text-primary-foreground px-6"
               asChild
             >
               <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
-                Get in touch
+                Get Started
               </a>
             </Button>
 
@@ -68,7 +100,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden py-6 border-t border-border/30">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-4" role="navigation" aria-label="Mobile navigation">
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -79,6 +111,14 @@ export function Header() {
                   {item.label}
                 </a>
               ))}
+              <Link
+                href="/own-your-narrative"
+                className="text-sm font-medium text-oyn-orange-600 hover:text-oyn-orange-700 transition-colors duration-200 py-2 flex items-center gap-1.5"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>For Creators</span>
+              </Link>
               <div className="pt-4 border-t border-border/30">
                 <Button
                   variant="outline"
@@ -87,7 +127,7 @@ export function Header() {
                   asChild
                 >
                   <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
-                    Get in touch
+                    Get Started
                   </a>
                 </Button>
               </div>
@@ -96,5 +136,6 @@ export function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }

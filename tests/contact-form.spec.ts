@@ -3,11 +3,15 @@ import { test, expect } from '@playwright/test';
 test.describe('Contact Form Functionality', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    // Scroll to contact section
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    // Wait for page to load completely
+    await page.waitForLoadState('networkidle');
   });
 
   test('contact form is visible and contains required fields', async ({ page }) => {
+    // Scroll to contact section first
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await page.waitForTimeout(1000);
+    
     // Find the contact form
     const form = page.locator('form, [data-testid="contact-form"]');
     await expect(form).toBeVisible();
@@ -167,11 +171,16 @@ test.describe('Contact Form Functionality', () => {
   });
 
   test('consultation booking option is available', async ({ page }) => {
-    // Look for consultation-related CTAs
-    const consultationCTA = page.locator('text=/consultation|book|schedule|calendar/i, [href*="calendar"], [href*="booking"]');
+    // Look for consultation-related CTAs with more flexible matching
+    const consultationCTA = page.locator('text=/consultation|book|schedule|discovery.*call|30.*minute/i');
+    const calendarLinks = page.locator('[href*="calendar"], [href*="booking"], [href*="calendly"], [href*="cal.com"]');
+    const consultationButtons = page.locator('button:has-text("consultation"), button:has-text("schedule"), button:has-text("book"), button:has-text("discovery")');
     
-    const hasConsultationOption = await consultationCTA.first().isVisible();
-    expect(hasConsultationOption).toBe(true);
+    const hasConsultationText = await consultationCTA.first().isVisible();
+    const hasCalendarLink = await calendarLinks.first().isVisible();
+    const hasConsultationButton = await consultationButtons.first().isVisible();
+    
+    expect(hasConsultationText || hasCalendarLink || hasConsultationButton).toBe(true);
   });
 
   test('30-minute consultation guarantee is mentioned', async ({ page }) => {

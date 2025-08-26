@@ -54,6 +54,12 @@
     "components/ui/tabs.tsx",
     "components/ui/toggle-group.tsx",
     "components/ui/toggle.tsx",
-    "components/ui/tooltip.tsx"
+    "components/ui/tooltip.tsx",
+    "components/ui/brand-card.tsx",
+    "components/ui/section.tsx",
+    "components/CursorFollowingElements.tsx",
+    "components/HeroThreeBackground.tsx",
+    "components/three/*.tsx",
+    "lib/useCursorTracking.ts"
   ]
 }

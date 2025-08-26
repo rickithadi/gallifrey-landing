@@ -99,7 +99,7 @@ export function Contact() {
             <div className="w-12 h-px bg-accent" role="presentation"></div>
           </div>
 
-          <h2 id="contact-heading" className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-primary max-w-4xl">
+          <h2 id="contact-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl">
             Let&apos;s build something
             <span className="italic text-accent"> exceptional together</span>
           </h2>
@@ -174,9 +174,9 @@ export function Contact() {
                         <SelectValue placeholder="Select budget range" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="essential">$500 - $1,500 (Essential)</SelectItem>
-                        <SelectItem value="professional">$1,500 - $5,000 (Professional)</SelectItem>
-                        <SelectItem value="enterprise">$5,000+ (Enterprise)</SelectItem>
+                        <SelectItem value="foundation">Foundation Package</SelectItem>
+                        <SelectItem value="professional">Professional Package</SelectItem>
+                        <SelectItem value="enterprise">Enterprise Package</SelectItem>
                         <SelectItem value="unsure">Not sure yet</SelectItem>
                       </SelectContent>
                     </Select>
@@ -232,8 +232,9 @@ export function Contact() {
 
                 <Button
                   type="submit"
+                  variant="gallifrey"
                   disabled={state.submitting || !formData.privacy}
-                  className="bg-primary hover:bg-primary/90 px-8 py-3 group disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-8 py-4 text-base min-h-[48px] group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {state.submitting ? (
                     <>

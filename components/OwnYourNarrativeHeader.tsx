@@ -23,32 +23,33 @@ export function OwnYourNarrativeHeader({ variant = "blur" }: OwnYourNarrativeHea
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Left: Back to Main Site */}
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors">
+            <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-oyn-orange-600 transition-colors">
               <ArrowLeft className="w-4 h-4" />
               <span className="hidden md:inline text-sm font-medium">Back to Gallifrey</span>
             </Link>
 
-            {/* Logo/Brand for Own Your Narrative */}
+            {/* Campaign Brand - Typography Focus */}
             <div className="ml-4 pl-4 border-l border-gray-200">
-              <Link href="/own-your-narrative" className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-orange-500 rounded-lg"></div>
-                <span className="font-semibold text-gray-900 hidden sm:inline">Own Your Narrative</span>
+              <Link href="/own-your-narrative" className="group">
+                <span className="font-heading font-medium text-gray-900 group-hover:text-oyn-orange-600 transition-colors">
+                  Own Your <span className="text-oyn-orange-600 font-semibold">Narrative</span>
+                </span>
               </Link>
             </div>
           </div>
 
           {/* Right: Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#services" className="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium">
+            <Link href="#services" className="text-gray-600 hover:text-oyn-orange-600 transition-colors text-sm font-medium">
               Services
             </Link>
-            <Link href="#process" className="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium">
+            <Link href="#process" className="text-gray-600 hover:text-oyn-orange-600 transition-colors text-sm font-medium">
               Process
             </Link>
-            <Link href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium">
+            <Link href="#contact" className="text-gray-600 hover:text-oyn-orange-600 transition-colors text-sm font-medium">
               Contact
             </Link>
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg">
+            <Button className="bg-oyn-orange-600 hover:bg-oyn-orange-700 text-white px-6 py-2 rounded-lg">
               Get Started
             </Button>
           </nav>
@@ -56,7 +57,7 @@ export function OwnYourNarrativeHeader({ variant = "blur" }: OwnYourNarrativeHea
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-purple-600 transition-colors"
+            className="md:hidden p-2 text-gray-600 hover:text-oyn-orange-600 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -70,26 +71,26 @@ export function OwnYourNarrativeHeader({ variant = "blur" }: OwnYourNarrativeHea
             <nav className="flex flex-col gap-4">
               <Link
                 href="#services"
-                className="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium py-2"
+                className="text-gray-600 hover:text-oyn-orange-600 transition-colors text-sm font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="#process"
-                className="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium py-2"
+                className="text-gray-600 hover:text-oyn-orange-600 transition-colors text-sm font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Process
               </Link>
               <Link
                 href="#contact"
-                className="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium py-2"
+                className="text-gray-600 hover:text-oyn-orange-600 transition-colors text-sm font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white w-full py-3 rounded-lg mt-2">
+              <Button className="bg-oyn-orange-600 hover:bg-oyn-orange-700 text-white w-full py-3 rounded-lg mt-2">
                 Get Started
               </Button>
             </nav>

@@ -19,6 +19,11 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        // Brand-specific variants
+        gallifrey: "bg-gallifrey-teal text-gallifrey-white hover:bg-gallifrey-teal-dark shadow-gallifrey hover:shadow-gallifrey-lg transition-all duration-300",
+        "gallifrey-outline": "border border-gallifrey-border text-gallifrey-teal hover:bg-gallifrey-off-white shadow-sm hover:shadow-gallifrey transition-all duration-300",
+        oyn: "bg-oyn-orange-600 text-white hover:bg-oyn-orange-700 shadow-oyn hover:shadow-oyn-lg transition-all duration-300",
+        "oyn-outline": "border border-oyn-stone-300 text-oyn-stone-700 hover:bg-oyn-stone-100 shadow-sm hover:shadow-oyn transition-all duration-300",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

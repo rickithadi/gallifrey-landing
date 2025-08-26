@@ -1,19 +1,44 @@
-import '@/styles/globals.css'
-
-import type { AppProps } from 'next/app'
-import { DefaultSeo } from 'next-seo'
-import { GoogleAnalytics } from '@next/third-parties/google'
-import React from 'react'
-import { ABTestProvider } from '@/components/ABTestProvider'
-import { VariantToggle } from '@/components/VariantToggle'
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import React, { useEffect } from 'react';
+import { ABTestProvider } from '@/components/ABTestProvider';
+import { LayoutABTestProvider } from '@/components/LayoutABTestProvider';
+import { VariantToggle } from '@/components/VariantToggle';
+import { initWebVitalsMonitoring, initCustomPerformanceMonitoring, generatePerformanceReport } from '@/lib/web-vitals';
 
 export default function App({ Component, pageProps }: AppProps) {
+  // Initialize Core Web Vitals and performance monitoring
+  useEffect(() => {
+    // Initialize Web Vitals monitoring on client side
+    initWebVitalsMonitoring();
+    initCustomPerformanceMonitoring();
+    
+    // Generate performance report after page load
+    const handleLoad = () => {
+      setTimeout(() => {
+        generatePerformanceReport();
+      }, 1000); // Wait for all resources to settle
+    };
+    
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+    
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <>
       <DefaultSeo
         titleTemplate="%s | Gallifrey Consulting"
         defaultTitle="Gallifrey Consulting - Security-First Web Development Melbourne"
-        description="Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $500. Own your digital narrative with custom web solutions."
+        description="Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $1000. Own your digital narrative with custom web solutions."
         canonical="https://gallifrey.consulting"
         openGraph={{
           type: 'website',
@@ -21,7 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
           url: 'https://gallifrey.consulting',
           site_name: 'Gallifrey Consulting',
           title: 'Gallifrey Consulting - Security-First Web Development Melbourne',
-          description: 'Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $500. Own your digital narrative with custom web solutions.',
+          description: 'Melbourne-based web development agency specializing in secure, GDPR-compliant websites. Starting at $1000. Own your digital narrative with custom web solutions.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -104,11 +129,22 @@ export default function App({ Component, pageProps }: AppProps) {
             rel: 'manifest',
             href: '/site.webmanifest',
           },
+          {
+            rel: 'preconnect',
+            href: 'https://fonts.googleapis.com',
+          },
+          {
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossOrigin: 'anonymous',
+          },
         ]}
       />
       <ABTestProvider>
-        <Component {...pageProps} />
-        <VariantToggle />
+        <LayoutABTestProvider>
+          <Component {...pageProps} />
+          <VariantToggle />
+        </LayoutABTestProvider>
       </ABTestProvider>
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />

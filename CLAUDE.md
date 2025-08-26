@@ -36,10 +36,10 @@ Gallifrey Consulting operates a dual-brand strategy (Nike-inspired model):
 - Mission: Breaking free from Big Tech dependency through platform-independent solutions
 
 ### Service Packages ("Own Your Narrative")
-- **Family Protection Starter** ($500): Platform-proof family memories
+- **Personal Website** ($1000): Platform-proof digital foundation
 - **Creator Liberation** ($1,200): Escape platform prison
 - **Professional Authority** ($2,500): Business continuity guarantee
-- **Enterprise Digital Sovereignty** ($5,000+): Complete platform independence
+- **Enterprise Digital Footprint Assessment** ($5,000+): Complete platform independence
 
 ### Core Messaging Framework
 - **Problem**: De-platforming risk, algorithm manipulation, data exploitation
@@ -77,7 +77,7 @@ The project supports two distinct brand identities:
 
 **Own Your Narrative Campaign**
 - `oyn-stone-*`, `oyn-orange-*` color scales
-- Warm espresso palette for digital sovereignty messaging
+- Warm espresso palette for digital footprint assessment messaging
 - Used in `/own-your-narrative` page
 
 #### Typography
@@ -144,7 +144,7 @@ The project supports two distinct brand identities:
 #### Own Your Narrative
 - Separate page at `/own-your-narrative`
 - Distinct visual identity with warm color palette
-- Digital sovereignty and creator economy messaging
+- Digital footprint assessment and creator economy messaging
 - Temporarily hidden CTAs in main landing page
 
 ### Development Guidelines
@@ -165,9 +165,11 @@ The project supports two distinct brand identities:
 
 ## Testing & Quality Assurance
 
-### Playwright Test Suite
-The project includes comprehensive end-to-end testing with Playwright:
+### Testing Strategy - Hybrid Approach
 
+The project implements a sophisticated dual-testing strategy combining Playwright for automation and MCP-Chrome for interactive development testing:
+
+#### Playwright Test Suite (CI/CD & Automation)
 **Test Scripts:**
 - `npm test` - Run all Playwright tests
 - `npm run test:ui` - Run tests with Playwright UI mode
@@ -175,6 +177,21 @@ The project includes comprehensive end-to-end testing with Playwright:
 - `npm run test:debug` - Debug tests step by step
 - `npm run test:report` - Show HTML test report
 - `npm run test:codegen` - Generate test code interactively
+
+#### MCP-Chrome Integration (Development & Interactive Testing)
+**New Testing Scripts:**
+- `npm run test:mcp` - Test mcp-chrome-bridge installation
+- `npm run test:interactive` - Start interactive testing with mcp-chrome
+- `npm run test:design-system` - Real-time design system validation
+- `npm run test:performance` - Live performance monitoring
+
+**Advantages of MCP-Chrome:**
+- Real-time testing in actual browser environment
+- Preserved login states and user sessions
+- AI-powered semantic content analysis
+- Cross-tab context management
+- Live performance monitoring
+- Interactive debugging capabilities
 
 **Test Categories:**
 - **Landing Page Tests** (`tests/landing-page.spec.ts`): Core functionality, navigation, responsive design
@@ -262,3 +279,48 @@ The design review workflow runs automatically on:
 - Some components may show TypeScript errors but are intentionally excluded
 - Console.log statements are removed in production builds
 - Google Analytics errors in development environment are expected and filtered out in tests
+
+## Multi-Agent Development Workflow
+
+### Overview
+This project implements a multi-agent development workflow using Claude Code, where specialized AI agents collaborate on the codebase through shared documentation files.
+
+### Agent Architecture
+- **Frontend Architecture Agent**: Component structure, state management, performance
+- **Backend/API Agent**: API routes, server logic, data flow optimization  
+- **UX/Design Agent**: User experience, accessibility, design consistency
+- **Code Review Agent**: Cross-cutting concerns, code quality, integration issues
+
+### Multi-Agent Commands
+- `npm run dev-with-agents` - Start development server with all agents
+- `npm run start-agents` - Start all four agents independently
+- `npm run agent:frontend` - Start frontend architecture agent
+- `npm run agent:backend` - Start backend/API agent  
+- `npm run agent:ux` - Start UX/design agent
+- `npm run agent:reviewer` - Start code review agent
+
+### Agent Communication
+Agents communicate asynchronously through markdown files in `./collaboration/`:
+- `frontend-notes.md` - Component and state management discussions
+- `backend-notes.md` - API and server-side architecture notes
+- `ux-notes.md` - User experience and design feedback
+- `review-notes.md` - Code review comments and integration concerns
+- `decisions.md` - Major architectural decisions and consensus
+
+### Agent Contexts
+Each agent has specialized context files in `./claude-contexts/` that define:
+- Specific roles and responsibilities
+- Communication protocols and formatting
+- Focus areas and technical concerns
+- File watch patterns for their domain
+
+### Benefits
+- **Continuous feedback** on code changes across multiple disciplines
+- **Asynchronous collaboration** between specialized perspectives
+- **Documentation** of design decisions and architectural evolution
+- **Learning opportunities** from diverse agent insights
+- **Consistency** in code quality and design patterns[byterover-mcp]
+
+# important 
+always use byterover-retrieve-knowledge tool to get the related context before any tasks 
+always use byterover-store-knowledge to store all the critical informations after sucessful tasks

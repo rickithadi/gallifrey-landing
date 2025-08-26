@@ -1,14 +1,29 @@
-import { Contact } from '@/components/Contact'
-import { Features } from '@/components/Features'
 import { Footer } from '@/components/Footer'
 import Head from 'next/head'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
-import { Pricing } from '@/components/Pricing'
-import { PrivacySecurity } from '@/components/PrivacySecurity'
 import { Services } from '@/components/Services'
-// import { Work } from '@/components/Work'
+import { Testimonials } from '@/components/Testimonials'
+import { TrustAndSecurity } from '@/components/TrustAndSecurity'
+import dynamic from 'next/dynamic'
+
+// Lazy load below-the-fold components
+const Pricing = dynamic(() => import('@/components/Pricing').then(mod => ({ default: mod.Pricing })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading pricing section" />
+})
+
+const FAQ = dynamic(() => import('@/components/FAQ').then(mod => ({ default: mod.FAQ })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-white animate-pulse" aria-label="Loading FAQ section" />
+})
+
+const ConsultativeContact = dynamic(() => import('@/components/ConsultativeContact').then(mod => ({ default: mod.ConsultativeContact })), {
+  ssr: false,
+  loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading contact section" />
+})
+
 
 export default function Home() {
   const structuredData = {
@@ -21,7 +36,7 @@ export default function Home() {
         "url": "https://gallifrey.consulting",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://gallifrey.consulting/gallifrey-logo.png",
+          "url": "https://gallifrey.consulting/gallifrey-logo.webp",
           "width": 436,
           "height": 133
         },
@@ -48,7 +63,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne pixel-perfect web development with obsessive attention to design detail. Custom-coded websites, bespoke design systems, and digital sovereignty solutions. Plus privacy protection and security services.",
+        "description": "Melbourne enterprise web development agency specializing in digital sovereignty, security-first custom solutions, GDPR compliance, and enterprise-grade digital protection services.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -82,8 +97,8 @@ export default function Home() {
       {
         "@type": "Service",
         "@id": "https://gallifrey.consulting/#customdevelopment",
-        "name": "Pixel-Perfect Web Development & Digital Sovereignty Services",
-        "description": "Custom-coded websites with obsessive design detail, bespoke design systems, plus digital sovereignty and privacy protection services",
+        "name": "Enterprise Web Development & Digital Sovereignty Services",
+        "description": "Enterprise-grade web development with security-first architecture, custom digital solutions, and comprehensive digital sovereignty services for business continuity",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -93,14 +108,14 @@ export default function Home() {
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Custom Development & Security Services",
+          "name": "Enterprise Development & Digital Sovereignty Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Pixel-Perfect Website Development",
-                "description": "Custom-coded websites with obsessive attention to design detail and mathematical precision"
+                "name": "Enterprise Website Development",
+                "description": "Security-first custom web development with enterprise-grade architecture and comprehensive digital protection"
               },
               "price": "1500",
               "priceCurrency": "AUD"
@@ -109,8 +124,8 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Bespoke Design Systems",
-                "description": "Hand-crafted design systems and component libraries built from scratch"
+                "name": "Enterprise Design Systems",
+                "description": "Scalable design systems and component libraries with enterprise-grade security and accessibility standards"
               },
               "price": "5000",
               "priceCurrency": "AUD"
@@ -119,8 +134,8 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Digital Sovereignty Services",
-                "description": "Privacy protection, data cleanup, and platform independence solutions"
+                "name": "Digital Sovereignty & Privacy Protection",
+                "description": "Comprehensive digital independence solutions including data protection, platform migration, and enterprise privacy compliance"
               },
               "price": "2500",
               "priceCurrency": "AUD"
@@ -133,7 +148,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#website",
         "url": "https://gallifrey.consulting",
         "name": "Gallifrey Consulting",
-        "description": "Pixel-Perfect Web Development Melbourne | Custom Design Systems",
+        "description": "Enterprise Web Development Melbourne | Digital Sovereignty & Security Solutions",
         "publisher": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -183,13 +198,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne"
-        description="Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800."
+        title="Custom Development Melbourne | Enterprise Security"
+        description="Melbourne's premier web agency. Security-first development, GDPR compliance, digital sovereignty. Professional web solutions with enterprise protection."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Pixel-Perfect Digital Experiences | Gallifrey Digital Melbourne',
-          description: 'Custom-coded websites with obsessive attention to design detail. Every pixel positioned with purpose, every interaction crafted to perfection. Starting at $800.',
+          title: 'Melbourne Web Development | Security-First Digital Solutions',
+          description: 'Melbourne web agency specializing in security-first development, GDPR compliance, and digital sovereignty solutions.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -203,7 +218,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'pixel perfect web development Melbourne, custom design systems, bespoke websites, digital sovereignty, privacy protection, hand-crafted development, boutique web development, trusted web development Melbourne'
+            content: 'Melbourne enterprise web development, digital sovereignty Melbourne, security-first development, GDPR compliance Melbourne, enterprise web solutions, custom website design Melbourne, data protection services, platform independence, digital narrative control, Melbourne web development agency, bespoke web development, privacy compliance, digital security consulting, enterprise security Melbourne'
           },
           {
             property: 'article:author',
@@ -226,69 +241,20 @@ export default function Home() {
             __html: JSON.stringify(structuredData),
           }}
         />
+        {/* Preload critical resources for better Core Web Vitals */}
+        <link rel="preload" href="/gallifrey-logo.webp" as="image" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       </Head>
       <div className="min-h-screen bg-white">
         <Header />
         <Hero />
         <Services />
-        <PrivacySecurity />
-        {/* <Work /> */}
-        <Features />
-
-        {/* Own Your Narrative Campaign CTA - Temporarily hidden */}
-        {/* <section className="py-20 px-4 bg-gradient-to-r from-[#1a237e] to-[#00695c] relative overflow-hidden">
-          <div className="container mx-auto max-w-4xl text-center relative z-10">
-            <div className="mb-6">
-              <span className="text-sm font-medium tracking-wider text-white/80 uppercase mb-4 block">
-                Digital Sovereignty
-              </span>
-              <div className="w-12 h-px bg-white/40 mx-auto mb-8"></div>
-            </div>
-
-            <h2 className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-6 text-white">
-              Ready to <span className="italic text-[#ffa726]">Own Your Narrative</span>?
-            </h2>
-
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
-              Stop building someone else&apos;s empire. Break free from Big Tech dependency with custom websites, data privacy protection, and complete digital independence.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/own-your-narrative"
-                className="inline-flex items-center px-8 py-3 bg-white text-[#1a237e] font-medium rounded-lg hover:bg-white/90 transition-colors"
-              >
-                Discover Digital Independence
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link
-                href="/own-your-narrative"
-                className="inline-flex items-center px-8 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-white/20">
-              <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-white/80">
-                <span>47 Data Brokers Removed</span>
-                <span>•</span>
-                <span>$2.3M Revenue Generated</span>
-                <span>•</span>
-                <span>100% Client Satisfaction</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#42a5f5]/20 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#ffa726]/20 to-transparent rounded-full blur-3xl"></div>
-        </section> */}
-
+        <Testimonials />
+        <TrustAndSecurity />
         <Pricing />
-        <Contact />
+        <FAQ />
+        <ConsultativeContact />
         <Footer />
       </div>
     </>

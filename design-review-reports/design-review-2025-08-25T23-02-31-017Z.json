@@ -1,0 +1,121 @@
+{
+  "timestamp": "2025-08-25T23:02:17.751Z",
+  "issues": [],
+  "warnings": [
+    {
+      "page": "main-landing",
+      "category": "SEO",
+      "message": "Title too long: 83 characters (should be under 60)",
+      "severity": "warning"
+    },
+    {
+      "page": "campaign",
+      "category": "SEO",
+      "message": "Title too long: 73 characters (should be under 60)",
+      "severity": "warning"
+    }
+  ],
+  "passed": [
+    {
+      "page": "main-landing",
+      "category": "Brand Colors",
+      "message": "Found 16 Gallifrey brand elements",
+      "severity": "success"
+    },
+    {
+      "page": "main-landing",
+      "category": "Typography",
+      "message": "Proper H1 usage",
+      "severity": "success"
+    },
+    {
+      "page": "main-landing",
+      "category": "Typography",
+      "message": "Heading font family correct",
+      "severity": "success"
+    },
+    {
+      "page": "main-landing",
+      "category": "Accessibility",
+      "message": "All images have alt text",
+      "severity": "success"
+    },
+    {
+      "page": "main-landing",
+      "category": "Responsive Design",
+      "message": "No horizontal scroll on mobile",
+      "severity": "success"
+    },
+    {
+      "page": "main-landing",
+      "category": "SEO",
+      "message": "Meta description length appropriate",
+      "severity": "success"
+    },
+    {
+      "page": "main-landing",
+      "category": "SEO",
+      "message": "Structured data present: 1 scripts",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "Campaign Colors",
+      "message": "Found 175 campaign elements",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "Typography",
+      "message": "Proper H1 usage",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "Typography",
+      "message": "Heading font family correct",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "Accessibility",
+      "message": "All images have alt text",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "Accessibility",
+      "message": "All form inputs have labels",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "Responsive Design",
+      "message": "No horizontal scroll on mobile",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "SEO",
+      "message": "Meta description length appropriate",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "SEO",
+      "message": "Structured data present: 1 scripts",
+      "severity": "success"
+    }
+  ],
+  "screenshots": [
+    "design-review-main-landing-1756162945925.png",
+    "design-review-campaign-1756162949588.png"
+  ],
+  "summary": {
+    "totalChecks": 17,
+    "issues": 0,
+    "warnings": 2,
+    "passed": 15,
+    "score": 94
+  }
+}
