@@ -13,7 +13,7 @@ export function Contact() {
   const formAnimation = useScrollAnimation<HTMLDivElement>();
   const sidebarAnimation = useScrollAnimation<HTMLDivElement>();
 
-  const [state, handleSubmit] = useForm("mgvzdpqo");
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mgvzdpqo');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
