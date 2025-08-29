@@ -38,6 +38,7 @@ export const Footer = React.memo(function Footer() {
             
             <div className="text-xs text-muted-foreground space-y-1">
               <p>© 2024 Gallifrey Consulting</p>
+              <p>ABN 69 696 168 286</p>
               <div className="flex gap-3">
                 <a href="#" className="hover:text-accent transition-colors">Privacy</a>
                 <a href="#" className="hover:text-accent transition-colors">Terms</a>

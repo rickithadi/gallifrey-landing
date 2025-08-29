@@ -23,19 +23,29 @@ export default function OwnYourNarrativePage() {
       {
         "@type": "Service",
         "@id": "https://gallifrey.consulting/own-your-narrative#digitalindependence",
-        "name": "Digital Independence & Sovereignty Services",
-        "description": "Stop building someone else's empire. Professional web development, data privacy protection, and complete digital independence at accessible prices.",
+        "name": "Enterprise Web Development & Digital Sovereignty Services",
+        "description": "Professional web development and digital sovereignty solutions for Melbourne businesses. Take control of your online presence and search results with custom websites and enterprise-grade security. Starting at $500.",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
-        "serviceType": "Digital Independence Solutions",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Australia"
-        },
+        "serviceType": "Professional Web Development Services",
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Australia"
+          },
+          {
+            "@type": "City",
+            "name": "Melbourne"
+          },
+          {
+            "@type": "State",
+            "name": "Victoria"
+          }
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Digital Independence Services",
+          "name": "Professional Web Development Services",
           "itemListElement": [
             {
               "@type": "Offer",
@@ -75,7 +85,7 @@ export default function OwnYourNarrativePage() {
         "@id": "https://gallifrey.consulting/own-your-narrative#webpage",
         "url": "https://gallifrey.consulting/own-your-narrative",
         "name": "Own Your Narrative - Digital Independence",
-        "description": "Stop being the product. Break free from Big Tech dependency with professional web development and data privacy protection at accessible prices.",
+        "description": "What happens when someone Googles your business? Take control of your search results with professional web development that puts you first.",
         "isPartOf": {
           "@id": "https://gallifrey.consulting/#website"
         },
@@ -89,13 +99,13 @@ export default function OwnYourNarrativePage() {
   return (
     <>
       <NextSeo
-        title="Digital Independence | Own Your Narrative"
-        description="Stop building someone else's empire. Break free from Big Tech with professional web development and digital independence solutions."
+        title="Melbourne Web Development | Google Search Results Optimization | Professional Websites from $500"
+        description="Professional web development Melbourne. Control your Google search results with custom websites that rank first. Platform-independent digital presence from $500. Free audit available."
         canonical="https://gallifrey.consulting/own-your-narrative"
         openGraph={{
           url: 'https://gallifrey.consulting/own-your-narrative',
-          title: 'Own Your Digital Narrative | Platform Independence',
-          description: 'Stop building someone else&apos;s empire. Break free from Big Tech with professional web development and digital independence solutions.',
+          title: 'Melbourne Web Development | Professional Website Design & SEO',
+          description: 'Professional web development in Melbourne. Custom websites that dominate Google search results. Platform-independent digital presence starting from $500.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image-narrative.jpg',
@@ -109,7 +119,7 @@ export default function OwnYourNarrativePage() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'digital independence, data ownership, privacy protection, Big Tech alternative, platform independence, digital sovereignty, custom websites, data privacy, small business websites, affordable web development, own your data, digital freedom'
+            content: 'melbourne web development, professional website design melbourne, custom website development, google search optimization, seo web design melbourne, business website melbourne, web developer melbourne, website design melbourne, professional web design, search engine optimization melbourne, custom web development melbourne, small business websites melbourne'
           },
           {
             property: 'article:author',

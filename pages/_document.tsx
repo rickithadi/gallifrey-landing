@@ -23,8 +23,7 @@ export default function Document() {
         <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#2D5A87" />
         
-        {/* Preload critical CSS for better Core Web Vitals */}
-        <link rel="preload" href="/styles/globals.css" as="style" />
+        {/* Note: CSS is loaded via _app.tsx import, no manual preload needed */}
       </Head>
       <body>
         <Main />
