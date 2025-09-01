@@ -1,7 +1,8 @@
 import { ArrowRight, Globe, Palette, Zap, CheckCircle } from "lucide-react";
 
 import { Button } from "./ui/button";
-import { GoogleSearchAnimation } from "./GoogleSearchAnimation";
+import { GoogleSearchSplitLayout as GoogleSearchAnimation } from "./GoogleSearchSplitLayout";
+import { StickyCallToAction } from "./StickyCallToAction";
 import { useState } from "react";
 import { useForm } from "@formspree/react";
 
@@ -24,8 +25,8 @@ export function OwnYourNarrative() {
   // Handle CTA clicks with analytics
   const handleCTAClick = (action: string, section: string) => {
     // Track conversion events
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as typeof window & { gtag: Function }).gtag('event', 'cta_click', {
         event_category: 'conversion',
         event_label: `${action}_${section}`,
       });
@@ -725,6 +726,9 @@ export function OwnYourNarrative() {
           </div>
         </div>
       </section>
+      
+      {/* Sticky CTA */}
+      <StickyCallToAction />
     </div>
   );
 }

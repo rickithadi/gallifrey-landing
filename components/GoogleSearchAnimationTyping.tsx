@@ -91,40 +91,37 @@ const searchScenarios = [
   }
 ];
 
-export function GoogleSearchAnimation() {
+export function GoogleSearchAnimationTyping() {
   const [currentScenario, setCurrentScenario] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [typedQuery, setTypedQuery] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
-    // Initial load delay for better UX
-    const loadTimer = setTimeout(() => {
-      setIsLoaded(true);
-      startTypingSequence();
-    }, 300);
+    // Start initial typing
+    typeQuery(searchScenarios[0].query);
 
+    // Set up interval for changing scenarios
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentScenario((prev) => (prev + 1) % searchScenarios.length);
+        const nextScenario = (currentScenario + 1) % searchScenarios.length;
+        setCurrentScenario(nextScenario);
         setIsTransitioning(false);
+        // Type new query after transition
+        setTimeout(() => {
+          typeQuery(searchScenarios[nextScenario].query);
+        }, 200);
       }, 500);
-    }, 6000); // Longer interval to accommodate typing
+    }, 5000);
 
-    return () => {
-      clearTimeout(loadTimer);
-      clearInterval(interval);
-    };
-  }, []);
+    return () => clearInterval(interval);
+  }, [currentScenario]);
 
-  const startTypingSequence = () => {
-    const query = searchScenarios[currentScenario].query;
+  const typeQuery = (query: string) => {
     setTypedQuery('');
     setIsTyping(true);
     
-    // Type out the query character by character
     let i = 0;
     const typeInterval = setInterval(() => {
       if (i <= query.length) {
@@ -134,7 +131,7 @@ export function GoogleSearchAnimation() {
         clearInterval(typeInterval);
         setIsTyping(false);
       }
-    }, 80); // Typing speed
+    }, 100); // Typing speed
   };
 
   const scenario = searchScenarios[currentScenario];
@@ -179,9 +176,16 @@ export function GoogleSearchAnimation() {
                 </div>
               )}
               
-              <div className="hover:bg-gray-50 -mx-2 px-2 py-1 rounded">
+              <div className={`hover:bg-gray-50 -mx-2 px-2 py-1 rounded ${
+                result.type === 'good' ? 'bg-blue-50 border-l-4 border-blue-500 relative' : ''
+              }`}>
+                {result.type === 'good' && (
+                  <div className="absolute -left-6 top-2 bg-green-500 text-white text-xs px-2 py-1 rounded font-bold">
+                    #1
+                  </div>
+                )}
                 <div className="flex items-start justify-between">
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className={`text-sm md:text-lg hover:underline cursor-pointer ${
                       result.type === 'good' ? 'text-purple-700 font-medium' : 'text-blue-600'
                     } leading-tight mb-1`}>
@@ -222,9 +226,11 @@ export function GoogleSearchAnimation() {
                   </div>
                   
                   {result.type === 'good' && (
-                    <div className="ml-4 bg-green-50 border border-green-200 rounded-lg p-3">
-                      <div className="text-xs text-green-700 font-medium mb-1">YOUR RESULT</div>
-                      <div className="text-xs text-green-600">Professional • Authoritative • Trustworthy</div>
+                    <div className="ml-2 md:ml-4 bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-300 rounded-lg p-2 md:p-3 shadow-lg flex-shrink-0">
+                      <div className="text-xs text-green-700 font-medium mb-1">🏆 FIRST RESULT</div>
+                      <div className="text-xs text-green-600 hidden md:block">Professional • Authoritative • Trustworthy</div>
+                      <div className="text-xs text-green-600 md:hidden">Premium Result</div>
+                      <div className="text-xs text-blue-600 font-semibold mt-1">Dominates Search</div>
                     </div>
                   )}
                 </div>
@@ -234,20 +240,20 @@ export function GoogleSearchAnimation() {
         </div>
 
         {/* Bottom insight */}
-        <div className="bg-gray-50 px-8 py-4 border-t border-gray-200">
-          <div className="flex items-center justify-between text-sm">
+        <div className="bg-gray-50 px-3 md:px-8 py-3 md:py-4 border-t border-gray-200">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 text-xs md:text-sm">
             <div className="text-gray-600">
-              <strong className="text-oyn-orange-600">{scenario.business}</strong> appears first with professional credentials
+              <strong className="text-oyn-orange-600">{scenario.business}</strong> ranks #1 - First result customers see
             </div>
-            <div className="text-gray-500">
+            <div className="text-gray-500 text-right">
               {currentScenario + 1} of {searchScenarios.length}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="text-center mt-6">
-        <p className="text-sm text-oyn-stone-600 italic">
+      <div className="text-center mt-4 md:mt-6 px-4">
+        <p className="text-xs md:text-sm text-oyn-stone-600 italic">
           This is what your customers see when they search for your services
         </p>
       </div>
