@@ -26,7 +26,7 @@ export function OwnYourNarrative() {
   const handleCTAClick = (action: string, section: string) => {
     // Track conversion events
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as typeof window & { gtag: Function }).gtag('event', 'cta_click', {
+      (window as typeof window & { gtag: (...args: unknown[]) => void }).gtag('event', 'cta_click', {
         event_category: 'conversion',
         event_label: `${action}_${section}`,
       });
@@ -52,8 +52,8 @@ export function OwnYourNarrative() {
     formData.append('project_type', projectType);
     formData.append('budget', budget);
     formData.append('message', message);
-    formData.append('form_type', 'Own Your Narrative Campaign');
-    formData.append('_subject', `Own Your Narrative: ${projectType} inquiry from ${name}`);
+    formData.append('form_type', 'Narrative Campaign');
+    formData.append('_subject', `Narrative: ${projectType} inquiry from ${name}`);
     
     // Submit to Formspree
     await handleFormspreeSubmit(formData);
@@ -130,7 +130,7 @@ export function OwnYourNarrative() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-heading font-medium mb-6 text-oyn-stone-800">When you own your digital presence, you control what people find.</h3>
-                <p className="text-lg text-oyn-stone-700 mb-6 font-semibold">Your website, your search results, your narrative.</p>
+                <p className="text-lg text-oyn-stone-700 mb-6 font-semibold">Your website, your search results, narrative.</p>
                 <div className="bg-oyn-stone-100 p-6 rounded-lg border-l-4 border-oyn-orange-600 mb-6">
                   <div className="space-y-4 text-oyn-stone-600">
                     <div className="flex items-start gap-3">

@@ -29,13 +29,13 @@ Gallifrey Consulting operates a dual-brand strategy (Nike-inspired model):
 - Visual Identity: Corporate blue/gray (#1B365D), clean professional lines
 - Services: Enterprise security, GDPR/CCPA compliance, performance optimization
 
-**Sub-Brand: "Own Your Narrative" Campaign**
+**Sub-Brand: "Narrative" Campaign**
 - Target: Small businesses, individual creators, privacy-conscious families
 - Positioning: Platform independence, digital empowerment, anti-Big Tech
-- Key Message: "Stop building someone else's empire. Own your digital narrative"
+- Key Message: "Stop building someone else's empire. Own your narrative"
 - Mission: Breaking free from Big Tech dependency through platform-independent solutions
 
-### Service Packages ("Own Your Narrative")
+### Service Packages ("Narrative")
 - **Personal Website** ($1000): Platform-proof digital foundation
 - **Creator Liberation** ($1,200): Escape platform prison
 - **Professional Authority** ($2,500): Business continuity guarantee
@@ -57,7 +57,7 @@ Gallifrey Consulting operates a dual-brand strategy (Nike-inspired model):
 - **SEO**: next-seo with comprehensive structured data
 
 ### Key Directories
-- `pages/` - Next.js pages (main site + Own Your Narrative campaign)
+- `pages/` - Next.js pages (main site + Narrative campaign)
 - `components/` - React components organized by feature
 - `components/ui/` - shadcn/ui components (many excluded from TypeScript)
 - `lib/` - Utilities (analytics, animations)
@@ -75,10 +75,10 @@ The project supports two distinct brand identities:
 - Professional web development agency aesthetic
 - Used in main landing page components
 
-**Own Your Narrative Campaign**
-- `oyn-stone-*`, `oyn-orange-*` color scales
-- Warm espresso palette for digital footprint assessment messaging
-- Used in `/own-your-narrative` page
+**Narrative Campaign**
+- `oyn-stone-*`, `oyn-orange-*` color scales  
+- Refined sage & copper palette for digital presence messaging
+- Used in `/narrative` page
 
 #### Typography
 - **Headings**: Montserrat font family
@@ -141,10 +141,10 @@ The project supports two distinct brand identities:
 
 ### Campaign-Specific Features
 
-#### Own Your Narrative
-- Separate page at `/own-your-narrative`
-- Distinct visual identity with warm color palette
-- Digital footprint assessment and creator economy messaging
+#### Narrative
+- Separate page at `/narrative`
+- Distinct visual identity with refined sage & copper palette
+- Digital presence and creator economy messaging
 - Temporarily hidden CTAs in main landing page
 
 ### Development Guidelines

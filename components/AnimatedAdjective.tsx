@@ -67,15 +67,17 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
         {adjectives[currentIndex]?.word || ''}
       </span>
       
-      {/* Space reservation container - minimal reserved space */}
+      {/* Space reservation container with better mobile handling */}
       <span 
-        className="inline-block transition-all duration-150 ease-out"
+        className="inline-block transition-all duration-150 ease-out relative"
         style={{ 
-          width: calculatedWidth ? `${calculatedWidth}px` : 'auto',
-          minWidth: calculatedWidth ? `${calculatedWidth}px` : 'auto' // No fallback - trust the calculation
+          width: calculatedWidth && calculatedWidth > 0 ? `${Math.ceil(calculatedWidth)}px` : 'auto',
+          minWidth: calculatedWidth && calculatedWidth > 0 ? `${Math.ceil(calculatedWidth)}px` : 'auto',
+          height: '1.2em', // Ensure consistent height for mobile
+          overflow: 'hidden' // Prevent layout shift on mobile
         }}
       >
-        {/* Actual animated text */}
+        {/* Actual animated text with improved mobile positioning */}
         <span
           ref={measureRef}
           className={`absolute left-0 top-0 whitespace-nowrap transition-all duration-400 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95'} ${adjectives[currentIndex]?.style || ''} ${className}`}
@@ -83,7 +85,9 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             textShadow: isVisible ? '0 1px 3px rgba(45, 90, 135, 0.12)' : 'none',
             letterSpacing: isVisible ? '0.01em' : '0em',
-            fontWeight: isVisible ? '500' : '400'
+            fontWeight: isVisible ? '500' : '400',
+            lineHeight: '1.2', // Match container height
+            transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(0.25em) scale(0.95)' // Smaller mobile transforms
           }}
         >
           {adjectives[currentIndex]?.word || ''}

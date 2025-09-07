@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Search, Star, MapPin } from 'lucide-react';
 
 const searchScenarios = [
@@ -94,32 +94,10 @@ const searchScenarios = [
 export function GoogleSearchAnimation() {
   const [currentScenario, setCurrentScenario] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [typedQuery, setTypedQuery] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
-  useEffect(() => {
-    // Initial load delay for better UX
-    const loadTimer = setTimeout(() => {
-      setIsLoaded(true);
-      startTypingSequence();
-    }, 300);
-
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentScenario((prev) => (prev + 1) % searchScenarios.length);
-        setIsTransitioning(false);
-      }, 500);
-    }, 6000); // Longer interval to accommodate typing
-
-    return () => {
-      clearTimeout(loadTimer);
-      clearInterval(interval);
-    };
-  }, []);
-
-  const startTypingSequence = () => {
+  const startTypingSequence = useCallback(() => {
     const query = searchScenarios[currentScenario].query;
     setTypedQuery('');
     setIsTyping(true);
@@ -135,7 +113,27 @@ export function GoogleSearchAnimation() {
         setIsTyping(false);
       }
     }, 80); // Typing speed
-  };
+  }, [currentScenario]);
+
+  useEffect(() => {
+    // Initial load delay for better UX
+    const loadTimer = setTimeout(() => {
+      startTypingSequence();
+    }, 300);
+
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentScenario((prev) => (prev + 1) % searchScenarios.length);
+        setIsTransitioning(false);
+      }, 500);
+    }, 6000); // Longer interval to accommodate typing
+
+    return () => {
+      clearTimeout(loadTimer);
+      clearInterval(interval);
+    };
+  }, [startTypingSequence]);
 
   const scenario = searchScenarios[currentScenario];
 

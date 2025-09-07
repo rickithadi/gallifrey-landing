@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Search, Star, MapPin, ArrowRight } from 'lucide-react';
 
 const searchScenarios = [
@@ -113,29 +113,7 @@ export function GoogleSearchSplitLayout() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  useEffect(() => {
-    // Start initial typing
-    typeQuery(searchScenarios[0].query);
-
-    // Set up interval for changing scenarios
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setShowResults(false);
-      setTimeout(() => {
-        const nextScenario = (currentScenario + 1) % searchScenarios.length;
-        setCurrentScenario(nextScenario);
-        setIsTransitioning(false);
-        // Type new query after transition
-        setTimeout(() => {
-          typeQuery(searchScenarios[nextScenario].query);
-        }, 300);
-      }, 500);
-    }, 8000); // Longer cycle to accommodate slower typing and phase progression
-
-    return () => clearInterval(interval);
-  }, [currentScenario]);
-
-  const typeQuery = (query: string) => {
+  const typeQuery = useCallback((query: string) => {
     setTypedQuery('');
     setIsTyping(true);
     setShowResults(false);
@@ -195,7 +173,29 @@ export function GoogleSearchSplitLayout() {
     // Start typing with fixed initial delay for smooth performance
     const initialDelay = 200 + (currentScenario * 30); // More predictable, less random
     setTimeout(typeNextChar, initialDelay);
-  };
+  }, [prefersReducedMotion, currentScenario]);
+
+  useEffect(() => {
+    // Start initial typing
+    typeQuery(searchScenarios[0].query);
+
+    // Set up interval for changing scenarios
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setShowResults(false);
+      setTimeout(() => {
+        const nextScenario = (currentScenario + 1) % searchScenarios.length;
+        setCurrentScenario(nextScenario);
+        setIsTransitioning(false);
+        // Type new query after transition
+        setTimeout(() => {
+          typeQuery(searchScenarios[nextScenario].query);
+        }, 300);
+      }, 500);
+    }, 8000); // Longer cycle to accommodate slower typing and phase progression
+
+    return () => clearInterval(interval);
+  }, [currentScenario, typeQuery]);
 
   const scenario = searchScenarios[currentScenario];
 

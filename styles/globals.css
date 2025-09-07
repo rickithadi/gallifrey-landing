@@ -33,27 +33,27 @@
   --gallifrey-teal-dark: 35 70 105; /* #234669 - Steel blue hover state */
   --gallifrey-border: 229 231 235; /* #E5E7EB - Subtle borders */
 
-  /* ===== OWN YOUR NARRATIVE CAMPAIGN COLORS - Warm Espresso Palette ===== */
-  --oyn-stone-50: 250 250 249; /* #FAFAF9 */
-  --oyn-stone-100: 245 245 244; /* #F5F5F4 */
-  --oyn-stone-200: 231 229 228; /* #E7E5E4 */
-  --oyn-stone-300: 214 211 209; /* #D6D3D1 */
-  --oyn-stone-400: 118 113 108; /* #76716C - Improved contrast */
-  --oyn-stone-500: 120 113 108; /* #78716C */
-  --oyn-stone-600: 87 83 78; /* #57534E */
-  --oyn-stone-700: 68 64 60; /* #44403C */
-  --oyn-stone-800: 41 37 36; /* #292524 */
-  --oyn-stone-900: 28 25 23; /* #1C1917 */
-  --oyn-orange-50: 255 247 237; /* #FFF7ED */
-  --oyn-orange-100: 255 237 213; /* #FFEDD5 */
-  --oyn-orange-200: 254 215 170; /* #FED7AA */
-  --oyn-orange-300: 253 186 116; /* #FDBA74 */
-  --oyn-orange-400: 251 146 60; /* #FB923C */
-  --oyn-orange-500: 249 115 22; /* #F97316 */
-  --oyn-orange-600: 234 88 12; /* #EA580C */
-  --oyn-orange-700: 194 65 12; /* #C2410C */
-  --oyn-orange-800: 154 52 18; /* #9A3412 */
-  --oyn-orange-900: 124 45 18; /* #7C2D12 */
+  /* ===== NARRATIVE CAMPAIGN COLORS - Refined Sage & Copper Palette ===== */
+  --oyn-stone-50: 252 252 251; /* #FCFCFB - Softer white */
+  --oyn-stone-100: 247 246 244; /* #F7F6F4 - Warmer light gray */
+  --oyn-stone-200: 232 230 227; /* #E8E6E3 - Sophisticated neutral */
+  --oyn-stone-300: 210 206 201; /* #D2CEC9 - Elegant medium gray */
+  --oyn-stone-400: 158 151 143; /* #9E978F - Refined contrast */
+  --oyn-stone-500: 135 128 119; /* #878077 - Sage undertone */
+  --oyn-stone-600: 95 88 82; /* #5F5852 - Rich brown-gray */
+  --oyn-stone-700: 71 65 60; /* #47413C - Deep charcoal */
+  --oyn-stone-800: 45 41 37; /* #2D2925 - Near black */
+  --oyn-stone-900: 32 29 26; /* #201D1A - Sophisticated black */
+  --oyn-orange-50: 254 252 247; /* #FEFCF7 - Cream whisper */
+  --oyn-orange-100: 252 244 232; /* #FCF4E8 - Warm cream */
+  --oyn-orange-200: 247 229 204; /* #F7E5CC - Soft bronze */
+  --oyn-orange-300: 237 204 166; /* #EDCCA6 - Muted gold */
+  --oyn-orange-400: 218 165 106; /* #DAA56A - Refined copper */
+  --oyn-orange-500: 197 139 85; /* #C58B55 - Elegant bronze */
+  --oyn-orange-600: 168 113 68; /* #A87144 - Deep copper */
+  --oyn-orange-700: 139 92 56; /* #8B5C38 - Rich bronze */
+  --oyn-orange-800: 110 73 45; /* #6E492D - Dark copper */
+  --oyn-orange-900: 85 57 36; /* #553924 - Deepest bronze */
 
   /* ===== SEMANTIC COLOR MAPPINGS - Gallifrey Brand Default ===== */
   --background: var(--gallifrey-white);
