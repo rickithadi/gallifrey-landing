@@ -54,11 +54,13 @@ export const Hero = React.memo(function Hero() {
                   headlineAnimation.isVisible ? "visible complete" : ""
                 }`}
               >
-                We create <AnimatedAdjective className="text-gallifrey-teal italic font-medium" />{" "}
-                digital foundations for discerning enterprises.
+                What happens when someone <span className="text-gallifrey-teal italic font-medium">Googles your business?</span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mt-8 leading-relaxed max-w-2xl">
-                Bespoke systems, strategic positioning, enterprise-grade security.
+              <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mt-6 leading-relaxed max-w-2xl">
+                Go ahead. Try it right now.
+              </p>
+              <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mt-6 leading-relaxed max-w-2xl">
+                Your digital footprint shapes your reality. We help you craft that narrative with <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> precision.
               </p>
               <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mt-8 text-sm text-gallifrey-charcoal/60 font-light">
                 <span>Melbourne</span>
@@ -121,12 +123,13 @@ export const Hero = React.memo(function Hero() {
                 headlineAnimation.isVisible ? "visible complete" : ""
               }`}
             >
-              We architect <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> digital experiences
-              for organizations that value excellence
+              What happens when someone <span className="text-gallifrey-teal italic font-medium">Googles your business?</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mb-12 leading-relaxed max-w-2xl">
-              Thoughtfully crafted systems that elevate your digital presence with
-              uncompromising attention to detail.
+            <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mb-8 leading-relaxed max-w-2xl">
+              Go ahead. Try it right now.
+            </p>
+            <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mb-12 leading-relaxed max-w-2xl">
+              Your digital footprint shapes your reality. We help you craft that narrative with <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> precision.
             </p>
             <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mb-12 text-sm text-gallifrey-charcoal/60 font-light">
               <span>Melbourne</span>

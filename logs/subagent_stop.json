@@ -1,0 +1,18 @@
+[
+  {
+    "session_id": "42afe37d-08ff-4e5d-9b62-9de0bf32ba8e",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/42afe37d-08ff-4e5d-9b62-9de0bf32ba8e.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "default",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "42afe37d-08ff-4e5d-9b62-9de0bf32ba8e",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/42afe37d-08ff-4e5d-9b62-9de0bf32ba8e.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "default",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  }
+]
