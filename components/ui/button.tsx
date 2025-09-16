@@ -20,8 +20,9 @@ const buttonVariants = cva(
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
         // Brand-specific variants
-        gallifrey: "bg-gallifrey-teal text-gallifrey-white hover:bg-gallifrey-teal-dark shadow-gallifrey hover:shadow-gallifrey-lg transition-all duration-300",
-        "gallifrey-outline": "border border-gallifrey-border text-gallifrey-teal hover:bg-gallifrey-off-white shadow-sm hover:shadow-gallifrey transition-all duration-300",
+        gallifrey: "bg-gallifrey-teal text-white hover:bg-gallifrey-teal/90 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gallifrey-teal",
+        "gallifrey-outline": "border-2 border-gallifrey-teal text-gallifrey-teal hover:bg-gallifrey-teal hover:text-white shadow-sm hover:shadow-lg transition-all duration-300",
+        "gallifrey-secondary": "bg-gallifrey-charcoal/10 text-gallifrey-charcoal border border-gallifrey-charcoal/20 hover:bg-gallifrey-charcoal/20 transition-all duration-300",
         oyn: "bg-oyn-orange-600 text-white hover:bg-oyn-orange-700 shadow-oyn hover:shadow-oyn-lg transition-all duration-300",
         "oyn-outline": "border border-oyn-stone-300 text-oyn-stone-700 hover:bg-oyn-stone-100 shadow-sm hover:shadow-oyn transition-all duration-300",
       },

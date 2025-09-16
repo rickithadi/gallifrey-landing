@@ -1,0 +1,247 @@
+{
+  "title": "Gallifrey Consulting Brand Style Guide",
+  "version": "2.0",
+  "lastUpdated": "2025-09-08",
+  "colors": {
+    "primary": {
+      "gallifrey-white": {
+        "rgb": [
+          255,
+          255,
+          255
+        ],
+        "hex": "#FFFFFF"
+      },
+      "gallifrey-off-white": {
+        "rgb": [
+          249,
+          250,
+          251
+        ],
+        "hex": "#F9FAFB"
+      },
+      "gallifrey-light-gray": {
+        "rgb": [
+          96,
+          103,
+          112
+        ],
+        "hex": "#606770"
+      },
+      "gallifrey-medium-gray": {
+        "rgb": [
+          107,
+          114,
+          128
+        ],
+        "hex": "#6B7280"
+      },
+      "gallifrey-dark-gray": {
+        "rgb": [
+          55,
+          65,
+          81
+        ],
+        "hex": "#374151"
+      },
+      "gallifrey-charcoal": {
+        "rgb": [
+          31,
+          41,
+          55
+        ],
+        "hex": "#1F2937"
+      },
+      "gallifrey-teal": {
+        "rgb": [
+          45,
+          90,
+          135
+        ],
+        "hex": "#2D5A87"
+      },
+      "gallifrey-teal-dark": {
+        "rgb": [
+          35,
+          70,
+          105
+        ],
+        "hex": "#234669"
+      },
+      "gallifrey-border": {
+        "rgb": [
+          229,
+          231,
+          235
+        ],
+        "hex": "#E5E7EB"
+      }
+    },
+    "campaign": {
+      "oyn-stone-50": {
+        "rgb": [
+          252,
+          252,
+          251
+        ],
+        "hex": "#FCFCFB"
+      },
+      "oyn-stone-100": {
+        "rgb": [
+          247,
+          246,
+          244
+        ],
+        "hex": "#F7F6F4"
+      },
+      "oyn-stone-200": {
+        "rgb": [
+          232,
+          230,
+          227
+        ],
+        "hex": "#E8E6E3"
+      },
+      "oyn-stone-700": {
+        "rgb": [
+          71,
+          65,
+          60
+        ],
+        "hex": "#47413C"
+      },
+      "oyn-stone-800": {
+        "rgb": [
+          45,
+          41,
+          37
+        ],
+        "hex": "#2D2925"
+      },
+      "oyn-orange-500": {
+        "rgb": [
+          197,
+          139,
+          85
+        ],
+        "hex": "#C58B55"
+      },
+      "oyn-orange-600": {
+        "rgb": [
+          168,
+          113,
+          68
+        ],
+        "hex": "#A87144"
+      },
+      "oyn-orange-700": {
+        "rgb": [
+          139,
+          92,
+          56
+        ],
+        "hex": "#8B5C38"
+      }
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": {
+        "family": "Montserrat",
+        "fallback": "sans-serif",
+        "weights": [
+          400,
+          500,
+          600,
+          700
+        ],
+        "googleUrl": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700"
+      },
+      "body": {
+        "family": "Source Sans Pro",
+        "fallback": "sans-serif",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "googleUrl": "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600"
+      },
+      "serif": {
+        "family": "Playfair Display",
+        "fallback": "serif",
+        "weights": [
+          400,
+          500,
+          600,
+          700
+        ],
+        "googleUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700"
+      }
+    },
+    "scale": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem"
+    },
+    "lineHeight": {
+      "tight": "1.25",
+      "normal": "1.5",
+      "relaxed": "1.625",
+      "loose": "2"
+    }
+  },
+  "usage": {
+    "docsAndContracts": {
+      "primaryColor": "gallifrey-charcoal",
+      "accentColor": "gallifrey-teal",
+      "backgroundColor": "gallifrey-white",
+      "headingFont": "Montserrat",
+      "bodyFont": "Source Sans Pro"
+    },
+    "manifestoAndSpiritual": {
+      "primaryColor": "oyn-stone-800",
+      "accentColor": "oyn-orange-600",
+      "backgroundColor": "oyn-stone-50",
+      "headingFont": "Montserrat",
+      "bodyFont": "Source Sans Pro",
+      "serifFont": "Playfair Display"
+    }
+  },
+  "elements": {
+    "letterhead": {
+      "companyName": "GALLIFREY CONSULTING",
+      "tagline": "Sacred Technology for Authentic Digital Liberation",
+      "location": "Melbourne, Australia",
+      "contact": "contact@gallifrey.consulting",
+      "services": "Digital Dharma • Platform Independence • Authentic Presence"
+    },
+    "spiritual": {
+      "headers": {
+        "om-kali": "ॐ माता काली 🗡️",
+        "om-ganesha": "ॐ गणपतये नमः 🐘",
+        "om-shanti": "ॐ शांति शांति शांति",
+        "divine-intention": "Generated with Divine Intention"
+      },
+      "blessings": {
+        "general": "🕉️ This document serves dharmic implementation of authentic digital liberation",
+        "manifesto": "🕉️ This manifesto serves as both spiritual foundation and business framework",
+        "technical": "🕉️ Sacred technology in service of authentic digital presence"
+      }
+    },
+    "classifications": {
+      "business-confidential": "Business Confidential",
+      "sacred-business-dharma": "Sacred Business Dharma",
+      "internal-strategy": "Internal Strategy Document",
+      "client-deliverable": "Client Deliverable",
+      "public-manifesto": "Public Manifesto",
+      "technical-specification": "Technical Specification"
+    }
+  }
+}

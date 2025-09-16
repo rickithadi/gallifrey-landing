@@ -23,8 +23,8 @@ export function TrustAndSecurity() {
     },
     {
       icon: <MapPin className="w-6 h-6 text-accent" />,
-      title: "Melbourne AI Hub",
-      description: "Local expertise with Australian AI governance knowledge and compliance. Direct communication with real humans, not AI agents."
+      title: "Global AI Expertise",
+      description: "International expertise with multi-jurisdictional AI governance knowledge and compliance. Direct communication with real humans, not AI agents."
     },
     {
       icon: <Star className="w-6 h-6 text-accent" />,
@@ -67,7 +67,7 @@ export function TrustAndSecurity() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Melbourne businesses choose us for AI-secure, custom digital solutions that protect against emerging threats and give them complete control over their digital presence in the age of artificial intelligence.
+            Global enterprises choose us for AI-secure, custom digital solutions that protect against emerging threats and give them complete control over their digital presence in the age of artificial intelligence.
           </p>
         </div>
 

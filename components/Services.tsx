@@ -14,9 +14,9 @@ export function Services() {
     },
     {
       icon: <Target className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "AI-Enhanced Digital Savasthya",
-      description: "Intelligent reputation management powered by AI monitoring that maintains your digital health against AI manipulation. Like Ayurvedic medicine for your online footprint enhanced with machine learning, we detect AI-generated attacks, deepfake campaigns, and synthetic reputation threats while cultivating authentic digital presence.",
-      details: ["AI-powered reputation monitoring across 200+ sources", "Deepfake & synthetic content detection", "Machine learning threat analysis & response", "AI manipulation crisis protocols"]
+      title: "Enterprise Threat Intelligence & Monitoring",
+      description: "Advanced threat intelligence powered by AI monitoring that protects your enterprise reputation against sophisticated attacks. We detect AI-generated disinformation campaigns, deepfake operations, and synthetic content threats while maintaining your authentic corporate presence through continuous surveillance countermeasures.",
+      details: ["AI-powered threat monitoring across 200+ sources", "Deepfake & synthetic content detection", "Machine learning threat analysis & automated response", "Corporate disinformation crisis protocols"]
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,

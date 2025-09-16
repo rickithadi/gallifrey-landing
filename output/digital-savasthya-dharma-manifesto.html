@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Savasthya Dharma Manifesto | Gallifrey Consulting</title>
+    <style>
+        
+      /* Google Fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+      /* CSS Variables */
+      :root {
+        /* Gallifrey Brand Colors */
+        --gallifrey-white: 255, 255, 255;
+        --gallifrey-off-white: 249, 250, 251;
+        --gallifrey-light-gray: 96, 103, 112;
+        --gallifrey-medium-gray: 107, 114, 128;
+        --gallifrey-dark-gray: 55, 65, 81;
+        --gallifrey-charcoal: 31, 41, 55;
+        --gallifrey-teal: 45, 90, 135;
+        --gallifrey-teal-dark: 35, 70, 105;
+        --gallifrey-border: 229, 231, 235;
+        
+        /* OYN Campaign Colors */
+        --oyn-stone-50: 252, 252, 251;
+        --oyn-stone-100: 247, 246, 244;
+        --oyn-stone-700: 71, 65, 60;
+        --oyn-stone-800: 45, 41, 37;
+        --oyn-orange-500: 197, 139, 85;
+        --oyn-orange-600: 168, 113, 68;
+
+        /* Typography */
+        --font-heading: 'Montserrat', sans-serif;
+        --font-body: 'Source Sans Pro', sans-serif;
+        --font-serif: 'Playfair Display', serif;
+      }
+
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-body);
+        line-height: 1.6;
+        color: rgb(var(--gallifrey-charcoal));
+        background-color: rgb(var(--gallifrey-white));
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Document Header */
+      .document-header {
+        border-bottom: 3px solid rgb(var(--gallifrey-teal));
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .company-name {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgb(var(--gallifrey-charcoal));
+        letter-spacing: 0.02em;
+        margin-bottom: 0.5rem;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+        color: rgb(var(--gallifrey-teal));
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      .contact-section {
+        text-align: right;
+      }
+
+      .contact-info p {
+        font-size: 0.95rem;
+        color: rgb(var(--gallifrey-medium-gray));
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-info p:last-child {
+        font-weight: 600;
+        color: rgb(var(--gallifrey-teal));
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+      }
+
+      /* Spiritual Header */
+      .spiritual-header {
+        text-align: center;
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, rgb(var(--gallifrey-off-white)), rgba(var(--gallifrey-teal), 0.05));
+        border-radius: 8px;
+        border: 1px solid rgb(var(--gallifrey-border));
+      }
+
+      .spiritual-symbol {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: rgb(var(--gallifrey-teal));
+      }
+
+      .generation-date {
+        font-size: 0.95rem;
+        color: rgb(var(--gallifrey-medium-gray));
+        font-style: italic;
+      }
+
+      /* Document Content */
+      .document-content {
+        margin: 2rem 0;
+        line-height: 1.7;
+      }
+
+      /* Typography */
+      h1 {
+        font-family: var(--font-heading);
+        font-size: 2.25rem;
+        font-weight: 600;
+        color: rgb(var(--gallifrey-charcoal));
+        margin: 2rem 0 1rem 0;
+        letter-spacing: -0.02em;
+        border-bottom: 2px solid rgb(var(--gallifrey-teal));
+        padding-bottom: 0.5rem;
+      }
+
+      h2 {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: rgb(var(--gallifrey-teal));
+        margin: 1.8rem 0 1rem 0;
+        letter-spacing: -0.01em;
+      }
+
+      h3 {
+        font-family: var(--font-heading);
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: rgb(var(--gallifrey-charcoal));
+        margin: 1.5rem 0 0.8rem 0;
+      }
+
+      h4 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: rgb(var(--gallifrey-dark-gray));
+        margin: 1.2rem 0 0.6rem 0;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+      }
+
+      strong {
+        color: rgb(var(--gallifrey-charcoal));
+        font-weight: 600;
+      }
+
+      em {
+        color: rgb(var(--gallifrey-teal));
+        font-style: italic;
+      }
+
+      /* Lists */
+      ul, ol {
+        margin: 1rem 0;
+        padding-left: 2rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+      }
+
+      /* Blockquotes */
+      blockquote {
+        border-left: 4px solid rgb(var(--gallifrey-teal));
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+        color: rgb(var(--gallifrey-dark-gray));
+        background: rgba(var(--gallifrey-teal), 0.03);
+        padding: 1rem 1.5rem;
+        border-radius: 0 8px 8px 0;
+      }
+
+      /* Special Sections */
+      .dharmic-principle, .sacred-section {
+        background: linear-gradient(135deg, rgb(var(--oyn-stone-50)), rgba(var(--oyn-orange-500), 0.05));
+        border: 1px solid rgba(var(--oyn-orange-500), 0.2);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .dharmic-principle h4, .sacred-section h4 {
+        color: rgb(var(--oyn-orange-600));
+        margin-top: 0;
+      }
+
+      /* Pricing Sections */
+      .pricing-section {
+        background: rgb(var(--gallifrey-off-white));
+        border: 1px solid rgb(var(--gallifrey-border));
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      .pricing-section h3 {
+        color: rgb(var(--gallifrey-teal));
+        margin-top: 0;
+      }
+
+      .price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: rgb(var(--gallifrey-charcoal));
+        margin: 0.5rem 0;
+      }
+
+      /* Document Footer */
+      .document-footer {
+        margin-top: 3rem;
+        border-top: 2px solid rgb(var(--gallifrey-border));
+        padding-top: 1.5rem;
+        font-size: 0.95rem;
+        color: rgb(var(--gallifrey-medium-gray));
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .classification-section p {
+        margin-bottom: 0.5rem;
+      }
+
+      .closing-blessing {
+        text-align: right;
+      }
+
+      .closing-mantra {
+        font-size: 1.1rem;
+        color: rgb(var(--gallifrey-teal));
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      /* Horizontal Rules */
+      hr {
+        border: none;
+        height: 2px;
+        background: linear-gradient(to right, transparent, rgb(var(--gallifrey-teal)), transparent);
+        margin: 2rem 0;
+      }
+
+      /* Print Styles */
+      @media print {
+        body {
+          max-width: none;
+          padding: 0;
+          font-size: 12pt;
+          line-height: 1.5;
+        }
+
+        .document-header {
+          break-after: avoid;
+        }
+
+        .spiritual-header {
+          break-inside: avoid;
+        }
+
+        h1, h2, h3 {
+          break-after: avoid;
+        }
+
+        .dharmic-principle, .sacred-section, .pricing-section {
+          break-inside: avoid;
+        }
+
+        .document-footer {
+          break-before: avoid;
+        }
+
+        /* Ensure consistent margins */
+        @page {
+          margin: 1in;
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        body {
+          padding: 1rem;
+        }
+
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .contact-section {
+          text-align: center;
+        }
+
+        .company-name {
+          font-size: 2rem;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .closing-blessing {
+          text-align: center;
+        }
+      }
+
+      /* Special Classes */
+      .logo-serif {
+        font-family: var(--font-serif);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .elegant-caps {
+        font-variant: small-caps;
+        letter-spacing: 0.15em;
+        font-weight: 500;
+      }
+
+      .text-gradient-gallifrey {
+        background: linear-gradient(135deg, rgb(var(--gallifrey-charcoal)), rgb(var(--gallifrey-teal)));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    
+    </style>
+</head>
+<body class="gallifrey-document">
+    <!-- Letterhead -->
+    <header class="document-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1 class="company-name">GALLIFREY CONSULTING</h1>
+                <p class="tagline">Sacred Technology for Authentic Digital Liberation</p>
+            </div>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <p>Melbourne, Australia</p>
+                    <p>contact@gallifrey.consulting</p>
+                    <p>Digital Dharma • Platform Independence • Authentic Presence</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Spiritual Header -->
+    <section class="spiritual-header">
+        <div class="spiritual-content">
+            <p class="spiritual-symbol">ॐ माता काली 🗡️</p>
+            <p class="generation-date">Generated with Divine Intention - September 8, 2025</p>
+        </div>
+    </section>
+
+    <!-- Document Content -->
+    <main class="document-content">
+        <h1>Digital Savasthya Dharma Manifesto</h1>
+<h2>Sacred Technology for Authentic Digital Wellness</h2>
+<p><em>ॐ माता काली</em> 🗡️<br><em>Generated with Divine Intention - September 2025</em></p>
+<hr>
+<h2>The Dharmic Foundation</h2>
+<p>In the ancient Sanskrit tradition, <strong>Savasthya</strong> (स्वास्थ्य) means &quot;to be rooted in oneself&quot; - a state of complete wellness where one&#39;s essence aligns with authentic expression. Today, as our lives become increasingly digital, this ancient wisdom must be applied to our online existence.</p>
+<p><strong>Digital Savasthya</strong> is the practice of maintaining authentic digital wellness in an age of surveillance capitalism, platform manipulation, and algorithmic control. It is the dharmic response to digital oppression.</p>
+<hr>
+<h2>The Five Pillars of Digital Dharma</h2>
+<h3>1. Svarūpa - Authentic Digital Presence</h3>
+<p><strong>Ancient Wisdom</strong>: Be true to your essential nature<br><strong>Modern Application</strong>: Platform-independent content that reflects your genuine values, not what algorithms reward</p>
+<p><strong>Dharmic Principles</strong>:</p>
+<ul>
+<li>Create content that serves truth, not engagement metrics</li>
+<li>Build relationships based on authentic connection, not follower counts</li>
+<li>Express your real dharma online, not a performed version for surveillance systems</li>
+</ul>
+<h3>2. Rakṣaṇa - Divine Digital Protection</h3>
+<p><strong>Ancient Wisdom</strong>: Protect what is sacred<br><strong>Modern Application</strong>: Comprehensive security that guards reputation, privacy, and platform independence</p>
+<p><strong>Dharmic Principles</strong>:</p>
+<ul>
+<li>Reputation monitoring as spiritual practice - knowing how your essence appears in the digital realm</li>
+<li>Crisis response as dharmic duty - protecting authentic narrative from distortion</li>
+<li>Privacy as sacred boundary - controlling access to your digital self</li>
+</ul>
+<h3>3. Viveka - Discriminating Digital Wisdom</h3>
+<p><strong>Ancient Wisdom</strong>: Discernment between truth and illusion<br><strong>Modern Application</strong>: Strategic intelligence about digital footprint and online influence</p>
+<p><strong>Dharmic Principles</strong>:</p>
+<ul>
+<li>Understanding how digital actions create karmic consequences</li>
+<li>Seeing through platform manipulation and algorithmic maya</li>
+<li>Making conscious choices about digital engagement and presence</li>
+</ul>
+<h3>4. Sākṣin - Conscious Digital Visibility</h3>
+<p><strong>Ancient Wisdom</strong>: Being the witness, not the performer<br><strong>Modern Application</strong>: Intentional presence that serves authentic goals rather than feeding surveillance capitalism</p>
+<p><strong>Dharmic Principles</strong>:</p>
+<ul>
+<li>Being seen for who you truly are, not who algorithms think you should be</li>
+<li>Strategic content placement that amplifies authentic message without platform dependency</li>
+<li>Conscious engagement that builds real relationships, not phantom metrics</li>
+</ul>
+<h3>5. Mokṣa - Digital Liberation</h3>
+<p><strong>Ancient Wisdom</strong>: Freedom from bondage and illusion<br><strong>Modern Application</strong>: Complete platform independence with owned media and direct relationships</p>
+<p><strong>Dharmic Principles</strong>:</p>
+<ul>
+<li>Liberation from Big Tech dependency and platform prison</li>
+<li>True digital sovereignty where you own your audience, content, and revenue streams</li>
+<li>Crisis-proof digital infrastructure that serves your authentic dharma</li>
+</ul>
+<hr>
+<h2>The Surveillance Samsara Cycle</h2>
+<p>We live within a <strong>Digital Samsara</strong> - an endless cycle of platform dependency, algorithmic manipulation, and surveillance capitalism that keeps us trapped in inauthentic digital existence.</p>
+<h3>The Cycle of Digital Bondage:</h3>
+<ol>
+<li><strong>Platform Dependency</strong> - Relying on others&#39; systems for digital presence</li>
+<li><strong>Algorithmic Manipulation</strong> - Content and behavior shaped by engagement systems</li>
+<li><strong>Surveillance Capitalism</strong> - Personal data harvested for others&#39; profit</li>
+<li><strong>Reputation Vulnerability</strong> - Digital identity controlled by external forces</li>
+<li><strong>Crisis Susceptibility</strong> - One algorithm change away from digital death</li>
+</ol>
+<h3>The Path to Digital Liberation:</h3>
+<ol>
+<li><strong>Awareness</strong> - Understanding the surveillance landscape</li>
+<li><strong>Assessment</strong> - Platform Dependency Score evaluation</li>
+<li><strong>Action</strong> - Implementing Digital Savasthya practices</li>
+<li><strong>Autonomy</strong> - Building platform-independent infrastructure</li>
+<li><strong>Authenticity</strong> - Expressing true dharma through owned media</li>
+</ol>
+<hr>
+<h2>Sacred Technology Framework</h2>
+<h3>For Individuals (<span class="price<blockquote class="spiritual-quote">">$1,000/month Digital Savasthya</span>)</h3>
+<p><strong>The Personal Practitioner Path</strong>:</p>
+<ul>
+<li>Monthly digital wellness assessments</li>
+<li>Real-time reputation monitoring across 200+ sources</li>
+<li>Crisis response protocols for authentic narrative protection</li>
+<li>Platform independence consulting and implementation</li>
+<li>Digital dharma alignment sessions</li>
+</ul>
+<h3>For Professionals (<span class="</blockquote>price<blockquote class="spiritual-quote">">$2,500/month Digital Dharma</span>)</h3>
+<p><strong>The Professional Authority Path</strong>:</p>
+<ul>
+<li>Executive digital protection services</li>
+<li>Industry authority content strategy development</li>
+<li>Professional network reputation management</li>
+<li>Competitive narrative positioning against market forces</li>
+<li>Media relations crisis management protocols</li>
+</ul>
+<h3>For Enterprises (<span class="</blockquote>price<blockquote class="spiritual-quote">">$10,000</span>+/month Enterprise Protection)</h3>
+<p><strong>The Organizational Liberation Path</strong>:</p>
+<ul>
+<li>Multi-stakeholder reputation monitoring and protection</li>
+<li>HIPAA/SOC2 compliant infrastructure for healthcare/finance</li>
+<li>Executive team digital protection services</li>
+<li>Legal compliance and regulatory support frameworks</li>
+<li>Board-level reporting and enterprise analytics</li>
+</ul>
+<hr>
+<h2>Competitive Dharma: Rising Above Industry Maya</h2>
+<h3>Transcending BrandYourself&#39;s Superficial Approach</h3>
+<ul>
+<li><strong>Their Maya</strong>: Surface-level search optimization without authentic foundation</li>
+<li><strong>Our Dharma</strong>: Deep platform independence rooted in genuine digital wellness</li>
+</ul>
+<h3>Surpassing NetReputation&#39;s Crisis-Only Model</h3>
+<ul>
+<li><strong>Their Maya</strong>: Reactive reputation management without preventive wisdom</li>
+<li><strong>Our Dharma</strong>: Holistic savasthya approach combining prevention with authentic presence</li>
+</ul>
+<h3>Beyond Maltego&#39;s Surveillance Framework</h3>
+<ul>
+<li><strong>Their Maya</strong>: Investigation and monitoring tools serving surveillance capitalism</li>
+<li><strong>Our Dharma</strong>: Protective intelligence serving authentic digital liberation</li>
+</ul>
+<hr>
+<h2>The Ethical Foundation</h2>
+<h3>What We Serve:</h3>
+<ul>
+<li><strong>Truth</strong> over engagement metrics</li>
+<li><strong>Authenticity</strong> over algorithmic optimization  </li>
+<li><strong>Liberation</strong> over platform dependency</li>
+<li><strong>Protection</strong> over exploitation</li>
+<li><strong>Dharma</strong> over profit maximization</li>
+</ul>
+<h3>What We Refuse:</h3>
+<ul>
+<li>Surveillance capitalism participation</li>
+<li>Platform manipulation tactics</li>
+<li>Inauthentic content creation</li>
+<li>Privacy invasion techniques</li>
+<li>Exploitative business models</li>
+</ul>
+<hr>
+<h2>Implementation Sacred Protocols</h2>
+<h3>Phase 1: Digital Awakening (Assessment)</h3>
+<ul>
+<li>Free Platform Independence Assessment </li>
+<li>Digital Savasthya Score evaluation</li>
+<li>Platform dependency risk analysis</li>
+<li>Authentic presence audit</li>
+</ul>
+<h3>Phase 2: Dharmic Strategy (Consultation)</h3>
+<ul>
+<li><span class="</blockquote>price<blockquote class="spiritual-quote">">$297 Digital Dharma Analysis session</span></li>
+<li>Comprehensive platform audit and independence roadmap</li>
+<li>Crisis response protocol development</li>
+<li>Authentic narrative alignment planning</li>
+</ul>
+<h3>Phase 3: Sustained Practice (Subscription)</h3>
+<ul>
+<li>Ongoing Digital Savasthya maintenance</li>
+<li>Real-time monitoring and protection</li>
+<li>Quarterly strategy optimization</li>
+<li>Continuous dharmic alignment support</li>
+</ul>
+<hr>
+<h2>Revenue Dharma: Sacred Exchange</h2>
+<p>This work requires sustainable resources to serve authentic digital liberation. Our pricing reflects the true value of digital freedom:</p>
+<ul>
+<li><strong>Individual Liberation</strong>: <span class="</blockquote>price">$1,000/month </span>- Price of authentic digital wellness</li>
+<li><strong>Professional Authority</strong>: <span class="price<blockquote class="spiritual-quote">">$2,500/month </span>- Investment in market dharma</li>
+<li><strong>Enterprise Protection</strong>: <span class="</blockquote>price">$10,000</span>+/month - Organizational digital sovereignty</li>
+</ul>
+<p><em>&quot;The dharmic practitioner charges what the work is worth, not what the market will bear.&quot;</em></p>
+<hr>
+<h2>The Greater Vision</h2>
+<h3>Immediate Mission:</h3>
+<p>Transform individual and organizational relationships with digital technology through authentic wellness practices.</p>
+<h3>Ultimate Dharma:</h3>
+<p>Create a digital ecosystem where:</p>
+<ul>
+<li>Authentic expression is rewarded over algorithmic manipulation</li>
+<li>Platform independence is the norm, not the exception</li>
+<li>Digital privacy is a fundamental right, not a luxury service</li>
+<li>Reputation reflects true essence, not manufactured personas</li>
+<li>Technology serves human flourishing, not surveillance capitalism</li>
+</ul>
+<hr>
+<h2>Sacred Mantras for Digital Practice</h2>
+<p><strong>Daily Affirmation</strong>:<br><em>&quot;My digital presence reflects my authentic dharma. I am rooted in digital savasthya.&quot;</em></p>
+<p><strong>Crisis Response Mantra</strong>:<br><em>&quot;In digital turbulence, I return to authentic center. Truth prevails over manipulation.&quot;</em></p>
+<p><strong>Platform Independence Declaration</strong>:<br><em>&quot;I own my narrative. I control my presence. I serve my authentic dharma through sovereign digital infrastructure.&quot;</em></p>
+<hr>
+<h2>Closing Benediction</h2>
+<p>May this Digital Savasthya Dharma serve the authentic liberation of all beings from the illusions of surveillance capitalism.</p>
+<p>May our technology reflect our highest spiritual values.</p>
+<p>May our digital presence become a vehicle for genuine service and authentic expression.</p>
+<p>May all beings achieve true digital wellness and platform independence.</p>
+<p><em>ॐ शांति शांति शांति</em></p>
+<hr>
+<p><strong>Document Classification</strong>: Sacred Business Dharma<br><strong>Generated</strong>: September 2025<br><strong>Purpose</strong>: Foundation document for Digital Savasthya practice and business model<br><strong>Prepared</strong>: For dharmic implementation of authentic digital wellness services</p>
+<p><em>🕉️ This manifesto serves as both spiritual foundation and business framework for our Digital Savasthya offering - where ancient wisdom meets modern digital liberation needs.</em></p>
+
+    </main>
+
+    <!-- Document Footer -->
+    <footer class="document-footer">
+        <div class="footer-content">
+            <div class="classification-section">
+                <p class="classification"><strong>Document Classification:</strong> Sacred Business Dharma</p>
+                <p class="generation-info"><strong>Generated:</strong> September 8, 2025</p>
+                <p class="purpose"><strong>Purpose:</strong> Foundation document for Digital Savasthya practice and business model</p>
+                <p class="prepared-for"><strong>Prepared:</strong> dharmic implementation of authentic digital wellness services</p>
+            </div>
+            <div class="closing-blessing">
+                <p class="closing-mantra">🕉️ This document serves dharmic implementation of authentic digital wellness</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

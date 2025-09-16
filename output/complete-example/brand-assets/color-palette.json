@@ -1,0 +1,23 @@
+{
+  "primary": {
+    "gallifrey-white": "#FFFFFF",
+    "gallifrey-off-white": "#F9FAFB",
+    "gallifrey-light-gray": "#606770",
+    "gallifrey-medium-gray": "#6B7280",
+    "gallifrey-dark-gray": "#374151",
+    "gallifrey-charcoal": "#1F2937",
+    "gallifrey-teal": "#2D5A87",
+    "gallifrey-teal-dark": "#234669",
+    "gallifrey-border": "#E5E7EB"
+  },
+  "campaign": {
+    "oyn-stone-50": "#FCFCFB",
+    "oyn-stone-100": "#F7F6F4",
+    "oyn-stone-200": "#E8E6E3",
+    "oyn-stone-700": "#47413C",
+    "oyn-stone-800": "#2D2925",
+    "oyn-orange-500": "#C58B55",
+    "oyn-orange-600": "#A87144",
+    "oyn-orange-700": "#8B5C38"
+  }
+}

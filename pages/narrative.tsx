@@ -23,12 +23,12 @@ export default function OwnYourNarrativePage() {
       {
         "@type": "Service",
         "@id": "https://gallifrey.consulting/own-your-narrative#digitalindependence",
-        "name": "Enterprise Web Development & Digital Sovereignty Services",
-        "description": "Professional web development and digital sovereignty solutions for Melbourne businesses. Take control of your online presence and search results with custom websites and enterprise-grade security. Starting at $500.",
+        "name": "Digital Dharma & Personal Reputation Management Services",
+        "description": "Individual digital wellness and reputation management for high-profile individuals, creators, and privacy-conscious families. Achieve authentic digital presence and platform independence. Starting at $1,000/month.",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
-        "serviceType": "Professional Web Development Services",
+        "serviceType": "Digital Wellness & Reputation Management Services",
         "areaServed": [
           {
             "@type": "Country",
@@ -45,37 +45,37 @@ export default function OwnYourNarrativePage() {
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Professional Web Development Services",
+          "name": "Digital Dharma & Savasthya Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Digital Independence Package",
-                "description": "Custom website with complete data ownership and privacy protection"
+                "name": "Digital Savasthya Monthly",
+                "description": "Personal reputation wellness and platform independence monitoring for high-profile individuals"
               },
-              "price": "500",
-              "priceCurrency": "AUD"
+              "price": "1000",
+              "priceCurrency": "USD"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Data Privacy Protection",
-                "description": "Comprehensive data cleanup and privacy protection services"
-              },
-              "price": "1500",
-              "priceCurrency": "AUD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Platform Independence Solution",
-                "description": "Break free from Big Tech with custom digital solutions"
+                "name": "Digital Dharma Professional",
+                "description": "Comprehensive narrative control and market authority for business leaders and professionals"
               },
               "price": "2500",
-              "priceCurrency": "AUD"
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Dharma Analysis",
+                "description": "One-time comprehensive audit and strategy session for platform independence"
+              },
+              "price": "297",
+              "priceCurrency": "USD"
             }
           ]
         }

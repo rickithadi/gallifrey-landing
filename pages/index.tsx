@@ -4,9 +4,6 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
 import { Services } from '@/components/Services'
-import { ReputationServices } from '@/components/ReputationServices'
-import { DigitalSavasthya } from '@/components/DigitalSavasthya'
-import { SubscriptionPlans } from '@/components/SubscriptionPlans'
 import { PlatformAssessment } from '@/components/PlatformAssessment'
 import { Testimonials } from '@/components/Testimonials'
 import { TrustAndSecurity } from '@/components/TrustAndSecurity'
@@ -67,7 +64,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne enterprise AI security agency specializing in AI threat protection, quantum-secure custom solutions, deepfake detection, and enterprise-grade AI governance services.",
+        "description": "Global enterprise AI security agency specializing in AI threat protection, quantum-secure custom solutions, deepfake detection, and enterprise-grade AI governance services.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -202,13 +199,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="AI Security Melbourne | Enterprise Digital Protection"
-        description="Melbourne's premier AI security agency. AI-resistant development, deepfake protection, prompt injection prevention, quantum-secure digital solutions with enterprise AI governance."
+        title="Global AI Security | Enterprise Digital Protection"
+        description="World's premier AI security agency. AI-resistant development, deepfake protection, prompt injection prevention, quantum-secure digital solutions with enterprise AI governance."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Melbourne AI Security | AI-Resistant Digital Solutions',
-          description: 'Melbourne AI security specialists delivering quantum-secure development, deepfake protection, and enterprise AI governance solutions.',
+          title: 'Global AI Security | AI-Resistant Digital Solutions',
+          description: 'Global AI security specialists delivering quantum-secure development, deepfake protection, and enterprise AI governance solutions.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -222,7 +219,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'Melbourne AI security, artificial intelligence cybersecurity, AI threat protection, deepfake detection Melbourne, prompt injection prevention, quantum-secure development, enterprise AI governance, AI-resistant architecture, Melbourne AI consulting, digital AI protection, AI security compliance, enterprise AI solutions, AI threat monitoring, cybersecurity AI Melbourne, AI security specialists'
+            content: 'global AI security, artificial intelligence cybersecurity, AI threat protection, deepfake detection, prompt injection prevention, quantum-secure development, enterprise AI governance, AI-resistant architecture, international AI consulting, digital AI protection, AI security compliance, enterprise AI solutions, AI threat monitoring, cybersecurity AI, AI security specialists'
           },
           {
             property: 'article:author',
@@ -255,9 +252,6 @@ export default function Home() {
         <Hero />
         <PlatformAssessment />
         <Services />
-        <ReputationServices />
-        <DigitalSavasthya />
-        <SubscriptionPlans />
         <Testimonials />
         <TrustAndSecurity />
         <Pricing />

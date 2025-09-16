@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-09-16T05:28:47.330Z",
+  "issues": [
+    {
+      "page": "main-landing",
+      "category": "Typography",
+      "message": "Should have exactly 1 H1, found 0",
+      "severity": "error"
+    },
+    {
+      "page": "campaign",
+      "category": "Typography",
+      "message": "Should have exactly 1 H1, found 0",
+      "severity": "error"
+    }
+  ],
+  "warnings": [
+    {
+      "page": "main-landing",
+      "category": "Brand Colors",
+      "message": "No Gallifrey brand classes found",
+      "severity": "warning"
+    },
+    {
+      "page": "main-landing",
+      "category": "SEO",
+      "message": "Check failed: locator.getAttribute: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('meta[name=\"description\"]')\u001b[22m\n",
+      "severity": "warning"
+    },
+    {
+      "page": "campaign",
+      "category": "Campaign Colors",
+      "message": "No campaign-specific styling found",
+      "severity": "warning"
+    },
+    {
+      "page": "campaign",
+      "category": "SEO",
+      "message": "Check failed: locator.getAttribute: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('meta[name=\"description\"]')\u001b[22m\n",
+      "severity": "warning"
+    }
+  ],
+  "passed": [
+    {
+      "page": "main-landing",
+      "category": "Responsive Design",
+      "message": "No horizontal scroll on mobile",
+      "severity": "success"
+    },
+    {
+      "page": "main-landing",
+      "category": "SEO",
+      "message": "Title length appropriate",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "Responsive Design",
+      "message": "No horizontal scroll on mobile",
+      "severity": "success"
+    },
+    {
+      "page": "campaign",
+      "category": "SEO",
+      "message": "Title length appropriate",
+      "severity": "success"
+    }
+  ],
+  "screenshots": [
+    "design-review-main-landing-1758000528958.png",
+    "design-review-campaign-1758000560866.png"
+  ],
+  "summary": {
+    "totalChecks": 10,
+    "issues": 2,
+    "warnings": 4,
+    "passed": 4,
+    "score": 60
+  }
+}

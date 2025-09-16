@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Gallifrey white",
+    "hex": "#FFFFFF",
+    "rgb": [
+      255,
+      255,
+      255
+    ]
+  },
+  {
+    "name": "Gallifrey off white",
+    "hex": "#F9FAFB",
+    "rgb": [
+      249,
+      250,
+      251
+    ]
+  },
+  {
+    "name": "Gallifrey light gray",
+    "hex": "#606770",
+    "rgb": [
+      96,
+      103,
+      112
+    ]
+  },
+  {
+    "name": "Gallifrey medium gray",
+    "hex": "#6B7280",
+    "rgb": [
+      107,
+      114,
+      128
+    ]
+  },
+  {
+    "name": "Gallifrey dark gray",
+    "hex": "#374151",
+    "rgb": [
+      55,
+      65,
+      81
+    ]
+  },
+  {
+    "name": "Gallifrey charcoal",
+    "hex": "#1F2937",
+    "rgb": [
+      31,
+      41,
+      55
+    ]
+  },
+  {
+    "name": "Gallifrey teal",
+    "hex": "#2D5A87",
+    "rgb": [
+      45,
+      90,
+      135
+    ]
+  },
+  {
+    "name": "Gallifrey teal dark",
+    "hex": "#234669",
+    "rgb": [
+      35,
+      70,
+      105
+    ]
+  },
+  {
+    "name": "Gallifrey border",
+    "hex": "#E5E7EB",
+    "rgb": [
+      229,
+      231,
+      235
+    ]
+  }
+]

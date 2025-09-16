@@ -60,13 +60,13 @@ export const Hero = React.memo(function Hero() {
                 Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
               </p>
               <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mt-6 leading-relaxed max-w-2xl">
-                96% of businesses face AI-powered de-platforming risks. Your digital <em>savasthya</em> — your authentic online presence defended against AI threats — shapes your reality. We help you achieve <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> AI-resistant digital independence through quantum-secure infrastructure and intelligent reputation protection.
+                96% of enterprises face AI-powered surveillance and manipulation risks. Your digital infrastructure requires <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> enterprise-grade protection against Maltego-style reconnaissance, deepfake campaigns, and prompt injection attacks through quantum-secure architecture and intelligent threat monitoring.
               </p>
               <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mt-8 text-sm text-gallifrey-charcoal/60 font-light">
-                <span>Melbourne</span>
+                <span>Global AI Security Leaders</span>
                 <span className="hidden sm:inline mx-1">·</span>
                 <span className="sm:hidden">•</span>
-                <span>AI Security Specialists</span>
+                <span>Quantum-Secure</span>
                 <span className="hidden sm:inline mx-1">·</span>
                 <span className="sm:hidden">•</span>
                 <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
@@ -145,13 +145,13 @@ export const Hero = React.memo(function Hero() {
               Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
             </p>
             <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mb-12 leading-relaxed max-w-2xl">
-              96% of businesses face AI-powered de-platforming risks. Your digital <em>savasthya</em> — your authentic online presence defended against AI threats — shapes your reality. We help you achieve <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> AI-resistant digital independence through quantum-secure infrastructure and intelligent reputation protection.
+              96% of enterprises face AI-powered surveillance and manipulation risks. Your digital infrastructure requires <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> enterprise-grade protection against Maltego-style reconnaissance, deepfake campaigns, and prompt injection attacks through quantum-secure architecture and intelligent threat monitoring.
             </p>
             <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mb-12 text-sm text-gallifrey-charcoal/60 font-light">
-              <span>Melbourne</span>
+              <span>Global AI Security Leaders</span>
               <span className="hidden sm:inline mx-2">·</span>
               <span className="sm:hidden">•</span>
-              <span>AI Security Specialists</span>
+              <span>Quantum-Secure</span>
               <span className="hidden sm:inline mx-2">·</span>
               <span className="sm:hidden">•</span>
               <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
