@@ -22,17 +22,17 @@ export function ReputationServices() {
   const services = [
     {
       icon: <Zap className="w-6 h-6 text-gallifrey-teal" aria-hidden="true" />,
-      title: "Free Digital Savasthya Assessment",
+      title: "Free Digital Security Assessment",
       price: "FREE",
       duration: "15 minutes",
-      description: "Discover your platform dependency risks and digital wellness score. Like BrandYourself's risk scan, but focused on platform independence and authentic digital presence.",
+      description: "Discover your platform dependency risks and digital security posture. Like BrandYourself's risk scan, but focused on platform independence and robust digital presence.",
       features: assessmentFeatures,
       cta: "Get Free Assessment",
       ctaAction: "reputation-free-assessment"
     },
     {
       icon: <Target className="w-6 h-6 text-gallifrey-teal" aria-hidden="true" />,
-      title: "Digital Dharma Analysis", 
+      title: "Digital Strategy Analysis", 
       price: "$297",
       duration: "60 minutes",
       description: "Deep-dive consultation revealing your complete digital narrative alignment. Comprehensive platform audit with actionable independence roadmap.",
@@ -43,7 +43,7 @@ export function ReputationServices() {
         "Crisis response protocol development"
       ],
       cta: "Book Consultation",
-      ctaAction: "reputation-dharma-analysis"
+      ctaAction: "reputation-strategy-analysis"
     },
     {
       icon: <Shield className="w-6 h-6 text-gallifrey-teal" aria-hidden="true" />,
@@ -72,18 +72,18 @@ export function ReputationServices() {
         >
           <div className="mb-8">
             <p className="text-sm font-medium tracking-[0.1em] text-gallifrey-charcoal/60 uppercase mb-4">
-              Digital Savasthya Services
+              Digital Security Services
             </p>
             <div className="w-12 h-px bg-gallifrey-teal mx-auto"></div>
           </div>
 
           <h2 id="reputation-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-gallifrey-charcoal max-w-4xl mx-auto tracking-tight">
-            Reputation Wellness &
+            Reputation Management &
             <span className="italic text-gallifrey-teal"> Platform Independence</span>
           </h2>
 
           <p className="text-lg text-gallifrey-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-            From free risk assessment to enterprise protection — discover your digital <em>savasthya</em> and build authentic platform-independent presence.
+            From free risk assessment to enterprise protection — discover your digital security posture and build robust platform-independent presence.
           </p>
         </div>
 

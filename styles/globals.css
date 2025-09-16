@@ -29,8 +29,9 @@
   --gallifrey-medium-gray: 107 114 128; /* #6B7280 - Secondary text */
   --gallifrey-dark-gray: 55 65 81; /* #374151 - Body text */
   --gallifrey-charcoal: 31 41 55; /* #1F2937 - Primary text & headings */
-  --gallifrey-teal: 45 90 135; /* #2D5A87 - Steel Blue-Teal - security-focused, technical competence */
-  --gallifrey-teal-dark: 35 70 105; /* #234669 - Steel blue hover state */
+  --gallifrey-teal: 28 73 113; /* #1C4971 - Deeper Steel Blue-Teal - commanding authority with sophistication */
+  --gallifrey-teal-dark: 21 58 91; /* #153A5B - Deep steel blue hover state */
+  --gallifrey-teal-light: 45 90 135; /* #2D5A87 - Original teal for subtle accents */
   --gallifrey-border: 229 231 235; /* #E5E7EB - Subtle borders */
 
   /* ===== NARRATIVE CAMPAIGN COLORS - Refined Sage & Copper Palette ===== */
@@ -119,8 +120,18 @@
     @apply bg-white text-foreground font-body;
   }
 
-  h1,
-  h2,
+  h1 {
+    @apply font-heading;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    @apply font-heading;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+  }
+
   h3,
   h4,
   h5,
@@ -142,6 +153,22 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .text-command {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: rgb(var(--gallifrey-charcoal));
+  }
+
+  .text-authority {
+    font-weight: 650;
+    letter-spacing: -0.015em;
+    color: rgb(var(--gallifrey-teal));
+  }
+
+  .shadow-command {
+    box-shadow: 0 8px 32px rgba(var(--gallifrey-teal), 0.15);
   }
 
   .text-gradient-gallifrey-elegant {
@@ -692,6 +719,77 @@
   .campaign-gradient {
     contain: layout style paint;
     will-change: transform;
+  }
+
+  /* ===== COIN ANIMATION STYLES ===== */
+  .coin-container {
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .coin {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+
+  .coin.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .coin-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgb(var(--gallifrey-teal)), rgb(var(--gallifrey-teal-dark)));
+    box-shadow: 
+      0 8px 32px rgba(var(--gallifrey-teal), 0.3),
+      inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .coin-front {
+    transform: rotateY(0deg);
+  }
+
+  .coin-back {
+    transform: rotateY(180deg);
+  }
+
+  .coin-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coin:hover {
+    transform: translateY(-4px) rotateY(0deg);
+    transition: all 0.3s ease-out;
+  }
+
+  .coin.flipped:hover {
+    transform: translateY(-4px) rotateY(180deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coin {
+      transition: none;
+    }
+    
+    .coin:hover {
+      transform: none;
+    }
   }
   
   .campaign-cta {
