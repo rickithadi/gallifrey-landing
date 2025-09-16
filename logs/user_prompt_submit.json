@@ -222,5 +222,21 @@
     "permission_mode": "bypassPermissions",
     "hook_event_name": "UserPromptSubmit",
     "prompt": "tone down the savasthya stuff. we want to counter maltego type surveilance and maintain enterpise positionsning. the savasthya stuff can move into the narrative branding section"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "its not at 3000"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "Conversation opened. 1 unread message.\n\nSkip to content\nUsing Gmail with screen readers\n\n4 of 46,801\n[rickithadi/gallifrey-landing] Shodan Key exposed on GitHub\nInbox\nGitGuardian <security@getgitguardian.com> Unsubscribe\n2:52\u202fPM (14 minutes ago)\nto me\n\nImages in this message are hidden. This message appears suspicious. Don't show the images unless you trust the sender and the message.\nShow imagesReport spam\nGitGuardian has detected the following Shodan Key exposed within your GitHub account.\nDetails\n\n- Secret type: Shodan Key\n\n- Repository: rickithadi/gallifrey-landing\n\n- Pushed date: September 16th 2025, 06:47:51 UTC\n\nFix this secret leak\nRead our guide to remediate an exposed secret.\n\nGitGuardian is the code security platform for the DevOps generation, trusted by 300,000 developers worldwide.\n\nUnsubscribe from these alerts.\n\nunsubscribe\n\n\n"
   }
 ]

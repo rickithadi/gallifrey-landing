@@ -198,5 +198,21 @@
     "permission_mode": "bypassPermissions",
     "hook_event_name": "Stop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
   }
 ]
