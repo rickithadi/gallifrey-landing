@@ -2,5 +2,17 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["syd1"]
+  "regions": ["syd1"],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/narrative",
+      "has": [
+        {
+          "type": "host",
+          "value": "narrative.gallifrey.consulting"
+        }
+      ]
+    }
+  ]
 }

@@ -22,5 +22,252 @@
       "command": "cd \"/Users/hadi.rickit/dev/gallifrey landing\" && git add -A && git commit -m \"Remove sensitive log files and secure repository\n\n- Remove logs containing exposed API keys\n- Add logs/ to .gitignore to prevent future exposure\n- Security cleanup following GitGuardian alert\n\nSECURITY: API key has been revoked and will be regenerated\"",
       "description": "Commit security cleanup"
     }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "cd \"/Users/hadi.rickit/dev/gallifrey landing\" && git push --force",
+      "description": "Force push to overwrite exposed history"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Immediately revoke exposed Shodan API key",
+          "status": "completed",
+          "activeForm": "Immediately revoking exposed Shodan API key"
+        },
+        {
+          "content": "Remove API key from git history",
+          "status": "completed",
+          "activeForm": "Removing API key from git history"
+        },
+        {
+          "content": "Generate new Shodan API key",
+          "status": "in_progress",
+          "activeForm": "Generating new Shodan API key"
+        },
+        {
+          "content": "Add .env files to .gitignore",
+          "status": "completed",
+          "activeForm": "Adding .env files to .gitignore"
+        },
+        {
+          "content": "Audit repository for other exposed secrets",
+          "status": "pending",
+          "activeForm": "Auditing repository for other exposed secrets"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "cd \"/Users/hadi.rickit/dev/gallifrey landing\" && grep -r -i \"api.*key\\|secret\\|token\\|password\" . --exclude-dir=node_modules --exclude-dir=.git --exclude=\"*.lock\" | grep -v \"api_key\" | head -10",
+      "description": "Audit repository for other potential secrets"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Immediately revoke exposed Shodan API key",
+          "status": "completed",
+          "activeForm": "Immediately revoking exposed Shodan API key"
+        },
+        {
+          "content": "Remove API key from git history",
+          "status": "completed",
+          "activeForm": "Removing API key from git history"
+        },
+        {
+          "content": "Generate new Shodan API key",
+          "status": "pending",
+          "activeForm": "Generating new Shodan API key"
+        },
+        {
+          "content": "Add .env files to .gitignore",
+          "status": "completed",
+          "activeForm": "Adding .env files to .gitignore"
+        },
+        {
+          "content": "Audit repository for other exposed secrets",
+          "status": "completed",
+          "activeForm": "Auditing repository for other exposed secrets"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/hadi.rickit/dev/gallifrey landing/pages/narrative.tsx"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/hadi.rickit/dev/gallifrey landing/components/OwnYourNarrative.tsx",
+      "limit": 50
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/hadi.rickit/dev/gallifrey landing/components/Header.tsx",
+      "limit": 50
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "narrative",
+      "path": "/Users/hadi.rickit/dev/gallifrey landing",
+      "glob": "*.tsx",
+      "output_mode": "files_with_matches"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "cd \"/Users/hadi.rickit/dev/gallifrey landing\" && ls -la vercel.json next.config.js",
+      "description": "Check for routing configuration files"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/hadi.rickit/dev/gallifrey landing/vercel.json"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "ExitPlanMode",
+    "tool_input": {
+      "plan": "## Plan: Move Narrative Section to Subdomain (narrative.gallifrey.consulting)\n\n### Overview\nTransform the current `/narrative` page into a standalone subdomain at `narrative.gallifrey.consulting` for better SEO and cleaner separation between enterprise AI security services (main domain) and the narrative/digital independence offerings (subdomain).\n\n### Implementation Steps:\n\n#### 1. **Create New Narrative Subdomain Project**\n- Create a new Next.js project specifically for narrative.gallifrey.consulting\n- Copy narrative-related components and pages from main site\n- Maintain separate repository or folder structure\n\n#### 2. **Extract Narrative Components**\nMove these components to the new subdomain project:\n- `pages/narrative.tsx` \u2192 becomes `pages/index.tsx` in new project\n- `components/OwnYourNarrative.tsx`\n- `components/OwnYourNarrativeHeader.tsx`\n- `components/DigitalSavasthya.tsx`\n- `components/ReputationServices.tsx`\n- `components/SubscriptionPlans.tsx`\n- Related narrative styling and assets\n\n#### 3. **Update Navigation & Cross-Domain Linking**\n- Main site header: Change narrative link to `https://narrative.gallifrey.consulting`\n- Narrative site: Add link back to main `https://gallifrey.consulting` for enterprise services\n- Both sites maintain consistent navigation structure\n\n#### 4. **SEO & URL Updates**\nMain updates needed:\n- Change all `/narrative` or `/own-your-narrative` references to `https://narrative.gallifrey.consulting`\n- Update canonical URLs in narrative components\n- Update structured data URLs\n- Update sitemap to include subdomain\n- Implement proper cross-domain analytics tracking\n\n#### 5. **Vercel Subdomain Configuration**\n- Deploy narrative project separately on Vercel\n- Configure DNS: `narrative.gallifrey.consulting` \u2192 Vercel deployment\n- Add subdomain in Vercel dashboard\n- Configure production environment variables\n\n#### 6. **Content & Branding Updates**\n- Rename \"Own Your Narrative\" to simply \"Narrative\" throughout\n- Update meta titles/descriptions for subdomain\n- Maintain savasthya/dharma messaging on narrative subdomain\n- Keep enterprise AI security on main domain\n\n#### 7. **Technical Considerations**\n- Share common components via npm package or git submodule\n- Consistent design system across both domains\n- Shared authentication if needed\n- CORS configuration for API calls between domains\n\n### Benefits:\n- **Better SEO**: Separate domains for distinct audiences (enterprise vs individual/creator)\n- **Cleaner Architecture**: Clear separation of concerns\n- **Brand Clarity**: narrative.gallifrey.consulting focuses on digital independence\n- **Scalability**: Each site can evolve independently\n\n### Files to Update/Create:\n1. New narrative project with its own package.json, next.config.js\n2. Remove narrative page from main site\n3. Update all internal links and navigation\n4. Configure subdomain deployment on Vercel\n5. Update DNS records"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "TodoWrite",
+    "tool_input": {
+      "todos": [
+        {
+          "content": "Create new narrative subdomain project structure",
+          "status": "in_progress",
+          "activeForm": "Creating new narrative subdomain project structure"
+        },
+        {
+          "content": "Extract narrative components to new project",
+          "status": "pending",
+          "activeForm": "Extracting narrative components to new project"
+        },
+        {
+          "content": "Update main site navigation to point to subdomain",
+          "status": "pending",
+          "activeForm": "Updating main site navigation to point to subdomain"
+        },
+        {
+          "content": "Remove narrative page from main site",
+          "status": "pending",
+          "activeForm": "Removing narrative page from main site"
+        },
+        {
+          "content": "Configure subdomain URLs and SEO metadata",
+          "status": "pending",
+          "activeForm": "Configuring subdomain URLs and SEO metadata"
+        },
+        {
+          "content": "Set up Vercel deployment for subdomain",
+          "status": "pending",
+          "activeForm": "Setting up Vercel deployment for subdomain"
+        }
+      ]
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "cd \"/Users/hadi.rickit/dev\" && mkdir -p \"narrative-gallifrey\"",
+      "description": "Create narrative subdomain project directory"
+    }
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "cd \"/Users/hadi.rickit/dev/gallifrey landing\" && git add -A",
+      "description": "Stage all changes for commit"
+    }
   }
 ]

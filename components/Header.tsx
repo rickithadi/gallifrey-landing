@@ -63,13 +63,13 @@ export function Header() {
 
           {/* CTA Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            {/* For Creators Link */}
+            {/* Narrative Link */}
             <Link
-              href="/own-your-narrative"
+              href="https://narrative.gallifrey.consulting"
               className="hidden md:flex items-center gap-1.5 text-sm font-medium text-oyn-orange-600 hover:text-oyn-orange-700 transition-colors duration-200"
             >
               <Sparkles className="w-4 h-4" />
-              <span>For Creators</span>
+              <span>Narrative</span>
             </Link>
             
             <Button
@@ -112,12 +112,12 @@ export function Header() {
                 </a>
               ))}
               <Link
-                href="/own-your-narrative"
+                href="https://narrative.gallifrey.consulting"
                 className="text-sm font-medium text-oyn-orange-600 hover:text-oyn-orange-700 transition-colors duration-200 py-2 flex items-center gap-1.5"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Sparkles className="w-4 h-4" />
-                <span>For Creators</span>
+                <span>Narrative</span>
               </Link>
               <div className="pt-4 border-t border-border/30">
                 <Button

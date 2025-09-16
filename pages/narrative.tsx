@@ -22,7 +22,7 @@ export default function OwnYourNarrativePage() {
       },
       {
         "@type": "Service",
-        "@id": "https://gallifrey.consulting/own-your-narrative#digitalindependence",
+        "@id": "https://narrative.gallifrey.consulting/#digitalindependence",
         "name": "Digital Dharma & Personal Reputation Management Services",
         "description": "Individual digital wellness and reputation management for high-profile individuals, creators, and privacy-conscious families. Achieve authentic digital presence and platform independence. Starting at $1,000/month.",
         "provider": {
@@ -82,15 +82,15 @@ export default function OwnYourNarrativePage() {
       },
       {
         "@type": "WebPage",
-        "@id": "https://gallifrey.consulting/own-your-narrative#webpage",
-        "url": "https://gallifrey.consulting/own-your-narrative",
-        "name": "Own Your Narrative - Digital Independence",
+        "@id": "https://narrative.gallifrey.consulting/#webpage",
+        "url": "https://narrative.gallifrey.consulting",
+        "name": "Narrative - Digital Independence",
         "description": "What happens when someone Googles your business? Take control of your search results with professional web development that puts you first.",
         "isPartOf": {
           "@id": "https://gallifrey.consulting/#website"
         },
         "about": {
-          "@id": "https://gallifrey.consulting/own-your-narrative#digitalindependence"
+          "@id": "https://narrative.gallifrey.consulting/#digitalindependence"
         }
       }
     ]
@@ -99,13 +99,13 @@ export default function OwnYourNarrativePage() {
   return (
     <>
       <NextSeo
-        title="Melbourne Web Development | Google Search Results Optimization | Professional Websites from $500"
-        description="Professional web development Melbourne. Control your Google search results with custom websites that rank first. Platform-independent digital presence from $500. Free audit available."
-        canonical="https://gallifrey.consulting/own-your-narrative"
+        title="Digital Independence | Narrative Control | Platform-Proof Digital Presence"
+        description="Take control of your digital narrative. Platform-independent digital presence with authentic storytelling. Digital sovereignty and reputation management services."
+        canonical="https://narrative.gallifrey.consulting"
         openGraph={{
-          url: 'https://gallifrey.consulting/own-your-narrative',
-          title: 'Melbourne Web Development | Professional Website Design & SEO',
-          description: 'Professional web development in Melbourne. Custom websites that dominate Google search results. Platform-independent digital presence starting from $500.',
+          url: 'https://narrative.gallifrey.consulting',
+          title: 'Digital Independence | Narrative Control | Platform-Proof Presence',
+          description: 'Take control of your digital narrative. Platform-independent digital presence with authentic storytelling and reputation management.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image-narrative.jpg',
@@ -119,7 +119,7 @@ export default function OwnYourNarrativePage() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'melbourne web development, professional website design melbourne, custom website development, google search optimization, seo web design melbourne, business website melbourne, web developer melbourne, website design melbourne, professional web design, search engine optimization melbourne, custom web development melbourne, small business websites melbourne'
+            content: 'digital independence, narrative control, platform independence, digital sovereignty, authentic storytelling, reputation management, digital savasthya, digital dharma, platform-proof presence, narrative marketing, digital wellness, online authenticity'
           },
           {
             property: 'article:author',
