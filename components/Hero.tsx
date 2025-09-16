@@ -5,7 +5,6 @@ import { trackCTAClick } from "@/lib/analytics";
 import { useLayoutABTest } from "./LayoutABTestProvider";
 import { trackLayoutVariantConversion } from "@/lib/layout-ab-test";
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
-import { AnimatedAdjective } from "./AnimatedAdjective";
 import { PlaceholderAnimation } from "./PlaceholderAnimation";
 import { PerformanceProfiler } from "./PerformanceProfiler";
 import dynamic from "next/dynamic";
@@ -16,6 +15,15 @@ const HeroThreeBackground = dynamic(
   { 
     ssr: false, 
     loading: () => <PlaceholderAnimation />
+  }
+);
+
+// Coin animation component
+const CoinAnimation = dynamic(
+  () => import("./CoinAnimation").then(mod => ({ default: mod.CoinAnimation })),
+  { 
+    ssr: false, 
+    loading: () => <div className="w-[120px] h-[120px] bg-gray-200 rounded-full animate-pulse" />
   }
 );
 
@@ -54,22 +62,19 @@ export const Hero = React.memo(function Hero() {
                   headlineAnimation.isVisible ? "visible complete" : ""
                 }`}
               >
-                What happens when <span className="text-gallifrey-teal italic font-medium">AI-powered attacks</span> target your business?
+Two Sides.<br /><span className="text-authority">One Solution.</span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mt-6 leading-relaxed max-w-2xl">
-                Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
-              </p>
-              <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mt-6 leading-relaxed max-w-2xl">
-                96% of enterprises face AI-powered surveillance and manipulation risks. Your digital infrastructure requires <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> enterprise-grade protection against Maltego-style reconnaissance, deepfake campaigns, and prompt injection attacks through quantum-secure architecture and intelligent threat monitoring.
+Master both surveillance and privacy.
               </p>
               <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mt-8 text-sm text-gallifrey-charcoal/60 font-light">
-                <span>Global AI Security Leaders</span>
+                <span>Secure</span>
                 <span className="hidden sm:inline mx-1">·</span>
                 <span className="sm:hidden">•</span>
-                <span>Quantum-Secure</span>
+                <span>Private</span>
                 <span className="hidden sm:inline mx-1">·</span>
                 <span className="sm:hidden">•</span>
-                <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
+                <span className="whitespace-nowrap">Controlled</span>
               </div>
             </header>
 
@@ -90,7 +95,7 @@ export const Hero = React.memo(function Hero() {
                     href="#platform-assessment"
                     onClick={() => handleCTAClick("hero-free-assessment")}
                   >
-                    Get Free Assessment
+                    Schedule Consultation
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </a>
                 </Button>
@@ -104,7 +109,7 @@ export const Hero = React.memo(function Hero() {
                     href="#contact"
                     onClick={() => handleCTAClick("hero-executive-briefing")}
                   >
-                    Book Consultation
+                    Learn More
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
                   </a>
                 </Button>
@@ -130,8 +135,9 @@ export const Hero = React.memo(function Hero() {
       </PerformanceProfiler>
 
       <div className="container mx-auto max-w-6xl relative z-20">
-        <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">
-          <header className="mb-12 md:mb-16">
+        <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0 md:flex md:items-center md:justify-between">
+          <div className="md:flex-1">
+            <header className="mb-12 md:mb-16">
             <h1
               ref={headlineAnimation.ref}
               id="hero-heading"
@@ -139,22 +145,19 @@ export const Hero = React.memo(function Hero() {
                 headlineAnimation.isVisible ? "visible complete" : ""
               }`}
             >
-              What happens when <span className="text-gallifrey-teal italic font-medium">AI-powered attacks</span> target your business?
+Two Sides.<br /><span className="text-authority">One Solution.</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mb-8 leading-relaxed max-w-2xl">
-              Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
-            </p>
-            <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mb-12 leading-relaxed max-w-2xl">
-              96% of enterprises face AI-powered surveillance and manipulation risks. Your digital infrastructure requires <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> enterprise-grade protection against Maltego-style reconnaissance, deepfake campaigns, and prompt injection attacks through quantum-secure architecture and intelligent threat monitoring.
+Master both surveillance and privacy.
             </p>
             <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mb-12 text-sm text-gallifrey-charcoal/60 font-light">
-              <span>Global AI Security Leaders</span>
+              <span>Secure</span>
               <span className="hidden sm:inline mx-2">·</span>
               <span className="sm:hidden">•</span>
-              <span>Quantum-Secure</span>
+              <span>Private</span>
               <span className="hidden sm:inline mx-2">·</span>
               <span className="sm:hidden">•</span>
-              <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
+              <span className="whitespace-nowrap">Controlled</span>
             </div>
           </header>
 
@@ -174,10 +177,16 @@ export const Hero = React.memo(function Hero() {
               href="#contact"
               onClick={() => handleCTAClick("hero-executive-briefing")}
             >
-              Begin conversation
+              Schedule Consultation
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
             </a>
           </Button>
+          </div>
+          </div>
+          
+          {/* Coin Animation */}
+          <div className="hidden md:block md:flex-shrink-0 md:ml-16">
+            <CoinAnimation className="" autoFlip={true} flipInterval={6000} />
           </div>
         </div>
       </div>
