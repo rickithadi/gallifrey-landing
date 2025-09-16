@@ -4,6 +4,10 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
 import { Services } from '@/components/Services'
+import { ReputationServices } from '@/components/ReputationServices'
+import { DigitalSavasthya } from '@/components/DigitalSavasthya'
+import { SubscriptionPlans } from '@/components/SubscriptionPlans'
+import { PlatformAssessment } from '@/components/PlatformAssessment'
 import { Testimonials } from '@/components/Testimonials'
 import { TrustAndSecurity } from '@/components/TrustAndSecurity'
 import dynamic from 'next/dynamic'
@@ -63,7 +67,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Melbourne enterprise web development agency specializing in digital sovereignty, security-first custom solutions, GDPR compliance, and enterprise-grade digital protection services.",
+        "description": "Melbourne enterprise AI security agency specializing in AI threat protection, quantum-secure custom solutions, deepfake detection, and enterprise-grade AI governance services.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -97,8 +101,8 @@ export default function Home() {
       {
         "@type": "Service",
         "@id": "https://gallifrey.consulting/#customdevelopment",
-        "name": "Enterprise Web Development & Digital Sovereignty Services",
-        "description": "Enterprise-grade web development with security-first architecture, custom digital solutions, and comprehensive digital sovereignty services for business continuity",
+        "name": "Enterprise AI Security & Digital Protection Services",
+        "description": "Enterprise-grade AI security with quantum-resistant architecture, custom AI-secure solutions, and comprehensive AI governance services for business continuity",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -108,36 +112,36 @@ export default function Home() {
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Enterprise Development & Digital Sovereignty Services",
+          "name": "Enterprise AI Security & Digital Protection Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Enterprise Website Development",
-                "description": "Security-first custom web development with enterprise-grade architecture and comprehensive digital protection"
-              },
-              "price": "1500",
-              "priceCurrency": "AUD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Enterprise Design Systems",
-                "description": "Scalable design systems and component libraries with enterprise-grade security and accessibility standards"
-              },
-              "price": "5000",
-              "priceCurrency": "AUD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Digital Sovereignty & Privacy Protection",
-                "description": "Comprehensive digital independence solutions including data protection, platform migration, and enterprise privacy compliance"
+                "name": "AI-Resistant Enterprise Development",
+                "description": "Quantum-secure custom development with AI threat modeling, deepfake protection, and comprehensive digital AI defense"
               },
               "price": "2500",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Security & Governance Systems",
+                "description": "Enterprise AI governance frameworks, AI threat monitoring, and compliance systems with real-time AI attack detection"
+              },
+              "price": "8000",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital AI Protection & Sovereignty",
+                "description": "Comprehensive AI threat protection including deepfake detection, prompt injection prevention, and AI-resistant platform independence"
+              },
+              "price": "5000",
               "priceCurrency": "AUD"
             }
           ]
@@ -168,10 +172,10 @@ export default function Home() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What makes Gallifrey Consulting different from other development agencies?",
+            "name": "What makes Gallifrey Consulting different from other AI security agencies?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We&apos;re pixel-perfect web developers who craft custom design systems with obsessive attention to detail. Every website and digital solution we create is hand-coded from scratch with mathematical precision. Plus, we offer digital sovereignty and privacy protection services."
+              "text": "We&apos;re quantum-secure AI specialists who craft custom defense systems with obsessive attention to emerging threats. Every digital solution we create is hand-coded with AI threat modeling and mathematical precision. Plus, we offer comprehensive AI governance and deepfake protection services."
             }
           },
           {
@@ -184,10 +188,10 @@ export default function Home() {
           },
           {
             "@type": "Question",
-            "name": "What development and security services do you provide?",
+            "name": "What AI security and protection services do you provide?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We provide pixel-perfect web development (custom websites, bespoke design systems, digital solutions) with obsessive design detail, plus digital sovereignty services including privacy protection, data cleanup, platform independence, and custom digital experiences."
+              "text": "We provide quantum-secure AI development (custom websites, AI-resistant systems, digital solutions) with obsessive security detail, plus comprehensive AI protection services including deepfake detection, prompt injection prevention, AI governance, and custom AI-secure digital experiences."
             }
           }
         ]
@@ -198,13 +202,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Custom Development Melbourne | Enterprise Security"
-        description="Melbourne's premier web agency. Security-first development, GDPR compliance, digital sovereignty. Professional web solutions with enterprise protection."
+        title="AI Security Melbourne | Enterprise Digital Protection"
+        description="Melbourne's premier AI security agency. AI-resistant development, deepfake protection, prompt injection prevention, quantum-secure digital solutions with enterprise AI governance."
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Melbourne Web Development | Security-First Digital Solutions',
-          description: 'Melbourne web agency specializing in security-first development, GDPR compliance, and digital sovereignty solutions.',
+          title: 'Melbourne AI Security | AI-Resistant Digital Solutions',
+          description: 'Melbourne AI security specialists delivering quantum-secure development, deepfake protection, and enterprise AI governance solutions.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',
@@ -218,7 +222,7 @@ export default function Home() {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'Melbourne enterprise web development, digital sovereignty Melbourne, security-first development, GDPR compliance Melbourne, enterprise web solutions, custom website design Melbourne, data protection services, platform independence, digital narrative control, Melbourne web development agency, bespoke web development, privacy compliance, digital security consulting, enterprise security Melbourne'
+            content: 'Melbourne AI security, artificial intelligence cybersecurity, AI threat protection, deepfake detection Melbourne, prompt injection prevention, quantum-secure development, enterprise AI governance, AI-resistant architecture, Melbourne AI consulting, digital AI protection, AI security compliance, enterprise AI solutions, AI threat monitoring, cybersecurity AI Melbourne, AI security specialists'
           },
           {
             property: 'article:author',
@@ -249,7 +253,11 @@ export default function Home() {
       <div className="min-h-screen bg-white">
         <Header />
         <Hero />
+        <PlatformAssessment />
         <Services />
+        <ReputationServices />
+        <DigitalSavasthya />
+        <SubscriptionPlans />
         <Testimonials />
         <TrustAndSecurity />
         <Pricing />

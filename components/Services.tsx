@@ -8,21 +8,21 @@ export function Services() {
   const services = [
     {
       icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Precision-Engineered Digital Assets",
-      description: "Bespoke systems engineered to become proprietary IP. Custom architecture built to enterprise specifications with zero technical debt. Every line of code is an asset that appreciates over time, creating defensible competitive moats.",
-      details: ["Custom architecture becomes proprietary IP", "Zero technical debt from day one", "Enterprise-grade scalability without vendor lock-in", "Unique integrations that competitors cannot replicate"]
+      title: "AI-Resistant Digital Architecture",
+      description: "Quantum-secure systems engineered to resist AI-powered attacks and become proprietary IP. Custom architecture built with AI threat modeling and zero technical debt. Every line of code includes anti-prompt-injection safeguards and deepfake detection, creating defensible competitive moats against emerging AI threats.",
+      details: ["AI threat modeling & quantum-secure architecture", "Prompt injection & LLM attack prevention", "Deepfake detection & content authenticity verification", "AI-resistant integrations competitors cannot replicate"]
     },
     {
       icon: <Target className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Complete Market Authority Through Search",
-      description: "Strategic narrative control and content dominance that generates enterprise leads 24/7. We remove negative content, eliminate data broker exposure, and push your preferred narrative across all digital channels to establish definitive market authority.",
-      details: ["Data broker removal from 100+ sources", "Negative content removal and suppression", "Strategic narrative positioning across search results", "24/7 enterprise lead generation through authority content"]
+      title: "AI-Enhanced Digital Savasthya",
+      description: "Intelligent reputation management powered by AI monitoring that maintains your digital health against AI manipulation. Like Ayurvedic medicine for your online footprint enhanced with machine learning, we detect AI-generated attacks, deepfake campaigns, and synthetic reputation threats while cultivating authentic digital presence.",
+      details: ["AI-powered reputation monitoring across 200+ sources", "Deepfake & synthetic content detection", "Machine learning threat analysis & response", "AI manipulation crisis protocols"]
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Enterprise Security & Business Continuity",
-      description: "Zero-incident compliance architecture that opens new markets. Our security framework meets the highest enterprise standards, enabling partnerships with Fortune 500 clients and government contracts that require bulletproof digital infrastructure.",
-      details: ["Zero-incident security track record", "Enterprise compliance that opens new markets", "Fortune 500-grade risk mitigation", "Business continuity guarantees with liability coverage"]
+      title: "Enterprise AI Security & Governance",
+      description: "Zero-incident AI compliance architecture that opens new markets. Our AI security framework meets the highest enterprise standards for AI governance, enabling partnerships with Fortune 500 clients and government contracts that require bulletproof AI-resistant digital infrastructure and regulatory compliance.",
+      details: ["Zero AI security incidents track record", "AI governance & regulatory compliance", "Enterprise-grade AI threat mitigation", "Business continuity with AI risk coverage"]
     }
   ];
 
@@ -42,12 +42,12 @@ export function Services() {
           </div>
 
           <h2 id="services-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl tracking-tight">
-            Enterprise Digital Assets That
-            <span className="italic text-accent"> Generate Competitive Advantage</span>
+            AI-Secure Digital Assets That
+            <span className="italic text-accent"> Defend Against Future Threats</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Three strategic pillars that create measurable competitive advantage and unlock enterprise opportunities.
+            Three strategic pillars that create AI-resistant competitive advantage and unlock enterprise opportunities while protecting against emerging digital threats.
           </p>
         </div>
 

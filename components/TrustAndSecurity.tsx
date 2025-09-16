@@ -8,42 +8,42 @@ export function TrustAndSecurity() {
   const uniqueApproach = [
     {
       icon: <Target className="w-6 h-6 text-accent" />,
-      title: "Complete Ownership",
-      description: "Custom code and architecture with no vendor lock-in. You own everything we build for your business."
+      title: "AI-Resistant Ownership",
+      description: "Custom code and architecture immune to AI attacks with no vendor lock-in. You own everything we build with quantum-secure foundations."
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" />,
-      title: "Security First", 
-      description: "Enterprise-grade security and GDPR compliance built in from day one. Protect your business from digital threats."
+      title: "AI Security First", 
+      description: "Enterprise-grade AI security, deepfake protection, and prompt injection prevention built in from day one. Defend against AI-powered digital threats."
     },
     {
       icon: <Award className="w-6 h-6 text-accent" />,
-      title: "Premium Positioning",
-      description: "Stand out as the trustworthy choice with privacy-focused, professional digital presence."
+      title: "AI-Verified Positioning",
+      description: "Stand out as the trustworthy choice with AI-authenticated content and privacy-focused digital presence that can't be manipulated."
     },
     {
       icon: <MapPin className="w-6 h-6 text-accent" />,
-      title: "Melbourne Based",
-      description: "Local expertise with Australian business knowledge and compliance. Direct communication and accountability."
+      title: "Melbourne AI Hub",
+      description: "Local expertise with Australian AI governance knowledge and compliance. Direct communication with real humans, not AI agents."
     },
     {
       icon: <Star className="w-6 h-6 text-accent" />,
-      title: "Scalable Architecture",
-      description: "Custom systems that grow with your business. No rebuilding or platform migrations required."
+      title: "AI-Adaptive Architecture",
+      description: "Custom systems that evolve with AI threats and grow with your business. No rebuilding required as AI landscape changes."
     },
     {
       icon: <Zap className="w-6 h-6 text-accent" />,
-      title: "Optimized Performance",
-      description: "Fast-loading, professional websites that impress visitors and convert them into customers."
+      title: "AI-Optimized Performance",
+      description: "Fast-loading, AI-enhanced websites that impress visitors and convert them into customers while blocking AI scraping."
     }
   ];
 
 
   const stats = [
-    { value: "0", label: "Security Incidents" },
-    { value: "100%", label: "Custom Security Frameworks" },
-    { value: "GDPR", label: "Compliant by Design" },
-    { value: "24/7", label: "Security Monitoring" }
+    { value: "0", label: "AI Security Breaches" },
+    { value: "100%", label: "AI-Resistant Frameworks" },
+    { value: "GDPR+", label: "AI Governance Ready" },
+    { value: "24/7", label: "AI Threat Monitoring" }
   ];
 
   return (
@@ -67,7 +67,7 @@ export function TrustAndSecurity() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Melbourne businesses choose us for secure, custom websites that protect their data and give them complete control over their digital presence.
+            Melbourne businesses choose us for AI-secure, custom digital solutions that protect against emerging threats and give them complete control over their digital presence in the age of artificial intelligence.
           </p>
         </div>
 

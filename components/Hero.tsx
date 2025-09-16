@@ -54,22 +54,22 @@ export const Hero = React.memo(function Hero() {
                   headlineAnimation.isVisible ? "visible complete" : ""
                 }`}
               >
-                What happens when someone <span className="text-gallifrey-teal italic font-medium">Googles your business?</span>
+                What happens when <span className="text-gallifrey-teal italic font-medium">AI-powered attacks</span> target your business?
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mt-6 leading-relaxed max-w-2xl">
-                Go ahead. Try it right now.
+                Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
               </p>
               <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mt-6 leading-relaxed max-w-2xl">
-                Your digital footprint shapes your reality. We help you craft that narrative with <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> precision.
+                96% of businesses face AI-powered de-platforming risks. Your digital <em>savasthya</em> — your authentic online presence defended against AI threats — shapes your reality. We help you achieve <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> AI-resistant digital independence through quantum-secure infrastructure and intelligent reputation protection.
               </p>
               <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mt-8 text-sm text-gallifrey-charcoal/60 font-light">
                 <span>Melbourne</span>
                 <span className="hidden sm:inline mx-1">·</span>
                 <span className="sm:hidden">•</span>
-                <span>Security certified</span>
+                <span>AI Security Specialists</span>
                 <span className="hidden sm:inline mx-1">·</span>
                 <span className="sm:hidden">•</span>
-                <span className="whitespace-nowrap">Zero incidents since 2019</span>
+                <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
               </div>
             </header>
 
@@ -79,20 +79,36 @@ export const Hero = React.memo(function Hero() {
                 ctaAnimation.isVisible ? "visible" : ""
               }`}
             >
-              <Button
-                size="lg"
-                variant="gallifrey"
-                className="px-8 py-3 font-medium tracking-wide group"
-                asChild
-              >
-                <a
-                  href="#contact"
-                  onClick={() => handleCTAClick("hero-executive-briefing")}
+              <div className="flex flex-col sm:flex-row gap-4 items-center">
+                <Button
+                  size="lg"
+                  variant="gallifrey"
+                  className="px-8 py-3 font-medium tracking-wide group"
+                  asChild
                 >
-                  Begin conversation
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-                </a>
-              </Button>
+                  <a
+                    href="#platform-assessment"
+                    onClick={() => handleCTAClick("hero-free-assessment")}
+                  >
+                    Get Free Assessment
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="gallifrey-outline"
+                  className="px-8 py-3 font-medium tracking-wide group"
+                  asChild
+                >
+                  <a
+                    href="#contact"
+                    onClick={() => handleCTAClick("hero-executive-briefing")}
+                  >
+                    Book Consultation
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -123,22 +139,22 @@ export const Hero = React.memo(function Hero() {
                 headlineAnimation.isVisible ? "visible complete" : ""
               }`}
             >
-              What happens when someone <span className="text-gallifrey-teal italic font-medium">Googles your business?</span>
+              What happens when <span className="text-gallifrey-teal italic font-medium">AI-powered attacks</span> target your business?
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mb-8 leading-relaxed max-w-2xl">
-              Go ahead. Try it right now.
+              Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
             </p>
             <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mb-12 leading-relaxed max-w-2xl">
-              Your digital footprint shapes your reality. We help you craft that narrative with <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> precision.
+              96% of businesses face AI-powered de-platforming risks. Your digital <em>savasthya</em> — your authentic online presence defended against AI threats — shapes your reality. We help you achieve <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> AI-resistant digital independence through quantum-secure infrastructure and intelligent reputation protection.
             </p>
             <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mb-12 text-sm text-gallifrey-charcoal/60 font-light">
               <span>Melbourne</span>
               <span className="hidden sm:inline mx-2">·</span>
               <span className="sm:hidden">•</span>
-              <span>Security certified</span>
+              <span>AI Security Specialists</span>
               <span className="hidden sm:inline mx-2">·</span>
               <span className="sm:hidden">•</span>
-              <span className="whitespace-nowrap">Zero incidents since 2019</span>
+              <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
             </div>
           </header>
 
