@@ -246,5 +246,77 @@
     "permission_mode": "plan",
     "hook_event_name": "UserPromptSubmit",
     "prompt": "Let's iterate on the own your narrative section. I want to change that to just narrative and let's stick it on a subdomain so it's narrative.gallifrey.consulting. I think that would be much better from an SEO perspective and make it cleaner. You can still maintain the nav bars and everything. "
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "keep going"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "https://www.recordedfuture.com/\n\nlets get this into the design direction. i like the boldness"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "TypeError: Cannot read properties of undefined (reading 'call')\n    at options.factory (http://localhost:3002/_next/static/chunks/webpack.js:665:31)\n    at __webpack_require__ (http://localhost:3002/_next/static/chunks/webpack.js:29:33)\n    at fn (http://localhost:3002/_next/static/chunks/webpack.js:322:21)\n    at eval (webpack-internal:///(pages-dir-browser)/./components/Hero.tsx:11:72)\n    at (pages-dir-browser)/./components/Hero.tsx (http://localhost:3002/_next/static/chunks/pages/index.js:51:1)\n    at options.factory (http://localhost:3002/_next/static/chunks/webpack.js:665:31)\n    at __webpack_require__ (http://localhost:3002/_next/static/chunks/webpack.js:29:33)\n    at fn (http://localhost:3002/_next/static/chunks/webpack.js:322:21)\n    at eval (webpack-internal:///(pages-dir-browser)/./pages/index.tsx:11:74)\n    at (pages-dir-browser)/./pages/index.tsx (http://localhost:3002/_next/static/chunks/pages/index.js:215:1)\n    at options.factory (http://localhost:3002/_next/static/chunks/webpack.js:665:31)\n    at __webpack_require__ (http://localhost:3002/_next/static/chunks/webpack.js:29:33)\n    at fn (http://localhost:3002/_next/static/chunks/webpack.js:322:21)\n    at eval (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=%2FUsers%2Fhadi.rickit%2Fdev%2Fgallifrey%20landing%2Fpages%2Findex.tsx&page=%2F!:5:16)\n    at eval (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/route-loader.js:238:51)"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "figure out a way to mock the narrative section"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "tone down on the savasthya stuff, make it more corporate and understated. redesign the hro to be less wordy and maybe play on the coin terminology with the animation "
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "not running\n"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "TypeError: Cannot read properties of undefined (reading 'call')\n    at options.factory (http://localhost:3003/_next/static/chunks/webpack.js:665:31)\n    at __webpack_require__ (http://localhost:3003/_next/static/chunks/webpack.js:29:33)\n    at fn (http://localhost:3003/_next/static/chunks/webpack.js:322:21)\n    at eval (webpack-internal:///(pages-dir-browser)/./components/Hero.tsx:11:72)\n    at (pages-dir-browser)/./components/Hero.tsx (http://localhost:3003/_next/static/chunks/pages/index.js:51:1)\n    at options.factory (http://localhost:3003/_next/static/chunks/webpack.js:665:31)\n    at __webpack_require__ (http://localhost:3003/_next/static/chunks/webpack.js:29:33)\n    at fn (http://localhost:3003/_next/static/chunks/webpack.js:322:21)\n    at eval (webpack-internal:///(pages-dir-browser)/./pages/index.tsx:11:74)\n    at (pages-dir-browser)/./pages/index.tsx (http://localhost:3003/_next/static/chunks/pages/index.js:215:1)\n    at options.factory (http://localhost:3003/_next/static/chunks/webpack.js:665:31)\n    at __webpack_require__ (http://localhost:3003/_next/static/chunks/webpack.js:29:33)\n    at fn (http://localhost:3003/_next/static/chunks/webpack.js:322:21)\n    at eval (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=%2FUsers%2Fhadi.rickit%2Fdev%2Fgallifrey%20landing%2Fpages%2Findex.tsx&page=%2F!:5:16)\n    at eval (webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/route-loader.js:238:51)"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "push to a feature/coin branch"
+  },
+  {
+    "session_id": "4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit/4ddb5aa4-c6a9-4ec5-b66a-c67c58dd3acd.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "coin flip animation on scroll, lets work on that"
   }
 ]

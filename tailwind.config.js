@@ -17,6 +17,7 @@ module.exports = {
         "gallifrey-charcoal": "rgb(var(--gallifrey-charcoal))",
         "gallifrey-teal": "rgb(var(--gallifrey-teal))",
         "gallifrey-teal-dark": "rgb(var(--gallifrey-teal-dark))",
+        "gallifrey-teal-light": "rgb(var(--gallifrey-teal-light))",
         "gallifrey-border": "rgb(var(--gallifrey-border))",
 
         // ===== OWN YOUR NARRATIVE CAMPAIGN COLORS =====

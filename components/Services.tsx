@@ -8,21 +8,21 @@ export function Services() {
   const services = [
     {
       icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "AI-Resistant Digital Architecture",
-      description: "Quantum-secure systems engineered to resist AI-powered attacks and become proprietary IP. Custom architecture built with AI threat modeling and zero technical debt. Every line of code includes anti-prompt-injection safeguards and deepfake detection, creating defensible competitive moats against emerging AI threats.",
-      details: ["AI threat modeling & quantum-secure architecture", "Prompt injection & LLM attack prevention", "Deepfake detection & content authenticity verification", "AI-resistant integrations competitors cannot replicate"]
+      title: "Quantum-Secure Architecture",
+      description: "Sophisticated systems that transform digital vulnerabilities into competitive advantages. Custom-engineered architecture with proprietary threat modeling that creates defensible business moats. Elegant protection that becomes your intellectual property.",
+      details: ["Proprietary threat modeling & quantum-secure foundations", "Advanced prompt injection & LLM attack mitigation", "Sophisticated content authenticity & deepfake protection", "Exclusive integrations that create competitive barriers"]
     },
     {
       icon: <Target className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Enterprise Threat Intelligence & Monitoring",
-      description: "Advanced threat intelligence powered by AI monitoring that protects your enterprise reputation against sophisticated attacks. We detect AI-generated disinformation campaigns, deepfake operations, and synthetic content threats while maintaining your authentic corporate presence through continuous surveillance countermeasures.",
-      details: ["AI-powered threat monitoring across 200+ sources", "Deepfake & synthetic content detection", "Machine learning threat analysis & automated response", "Corporate disinformation crisis protocols"]
+      title: "Intelligent Threat Monitoring",
+      description: "Sophisticated surveillance meets privacy protection. Advanced intelligence systems that detect sophisticated attacks while maintaining your authentic presence. We monitor the monitors, ensuring absolute authority over your digital narrative.",
+      details: ["Comprehensive threat intelligence across global sources", "Advanced synthetic content & deepfake detection", "Intelligent threat analysis & automated countermeasures", "Sophisticated crisis response & narrative protection"]
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Enterprise AI Security & Governance",
-      description: "Zero-incident AI compliance architecture that opens new markets. Our AI security framework meets the highest enterprise standards for AI governance, enabling partnerships with Fortune 500 clients and government contracts that require bulletproof AI-resistant digital infrastructure and regulatory compliance.",
-      details: ["Zero AI security incidents track record", "AI governance & regulatory compliance", "Enterprise-grade AI threat mitigation", "Business continuity with AI risk coverage"]
+      title: "AI Governance & Compliance",
+      description: "Uncompromising standards that open enterprise markets. Sophisticated governance frameworks that meet the highest regulatory requirements while maintaining operational elegance. Your competitive advantage through absolute compliance authority.",
+      details: ["Uncompromising security track record & excellence", "Sophisticated AI governance & regulatory mastery", "Enterprise-grade threat mitigation & risk management", "Business continuity with comprehensive risk coverage"]
     }
   ];
 
@@ -42,12 +42,12 @@ export function Services() {
           </div>
 
           <h2 id="services-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl tracking-tight">
-            AI-Secure Digital Assets That
-            <span className="italic text-accent"> Defend Against Future Threats</span>
+Absolute Authority Over Your Digital Domain,
+            <span className="italic text-accent"> Where Surveillance Meets Privacy</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Three strategic pillars that create AI-resistant competitive advantage and unlock enterprise opportunities while protecting against emerging digital threats.
+Sophisticated protection architecture that transforms surveillance risks into competitive advantages. Where others see threats, we engineer absolute authority.
           </p>
         </div>
 

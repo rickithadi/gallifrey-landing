@@ -1,19 +1,27 @@
 import { useState, useEffect } from 'react';
 import { Eye, Shield } from 'lucide-react';
+import { useScrollAnimation } from '@/lib/useScrollAnimation';
 
 interface CoinAnimationProps {
   className?: string;
   autoFlip?: boolean;
   flipInterval?: number;
+  scrollTrigger?: boolean;
 }
 
 export function CoinAnimation({ 
   className = '', 
   autoFlip = true, 
-  flipInterval = 4000 
+  flipInterval = 4000,
+  scrollTrigger = true
 }: CoinAnimationProps) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const scrollAnimation = useScrollAnimation<HTMLDivElement>({ 
+    threshold: 0.3, 
+    triggerOnce: false 
+  });
 
+  // Auto-flip interval effect
   useEffect(() => {
     if (!autoFlip) return;
 
@@ -24,8 +32,21 @@ export function CoinAnimation({
     return () => clearInterval(interval);
   }, [autoFlip, flipInterval]);
 
+  // Scroll-triggered flip effect
+  useEffect(() => {
+    if (!scrollTrigger) return;
+
+    if (scrollAnimation.isVisible) {
+      // Flip when scrolled into view
+      setIsFlipped(true);
+    } else {
+      // Reset when scrolled out of view (since triggerOnce: false)
+      setIsFlipped(false);
+    }
+  }, [scrollAnimation.isVisible, scrollTrigger]);
+
   return (
-    <div className={`coin-container ${className}`}>
+    <div ref={scrollAnimation.ref} className={`coin-container ${className}`}>
       <div 
         className={`coin ${isFlipped ? 'flipped' : ''}`}
         onClick={() => setIsFlipped(!isFlipped)}

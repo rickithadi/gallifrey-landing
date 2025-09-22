@@ -735,11 +735,13 @@
     height: 120px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: coinFloat 6s ease-in-out infinite;
   }
 
   .coin.flipped {
     transform: rotateY(180deg);
+    animation: coinFloatFlipped 6s ease-in-out infinite;
   }
 
   .coin-face {
@@ -782,13 +784,38 @@
     transform: translateY(-4px) rotateY(180deg);
   }
 
+  /* Float animation keyframes */
+  @keyframes coinFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+
+  @keyframes coinFloatFlipped {
+    0%, 100% {
+      transform: translateY(0px) rotateY(180deg);
+    }
+    50% {
+      transform: translateY(-8px) rotateY(180deg);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .coin {
       transition: none;
+      animation: none;
     }
     
     .coin:hover {
       transform: none;
+    }
+    
+    .coin.flipped {
+      animation: none;
     }
   }
   

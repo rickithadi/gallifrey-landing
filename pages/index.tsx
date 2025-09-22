@@ -25,6 +25,16 @@ const ConsultativeContact = dynamic(() => import('@/components/ConsultativeConta
   loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading contact section" />
 })
 
+const NarrativePreview = dynamic(() => import('@/components/NarrativePreview').then(mod => ({ default: mod.NarrativePreview })), {
+  ssr: false,
+  loading: () => null
+})
+
+const DevUtils = dynamic(() => import('@/components/DevUtils').then(mod => ({ default: mod.DevUtils })), {
+  ssr: false,
+  loading: () => null
+})
+
 
 export default function Home() {
   const structuredData = {
@@ -248,6 +258,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       </Head>
       <div className="min-h-screen bg-white">
+        <DevUtils />
         <Header />
         <Hero />
         <PlatformAssessment />
@@ -257,6 +268,7 @@ export default function Home() {
         <Pricing />
         <FAQ />
         <ConsultativeContact />
+        <NarrativePreview />
         <Footer />
       </div>
     </>

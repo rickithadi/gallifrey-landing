@@ -186,7 +186,12 @@ Master both surveillance and privacy.
           
           {/* Coin Animation */}
           <div className="hidden md:block md:flex-shrink-0 md:ml-16">
-            <CoinAnimation className="" autoFlip={true} flipInterval={6000} />
+            <CoinAnimation 
+              className="" 
+              autoFlip={false} 
+              flipInterval={6000} 
+              scrollTrigger={true}
+            />
           </div>
         </div>
       </div>
