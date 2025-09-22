@@ -884,4 +884,440 @@
       background: rgba(255, 255, 255, 0.95);
     }
   }
+
+  /* ===== SECURITY-THEMED ANIMATIONS ===== */
+
+  /* Security Coin Animations */
+  .security-coin-container {
+    perspective: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .security-coin, .security-coin-large {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: securityFloat 8s ease-in-out infinite;
+  }
+
+  .security-coin {
+    width: 120px;
+    height: 120px;
+  }
+
+  .security-coin-large {
+    width: 180px;
+    height: 180px;
+  }
+
+  .security-coin.flipped, .security-coin-large.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .security-coin.hovered, .security-coin-large.hovered {
+    transform: scale(1.05) rotateY(-15deg);
+    animation-play-state: paused;
+  }
+
+  .security-coin-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 0 30px rgba(59, 130, 246, 0.4),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+
+  .security-coin-front {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
+    box-shadow: 
+      0 0 30px rgba(239, 68, 68, 0.4),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .security-coin-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+    box-shadow: 
+      0 0 30px rgba(16, 185, 129, 0.4),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .security-coin-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+
+  .security-icon-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .security-indicators {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  .security-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .security-dot.active {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    animation: securityPulse 2s ease-in-out infinite;
+  }
+
+  .security-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .surveillance-overlay {
+    background: radial-gradient(circle at center, 
+      rgba(239, 68, 68, 0.2) 0%, 
+      rgba(220, 38, 38, 0.1) 50%, 
+      transparent 100%);
+    animation: surveillanceScan 3s ease-in-out infinite;
+  }
+
+  .defense-overlay {
+    background: radial-gradient(circle at center, 
+      rgba(16, 185, 129, 0.2) 0%, 
+      rgba(5, 150, 105, 0.1) 50%, 
+      transparent 100%);
+    animation: defenseShield 4s ease-in-out infinite;
+  }
+
+  .security-coin:hover .security-overlay,
+  .security-coin-large:hover .security-overlay {
+    opacity: 1;
+  }
+
+  /* Security Status */
+  .security-status {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Scanning Ring Effect */
+  .security-scan-ring {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 2px solid transparent;
+    border-top: 2px solid rgba(59, 130, 246, 0.6);
+    border-radius: 50%;
+    animation: securityScan 4s linear infinite;
+    z-index: 1;
+  }
+
+  /* Particle System */
+  .security-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .security-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #60a5fa, transparent);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    animation: particleExplosion 1s ease-out forwards;
+  }
+
+  /* Security Background Elements */
+  .security-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridDrift 20s linear infinite;
+  }
+
+  .security-hexagon-field {
+    position: absolute;
+    inset: 0;
+  }
+
+  .security-hexagon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgba(59, 130, 246, 0.1);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+    animation: hexagonFloat 8s ease-in-out infinite;
+  }
+
+  .security-scan-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(34, 197, 94, 0.8) 50%, 
+      transparent 100%);
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+  }
+
+  .security-particle-field {
+    position: absolute;
+    inset: 0;
+  }
+
+  .security-floating-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(59, 130, 246, 0.6);
+    border-radius: 50%;
+    animation: floatingParticle 6s ease-in-out infinite;
+  }
+
+  .security-binary-rain {
+    position: absolute;
+    inset: 0;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+  }
+
+  .security-binary-column {
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    color: rgba(34, 197, 94, 0.3);
+    animation: binaryFall 8s linear infinite;
+  }
+
+  .security-binary-column span {
+    display: block;
+    line-height: 1.2;
+  }
+
+  .security-perimeter {
+    position: absolute;
+    inset: 20px;
+    pointer-events: none;
+  }
+
+  .security-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(59, 130, 246, 0.4);
+  }
+
+  .security-corner-tl {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .security-corner-tr {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .security-corner-bl {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+  }
+
+  .security-corner-br {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  .security-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, 
+      transparent 20%, 
+      rgba(255, 255, 255, 0.02) 50%, 
+      rgba(59, 130, 246, 0.05) 100%);
+  }
+
+  /* Keyframe Animations */
+  @keyframes securityFloat {
+    0%, 100% { transform: translateY(0px) rotateX(0deg); }
+    25% { transform: translateY(-8px) rotateX(5deg); }
+    50% { transform: translateY(-4px) rotateX(0deg); }
+    75% { transform: translateY(-12px) rotateX(-5deg); }
+  }
+
+  @keyframes securityPulse {
+    0%, 100% { 
+      opacity: 0.9;
+      transform: scale(1);
+    }
+    50% { 
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes securityScan {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes surveillanceScan {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes defenseShield {
+    0%, 100% { 
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% { 
+      opacity: 0.6;
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes particleExplosion {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(
+        calc(cos(var(--angle)) * 60px), 
+        calc(sin(var(--angle)) * 60px)
+      ) scale(0);
+    }
+  }
+
+  @keyframes gridDrift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+
+  @keyframes hexagonFloat {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0.1;
+    }
+    50% { 
+      transform: translateY(-20px) rotate(180deg);
+      opacity: 0.3;
+    }
+  }
+
+  @keyframes floatingParticle {
+    0%, 100% { 
+      transform: translateY(0px);
+      opacity: 0.6;
+    }
+    50% { 
+      transform: translateY(-30px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes binaryFall {
+    0% { 
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+    10%, 90% { opacity: 1; }
+    100% { 
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  /* Responsive adjustments for security elements */
+  @media (max-width: 768px) {
+    .security-coin-large {
+      width: 140px;
+      height: 140px;
+    }
+
+    .security-scan-ring {
+      width: 180px;
+      height: 180px;
+    }
+
+    .security-hexagon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .security-corner {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  /* Reduced motion preferences for security animations */
+  @media (prefers-reduced-motion: reduce) {
+    .security-coin,
+    .security-coin-large,
+    .security-scan-ring,
+    .security-hexagon,
+    .security-floating-particle,
+    .security-binary-column,
+    .security-particle {
+      animation: none !important;
+    }
+
+    .security-overlay {
+      animation: none !important;
+      opacity: 0.3 !important;
+    }
+
+    .security-grid-pattern {
+      animation: none !important;
+    }
+  }
 }
