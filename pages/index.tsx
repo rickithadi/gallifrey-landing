@@ -8,6 +8,9 @@ import { PlatformAssessment } from '@/components/PlatformAssessment'
 import { Testimonials } from '@/components/Testimonials'
 import { TrustAndSecurity } from '@/components/TrustAndSecurity'
 import dynamic from 'next/dynamic'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+import { GetStaticProps } from 'next'
 
 // Lazy load below-the-fold components
 const Pricing = dynamic(() => import('@/components/Pricing').then(mod => ({ default: mod.Pricing })), {
@@ -37,6 +40,7 @@ const DevUtils = dynamic(() => import('@/components/DevUtils').then(mod => ({ de
 
 
 export default function Home() {
+  const { t } = useTranslation('common');
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -209,8 +213,8 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Global AI Security | Enterprise Digital Protection"
-        description="World's premier AI security agency. AI-resistant development, deepfake protection, prompt injection prevention, quantum-secure digital solutions with enterprise AI governance."
+        title={t('seo.defaultTitle')}
+        description={t('seo.defaultDescription')}
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
@@ -273,4 +277,12 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'home', 'services', 'pricing', 'faq'])),
+    },
+  }
 }

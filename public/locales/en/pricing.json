@@ -1,0 +1,116 @@
+{
+  "section": {
+    "label": "Investment",
+    "title": "Strategic partnerships for",
+    "titleHighlight": " exceptional outcomes",
+    "subtitle": "Every engagement is customized to your specific requirements and goals. Our partnerships typically begin in the four-figure range, scaling with complexity and scope."
+  },
+  "packages": [
+    {
+      "name": "Personal Website",
+      "tagline": "Platform-proof digital foundation",
+      "description": "Perfect for individual creators and professionals who want to own their narrative",
+      "scope": "Ideal for: Solo professionals, creators, personal brands",
+      "timeline": "1-2 weeks",
+      "cta": "Get Foundation Quote",
+      "investment": "Four-figure investment",
+      "features": [
+        "Custom responsive website design",
+        "Basic SEO optimization",
+        "Contact form integration",
+        "Mobile-first development",
+        "GDPR compliance setup",
+        "Basic security implementation",
+        "1-month support included"
+      ]
+    },
+    {
+      "name": "Creator Liberation",
+      "tagline": "Escape platform prison",
+      "description": "Comprehensive solution for creators ready to break free from Big Tech dependency",
+      "scope": "Ideal for: Content creators, small businesses, growing brands",
+      "timeline": "2-3 weeks",
+      "cta": "Discuss Professional Package",
+      "investment": "Mid four to five-figure investment",
+      "popular": true,
+      "features": [
+        "Platform-independent website",
+        "Content migration assistance",
+        "Email list setup & integration",
+        "E-commerce capabilities",
+        "Advanced SEO optimization",
+        "Analytics & performance tracking",
+        "3-month support & guidance"
+      ]
+    },
+    {
+      "name": "Professional Authority",
+      "tagline": "Business continuity guarantee",
+      "description": "Enterprise-grade solution for businesses requiring maximum security and compliance",
+      "scope": "Ideal for: Established businesses, professional services, enterprises",
+      "timeline": "3-4 weeks",
+      "cta": "Explore Enterprise Solutions",
+      "investment": "Five+ figure strategic investment",
+      "features": [
+        "Custom web application development",
+        "Enterprise security implementation",
+        "GDPR & CCPA compliance",
+        "ISO 27001 ready infrastructure",
+        "Advanced performance optimization",
+        "24/7 security monitoring",
+        "6-month strategic partnership",
+        "Priority support & maintenance"
+      ]
+    }
+  ],
+  "popularLabel": "Most Popular",
+  "timelineLabel": "Timeline:",
+  "partnership": {
+    "label": "Partnership Process",
+    "title": "From Discovery to",
+    "titleHighlight": " Long-term Success",
+    "subtitle": "Our proven methodology combines strategic discovery, technical excellence, and ongoing partnership to deliver measurable outcomes that grow with your business.",
+    "steps": [
+      {
+        "title": "Strategic Discovery",
+        "description": "Comprehensive 30-minute strategy session analyzing your infrastructure, objectives, and competitive positioning",
+        "details": [
+          "Goals & requirements analysis",
+          "Strategic assessment",
+          "Risk & opportunity mapping",
+          "Investment alignment"
+        ]
+      },
+      {
+        "title": "Custom Proposal",
+        "description": "Detailed architecture design balancing security, scalability, and business requirements with transparent pricing",
+        "details": [
+          "Technical architecture",
+          "Security framework",
+          "Timeline & milestones",
+          "Flexible payment terms"
+        ]
+      },
+      {
+        "title": "Expert Implementation",
+        "description": "Agile development with continuous security validation, regular updates, and iterative refinement",
+        "details": [
+          "Custom development",
+          "Security implementation",
+          "Testing & optimization",
+          "Performance validation"
+        ]
+      },
+      {
+        "title": "Ongoing Partnership",
+        "description": "Strategic support, security monitoring, and infrastructure evolution as your business grows",
+        "details": [
+          "Continuous monitoring",
+          "Strategic consultation",
+          "Evolution planning",
+          "Incident response"
+        ]
+      }
+    ]
+  }
+}

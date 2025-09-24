@@ -1,0 +1,56 @@
+{
+  "section": {
+    "label": "Frequently Asked Questions",
+    "title": "Everything you need to know about",
+    "titleHighlight": " working with us",
+    "subtitle": "Have a different question? Get in touch and we'll get back to you within 24 hours."
+  },
+  "questions": [
+    {
+      "question": "What makes Gallifrey Consulting different from other web developers?",
+      "answer": "We specialize in security-first web development with a dual-brand strategy. Our main brand serves B2B enterprise clients with compliance-ready infrastructure, while our 'Narrative' campaign helps small businesses and creators achieve platform independence. We focus on GDPR/CCPA compliance, performance optimization, and breaking free from Big Tech dependency."
+    },
+    {
+      "question": "How do you structure investment levels for projects?",
+      "answer": "Each engagement commences with a comprehensive discovery consultation to thoroughly understand your objectives, timeline, and strategic requirements. Investment levels are calibrated based on project scope and complexity: foundational custom websites typically begin in the four-figure range, while comprehensive design systems with integrated security consulting range to five-figure investments. Enterprise-scale solutions with ongoing strategic partnerships are individually assessed and quoted. We maintain complete transparency with fixed-price proposals—no hourly billing uncertainties or unexpected costs."
+    },
+    {
+      "question": "Do you serve clients beyond Melbourne?",
+      "answer": "Absolutely. While we're proudly headquartered in Melbourne, our expertise extends across Australia and internationally. Our sophisticated digital-first methodology enables seamless collaboration regardless of geographic location, supported by meticulous communication protocols and strategic project governance that ensure exceptional outcomes for every client."
+    },
+    {
+      "question": "How does your Complete Market Authority Through Search pillar work?",
+      "answer": "Our second pillar combines strategic search positioning with comprehensive narrative control. We remove negative content from 100+ sources, eliminate data broker exposure, and strategically position your preferred narrative across all digital channels. The result: market authority that generates enterprise leads while controlling how your organization appears online."
+    },
+    {
+      "question": "How does your Enterprise Security & Business Continuity pillar work?",
+      "answer": "Our third pillar delivers zero-incident compliance architecture that meets Fortune 500 standards. We implement zero-trust frameworks, enterprise authentication, and comprehensive compliance protocols from the ground up. Our unblemished security record across all client engagements demonstrates our commitment to business continuity that enables new market opportunities."
+    },
+    {
+      "question": "What are typical project timelines?",
+      "answer": "Project duration is calibrated to complexity and scope requirements. Foundation engagements typically span 1-2 weeks, Professional packages require 2-4 weeks, while Enterprise solutions encompass 4-12 weeks. During our discovery phase, we provide meticulously detailed timelines with milestone markers, maintaining transparent communication and regular progress updates throughout the entire engagement."
+    },
+    {
+      "question": "Do you provide ongoing support after project delivery?",
+      "answer": "Certainly. Every partnership includes comprehensive ongoing support, continuous security monitoring, and proactive maintenance. Foundation engagements include one month of support, Professional packages encompass three months, while Enterprise partnerships feature indefinite strategic support. We cultivate enduring relationships and long-term success, not merely transactional project delivery."
+    },
+    {
+      "question": "Which technologies and frameworks do you employ?",
+      "answer": "We select optimal technologies based on strategic requirements rather than industry trends. Our technical expertise encompasses modern frameworks including Next.js and React for dynamic applications, Node.js for robust backend systems, enterprise database solutions (PostgreSQL, MongoDB), cloud infrastructure (AWS, Vercel), and comprehensive security toolsets. We integrate AI-assisted development methodologies to accelerate delivery while maintaining exceptional code quality. Our technology choices prioritize long-term stability, performance optimization, and security over ephemeral features. Every technical decision is thoroughly documented and explained, ensuring complete transparency in your investment."
+    },
+    {
+      "question": "How does your Precision-Engineered Digital Assets pillar create value?",
+      "answer": "Our first pillar transforms custom development into appreciating business assets. Every system is engineered to enterprise specifications with zero technical debt, creating proprietary IP that competitors cannot replicate. Our architecture becomes a competitive moat—scalable, vendor-independent, and designed to unlock enterprise opportunities."
+    },
+    {
+      "question": "What occurs during the discovery consultation?",
+      "answer": "Our 30-minute discovery consultation comprehensively addresses your current challenges, strategic objectives, technical requirements, timeline expectations, and success metrics. We explore your digital sovereignty aspirations, security priorities, and provide preliminary strategic recommendations. This obligation-free consultation ensures optimal alignment between our capabilities and your vision, establishing the foundation for a successful partnership."
+    }
+  ],
+  "stillHaveQuestions": {
+    "title": "Still have questions?",
+    "subtitle": "Schedule a competitive advantage assessment to explore how our three pillars can transform your enterprise.",
+    "sendMessage": "Send us a message",
+    "bookConsultation": "Book consultation call"
+  }
+}

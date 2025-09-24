@@ -1,0 +1,39 @@
+{
+  "navigation": {
+    "services": "Services",
+    "results": "Results", 
+    "investment": "Investment",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "narrative": "Narrative",
+    "skipToMain": "Skip to main content",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "currentPage": "Current page"
+  },
+  "languages": {
+    "en": "English",
+    "id": "Indonesian"
+  },
+  "buttons": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contact": "Contact Us",
+    "sendMessage": "Send us a message",
+    "bookConsultation": "Book consultation call",
+    "scheduleCall": "Schedule Discovery Call",
+    "viewStories": "View Success Stories"
+  },
+  "footer": {
+    "copyright": "© 2024 Gallifrey Consulting. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "seo": {
+    "defaultTitle": "Global AI Security | Enterprise Digital Protection",
+    "defaultDescription": "World's premier AI security agency. AI-resistant development, deepfake protection, prompt injection prevention, quantum-secure digital solutions with enterprise AI governance."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "session_id": "3876cf55-987a-4d4b-97f3-8bcf390c2d64",
+  "prompts": [
+    "@agent-qa-tester-agent test this application, @agent-ui-designer-agent condut design reveiew",
+    "use headless browser",
+    "remove \n\n\ud83c\udfa8 A/B Test: Color Variants\n\nDeep Corporate Teal\nSophisticated, premium consulting feel\n\nSteel Blue-Teal\nSecurity-focused, technical competence\nCurrent: Deep Corporate Teal\nTest with: ?variant=corporate-teal or ?variant=steel-blue-teal",
+    "remove the whole widget",
+    "update all the copy to use the intl logic.\n\nfor example hero.title hero.titleHighlight\nhero.subtitle",
+    "no mention of pricing please, it cheapens it. keep with the same copy just use the i18n\n",
+    "update the nav copy to use actualy values",
+    "leave the narrative section alone, it doesnt need translation. Focus on the gallifrey brand having actual values instead of navigation.services",
+    "no, show those labels instead of the key\n",
+    "Image #1]",
+    "Scoot Website\n\nHome Page\nOpening homepage panoramic video\nLogo\n\nTab 1- Pricing\nPricing & Packages\n\nTab 2- Scoot\nMeet our Head Instructor *Need Notes*\nAccomplishments *Need Notes*\n\nTab 3- Contact Us\nInquiries + Bookings Form\n-Full Name\n-Number of people\n-WA #\n-Email\n-Preferred date/ time\n-Surf level\n\nTab 4- Where to Find Us/ About Us\nSurf School Bio *Need Notes*\nLinks to Instagram \nGoogle Reviews\nLocation\n\nEtc\nVideo Analysis/ Land Coaching\nBeginner & Intermediate Surf Examples (Videos + Photos)\n\nSurf forecast?\n\n\n\nBooking Confirmation message/ template:\n\nThank you for confirming your booking with Uluwatu Surf School Bali.\n\nName:\nDate:\nTime:\n# of people:\nLesson type:\nSurf location:\nMeeting point:\n\n**Please note all payments must be made in cash. We do not take a deposit or cancellation fee, and understand any unforeseen circumstances. We ask that for any cancellations or rescheduling, please provide a notice period of 2 hours before the confirmed start time. Thank you and we look forward to surfing with you! \ud83e\udd19\ud83c\udffc\n",
+    "@agent-ui-ux-dev-team-coordinator provide improvements for navbar",
+    "start",
+    "provide suggestions on making it more understated and professional",
+    " - Consider removing icons from CTA buttons entirely\n  - Use consistent 4px border-radius throughout\n  - Implement 8px spacing grid for mathematical precision\n  - Add subtle letter-spacing to navigation items for executive feel",
+    "[Image #1]",
+    "restart dev server",
+    "it looks too clutered and has no top padding. give suggestions"
+  ]
+}

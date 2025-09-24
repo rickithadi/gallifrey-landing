@@ -30,5 +30,13 @@
     "hook_event_name": "PreCompact",
     "trigger": "manual",
     "custom_instructions": ""
+  },
+  {
+    "session_id": "3876cf55-987a-4d4b-97f3-8bcf390c2d64",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/3876cf55-987a-4d4b-97f3-8bcf390c2d64.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "PreCompact",
+    "trigger": "manual",
+    "custom_instructions": ""
   }
 ]

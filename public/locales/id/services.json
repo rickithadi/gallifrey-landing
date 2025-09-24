@@ -1,0 +1,40 @@
+{
+  "section": {
+    "label": "Apa Yang Kami Lakukan",
+    "title": "Otoritas Absolut Atas Domain Digital Anda,",
+    "titleHighlight": " Dimana Pengawasan Bertemu Privasi",
+    "subtitle": "Arsitektur perlindungan canggih yang mengubah risiko pengawasan menjadi keunggulan kompetitif. Dimana yang lain melihat ancaman, kami merancang otoritas absolut."
+  },
+  "services": [
+    {
+      "title": "Arsitektur Quantum-Secure",
+      "description": "Sistem canggih yang mengubah kerentanan digital menjadi keunggulan kompetitif. Arsitektur yang dirancang khusus dengan pemodelan ancaman proprietary yang menciptakan parit bisnis yang dapat dipertahankan. Perlindungan elegan yang menjadi kekayaan intelektual Anda.",
+      "details": [
+        "Pemodelan ancaman proprietary & fondasi quantum-secure",
+        "Mitigasi injeksi prompt lanjutan & serangan LLM",
+        "Keaslian konten canggih & perlindungan deepfake",
+        "Integrasi eksklusif yang menciptakan penghalang kompetitif"
+      ]
+    },
+    {
+      "title": "Pemantauan Ancaman Cerdas",
+      "description": "Pengawasan canggih bertemu perlindungan privasi. Sistem intelijen lanjutan yang mendeteksi serangan canggih sambil mempertahankan kehadiran otentik Anda. Kami memantau para pemantau, memastikan otoritas absolut atas narasi digital Anda.",
+      "details": [
+        "Intelijen ancaman komprehensif di seluruh sumber global",
+        "Deteksi konten sintetis & deepfake lanjutan",
+        "Analisis ancaman cerdas & langkah penanggulangan otomatis",
+        "Respons krisis canggih & perlindungan narasi"
+      ]
+    },
+    {
+      "title": "Tata Kelola AI & Kepatuhan",
+      "description": "Standar tanpa kompromi yang membuka pasar perusahaan. Kerangka tata kelola canggih yang memenuhi persyaratan regulasi tertinggi sambil mempertahankan elegans operasional. Keunggulan kompetitif Anda melalui otoritas kepatuhan absolut.",
+      "details": [
+        "Rekam jejak keamanan tanpa kompromi & keunggulan",
+        "Tata kelola AI canggih & penguasaan regulasi",
+        "Mitigasi ancaman kelas perusahaan & manajemen risiko",
+        "Kontinuitas bisnis dengan cakupan risiko komprehensif"
+      ]
+    }
+  ]
+}

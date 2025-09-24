@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallifrey Consulting - UI/UX Design Review</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 40px; }
+        .score { font-size: 3em; font-weight: bold; color: #ef4444; }
+        .section { margin: 30px 0; }
+        .section h2 { color: #1B365D; border-bottom: 2px solid #14b8a6; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #f8fafc; padding: 20px; border-radius: 6px; border-left: 4px solid #14b8a6; }
+        .priority-high { border-left-color: #ef4444; }
+        .priority-medium { border-left-color: #f59e0b; }
+        .priority-low { border-left-color: #10b981; }
+        .screenshot { margin: 10px 0; }
+        .screenshot img { max-width: 100%; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .metric { display: inline-block; margin: 10px 15px 10px 0; padding: 8px 12px; background: #e0f2fe; border-radius: 4px; }
+        pre { background: #f1f5f9; padding: 15px; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gallifrey Consulting - UI/UX Design Review</h1>
+            <div class="score">58/100</div>
+            <p>Comprehensive automated design analysis - 24/09/2025, 8:04:44 am</p>
+        </div>
+
+        <div class="section">
+            <h2>Executive Summary</h2>
+            <div class="grid">
+                <div class="metric">Screenshots: 5</div>
+                <div class="metric">Recommendations: 2</div>
+                <div class="metric">Critical Issues: 0</div>
+                <div class="metric">Breakpoints Tested: 4</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Recommendations</h2>
+            <div class="grid">
+                
+                    <div class="card priority-medium">
+                        <h3>User Experience - Medium Priority</h3>
+                        <p><strong>Issue:</strong> Limited call-to-action elements found</p>
+                        <p><strong>Solution:</strong> Add more prominent CTAs to guide user actions and improve conversions</p>
+                    </div>
+                
+                    <div class="card priority-low">
+                        <h3>Brand Consistency - Low Priority</h3>
+                        <p><strong>Issue:</strong> Brand-specific typography classes not detected</p>
+                        <p><strong>Solution:</strong> Ensure .logo-serif and .elegant-caps classes are properly implemented</p>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Accessibility Analysis</h2>
+            <div class="card">
+                <p><strong>Missing Alt Text:</strong> 0 images</p>
+                <p><strong>Focusable Elements:</strong> 0 found</p>
+                <p><strong>Heading Structure:</strong> 0 headings</p>
+                <p><strong>Form Labels:</strong> 0 form elements</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Brand Consistency</h2>
+            <div class="card">
+                <p><strong>Colors Used:</strong> 4 unique colors</p>
+                <p><strong>Fonts Used:</strong> 1 font families</p>
+                <p><strong>Gallifrey Elements:</strong> 0</p>
+                <p><strong>OYN Elements:</strong> 0</p>
+                <p><strong>Logo Serif Class:</strong> Not found</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>User Experience Analysis</h2>
+            <div class="card">
+                <p><strong>Navigation Links:</strong> 0</p>
+                <p><strong>Call-to-Action Elements:</strong> 0</p>
+                <p><strong>Content Sections:</strong> 0</p>
+                <p><strong>Has Hero Section:</strong> No</p>
+                <p><strong>Has Footer:</strong> No</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Screenshots</h2>
+            
+                <div class="screenshot">
+                    <h3>DESKTOP FULL PAGE</h3>
+                    <img src="desktop-full-page.png" alt="desktop-full-page.png" loading="lazy">
+                </div>
+            
+                <div class="screenshot">
+                    <h3>MOBILE VIEW</h3>
+                    <img src="mobile-view.png" alt="mobile-view.png" loading="lazy">
+                </div>
+            
+                <div class="screenshot">
+                    <h3>TABLET VIEW</h3>
+                    <img src="tablet-view.png" alt="tablet-view.png" loading="lazy">
+                </div>
+            
+                <div class="screenshot">
+                    <h3>DESKTOP VIEW</h3>
+                    <img src="desktop-view.png" alt="desktop-view.png" loading="lazy">
+                </div>
+            
+                <div class="screenshot">
+                    <h3>LARGE DESKTOP VIEW</h3>
+                    <img src="large-desktop-view.png" alt="large-desktop-view.png" loading="lazy">
+                </div>
+            
+        </div>
+
+        <div class="section">
+            <h2>Raw Data</h2>
+            <pre>{
+  "timestamp": "2025-09-24T00:04:44.672Z",
+  "overallScore": 58,
+  "brandConsistency": {
+    "colorsUsed": [
+      "rgb(0, 0, 0)",
+      "rgb(255, 255, 255)",
+      "rgb(31, 41, 55)",
+      "rgb(117, 117, 117)"
+    ],
+    "typography": {
+      "fontsUsed": [
+        "\"Source Sans Pro\", system-ui, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+      ]
+    },
+    "brandElementsFound": {
+      "logoSerifClass": false,
+      "elegantCapsClass": false,
+      "gallifreyElements": 0,
+      "oynElements": 0
+    },
+    "designConsistency": {}
+  },
+  "responsiveDesign": {
+    "mobile": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    },
+    "tablet": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    },
+    "desktop": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    },
+    "large-desktop": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    }
+  },
+  "accessibility": {
+    "missingAltText": [],
+    "headingStructure": [],
+    "focusableElements": [],
+    "ariaLabels": [],
+    "colorContrast": [],
+    "formLabels": []
+  },
+  "uxAnalysis": {
+    "navigation": {},
+    "callToActions": [],
+    "contentFlow": {
+      "sectionCount": 0,
+      "hasHero": false,
+      "hasFooter": false,
+      "sectionsIdentified": []
+    },
+    "interactivity": {}
+  },
+  "componentDesign": {},
+  "screenshots": [
+    "desktop-full-page.png",
+    "mobile-view.png",
+    "tablet-view.png",
+    "desktop-view.png",
+    "large-desktop-view.png"
+  ],
+  "recommendations": [
+    {
+      "priority": "Medium",
+      "category": "User Experience",
+      "issue": "Limited call-to-action elements found",
+      "solution": "Add more prominent CTAs to guide user actions and improve conversions"
+    },
+    {
+      "priority": "Low",
+      "category": "Brand Consistency",
+      "issue": "Brand-specific typography classes not detected",
+      "solution": "Ensure .logo-serif and .elegant-caps classes are properly implemented"
+    }
+  ],
+  "performance": {
+    "loadTime": 0,
+    "domContentLoaded": 0.09999999997671694,
+    "firstPaint": 1752,
+    "firstContentfulPaint": 1752
+  },
+  "summary": {
+    "overallScore": 58,
+    "totalScreenshots": 5,
+    "totalRecommendations": 2,
+    "criticalIssues": 0
+  }
+}</pre>
+        </div>
+    </div>
+</body>
+</html>

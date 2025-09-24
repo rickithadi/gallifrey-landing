@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "Kuasai Kedua Sisi",
+    "titleHighlight": "Keamanan",
+    "subtitle": "Pengawasan lengkap. Pertahanan total. Satu platform.",
+    "cta": "Amankan Aset Anda",
+    "metrics": {
+      "uptime": "99.9% Waktu Aktif",
+      "realtime": "Real-time",
+      "enterprise": "Kelas Perusahaan"
+    },
+    "statusIndicators": {
+      "secure": "AMAN",
+      "monitored": "DIPANTAU"
+    },
+    "trustIndicators": {
+      "title": "Dipercaya oleh Profesional Keamanan",
+      "iso": "ISO 27001",
+      "soc": "SOC 2",
+      "gdpr": "Sesuai GDPR"
+    }
+  },
+  "testimonials": {
+    "title": "Kata Klien Kami",
+    "subtitle": "Dipercaya oleh bisnis di seluruh dunia untuk keunggulan keamanan"
+  },
+  "trustAndSecurity": {
+    "title": "Keamanan Kelas Perusahaan",
+    "subtitle": "Data dan operasi Anda dilindungi oleh langkah-langkah keamanan terdepan di industri"
+  }
+}

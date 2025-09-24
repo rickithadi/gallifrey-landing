@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Eye, Shield, Search, Lock, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Eye, Shield, Unlock, Search, Lock, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '@/lib/useScrollAnimation';
 
 interface CoinAnimationProps {
@@ -13,11 +13,11 @@ interface CoinAnimationProps {
 export function CoinAnimation({ 
   className = '', 
   autoFlip = true, 
-  flipInterval = 5000,
+  flipInterval = 4000,
   scrollTrigger = true,
   size = 'large'
 }: CoinAnimationProps) {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [currentFace, setCurrentFace] = useState(0); // 0: SECURITY, 1: DEFENSE, 2: FREEDOM
   const [isHovered, setIsHovered] = useState(false);
   const particlesRef = useRef<HTMLDivElement>(null);
   const scrollAnimation = useScrollAnimation<HTMLDivElement>({ 
@@ -26,34 +26,60 @@ export function CoinAnimation({
   });
 
   const coinSize = size === 'large' ? 'security-coin-large' : 'security-coin';
+  
+  // Define the three faces with their content and colors
+  const faces = [
+    { 
+      id: 'security',
+      label: 'SECURITY',
+      icon: Eye,
+      bgColor: 'from-blue-600 to-blue-800',
+      secondaryIcon: Search
+    },
+    { 
+      id: 'defense',
+      label: 'DEFENSE', 
+      icon: Shield,
+      bgColor: 'from-green-600 to-green-800',
+      secondaryIcon: Lock
+    },
+    { 
+      id: 'freedom',
+      label: 'FREEDOM',
+      icon: Unlock,
+      bgColor: 'from-blue-500 via-teal-500 to-green-500',
+      secondaryIcon: CheckCircle
+    }
+  ];
 
-  // Auto-flip interval effect
+  // Auto-rotation through three faces
   useEffect(() => {
     if (!autoFlip) return;
 
     const interval = setInterval(() => {
-      setIsFlipped(prev => !prev);
+      setCurrentFace(prev => (prev + 1) % 3); // Cycle through 0, 1, 2
     }, flipInterval);
 
     return () => clearInterval(interval);
   }, [autoFlip, flipInterval]);
 
-  // Scroll-triggered flip effect
+  // Scroll-triggered animation
   useEffect(() => {
     if (!scrollTrigger) return;
 
     if (scrollAnimation.isVisible) {
-      setIsFlipped(true);
+      // Start the animation when visible
+      setCurrentFace(1); // Start with DEFENSE
     } else {
-      setIsFlipped(false);
+      setCurrentFace(0); // Reset to SECURITY
     }
   }, [scrollAnimation.isVisible, scrollTrigger]);
 
-  // Particle effect on flip
+  // Particle effect on face change
   useEffect(() => {
     if (!particlesRef.current) return;
     
-    // Create particles on flip
+    // Create particles on face change
     const particles = particlesRef.current;
     particles.innerHTML = '';
     
@@ -64,79 +90,82 @@ export function CoinAnimation({
       particle.style.setProperty('--angle', `${i * 45}deg`);
       particles.appendChild(particle);
     }
-  }, [isFlipped]);
+  }, [currentFace]);
 
   const handleClick = () => {
-    setIsFlipped(!isFlipped);
+    setCurrentFace(prev => (prev + 1) % 3); // Cycle to next face on click
   };
 
   return (
     <div ref={scrollAnimation.ref} className={`security-coin-container ${className}`}>
       {/* Scanning ring effect */}
-      <div className="security-scan-ring" />
+      <div className="security-scan-ring" aria-hidden="true" />
       
       {/* Particle system */}
-      <div ref={particlesRef} className="security-particles" />
+      <div ref={particlesRef} className="security-particles" aria-hidden="true" />
       
       <div 
-        className={`${coinSize} ${isFlipped ? 'flipped' : ''} ${isHovered ? 'hovered' : ''}`}
+        className={`${coinSize} face-${currentFace} ${isHovered ? 'hovered' : ''}`}
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        role="button"
+        tabIndex={0}
+        aria-label={`Security animation showing ${faces[currentFace].label}. Click to cycle through security concepts.`}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleClick();
+          }
+        }}
       >
-        {/* Surveillance Side */}
-        <div className="security-coin-face security-coin-front">
-          <div className="security-coin-content">
-            <div className="security-icon-group">
-              <Eye className="w-10 h-10 text-white" />
-              <Search className="w-4 h-4 text-blue-300 absolute -top-1 -right-1" />
+        {faces.map((face, index) => {
+          const Icon = face.icon;
+          const SecondaryIcon = face.secondaryIcon;
+          
+          return (
+            <div 
+              key={face.id}
+              className={`security-coin-face security-face-${index}`}
+            >
+              <div className={`security-coin-content bg-gradient-to-br ${face.bgColor}`}>
+                <div className="security-icon-group">
+                  <Icon className="w-10 h-10 text-white" />
+                  <SecondaryIcon className="w-4 h-4 text-white/80 absolute -top-1 -right-1" />
+                </div>
+                <span className="text-sm font-bold text-white mt-3 tracking-wider">
+                  {face.label}
+                </span>
+                <div className="security-indicators">
+                  <div className={`security-dot ${currentFace === index ? 'active' : ''}`} />
+                  <div className={`security-dot ${currentFace === index ? 'active' : ''}`} />
+                  <div className={`security-dot ${currentFace === index ? 'active' : ''}`} />
+                </div>
+              </div>
             </div>
-            <span className="text-sm font-bold text-white mt-3 tracking-wide">
-              SURVEILLANCE
-            </span>
-            <div className="security-indicators">
-              <div className="security-dot active" />
-              <div className="security-dot active" />
-              <div className="security-dot active" />
-            </div>
-          </div>
-          {/* Surveillance overlay effects */}
-          <div className="security-overlay surveillance-overlay" />
-        </div>
-        
-        {/* Defense Side */}
-        <div className="security-coin-face security-coin-back">
-          <div className="security-coin-content">
-            <div className="security-icon-group">
-              <Shield className="w-10 h-10 text-white" />
-              <Lock className="w-4 h-4 text-green-300 absolute -top-1 -right-1" />
-            </div>
-            <span className="text-sm font-bold text-white mt-3 tracking-wide">
-              DEFENSE
-            </span>
-            <div className="security-indicators">
-              <div className="security-dot active" />
-              <div className="security-dot active" />
-              <div className="security-dot" />
-            </div>
-          </div>
-          {/* Defense overlay effects */}
-          <div className="security-overlay defense-overlay" />
-        </div>
+          );
+        })}
       </div>
       
       {/* Status indicator */}
       <div className="security-status">
         <div className="flex items-center gap-2 text-xs">
-          {isFlipped ? (
+          {currentFace === 0 && (
             <>
-              <CheckCircle className="w-3 h-3 text-green-500" />
+              <Eye className="w-3 h-3 text-blue-500" />
+              <span className="text-gallifrey-charcoal/60">Security Active</span>
+            </>
+          )}
+          {currentFace === 1 && (
+            <>
+              <Shield className="w-3 h-3 text-green-500" />
               <span className="text-gallifrey-charcoal/60">Defense Active</span>
             </>
-          ) : (
+          )}
+          {currentFace === 2 && (
             <>
-              <AlertTriangle className="w-3 h-3 text-amber-500" />
-              <span className="text-gallifrey-charcoal/60">Monitoring</span>
+              <Unlock className="w-3 h-3 text-teal-500" />
+              <span className="text-gallifrey-charcoal/60">Freedom Active</span>
             </>
           )}
         </div>
