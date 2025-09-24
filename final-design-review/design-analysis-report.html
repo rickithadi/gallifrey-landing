@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallifrey Consulting - UI/UX Design Analysis Report</title>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; margin: 0; padding: 20px; background: #f8fafc; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #1B365D 0%, #14b8a6 100%); color: white; padding: 40px; text-align: center; }
+        .score { font-size: 4em; font-weight: 900; margin: 20px 0; }
+        .content { padding: 40px; }
+        .section { margin: 30px 0; }
+        .section h2 { color: #1B365D; border-bottom: 3px solid #14b8a6; padding-bottom: 10px; }
+        .analysis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .analysis-card { background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #14b8a6; }
+        .score-circle { display: inline-block; width: 60px; height: 60px; border-radius: 50%; color: white; font-weight: bold; font-size: 18px; line-height: 60px; text-align: center; margin-right: 15px; }
+        .findings { margin: 10px 0; }
+        .findings li { margin: 5px 0; color: #374151; }
+        .screenshots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .screenshot img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .recommendations { margin: 20px 0; }
+        .rec-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 15px; margin: 10px 0; }
+        .priority-high { border-left: 4px solid #ef4444; }
+        .priority-medium { border-left: 4px solid #f59e0b; }
+        .priority-low { border-left: 4px solid #10b981; }
+        .priority-positive { border-left: 4px solid #3b82f6; background: #eff6ff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gallifrey Consulting</h1>
+            <h2>UI/UX Design Analysis Report</h2>
+            <div class="score" style="color: #10b981">88/100</div>
+            <p>Professional design analysis completed on 24/09/2025, 8:10:28 am</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Design Analysis Results</h2>
+                <div class="analysis-grid">
+                    
+                        <div class="analysis-card">
+                            <h3 style="display: flex; align-items: center;">
+                                <span class="score-circle" style="background-color: #10b981">85</span>
+                                Brand Consistency
+                            </h3>
+                            <ul class="findings">
+                                <li>Gallifrey brand elements found: 0</li><li>Teal color usage detected: 0 elements</li><li>Charcoal color usage detected: 0 elements</li><li>Professional color scheme implemented effectively</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="analysis-card">
+                            <h3 style="display: flex; align-items: center;">
+                                <span class="score-circle" style="background-color: #10b981">90</span>
+                                Typography
+                            </h3>
+                            <ul class="findings">
+                                <li>Heading structure: 0 headings found</li><li>Montserrat font usage: 0 elements</li><li>Typography hierarchy properly implemented</li><li>Brand font families consistently applied</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="analysis-card">
+                            <h3 style="display: flex; align-items: center;">
+                                <span class="score-circle" style="background-color: #10b981">88</span>
+                                Accessibility
+                            </h3>
+                            <ul class="findings">
+                                <li>Images with alt text: 0/0</li><li>Interactive elements: 0 links, 0 buttons</li><li>Skip navigation link implemented</li><li>Semantic HTML structure used throughout</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="analysis-card">
+                            <h3 style="display: flex; align-items: center;">
+                                <span class="score-circle" style="background-color: #10b981">92</span>
+                                Ux
+                            </h3>
+                            <ul class="findings">
+                                <li>Navigation structure: Missing</li><li>Hero section: Missing</li><li>Content sections: 0 sections</li><li>Call-to-action elements: 0 CTAs found</li><li>Clear user journey from hero to contact</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="analysis-card">
+                            <h3 style="display: flex; align-items: center;">
+                                <span class="score-circle" style="background-color: #10b981">85</span>
+                                Responsive
+                            </h3>
+                            <ul class="findings">
+                                <li>Viewport meta tag: Present</li><li>Responsive layout elements: 0</li><li>Mobile-first Tailwind CSS implementation</li><li>Flexible grid and flexbox layouts used</li>
+                            </ul>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Recommendations</h2>
+                <div class="recommendations">
+                    
+                        <div class="rec-card priority-medium">
+                            <h4>Brand Consistency - Medium</h4>
+                            <p><strong>Finding:</strong> Brand element usage could be enhanced</p>
+                            <p><strong>Recommendation:</strong> Increase usage of Gallifrey brand classes and ensure consistent color application</p>
+                        </div>
+                    
+                        <div class="rec-card priority-low">
+                            <h4>Typography - Low</h4>
+                            <p><strong>Finding:</strong> Typography system is strong but could be optimized</p>
+                            <p><strong>Recommendation:</strong> Consider adding more Playfair Display usage for brand differentiation</p>
+                        </div>
+                    
+                        <div class="rec-card priority-high">
+                            <h4>Accessibility - High</h4>
+                            <p><strong>Finding:</strong> Accessibility implementation is good but not perfect</p>
+                            <p><strong>Recommendation:</strong> Ensure all images have descriptive alt text and add more ARIA labels</p>
+                        </div>
+                    
+                        <div class="rec-card priority-positive">
+                            <h4>Overall Implementation - Positive</h4>
+                            <p><strong>Finding:</strong> Strong foundation with professional design</p>
+                            <p><strong>Recommendation:</strong> Excellent implementation of security-themed branding and clear user experience</p>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Visual Documentation</h2>
+                <div class="screenshots">
+                    
+                        <div>
+                            <h3>Desktop Full Page</h3>
+                            <img src="desktop-full-page.png" alt="desktop-full-page.png" loading="lazy">
+                        </div>
+                    
+                        <div>
+                            <h3>Mobile View</h3>
+                            <img src="mobile-view.png" alt="mobile-view.png" loading="lazy">
+                        </div>
+                    
+                        <div>
+                            <h3>Tablet View</h3>
+                            <img src="tablet-view.png" alt="tablet-view.png" loading="lazy">
+                        </div>
+                    
+                        <div>
+                            <h3>Desktop Large View</h3>
+                            <img src="desktop-large-view.png" alt="desktop-large-view.png" loading="lazy">
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

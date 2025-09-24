@@ -1,0 +1,13 @@
+{
+  "session_id": "360a1a32-0556-459b-ad0f-5c143334d94e",
+  "prompts": [
+    "continue from last, claude just crashed, \n\nyou were working on Updating CoinAnimation component with three-word rotation\u2026",
+    "@agent-design-review-analyzer hero section review. coin flipping animation is not working",
+    "server is already running",
+    "@agent-design-review-analyzer ",
+    "run it at 3000 kill all other dev servers",
+    "appWithTranslation was called without a next-i18next config\n\n",
+    "TypeError: service.details.map is not a function\n    at eval (webpack-internal:///(pages-dir-node)/./components/Services.tsx:172:75)\n    at Array.map (<anonymous>)\n    at Services (webpack-internal:///(pages-dir-node)/./components/Services.tsx:138:40)\n    at Object.react_stack_bottom_frame (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:9251:18)\n    at renderWithHooks (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:4898:19)\n    at renderElement (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:5333:23)\n    at retryNode (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6092:31)\n    at renderNodeDestructive (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6042:11)\n    at renderNode (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6499:18)\n    at renderChildrenArray (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6375:9)\n    at retryNode (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6116:13)\n    at renderNodeDestructive (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6042:11)\n    at renderNode (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6499:18)\n    at renderElement (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:5459:18)\n    at retryNode (file:///Users/hadi.rickit/dev/gallifrey landing/node_modules/react-dom/cjs/react-dom-server.edge.development.js:6092:31)",
+    "@agent-design-review-analyzer design review and functionality review"
+  ]
+}

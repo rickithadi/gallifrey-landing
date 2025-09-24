@@ -8,6 +8,9 @@ import { PlatformAssessment } from '@/components/PlatformAssessment'
 import { Testimonials } from '@/components/Testimonials'
 import { TrustAndSecurity } from '@/components/TrustAndSecurity'
 import dynamic from 'next/dynamic'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+import { GetStaticProps } from 'next'
 
 // Lazy load below-the-fold components
 const Pricing = dynamic(() => import('@/components/Pricing').then(mod => ({ default: mod.Pricing })), {
@@ -25,8 +28,19 @@ const ConsultativeContact = dynamic(() => import('@/components/ConsultativeConta
   loading: () => <div className="py-20 bg-gallifrey-section animate-pulse" aria-label="Loading contact section" />
 })
 
+const NarrativePreview = dynamic(() => import('@/components/NarrativePreview').then(mod => ({ default: mod.NarrativePreview })), {
+  ssr: false,
+  loading: () => null
+})
+
+const DevUtils = dynamic(() => import('@/components/DevUtils').then(mod => ({ default: mod.DevUtils })), {
+  ssr: false,
+  loading: () => null
+})
+
 
 export default function Home() {
+  const { t } = useTranslation('common');
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -199,8 +213,8 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Global AI Security | Enterprise Digital Protection"
-        description="World's premier AI security agency. AI-resistant development, deepfake protection, prompt injection prevention, quantum-secure digital solutions with enterprise AI governance."
+        title={t('seo.defaultTitle')}
+        description={t('seo.defaultDescription')}
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
@@ -248,6 +262,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       </Head>
       <div className="min-h-screen bg-white">
+        <DevUtils />
         <Header />
         <Hero />
         <PlatformAssessment />
@@ -257,8 +272,17 @@ export default function Home() {
         <Pricing />
         <FAQ />
         <ConsultativeContact />
+        <NarrativePreview />
         <Footer />
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'home', 'services', 'pricing', 'faq'])),
+    },
+  }
 }

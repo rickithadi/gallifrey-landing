@@ -101,12 +101,12 @@ export function PlatformAssessment() {
       return {
         score: totalScore,
         level: 'low',
-        title: 'Digital Savasthya: Strong Foundation',
+        title: 'Digital Security: Strong Foundation',
         description: 'You have good digital wellness practices and platform independence. Your authentic presence is well-protected.',
         recommendations: [
           'Maintain your current platform independence practices',
           'Consider advanced reputation monitoring for prevention',
-          'Share your knowledge to help others achieve digital savasthya'
+          'Share your knowledge to help others achieve digital security'
         ],
         nextStep: {
           title: 'Advanced Digital Protection',
@@ -128,7 +128,7 @@ export function PlatformAssessment() {
           'Create crisis response plans for platform disruptions'
         ],
         nextStep: {
-          title: 'Digital Dharma Analysis',
+          title: 'Digital Strategy Analysis',
           description: 'Get a comprehensive audit of your platform dependencies and independence roadmap.',
           cta: 'Book $297 Strategy Session',
           ctaAction: 'assessment-medium-risk-consultation'
@@ -139,7 +139,7 @@ export function PlatformAssessment() {
         score: totalScore,
         level: 'high',
         title: 'High Platform Dependency Risk',
-        description: 'Your digital wellness is compromised by dangerous platform dependency. Immediate action needed to restore savasthya.',
+        description: 'Your digital security is compromised by dangerous platform dependency. Immediate action needed to restore protection.',
         recommendations: [
           'Urgent: Begin platform independence strategy immediately',
           'Establish owned media presence (website, email, direct relationships)',
@@ -148,7 +148,7 @@ export function PlatformAssessment() {
           'Develop crisis response protocols'
         ],
         nextStep: {
-          title: 'Digital Savasthya Recovery Program',
+          title: 'Digital Security Recovery Program',
           description: 'Emergency consultation to restore your digital wellness and independence.',
           cta: 'Schedule Emergency Consultation',
           ctaAction: 'assessment-high-risk-emergency'
@@ -231,7 +231,7 @@ export function PlatformAssessment() {
                 Free Platform Independence Assessment
               </h2>
               <p className="text-lg text-gallifrey-charcoal/70 max-w-2xl mx-auto leading-relaxed mb-8">
-                Discover your <em>Digital Savasthya</em> score and platform dependency risks. Like BrandYourself&rsquo;s free scan, 
+                Discover your <em>Digital Security</em> score and platform dependency risks. Like BrandYourself&rsquo;s free scan, 
                 but focused on authentic digital wellness and independence.
               </p>
             </div>
@@ -264,7 +264,7 @@ export function PlatformAssessment() {
                   handleCTAClick('platform-assessment-start');
                 }}
               >
-                Start Your Digital Savasthya Assessment
+                Start Your Digital Security Assessment
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
 

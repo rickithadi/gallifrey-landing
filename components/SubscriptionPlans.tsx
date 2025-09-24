@@ -15,14 +15,14 @@ export function SubscriptionPlans() {
   const plans = [
     {
       icon: <Zap className="w-8 h-8 text-gallifrey-teal" />,
-      name: "Digital Savasthya",
-      subtitle: "Personal Reputation Wellness",
+      name: "Digital Security",
+      subtitle: "Personal Reputation Management",
       price: "$1,000",
       period: "/month",
-      description: "For high-profile individuals seeking authentic digital presence and reputation protection. Like Ayurvedic medicine for your online footprint.",
+      description: "For high-profile individuals seeking robust digital presence and reputation protection. Enterprise-grade security for personal brands.",
       features: [
         "Real-time reputation monitoring across 200+ sources",
-        "Monthly digital wellness assessment & report",
+        "Monthly digital security assessment & report",
         "Crisis response protocol (24-hour activation)",
         "Platform independence consulting",
         "Negative content suppression strategies",
@@ -30,20 +30,20 @@ export function SubscriptionPlans() {
         "Privacy protection & data broker removal",
         "Quarterly strategy optimization sessions"
       ],
-      cta: "Start Digital Savasthya",
-      ctaAction: "subscription-digital-savasthya",
+      cta: "Start Digital Security",
+      ctaAction: "subscription-digital-security",
       popular: false,
       badge: null
     },
     {
       icon: <Crown className="w-8 h-8 text-gallifrey-teal" />,
-      name: "Digital Dharma",
+      name: "Digital Strategy",
       subtitle: "Professional Authority Control",
       price: "$2,500",
       period: "/month", 
       description: "For business leaders and professionals requiring comprehensive narrative control and market authority positioning.",
       features: [
-        "Everything in Digital Savasthya, plus:",
+        "Everything in Digital Security, plus:",
         "Professional network reputation management",
         "Industry authority content strategy",
         "Executive protection protocols",
@@ -54,8 +54,8 @@ export function SubscriptionPlans() {
         "Custom crisis communication templates",
         "LinkedIn & professional platform optimization"
       ],
-      cta: "Claim Digital Dharma",
-      ctaAction: "subscription-digital-dharma",
+      cta: "Claim Digital Strategy",
+      ctaAction: "subscription-digital-strategy",
       popular: true,
       badge: "Most Popular"
     },
@@ -67,7 +67,7 @@ export function SubscriptionPlans() {
       period: "/month",
       description: "Complete organizational reputation management for healthcare, finance, and enterprise clients requiring compliance-grade protection.",
       features: [
-        "Everything in Digital Dharma, plus:",
+        "Everything in Digital Strategy, plus:",
         "Multi-stakeholder reputation monitoring",
         "HIPAA/SOC2 compliant infrastructure",
         "Legal compliance & regulatory support",
@@ -107,7 +107,7 @@ export function SubscriptionPlans() {
           </h2>
 
           <p className="text-lg text-gallifrey-charcoal/70 max-w-3xl mx-auto leading-relaxed mb-8">
-            Ongoing reputation wellness and platform independence protection. Cancel anytime, but your digital <em>savasthya</em> deserves consistent care.
+            Ongoing reputation management and platform independence protection. Cancel anytime, but your digital security deserves consistent attention.
           </p>
 
           <div className="inline-flex items-center gap-2 bg-gallifrey-teal/10 text-gallifrey-charcoal px-4 py-2 rounded-full text-sm">
@@ -216,7 +216,7 @@ export function SubscriptionPlans() {
                 vs. NetReputation ($3K-$15K)
               </div>
               <p className="text-gallifrey-charcoal/70">
-                Holistic <em>savasthya</em> approach combining reputation with platform independence. Prevention-focused, not just crisis response.
+                Holistic security approach combining reputation with platform independence. Prevention-focused, not just crisis response.
               </p>
             </div>
             <div>
@@ -224,7 +224,7 @@ export function SubscriptionPlans() {
                 Our Unique Value
               </div>
               <p className="text-gallifrey-charcoal/70">
-                Digital wellness philosophy meets enterprise-grade security. Authentic presence aligned with your true dharma and business goals.
+                Digital security philosophy meets enterprise-grade protection. Authentic presence aligned with your strategic objectives and business goals.
               </p>
             </div>
           </div>

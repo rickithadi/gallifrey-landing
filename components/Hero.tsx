@@ -2,25 +2,32 @@ import React, { Suspense, useCallback } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { trackCTAClick } from "@/lib/analytics";
-import { useLayoutABTest } from "./LayoutABTestProvider";
-import { trackLayoutVariantConversion } from "@/lib/layout-ab-test";
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
-import { AnimatedAdjective } from "./AnimatedAdjective";
 import { PlaceholderAnimation } from "./PlaceholderAnimation";
 import { PerformanceProfiler } from "./PerformanceProfiler";
 import dynamic from "next/dynamic";
+import { useTranslation } from 'next-i18next';
 
-// Use Gallifreyan Three.js background
-const HeroThreeBackground = dynamic(
-  () => import("./GallifreyanThreeBackground").then(mod => ({ default: mod.GallifreyanThreeBackground })),
+// Use Security background instead of Gallifreyan
+const SecurityBackground = dynamic(
+  () => import("./SecurityBackground").then(mod => ({ default: mod.SecurityBackground })),
   { 
     ssr: false, 
     loading: () => <PlaceholderAnimation />
   }
 );
 
+// Enhanced coin animation component
+const CoinAnimation = dynamic(
+  () => import("./CoinAnimation").then(mod => ({ default: mod.CoinAnimation })),
+  { 
+    ssr: false, 
+    loading: () => <div className="w-[180px] h-[180px] bg-gray-200 rounded-full animate-pulse" />
+  }
+);
+
 export const Hero = React.memo(function Hero() {
-  const { variant } = useLayoutABTest();
+  const { t } = useTranslation('home');
   const headlineAnimation = useScrollAnimation<HTMLHeadingElement>({
     threshold: 0.1,
   });
@@ -28,156 +35,88 @@ export const Hero = React.memo(function Hero() {
 
   const handleCTAClick = useCallback((action: string) => {
     trackCTAClick(action);
-    trackLayoutVariantConversion(variant, action);
-  }, [variant]);
-
-  if (variant === "lightweight") {
-    return (
-      <section
-        className="relative min-h-screen px-4 overflow-hidden flex items-center"
-        style={{ minHeight: 'calc(100vh - 4rem)' }}
-        aria-labelledby="hero-heading"
-        data-testid="hero-section-lightweight"
-      >
-        <PerformanceProfiler id="HeroThreeBackground-lightweight">
-          <Suspense fallback={<PlaceholderAnimation />}>
-            <HeroThreeBackground className="opacity-30 md:opacity-60" />
-          </Suspense>
-        </PerformanceProfiler>
-        <div className="container mx-auto relative z-20">
-          <div className="max-w-xl text-center md:text-left mx-auto md:mx-0">
-            <header className="mb-8">
-              <h1
-                ref={headlineAnimation.ref}
-                id="hero-heading"
-                className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-light leading-tight text-gallifrey-charcoal tracking-wide animate-fade-in-up hero-animation ${
-                  headlineAnimation.isVisible ? "visible complete" : ""
-                }`}
-              >
-                What happens when <span className="text-gallifrey-teal italic font-medium">AI-powered attacks</span> target your business?
-              </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mt-6 leading-relaxed max-w-2xl">
-                Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
-              </p>
-              <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mt-6 leading-relaxed max-w-2xl">
-                96% of enterprises face AI-powered surveillance and manipulation risks. Your digital infrastructure requires <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> enterprise-grade protection against Maltego-style reconnaissance, deepfake campaigns, and prompt injection attacks through quantum-secure architecture and intelligent threat monitoring.
-              </p>
-              <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mt-8 text-sm text-gallifrey-charcoal/60 font-light">
-                <span>Global AI Security Leaders</span>
-                <span className="hidden sm:inline mx-1">·</span>
-                <span className="sm:hidden">•</span>
-                <span>Quantum-Secure</span>
-                <span className="hidden sm:inline mx-1">·</span>
-                <span className="sm:hidden">•</span>
-                <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
-              </div>
-            </header>
-
-            <div
-              ref={ctaAnimation.ref}
-              className={`flex justify-center md:block animate-fade-in-up delay-300 ${
-                ctaAnimation.isVisible ? "visible" : ""
-              }`}
-            >
-              <div className="flex flex-col sm:flex-row gap-4 items-center">
-                <Button
-                  size="lg"
-                  variant="gallifrey"
-                  className="px-8 py-3 font-medium tracking-wide group"
-                  asChild
-                >
-                  <a
-                    href="#platform-assessment"
-                    onClick={() => handleCTAClick("hero-free-assessment")}
-                  >
-                    Get Free Assessment
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="gallifrey-outline"
-                  className="px-8 py-3 font-medium tracking-wide group"
-                  asChild
-                >
-                  <a
-                    href="#contact"
-                    onClick={() => handleCTAClick("hero-executive-briefing")}
-                  >
-                    Book Consultation
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  }, []);
 
   return (
     <section
       className="relative min-h-screen px-4 overflow-hidden flex items-center"
       style={{ minHeight: 'calc(100vh - 4rem)' }}
       aria-labelledby="hero-heading"
-      data-testid="hero-section-original"
+      data-testid="hero-section-security"
     >
-      <PerformanceProfiler id="HeroThreeBackground-original">
+      <PerformanceProfiler id="SecurityBackground">
         <Suspense fallback={<PlaceholderAnimation />}>
-          <HeroThreeBackground className="opacity-40 md:opacity-70" />
+          <SecurityBackground className="opacity-70" />
         </Suspense>
       </PerformanceProfiler>
 
-      <div className="container mx-auto max-w-6xl relative z-20">
-        <div className="text-center md:text-left max-w-4xl mx-auto md:mx-0">
-          <header className="mb-12 md:mb-16">
-            <h1
-              ref={headlineAnimation.ref}
-              id="hero-heading"
-              className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-light leading-tight mb-8 text-gallifrey-charcoal tracking-wide animate-fade-up animate-delay-200 hero-animation ${
-                headlineAnimation.isVisible ? "visible complete" : ""
+      <div className="container mx-auto max-w-7xl relative z-20">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[calc(100vh-8rem)]">
+          
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <header className="mb-12">
+              <h1
+                ref={headlineAnimation.ref}
+                id="hero-heading"
+                className={`text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-heading font-light leading-tight text-gallifrey-charcoal tracking-tight animate-fade-up hero-animation ${
+                  headlineAnimation.isVisible ? "visible complete" : ""
+                }`}
+              >
+                {t('hero.title')}{' '}
+                <span className="text-authority bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  {t('hero.titleHighlight')}
+                </span>
+              </h1>
+              
+              <p className="text-xl sm:text-2xl lg:text-2xl text-gallifrey-charcoal/60 font-light mt-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                {t('hero.subtitle')}
+              </p>
+            </header>
+
+            <div
+              ref={ctaAnimation.ref}
+              className={`flex flex-col items-center lg:items-start animate-fade-up animate-delay-600 ${
+                ctaAnimation.isVisible ? "visible" : ""
               }`}
             >
-              What happens when <span className="text-gallifrey-teal italic font-medium">AI-powered attacks</span> target your business?
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gallifrey-charcoal/70 font-light mb-8 leading-relaxed max-w-2xl">
-              Deepfakes, prompt injection, AI manipulation — your digital existence is under siege.
-            </p>
-            <p className="text-base sm:text-lg text-gallifrey-charcoal/60 font-light mb-12 leading-relaxed max-w-2xl">
-              96% of enterprises face AI-powered surveillance and manipulation risks. Your digital infrastructure requires <AnimatedAdjective className="text-gallifrey-teal italic font-medium" /> enterprise-grade protection against Maltego-style reconnaissance, deepfake campaigns, and prompt injection attacks through quantum-secure architecture and intelligent threat monitoring.
-            </p>
-            <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mb-12 text-sm text-gallifrey-charcoal/60 font-light">
-              <span>Global AI Security Leaders</span>
-              <span className="hidden sm:inline mx-2">·</span>
-              <span className="sm:hidden">•</span>
-              <span>Quantum-Secure</span>
-              <span className="hidden sm:inline mx-2">·</span>
-              <span className="sm:hidden">•</span>
-              <span className="whitespace-nowrap">Zero AI breaches since 2019</span>
+              <Button
+                size="lg"
+                variant="gallifrey"
+                className="px-10 py-4 text-lg font-semibold tracking-wide group bg-gallifrey-charcoal hover:bg-gallifrey-charcoal/90 text-white border-0 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+                asChild
+              >
+                <a
+                  href="#contact"
+                  onClick={() => handleCTAClick("hero-secure-assets")}
+                >
+                  {t('hero.cta')}
+                  <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+              
+              {/* Trust Indicators */}
+              <div className="mt-6 text-center lg:text-left">
+                <p className="text-xs text-gallifrey-charcoal/40 mb-2">{t('hero.trustIndicators.title')}</p>
+                <div className="flex items-center justify-center lg:justify-start gap-3 text-xs text-gallifrey-charcoal/50">
+                  <span>{t('hero.trustIndicators.iso')}</span>
+                  <span>•</span>
+                  <span>{t('hero.trustIndicators.soc')}</span>
+                  <span>•</span>
+                  <span>{t('hero.trustIndicators.gdpr')}</span>
+                </div>
+              </div>
             </div>
-          </header>
-
-          <div
-            ref={ctaAnimation.ref}
-            className={`flex justify-center md:block animate-fade-up animate-delay-600 ${
-              ctaAnimation.isVisible ? "visible" : ""
-            }`}
-        >
-          <Button
-            size="lg"
-            variant="gallifrey"
-            className="px-8 py-3 font-medium tracking-wide group"
-            asChild
-          >
-            <a
-              href="#contact"
-              onClick={() => handleCTAClick("hero-executive-briefing")}
-            >
-              Begin conversation
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" />
-            </a>
-          </Button>
+          </div>
+          
+          {/* Right Content - Enhanced Coin */}
+          <div className="flex justify-center lg:justify-end">
+            <CoinAnimation 
+              size="large"
+              autoFlip={true} 
+              flipInterval={4000} 
+              scrollTrigger={true}
+            />
           </div>
         </div>
       </div>

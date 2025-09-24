@@ -1,0 +1,118 @@
+{
+  "section": {
+    "label": "Investasi",
+    "title": "Kemitraan strategis untuk",
+    "titleHighlight": " hasil yang luar biasa",
+    "subtitle": "Setiap keterlibatan disesuaikan dengan kebutuhan dan tujuan spesifik Anda. Kemitraan kami biasanya dimulai dalam kisaran empat digit, berkembang dengan kompleksitas dan cakupan."
+  },
+  "packages": [
+    {
+      "name": "Foundation",
+      "tagline": "Keamanan digital esensial",
+      "description": "Sempurna untuk merek personal dan bisnis kecil yang membangun kehadiran online yang aman",
+      "scope": "Ideal untuk: Profesional solo, bisnis kecil, merek personal",
+      "timeline": "1-2 minggu",
+      "cta": "Dapatkan Penawaran Foundation",
+      "investment": "Investasi empat digit",
+      "features": [
+        "Audit keamanan komprehensif & pembersihan",
+        "Penghapusan broker data dari 50+ sumber",
+        "Pemantauan reputasi SEO & perlindungan merek",
+        "Penilaian jejak digital & kontrol",
+        "Implementasi keamanan perusahaan",
+        "Perlindungan privasi & kepatuhan GDPR",
+        "Dukungan & pemantauan 1 bulan"
+      ]
+    },
+    {
+      "name": "Professional",
+      "tagline": "Transformasi digital lengkap",
+      "description": "Solusi komprehensif untuk bisnis mapan dan layanan profesional",
+      "scope": "Ideal untuk: Bisnis berkembang, layanan profesional, merek mapan",
+      "timeline": "2-4 minggu",
+      "cta": "Diskusikan Paket Professional",
+      "investment": "Investasi pertengahan empat hingga lima digit",
+      "popular": true,
+      "features": [
+        "Dashboard bisnis kustom",
+        "Implementasi keamanan lanjutan",
+        "Penghapusan broker data komprehensif",
+        "Manajemen reputasi SEO & pemantauan",
+        "Integrasi multi-platform & pembersihan",
+        "Optimisasi proses digital bertenaga AI",
+        "Perencanaan kedaulatan digital strategis",
+        "Kemitraan & dukungan 3 bulan"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "tagline": "Kedaulatan digital total",
+      "description": "Solusi skala penuh untuk organisasi yang memerlukan keamanan maksimum dan pengembangan kustom",
+      "scope": "Ideal untuk: Organisasi besar, kebutuhan keamanan tinggi, persyaratan kompleks",
+      "timeline": "4-12 minggu",
+      "cta": "Jelajahi Solusi Enterprise",
+      "investment": "Investasi strategis lima+ digit",
+      "features": [
+        "Aplikasi web & sistem kustom",
+        "Infrastruktur perusahaan terintegrasi AI",
+        "Keamanan kelas perusahaan & pembersihan privasi",
+        "Reputasi SEO lanjutan & kontrol narasi",
+        "Pemantauan keamanan & respons 24/7",
+        "Tim pengembangan khusus",
+        "Suite digitalisasi lengkap",
+        "Konsultasi strategis berkelanjutan",
+        "Layanan concierge sarung tangan putih"
+      ]
+    }
+  ],
+  "popularLabel": "Paling Populer",
+  "timelineLabel": "Timeline:",
+  "partnership": {
+    "label": "Proses Kemitraan",
+    "title": "Dari Discovery hingga",
+    "titleHighlight": " Kesuksesan Jangka Panjang",
+    "subtitle": "Metodologi terbukti kami menggabungkan discovery strategis, keunggulan teknis, dan kemitraan berkelanjutan untuk memberikan hasil terukur yang berkembang dengan bisnis Anda.",
+    "steps": [
+      {
+        "title": "Discovery Strategis",
+        "description": "Sesi strategi komprehensif 30 menit menganalisis infrastruktur, tujuan, dan posisi kompetitif Anda",
+        "details": [
+          "Analisis tujuan & persyaratan",
+          "Penilaian strategis",
+          "Pemetaan risiko & peluang",
+          "Penyesuaian investasi"
+        ]
+      },
+      {
+        "title": "Proposal Kustom",
+        "description": "Desain arsitektur detail yang menyeimbangkan keamanan, skalabilitas, dan persyaratan bisnis dengan penetapan harga transparan",
+        "details": [
+          "Arsitektur teknis",
+          "Kerangka keamanan",
+          "Timeline & milestone",
+          "Syarat pembayaran fleksibel"
+        ]
+      },
+      {
+        "title": "Implementasi Ahli",
+        "description": "Pengembangan agile dengan validasi keamanan berkelanjutan, pembaruan rutin, dan penyempurnaan iteratif",
+        "details": [
+          "Pengembangan kustom",
+          "Implementasi keamanan",
+          "Pengujian & optimisasi",
+          "Validasi performa"
+        ]
+      },
+      {
+        "title": "Kemitraan Berkelanjutan",
+        "description": "Dukungan strategis, pemantauan keamanan, dan evolusi infrastruktur seiring pertumbuhan bisnis Anda",
+        "details": [
+          "Pemantauan berkelanjutan",
+          "Konsultasi strategis",
+          "Perencanaan evolusi",
+          "Respons insiden"
+        ]
+      }
+    ]
+  }
+}

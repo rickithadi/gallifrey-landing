@@ -1,0 +1,56 @@
+{
+  "section": {
+    "label": "Pertanyaan yang Sering Diajukan",
+    "title": "Semua yang perlu Anda ketahui tentang",
+    "titleHighlight": " bekerja dengan kami",
+    "subtitle": "Punya pertanyaan lain? Hubungi kami dan kami akan membalas dalam 24 jam."
+  },
+  "questions": [
+    {
+      "question": "Apa yang membedakan Gallifrey Consulting dari agensi pengembangan lainnya?",
+      "answer": "Kami merancang aset digital perusahaan melalui tiga pilar inti: sistem yang direkayasa dengan presisi yang menjadi IP proprietary, otoritas pasar lengkap melalui posisi pencarian strategis, dan keamanan perusahaan yang membuka kemitraan Fortune 500. Pendekatan bespoke kami memastikan kepemilikan total aset digital Anda dengan nol ketergantungan vendor—membangun kedaulatan digital Anda, bukan hanya situs web lain."
+    },
+    {
+      "question": "Bagaimana Anda menyusun tingkat investasi untuk proyek?",
+      "answer": "Setiap keterlibatan dimulai dengan konsultasi discovery komprehensif untuk memahami secara menyeluruh tujuan, timeline, dan persyaratan strategis Anda. Tingkat investasi dikalibrasi berdasarkan cakupan dan kompleksitas proyek: situs web kustom dasar biasanya dimulai dari $3,000-5,000, sementara sistem desain komprehensif dengan konsultasi keamanan terintegrasi berkisar dari $5,000-15,000+. Solusi skala enterprise dengan kemitraan strategis berkelanjutan dinilai dan dikutip secara individual. Kami mempertahankan transparansi lengkap dengan proposal harga tetap—tidak ada ketidakpastian penagihan per jam atau biaya tak terduga."
+    },
+    {
+      "question": "Apakah Anda melayani klien di luar Melbourne?",
+      "answer": "Tentu saja. Meskipun kami berkantor pusat dengan bangga di Melbourne, keahlian kami meluas ke seluruh Australia dan internasional. Metodologi digital-first yang canggih memungkinkan kolaborasi yang mulus terlepas dari lokasi geografis, didukung oleh protokol komunikasi yang teliti dan tata kelola proyek strategis yang memastikan hasil luar biasa untuk setiap klien."
+    },
+    {
+      "question": "Bagaimana pilar Otoritas Pasar Lengkap Melalui Pencarian Anda bekerja?",
+      "answer": "Pilar kedua kami menggabungkan posisi pencarian strategis dengan kontrol narasi komprehensif. Kami menghapus konten negatif dari 100+ sumber, menghilangkan eksposur broker data, dan secara strategis memposisikan narasi pilihan Anda di semua saluran digital. Hasilnya: otoritas pasar yang menghasilkan lead enterprise sambil mengontrol bagaimana organisasi Anda muncul online."
+    },
+    {
+      "question": "Bagaimana pilar Keamanan Perusahaan & Kontinuitas Bisnis Anda bekerja?",
+      "answer": "Pilar ketiga kami memberikan arsitektur kepatuhan zero-incident yang memenuhi standar Fortune 500. Kami mengimplementasikan kerangka zero-trust, otentikasi perusahaan, dan protokol kepatuhan komprehensif dari awal. Rekam jejak keamanan tanpa cela kami di semua keterlibatan klien mendemonstrasikan komitmen kami terhadap kontinuitas bisnis yang memungkinkan peluang pasar baru."
+    },
+    {
+      "question": "Berapa timeline proyek yang umum?",
+      "answer": "Durasi proyek dikalibrasi sesuai persyaratan kompleksitas dan cakupan. Keterlibatan Foundation biasanya berlangsung 1-2 minggu, paket Professional memerlukan 2-4 minggu, sementara solusi Enterprise mencakup 4-12 minggu. Selama fase discovery kami, kami menyediakan timeline yang terperinci dengan penanda milestone, mempertahankan komunikasi transparan dan pembaruan kemajuan rutin sepanjang seluruh keterlibatan."
+    },
+    {
+      "question": "Apakah Anda menyediakan dukungan berkelanjutan setelah pengiriman proyek?",
+      "answer": "Tentu saja. Setiap kemitraan mencakup dukungan berkelanjutan komprehensif, pemantauan keamanan berkelanjutan, dan pemeliharaan proaktif. Keterlibatan Foundation mencakup satu bulan dukungan, paket Professional mencakup tiga bulan, sementara kemitraan Enterprise menampilkan dukungan strategis tak terbatas. Kami menumbuhkan hubungan abadi dan kesuksesan jangka panjang, bukan hanya pengiriman proyek transaksional."
+    },
+    {
+      "question": "Teknologi dan framework apa yang Anda gunakan?",
+      "answer": "Kami memilih teknologi optimal berdasarkan persyaratan strategis daripada tren industri. Keahlian teknis kami mencakup framework modern termasuk Next.js dan React untuk aplikasi dinamis, Node.js untuk sistem backend yang kuat, solusi database perusahaan (PostgreSQL, MongoDB), infrastruktur cloud (AWS, Vercel), dan toolset keamanan komprehensif. Kami mengintegrasikan metodologi pengembangan berbantu AI untuk mempercepat pengiriman sambil mempertahankan kualitas kode yang luar biasa. Pilihan teknologi kami memprioritaskan stabilitas jangka panjang, optimisasi performa, dan keamanan dibanding fitur sementara. Setiap keputusan teknis didokumentasikan dan dijelaskan secara menyeluruh, memastikan transparansi lengkap dalam investasi Anda."
+    },
+    {
+      "question": "Bagaimana pilar Aset Digital Direkayasa Presisi Anda menciptakan nilai?",
+      "answer": "Pilar pertama kami mengubah pengembangan kustom menjadi aset bisnis yang mengapresiasi. Setiap sistem direkayasa sesuai spesifikasi perusahaan dengan nol technical debt, menciptakan IP proprietary yang tidak dapat direplikasi pesaing. Arsitektur kami menjadi parit kompetitif—skalabel, independen vendor, dan dirancang untuk membuka peluang perusahaan."
+    },
+    {
+      "question": "Apa yang terjadi selama konsultasi discovery?",
+      "answer": "Konsultasi discovery 30 menit kami secara komprehensif membahas tantangan saat ini Anda, tujuan strategis, persyaratan teknis, ekspektasi timeline, dan metrik sukses. Kami mengeksplorasi aspirasi kedaulatan digital Anda, prioritas keamanan, dan memberikan rekomendasi strategis awal. Konsultasi bebas kewajiban ini memastikan penyesuaian optimal antara kemampuan kami dan visi Anda, menetapkan fondasi untuk kemitraan yang sukses."
+    }
+  ],
+  "stillHaveQuestions": {
+    "title": "Masih ada pertanyaan?",
+    "subtitle": "Jadwalkan penilaian keunggulan kompetitif untuk mengeksplorasi bagaimana tiga pilar kami dapat mengubah perusahaan Anda.",
+    "sendMessage": "Kirim pesan",
+    "bookConsultation": "Jadwalkan konsultasi"
+  }
+}

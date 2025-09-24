@@ -1,0 +1,34 @@
+{
+  "navigation": {
+    "services": "Layanan",
+    "results": "Hasil", 
+    "investment": "Investasi",
+    "faq": "FAQ",
+    "contact": "Kontak",
+    "getStarted": "Mulai",
+    "narrative": "Naratif",
+    "skipToMain": "Lewati ke konten utama"
+  },
+  "languages": {
+    "en": "English",
+    "id": "Indonesian"
+  },
+  "buttons": {
+    "learnMore": "Pelajari Lebih Lanjut",
+    "getStarted": "Mulai",
+    "contact": "Hubungi Kami",
+    "sendMessage": "Kirim pesan",
+    "bookConsultation": "Jadwalkan konsultasi",
+    "scheduleCall": "Jadwalkan Panggilan Discovery",
+    "viewStories": "Lihat Kisah Sukses"
+  },
+  "footer": {
+    "copyright": "© 2024 Gallifrey Consulting. Hak cipta dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan"
+  },
+  "seo": {
+    "defaultTitle": "Pengembangan Web Keamanan Pertama | Perlindungan Digital Perusahaan",
+    "defaultDescription": "Agensi pengembangan web Melbourne yang mengkhususkan diri dalam situs web yang aman dan sesuai GDPR. Mulai dari $1000. Miliki narasi digital Anda dengan solusi web kustom."
+  }
+}

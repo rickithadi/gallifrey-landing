@@ -1,0 +1,107 @@
+{
+  "timestamp": "2025-09-24T00:04:44.672Z",
+  "overallScore": 58,
+  "brandConsistency": {
+    "colorsUsed": [
+      "rgb(0, 0, 0)",
+      "rgb(255, 255, 255)",
+      "rgb(31, 41, 55)",
+      "rgb(117, 117, 117)"
+    ],
+    "typography": {
+      "fontsUsed": [
+        "\"Source Sans Pro\", system-ui, -apple-system, \"system-ui\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+      ]
+    },
+    "brandElementsFound": {
+      "logoSerifClass": false,
+      "elegantCapsClass": false,
+      "gallifreyElements": 0,
+      "oynElements": 0
+    },
+    "designConsistency": {}
+  },
+  "responsiveDesign": {
+    "mobile": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    },
+    "tablet": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    },
+    "desktop": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    },
+    "large-desktop": {
+      "hasHorizontalScroll": false,
+      "visibleElements": [],
+      "typography": {},
+      "colorAnalysis": {},
+      "interactiveElements": []
+    }
+  },
+  "accessibility": {
+    "missingAltText": [],
+    "headingStructure": [],
+    "focusableElements": [],
+    "ariaLabels": [],
+    "colorContrast": [],
+    "formLabels": []
+  },
+  "uxAnalysis": {
+    "navigation": {},
+    "callToActions": [],
+    "contentFlow": {
+      "sectionCount": 0,
+      "hasHero": false,
+      "hasFooter": false,
+      "sectionsIdentified": []
+    },
+    "interactivity": {}
+  },
+  "componentDesign": {},
+  "screenshots": [
+    "desktop-full-page.png",
+    "mobile-view.png",
+    "tablet-view.png",
+    "desktop-view.png",
+    "large-desktop-view.png"
+  ],
+  "recommendations": [
+    {
+      "priority": "Medium",
+      "category": "User Experience",
+      "issue": "Limited call-to-action elements found",
+      "solution": "Add more prominent CTAs to guide user actions and improve conversions"
+    },
+    {
+      "priority": "Low",
+      "category": "Brand Consistency",
+      "issue": "Brand-specific typography classes not detected",
+      "solution": "Ensure .logo-serif and .elegant-caps classes are properly implemented"
+    }
+  ],
+  "performance": {
+    "loadTime": 0,
+    "domContentLoaded": 0.09999999997671694,
+    "firstPaint": 1752,
+    "firstContentfulPaint": 1752
+  },
+  "summary": {
+    "overallScore": 58,
+    "totalScreenshots": 5,
+    "totalRecommendations": 2,
+    "criticalIssues": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-09-24T00:08:51.073Z",
+  "overallScore": 0,
+  "brandConsistency": {},
+  "responsiveDesign": {},
+  "accessibility": {},
+  "uxAnalysis": {},
+  "componentDesign": {},
+  "screenshots": [],
+  "recommendations": [],
+  "pageLoad": {
+    "hasError": true,
+    "errorType": "Runtime TypeError"
+  },
+  "scoreBreakdown": {
+    "responsive": 0,
+    "accessibility": 0,
+    "brand": 0,
+    "ux": 0
+  },
+  "summary": {
+    "overallScore": 0,
+    "scoreBreakdown": {
+      "responsive": 0,
+      "accessibility": 0,
+      "brand": 0,
+      "ux": 0
+    },
+    "totalScreenshots": 0,
+    "totalRecommendations": 0,
+    "criticalIssues": 0,
+    "hasPageLoadError": true
+  }
+}

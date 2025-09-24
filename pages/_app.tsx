@@ -5,10 +5,11 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import React, { useEffect } from 'react';
 import { ABTestProvider } from '@/components/ABTestProvider';
 import { LayoutABTestProvider } from '@/components/LayoutABTestProvider';
-import { VariantToggle } from '@/components/VariantToggle';
 import { initWebVitalsMonitoring, initCustomPerformanceMonitoring, generatePerformanceReport } from '@/lib/web-vitals';
+import { appWithTranslation } from 'next-i18next';
+import nextI18NextConfig from '../next-i18next.config.js';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   // Initialize Core Web Vitals and performance monitoring
   useEffect(() => {
     // Initialize Web Vitals monitoring on client side
@@ -143,7 +144,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <ABTestProvider>
         <LayoutABTestProvider>
           <Component {...pageProps} />
-          <VariantToggle />
         </LayoutABTestProvider>
       </ABTestProvider>
       {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
@@ -152,3 +152,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   )
 }
+
+export default appWithTranslation(App, nextI18NextConfig);

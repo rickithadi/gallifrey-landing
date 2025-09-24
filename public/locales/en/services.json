@@ -1,0 +1,40 @@
+{
+  "section": {
+    "label": "Services",
+    "title": "Security-first web development",
+    "titleHighlight": " that protects your business",
+    "subtitle": "From custom web applications to enterprise security compliance, we deliver comprehensive digital solutions that safeguard your business while driving growth."
+  },
+  "services": [
+    {
+      "title": "Bespoke Web Development",
+      "description": "Custom-built websites and web applications designed specifically for your business needs.",
+      "details": [
+        "Custom React/Next.js applications",
+        "Progressive Web Apps (PWA)",
+        "E-commerce solutions",
+        "API development and integration"
+      ]
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Lightning-fast websites that convert visitors into customers through superior user experience.",
+      "details": [
+        "Core Web Vitals optimization",
+        "SEO performance improvements",
+        "Mobile-first responsive design",
+        "Advanced caching strategies"
+      ]
+    },
+    {
+      "title": "Security & Compliance",
+      "description": "Enterprise-grade security measures and compliance frameworks to protect your digital assets.",
+      "details": [
+        "GDPR & CCPA compliance",
+        "ISO 27001 security standards",
+        "SOC 2 Type II compliance",
+        "Advanced threat protection"
+      ]
+    }
+  ]
+}

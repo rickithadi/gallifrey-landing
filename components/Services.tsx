@@ -1,28 +1,45 @@
 import { Code, Shield, Target } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/lib/useScrollAnimation";
+import { useTranslation } from 'next-i18next';
 
 export function Services() {
+  const { t } = useTranslation('services');
   const headerAnimation = useScrollAnimation<HTMLDivElement>();
   const { ref: servicesRef, visibleItems } = useStaggeredAnimation<HTMLDivElement>(3);
 
   const services = [
     {
       icon: <Code className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "AI-Resistant Digital Architecture",
-      description: "Quantum-secure systems engineered to resist AI-powered attacks and become proprietary IP. Custom architecture built with AI threat modeling and zero technical debt. Every line of code includes anti-prompt-injection safeguards and deepfake detection, creating defensible competitive moats against emerging AI threats.",
-      details: ["AI threat modeling & quantum-secure architecture", "Prompt injection & LLM attack prevention", "Deepfake detection & content authenticity verification", "AI-resistant integrations competitors cannot replicate"]
+      title: t('services.0.title'),
+      description: t('services.0.description'),
+      details: [
+        t('services.0.details.0'),
+        t('services.0.details.1'),
+        t('services.0.details.2'),
+        t('services.0.details.3')
+      ]
     },
     {
       icon: <Target className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Enterprise Threat Intelligence & Monitoring",
-      description: "Advanced threat intelligence powered by AI monitoring that protects your enterprise reputation against sophisticated attacks. We detect AI-generated disinformation campaigns, deepfake operations, and synthetic content threats while maintaining your authentic corporate presence through continuous surveillance countermeasures.",
-      details: ["AI-powered threat monitoring across 200+ sources", "Deepfake & synthetic content detection", "Machine learning threat analysis & automated response", "Corporate disinformation crisis protocols"]
+      title: t('services.1.title'),
+      description: t('services.1.description'),
+      details: [
+        t('services.1.details.0'),
+        t('services.1.details.1'),
+        t('services.1.details.2'),
+        t('services.1.details.3')
+      ]
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" aria-hidden="true" />,
-      title: "Enterprise AI Security & Governance",
-      description: "Zero-incident AI compliance architecture that opens new markets. Our AI security framework meets the highest enterprise standards for AI governance, enabling partnerships with Fortune 500 clients and government contracts that require bulletproof AI-resistant digital infrastructure and regulatory compliance.",
-      details: ["Zero AI security incidents track record", "AI governance & regulatory compliance", "Enterprise-grade AI threat mitigation", "Business continuity with AI risk coverage"]
+      title: t('services.2.title'),
+      description: t('services.2.description'),
+      details: [
+        t('services.2.details.0'),
+        t('services.2.details.1'),
+        t('services.2.details.2'),
+        t('services.2.details.3')
+      ]
     }
   ];
 
@@ -36,18 +53,18 @@ export function Services() {
         >
           <div className="mb-8">
             <p className="text-sm font-medium tracking-[0.1em] text-muted-foreground uppercase mb-4">
-              What We Do
+              {t('section.label')}
             </p>
             <div className="w-12 h-px bg-accent"></div>
           </div>
 
           <h2 id="services-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary max-w-4xl tracking-tight">
-            AI-Secure Digital Assets That
-            <span className="italic text-accent"> Defend Against Future Threats</span>
+            {t('section.title')}
+            <span className="italic text-accent">{t('section.titleHighlight')}</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Three strategic pillars that create AI-resistant competitive advantage and unlock enterprise opportunities while protecting against emerging digital threats.
+            {t('section.subtitle')}
           </p>
         </div>
 
