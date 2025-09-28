@@ -1,114 +1,114 @@
 {
   "section": {
-    "label": "Investment",
-    "title": "Strategic partnerships for",
-    "titleHighlight": " exceptional outcomes",
-    "subtitle": "Every engagement is customized to your specific requirements and goals. Our partnerships typically begin in the four-figure range, scaling with complexity and scope."
+    "label": "Autonomous Infrastructure Packages",
+    "title": "AI-powered solutions for",
+    "titleHighlight": " frictionless operations",
+    "subtitle": "Self-healing infrastructure that reduces operational costs by 70% while achieving 99.99% uptime. Investment scales with autonomous capabilities and infrastructure complexity."
   },
   "packages": [
     {
-      "name": "Personal Website",
-      "tagline": "Platform-proof digital foundation",
-      "description": "Perfect for individual creators and professionals who want to own their narrative",
-      "scope": "Ideal for: Solo professionals, creators, personal brands",
+      "name": "Smart Foundation",
+      "tagline": "Entry to self-managing infrastructure",
+      "description": "Basic AI-powered infrastructure with automated monitoring and self-healing capabilities",
+      "scope": "Ideal for: SMBs, startups, growing teams",
       "timeline": "1-2 weeks",
-      "cta": "Get Foundation Quote",
-      "investment": "Four-figure investment",
+      "cta": "Start Autonomous Operations",
+      "investment": "$2,500/month",
       "features": [
-        "Custom responsive website design",
-        "Basic SEO optimization",
-        "Contact form integration",
-        "Mobile-first development",
-        "GDPR compliance setup",
-        "Basic security implementation",
-        "1-month support included"
+        "Self-healing Ubuntu VPS infrastructure",
+        "AI-powered security monitoring",
+        "Automated backups and recovery",
+        "Basic resource optimization",
+        "24/7 autonomous threat detection",
+        "Predictive maintenance alerts",
+        "Zero-touch security updates"
       ]
     },
     {
-      "name": "Creator Liberation",
-      "tagline": "Escape platform prison",
-      "description": "Comprehensive solution for creators ready to break free from Big Tech dependency",
-      "scope": "Ideal for: Content creators, small businesses, growing brands",
+      "name": "Intelligent Operations",
+      "tagline": "AI-optimized cloud management",
+      "description": "Self-managing cloud infrastructure with AI resource optimization and predictive scaling",
+      "scope": "Ideal for: Mid-market companies, scaling businesses, tech teams",
       "timeline": "2-3 weeks",
-      "cta": "Discuss Professional Package",
-      "investment": "Mid four to five-figure investment",
+      "cta": "Experience AI Operations",
+      "investment": "$8,000/month",
       "popular": true,
       "features": [
-        "Platform-independent website",
-        "Content migration assistance",
-        "Email list setup & integration",
-        "E-commerce capabilities",
-        "Advanced SEO optimization",
-        "Analytics & performance tracking",
-        "3-month support & guidance"
+        "Multi-cloud AI orchestration",
+        "Self-optimizing resource allocation",
+        "Automated performance tuning",
+        "Predictive scaling and cost optimization",
+        "AI-driven security automation",
+        "Zero-downtime deployment pipelines",
+        "Real-time efficiency analytics"
       ]
     },
     {
-      "name": "Professional Authority",
-      "tagline": "Business continuity guarantee",
-      "description": "Enterprise-grade solution for businesses requiring maximum security and compliance",
-      "scope": "Ideal for: Established businesses, professional services, enterprises",
+      "name": "Autonomous Enterprise",
+      "tagline": "Complete self-healing operations",
+      "description": "Fully autonomous infrastructure with AI-powered SOC, self-healing systems, and guaranteed 99.99% uptime",
+      "scope": "Ideal for: Enterprises, critical systems, high-availability requirements",
       "timeline": "3-4 weeks",
-      "cta": "Explore Enterprise Solutions",
-      "investment": "Five+ figure strategic investment",
+      "cta": "Deploy Autonomous Infrastructure",
+      "investment": "$15,000+/month",
       "features": [
-        "Custom web application development",
-        "Enterprise security implementation",
-        "GDPR & CCPA compliance",
-        "ISO 27001 ready infrastructure",
-        "Advanced performance optimization",
-        "24/7 security monitoring",
-        "6-month strategic partnership",
-        "Priority support & maintenance"
+        "Self-healing Ubuntu/Kali SOC infrastructure",
+        "AI-powered threat hunting and response",
+        "Autonomous disaster recovery systems",
+        "Predictive maintenance and optimization",
+        "Multi-cloud failover architecture",
+        "Zero-touch compliance automation",
+        "24/7 AI operations with human oversight",
+        "Guaranteed 99.99% uptime SLA"
       ]
     }
   ],
   "popularLabel": "Most Popular",
   "timelineLabel": "Timeline:",
   "partnership": {
-    "label": "Partnership Process",
-    "title": "From Discovery to",
-    "titleHighlight": " Long-term Success",
-    "subtitle": "Our proven methodology combines strategic discovery, technical excellence, and ongoing partnership to deliver measurable outcomes that grow with your business.",
+    "label": "Autonomous Deployment Process",
+    "title": "From Assessment to",
+    "titleHighlight": " Self-Healing Operations",
+    "subtitle": "Our AI-powered deployment methodology transforms your infrastructure into an autonomous system that manages itself, reduces costs, and scales seamlessly.",
     "steps": [
       {
-        "title": "Strategic Discovery",
-        "description": "Comprehensive 30-minute strategy session analyzing your infrastructure, objectives, and competitive positioning",
+        "title": "Infrastructure Assessment",
+        "description": "AI-powered analysis of your current infrastructure, identifying optimization opportunities and autonomous potential",
         "details": [
-          "Goals & requirements analysis",
-          "Strategic assessment",
-          "Risk & opportunity mapping",
-          "Investment alignment"
+          "Current infrastructure audit",
+          "AI optimization opportunities",
+          "Cost reduction projections",
+          "Autonomous readiness evaluation"
         ]
       },
       {
-        "title": "Custom Proposal",
-        "description": "Detailed architecture design balancing security, scalability, and business requirements with transparent pricing",
+        "title": "AI Architecture Design",
+        "description": "Custom self-healing architecture blueprint with AI orchestration, predictive scaling, and autonomous operations",
         "details": [
-          "Technical architecture",
-          "Security framework",
-          "Timeline & milestones",
-          "Flexible payment terms"
+          "Self-healing system design",
+          "AI orchestration framework",
+          "Predictive scaling architecture",
+          "Autonomous security implementation"
         ]
       },
       {
-        "title": "Expert Implementation",
-        "description": "Agile development with continuous security validation, regular updates, and iterative refinement",
+        "title": "Autonomous Deployment",
+        "description": "Seamless migration to self-managing infrastructure with AI-powered monitoring and continuous optimization",
         "details": [
-          "Custom development",
-          "Security implementation",
-          "Testing & optimization",
-          "Performance validation"
+          "Zero-downtime migration",
+          "AI system training and calibration",
+          "Self-healing capability activation",
+          "Performance baseline establishment"
         ]
       },
       {
-        "title": "Ongoing Partnership",
-        "description": "Strategic support, security monitoring, and infrastructure evolution as your business grows",
+        "title": "Continuous AI Optimization",
+        "description": "Your infrastructure continuously improves itself through AI learning, predictive maintenance, and autonomous scaling",
         "details": [
-          "Continuous monitoring",
-          "Strategic consultation",
-          "Evolution planning",
-          "Incident response"
+          "Self-optimizing performance",
+          "Predictive issue prevention",
+          "Autonomous cost optimization",
+          "Continuous security evolution"
         ]
       }
     ]

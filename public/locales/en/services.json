@@ -1,39 +1,39 @@
 {
   "section": {
-    "label": "Services",
-    "title": "Security-first web development",
-    "titleHighlight": " that protects your business",
-    "subtitle": "From custom web applications to enterprise security compliance, we deliver comprehensive digital solutions that safeguard your business while driving growth."
+    "label": "AI-Powered Excellence",
+    "title": "Digital moksha through",
+    "titleHighlight": " flow state infrastructure",
+    "subtitle": "We deliver liberation from operational burden through self-healing AI systems that achieve perfect balance - ubuntu principles ensuring collective prosperity while reducing costs by 70%."
   },
   "services": [
     {
-      "title": "Bespoke Web Development",
-      "description": "Custom-built websites and web applications designed specifically for your business needs.",
+      "title": "Autonomous Security Operations Center",
+      "description": "Self-healing Ubuntu/Kali VPS infrastructure with AI-driven threat detection, automated response, and predictive vulnerability management.",
       "details": [
-        "Custom React/Next.js applications",
-        "Progressive Web Apps (PWA)",
-        "E-commerce solutions",
-        "API development and integration"
+        "Self-healing Ubuntu/Kali Linux VPS infrastructure",
+        "AI-powered threat detection and automatic response",
+        "Predictive vulnerability management and patching",
+        "24/7 autonomous security operations with zero-touch management"
       ]
     },
     {
-      "title": "Performance Optimization",
-      "description": "Lightning-fast websites that convert visitors into customers through superior user experience.",
+      "title": "Intelligent Cloud Management",
+      "description": "Multi-cloud AI orchestration with self-optimizing resource allocation, automated cost reduction, and predictive scaling that adapts to your business flow.",
       "details": [
-        "Core Web Vitals optimization",
-        "SEO performance improvements",
-        "Mobile-first responsive design",
-        "Advanced caching strategies"
+        "Multi-cloud AI orchestration and optimization",
+        "Self-optimizing resource allocation and cost reduction",
+        "Predictive scaling based on demand patterns",
+        "Automated performance tuning and efficiency optimization"
       ]
     },
     {
-      "title": "Security & Compliance",
-      "description": "Enterprise-grade security measures and compliance frameworks to protect your digital assets.",
+      "title": "Self-Healing Business Continuity",
+      "description": "Autonomous disaster recovery systems with AI-powered failover, self-recovering data protection, and zero-downtime architecture guarantee.",
       "details": [
-        "GDPR & CCPA compliance",
-        "ISO 27001 security standards",
-        "SOC 2 Type II compliance",
-        "Advanced threat protection"
+        "Autonomous disaster recovery and failover systems",
+        "Self-recovering data protection and backup automation",
+        "Zero-downtime architecture with predictive maintenance",
+        "AI-driven business continuity planning and execution"
       ]
     }
   ]

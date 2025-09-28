@@ -8,42 +8,42 @@ export function TrustAndSecurity() {
   const uniqueApproach = [
     {
       icon: <Target className="w-6 h-6 text-accent" />,
-      title: "AI-Resistant Ownership",
-      description: "Custom code and architecture immune to AI attacks with no vendor lock-in. You own everything we build with quantum-secure foundations."
+      title: "Self-Healing Infrastructure",
+      description: "AI-powered systems that automatically detect, diagnose, and repair issues before they impact your business. Zero-touch operations with 99.99% uptime guarantee."
     },
     {
       icon: <Shield className="w-6 h-6 text-accent" />,
-      title: "AI Security First", 
-      description: "Enterprise-grade AI security, deepfake protection, and prompt injection prevention built in from day one. Defend against AI-powered digital threats."
+      title: "Autonomous Security Operations", 
+      description: "Ubuntu/Kali-powered SOC with AI threat hunting, automated response, and predictive vulnerability management. 24/7 protection without human intervention."
     },
     {
       icon: <Award className="w-6 h-6 text-accent" />,
-      title: "AI-Verified Positioning",
-      description: "Stand out as the trustworthy choice with AI-authenticated content and privacy-focused digital presence that can't be manipulated."
+      title: "Intelligent Cost Optimization",
+      description: "AI algorithms continuously optimize your cloud spending, resource allocation, and infrastructure efficiency. Average 70% cost reduction achieved."
     },
     {
       icon: <MapPin className="w-6 h-6 text-accent" />,
-      title: "Global AI Expertise",
-      description: "International expertise with multi-jurisdictional AI governance knowledge and compliance. Direct communication with real humans, not AI agents."
+      title: "Multi-Cloud AI Orchestration",
+      description: "Seamless management across AWS, Azure, and GCP with intelligent failover, load balancing, and performance optimization. Global scale, local efficiency."
     },
     {
       icon: <Star className="w-6 h-6 text-accent" />,
-      title: "AI-Adaptive Architecture",
-      description: "Custom systems that evolve with AI threats and grow with your business. No rebuilding required as AI landscape changes."
+      title: "Predictive Scaling Architecture",
+      description: "Machine learning algorithms predict demand patterns and automatically scale resources. Never over-provision or under-perform again."
     },
     {
       icon: <Zap className="w-6 h-6 text-accent" />,
-      title: "AI-Optimized Performance",
-      description: "Fast-loading, AI-enhanced websites that impress visitors and convert them into customers while blocking AI scraping."
+      title: "Zero-Downtime Guarantee",
+      description: "AI-powered redundancy and instant failover systems ensure continuous operation. Self-recovering data protection with autonomous disaster recovery."
     }
   ];
 
 
   const stats = [
-    { value: "0", label: "AI Security Breaches" },
-    { value: "100%", label: "AI-Resistant Frameworks" },
-    { value: "GDPR+", label: "AI Governance Ready" },
-    { value: "24/7", label: "AI Threat Monitoring" }
+    { value: "99.99%", label: "Uptime Achieved" },
+    { value: "70%", label: "Cost Reduction" },
+    { value: "0.3s", label: "Incident Response" },
+    { value: "24/7", label: "Autonomous Operations" }
   ];
 
   return (
@@ -63,11 +63,11 @@ export function TrustAndSecurity() {
 
           <h2 id="trust-security-heading" className="text-3xl md:text-5xl font-heading font-medium leading-tight mb-6 text-primary tracking-tight">
             Why Choose
-            <span className="italic text-accent"> Gallifrey Consulting</span>
+            <span className="italic text-accent"> Autonomous Infrastructure</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Global enterprises choose us for AI-secure, custom digital solutions that protect against emerging threats and give them complete control over their digital presence in the age of artificial intelligence.
+            Global enterprises choose us for self-healing, AI-powered infrastructure that reduces operational costs by 70% while achieving 99.99% uptime. Experience the flow state of zero-touch operations.
           </p>
         </div>
 

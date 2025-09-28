@@ -78,7 +78,7 @@ export default function Home() {
         "@id": "https://gallifrey.consulting/#localbusiness",
         "name": "Gallifrey Consulting",
         "image": "https://gallifrey.consulting/og-image.jpg",
-        "description": "Global enterprise AI security agency specializing in AI threat protection, quantum-secure custom solutions, deepfake detection, and enterprise-grade AI governance services.",
+        "description": "Global AI-powered infrastructure agency specializing in self-healing systems, autonomous operations, Ubuntu/Kali SOC services, and intelligent cloud management with 99.99% uptime guarantee.",
         "url": "https://gallifrey.consulting",
         "telephone": "+61-3-xxxx-xxxx",
         "address": {
@@ -112,8 +112,8 @@ export default function Home() {
       {
         "@type": "Service",
         "@id": "https://gallifrey.consulting/#customdevelopment",
-        "name": "Enterprise AI Security & Digital Protection Services",
-        "description": "Enterprise-grade AI security with quantum-resistant architecture, custom AI-secure solutions, and comprehensive AI governance services for business continuity",
+        "name": "Autonomous Infrastructure & Self-Healing Operations",
+        "description": "AI-powered infrastructure that manages itself, reduces operational costs by 70%, and achieves 99.99% uptime through self-healing systems and autonomous operations",
         "provider": {
           "@id": "https://gallifrey.consulting/#organization"
         },
@@ -123,24 +123,14 @@ export default function Home() {
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Enterprise AI Security & Digital Protection Services",
+          "name": "Autonomous Infrastructure & Self-Healing Operations",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "AI-Resistant Enterprise Development",
-                "description": "Quantum-secure custom development with AI threat modeling, deepfake protection, and comprehensive digital AI defense"
-              },
-              "price": "2500",
-              "priceCurrency": "AUD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Security & Governance Systems",
-                "description": "Enterprise AI governance frameworks, AI threat monitoring, and compliance systems with real-time AI attack detection"
+                "name": "Infrastructure Liberation & Autonomous SOC",
+                "description": "Self-healing Ubuntu/Kali VPS infrastructure with AI-driven threat detection - achieve moksha from operational burden through autonomous operations"
               },
               "price": "8000",
               "priceCurrency": "AUD"
@@ -149,10 +139,20 @@ export default function Home() {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Digital AI Protection & Sovereignty",
-                "description": "Comprehensive AI threat protection including deepfake detection, prompt injection prevention, and AI-resistant platform independence"
+                "name": "Cloud Moksha & Flow State Operations",
+                "description": "Multi-cloud AI orchestration with self-optimizing resource allocation - liberation from manual operations through intelligent automation and ubuntu principles"
               },
-              "price": "5000",
+              "price": "15000",
+              "priceCurrency": "AUD"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Nirvana & Business Continuity",
+                "description": "Autonomous disaster recovery systems with AI-powered failover - achieve perfect operational balance through self-healing infrastructure moksha"
+              },
+              "price": "12000",
               "priceCurrency": "AUD"
             }
           ]
@@ -183,10 +183,10 @@ export default function Home() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What makes Gallifrey Consulting different from other AI security agencies?",
+            "name": "What makes Gallifrey Consulting different from other infrastructure providers?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We&apos;re quantum-secure AI specialists who craft custom defense systems with obsessive attention to emerging threats. Every digital solution we create is hand-coded with AI threat modeling and mathematical precision. Plus, we offer comprehensive AI governance and deepfake protection services."
+              "text": "We&apos;re AI-powered infrastructure specialists who help you achieve digital moksha - complete liberation from operational burden. Every solution features self-healing systems, ubuntu principles for collective security, and flow state optimization that reduces costs by 70% while achieving 99.99% uptime."
             }
           },
           {
@@ -199,10 +199,10 @@ export default function Home() {
           },
           {
             "@type": "Question",
-            "name": "What AI security and protection services do you provide?",
+            "name": "What autonomous infrastructure and moksha services do you provide?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We provide quantum-secure AI development (custom websites, AI-resistant systems, digital solutions) with obsessive security detail, plus comprehensive AI protection services including deepfake detection, prompt injection prevention, AI governance, and custom AI-secure digital experiences."
+              "text": "We provide self-healing infrastructure (Ubuntu/Kali SOC, multi-cloud orchestration, autonomous scaling) with AI-powered liberation from manual operations. Our services include Infrastructure Moksha, Flow State Operations, Digital Nirvana continuity, and ubuntu-based collective security - achieving perfect operational balance."
             }
           }
         ]
@@ -218,8 +218,8 @@ export default function Home() {
         canonical="https://gallifrey.consulting"
         openGraph={{
           url: 'https://gallifrey.consulting',
-          title: 'Global AI Security | AI-Resistant Digital Solutions',
-          description: 'Global AI security specialists delivering quantum-secure development, deepfake protection, and enterprise AI governance solutions.',
+          title: 'Self-Healing AI Infrastructure | Digital Moksha & Flow State Operations',
+          description: 'AI-powered infrastructure specialists delivering self-healing systems, operational moksha, and 99.99% uptime with 70% cost reduction through ubuntu principles.',
           images: [
             {
               url: 'https://gallifrey.consulting/og-image.jpg',

@@ -1,0 +1,339 @@
+{
+  "name": "Gallifrey Design System - Digital Moksha Theme",
+  "description": "Design tokens for spiritual-tech infrastructure messaging with flow state and ubuntu principles",
+  "version": "2.0.0",
+  "lastModified": "2025-01-28",
+  
+  "philosophy": {
+    "tat-svam-asi": "Thou art That - the ultimate unity between user and system, where interface becomes consciousness",
+    "moksha": "Liberation from operational burden through seamless design that dissolves the illusion of complexity",
+    "flow": "Frictionless user experiences that achieve perfect balance - where technology becomes transparent", 
+    "ubuntu": "Collective harmony in design - I am because we are, user and system as one consciousness",
+    "nirvana": "Perfect visual balance between spiritual depth and technical excellence - the cessation of design friction",
+    "gallifrey-inspired": "Time Lord wisdom applied to digital realms - regenerative systems that evolve and transcend"
+  },
+
+  "tokens": {
+    "colors": {
+      "foundation": {
+        "moksha": {
+          "liberated-white": {
+            "value": "#FFFFFF",
+            "rgb": "255 255 255",
+            "description": "Pure liberation - the canvas of infinite possibility"
+          },
+          "flowing-gray": {
+            "50": { "value": "#F9FAFB", "rgb": "249 250 251", "description": "Whisper of flow state" },
+            "100": { "value": "#F3F4F6", "rgb": "243 244 246", "description": "Gentle current" },
+            "200": { "value": "#E5E7EB", "rgb": "229 231 235", "description": "Subtle movement" },
+            "300": { "value": "#D1D5DB", "rgb": "209 213 219", "description": "Flowing transition" },
+            "400": { "value": "#9CA3AF", "rgb": "156 163 175", "description": "Balanced neutral" },
+            "500": { "value": "#6B7280", "rgb": "107 114 128", "description": "Harmonious middle" },
+            "600": { "value": "#4B5563", "rgb": "75 85 99", "description": "Grounded wisdom" },
+            "700": { "value": "#374151", "rgb": "55 65 81", "description": "Deep understanding" },
+            "800": { "value": "#1F2937", "rgb": "31 41 55", "description": "Profound knowledge" },
+            "900": { "value": "#111827", "rgb": "17 24 39", "description": "Ultimate depth" }
+          }
+        },
+        
+        "ubuntu": {
+          "collective-blue": {
+            "50": { "value": "#EFF6FF", "rgb": "239 246 255", "description": "Shared sky" },
+            "100": { "value": "#DBEAFE", "rgb": "219 234 254", "description": "Community breath" },
+            "200": { "value": "#BFDBFE", "rgb": "191 219 254", "description": "Collective flow" },
+            "300": { "value": "#93C5FD", "rgb": "147 197 253", "description": "Ubuntu harmony" },
+            "400": { "value": "#60A5FA", "rgb": "96 165 250", "description": "Shared purpose" },
+            "500": { "value": "#1C4971", "rgb": "28 73 113", "description": "Unity strength - primary brand" },
+            "600": { "value": "#153A5B", "rgb": "21 58 91", "description": "Deep connection" },
+            "700": { "value": "#2D5A87", "rgb": "45 90 135", "description": "Collective wisdom" },
+            "800": { "value": "#1E3A8A", "rgb": "30 58 138", "description": "Profound unity" },
+            "900": { "value": "#1E293B", "rgb": "30 41 59", "description": "Eternal bond" }
+          }
+        },
+
+        "nirvana": {
+          "enlightened-green": {
+            "50": { "value": "#F0FDF4", "rgb": "240 253 244", "description": "Awakening light" },
+            "100": { "value": "#DCFCE7", "rgb": "220 252 231", "description": "First insight" },
+            "200": { "value": "#BBF7D0", "rgb": "187 247 208", "description": "Growing awareness" },
+            "300": { "value": "#86EFAC", "rgb": "134 239 172", "description": "Clear understanding" },
+            "400": { "value": "#4ADE80", "rgb": "74 222 128", "description": "Flowing wisdom" },
+            "500": { "value": "#22C55E", "rgb": "34 197 94", "description": "Perfect balance" },
+            "600": { "value": "#16A34A", "rgb": "22 163 74", "description": "Sustained harmony" },
+            "700": { "value": "#15803D", "rgb": "21 128 61", "description": "Deep peace" },
+            "800": { "value": "#166534", "rgb": "22 101 52", "description": "Eternal stillness" },
+            "900": { "value": "#14532D", "rgb": "20 83 45", "description": "Nirvana state" }
+          }
+        },
+
+        "flow": {
+          "state-amber": {
+            "50": { "value": "#FFFBEB", "rgb": "255 251 235", "description": "Initial spark - tat svam asi awakening" },
+            "100": { "value": "#FEF3C7", "rgb": "254 243 199", "description": "Warming flow - consciousness stirring" },
+            "200": { "value": "#FDE68A", "rgb": "253 230 138", "description": "Building momentum - awareness expanding" },
+            "300": { "value": "#FCD34D", "rgb": "252 211 77", "description": "Peak attention - mind and system merging" },
+            "400": { "value": "#FBBF24", "rgb": "251 191 36", "description": "Sustained focus - user-interface unity" },
+            "500": { "value": "#F59E0B", "rgb": "245 158 11", "description": "Flow state achieved - thou art that realized" },
+            "600": { "value": "#D97706", "rgb": "217 119 6", "description": "Deep immersion - ego-system dissolution" },
+            "700": { "value": "#B45309", "rgb": "180 83 9", "description": "Effortless mastery - moksha in action" },
+            "800": { "value": "#92400E", "rgb": "146 64 14", "description": "Transcendent skill - beyond duality" },
+            "900": { "value": "#78350F", "rgb": "120 53 15", "description": "Perfect flow - ultimate non-dual state" }
+          }
+        },
+
+        "gallifrey": {
+          "time-lord-gold": {
+            "50": { "value": "#FFFBEB", "rgb": "255 251 235", "description": "Regeneration light - tat svam asi made visible" },
+            "100": { "value": "#FEF3C7", "rgb": "254 243 199", "description": "Temporal shimmer - the golden thread of consciousness" },
+            "200": { "value": "#FDE68A", "rgb": "253 230 138", "description": "Time vortex glow - illuminated understanding" },
+            "300": { "value": "#FCD34D", "rgb": "252 211 77", "description": "Chronos wisdom - timeless knowledge" },
+            "400": { "value": "#FBBF24", "rgb": "251 191 36", "description": "TARDIS energy - infinite possibility" },
+            "500": { "value": "#F59E0B", "rgb": "245 158 11", "description": "Gallifreyan fire - the spark of 'That'" },
+            "600": { "value": "#D97706", "rgb": "217 119 6", "description": "Time Lord authority - moksha realized" },
+            "700": { "value": "#B45309", "rgb": "180 83 9", "description": "Rassilon's legacy - eternal wisdom" },
+            "800": { "value": "#92400E", "rgb": "146 64 14", "description": "Ancient dharma - universal truth" },
+            "900": { "value": "#78350F", "rgb": "120 53 15", "description": "Omega's depth - the source consciousness" }
+          },
+          
+          "vortex-blue": {
+            "50": { "value": "#EFF6FF", "rgb": "239 246 255", "description": "Time stream whisper - consciousness awakening" },
+            "100": { "value": "#DBEAFE", "rgb": "219 234 254", "description": "Temporal drift - flowing awareness" },
+            "200": { "value": "#BFDBFE", "rgb": "191 219 254", "description": "Time wind flow - moving meditation" },
+            "300": { "value": "#93C5FD", "rgb": "147 197 253", "description": "Vortex current - stream of being" },
+            "400": { "value": "#60A5FA", "rgb": "96 165 250", "description": "TARDIS blue - infinite inner space" },
+            "500": { "value": "#1C4971", "rgb": "28 73 113", "description": "Time Lord blue - tat svam asi embodied" },
+            "600": { "value": "#153A5B", "rgb": "21 58 91", "description": "Deep time - eternal now" },
+            "700": { "value": "#2D5A87", "rgb": "45 90 135", "description": "Gallifrey's wisdom - cosmic consciousness" },
+            "800": { "value": "#1E3A8A", "rgb": "30 58 138", "description": "Universal mind - thou art that realized" },
+            "900": { "value": "#1E293B", "rgb": "30 41 59", "description": "Source awareness - ultimate reality" }
+          }
+        }
+      },
+
+      "semantic": {
+        "primary": {
+          "value": "var(--ubuntu-collective-blue-500)",
+          "description": "Main brand color representing unity and collective strength"
+        },
+        "secondary": {
+          "value": "var(--nirvana-enlightened-green-500)", 
+          "description": "Secondary color representing balance and growth"
+        },
+        "accent": {
+          "value": "var(--flow-state-amber-500)",
+          "description": "Accent color representing optimal performance and flow state"
+        },
+        "background": {
+          "value": "var(--moksha-liberated-white)",
+          "description": "Pure canvas for infinite possibility"
+        },
+        "surface": {
+          "value": "var(--moksha-flowing-gray-50)",
+          "description": "Elevated surfaces with subtle flow"
+        },
+        "text": {
+          "primary": "var(--moksha-flowing-gray-900)",
+          "secondary": "var(--moksha-flowing-gray-700)",
+          "tertiary": "var(--moksha-flowing-gray-500)"
+        }
+      }
+    },
+
+    "typography": {
+      "philosophy": "Typography that flows like consciousness - from structured authority to organic wisdom",
+      
+      "fonts": {
+        "heading": {
+          "family": "Montserrat",
+          "description": "Structured consciousness - for titles and important hierarchy",
+          "fallback": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        },
+        "body": {
+          "family": "Source Sans Pro", 
+          "description": "Flowing communication - for readable content",
+          "fallback": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        },
+        "spiritual": {
+          "family": "Playfair Display",
+          "description": "Spiritual wisdom - for moksha, ubuntu, and transcendent concepts",
+          "fallback": "Georgia, 'Times New Roman', serif"
+        }
+      },
+
+      "scales": {
+        "moksha": {
+          "xs": { "size": "0.75rem", "lineHeight": "1rem", "description": "Subtle whispers" },
+          "sm": { "size": "0.875rem", "lineHeight": "1.25rem", "description": "Gentle voice" },
+          "base": { "size": "1rem", "lineHeight": "1.5rem", "description": "Natural flow" },
+          "lg": { "size": "1.125rem", "lineHeight": "1.75rem", "description": "Clear expression" },
+          "xl": { "size": "1.25rem", "lineHeight": "1.75rem", "description": "Confident presence" },
+          "2xl": { "size": "1.5rem", "lineHeight": "2rem", "description": "Strong declaration" },
+          "3xl": { "size": "1.875rem", "lineHeight": "2.25rem", "description": "Commanding attention" },
+          "4xl": { "size": "2.25rem", "lineHeight": "2.5rem", "description": "Transformative impact" },
+          "5xl": { "size": "3rem", "lineHeight": "1", "description": "Transcendent power" },
+          "6xl": { "size": "3.75rem", "lineHeight": "1", "description": "Ultimate expression" }
+        }
+      },
+
+      "weights": {
+        "light": 300,
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      }
+    },
+
+    "spacing": {
+      "philosophy": "Spacing that breathes like meditation - organic rhythms that create flow",
+      
+      "scale": {
+        "breathe-1": { "value": "0.25rem", "description": "Subtle breath" },
+        "breathe-2": { "value": "0.5rem", "description": "Gentle inhale" },
+        "breathe-3": { "value": "0.75rem", "description": "Natural rhythm" },
+        "breathe-4": { "value": "1rem", "description": "Steady breathing" },
+        "breathe-5": { "value": "1.25rem", "description": "Deep breath" },
+        "breathe-6": { "value": "1.5rem", "description": "Expanding space" },
+        "breathe-8": { "value": "2rem", "description": "Flowing pause" },
+        "breathe-10": { "value": "2.5rem", "description": "Contemplative space" },
+        "breathe-12": { "value": "3rem", "description": "Meditative gap" },
+        "breathe-16": { "value": "4rem", "description": "Transcendent space" },
+        "breathe-20": { "value": "5rem", "description": "Infinite expanse" },
+        "breathe-24": { "value": "6rem", "description": "Cosmic rhythm" }
+      }
+    },
+
+    "elevation": {
+      "philosophy": "Shadows that lift elements into different states of consciousness",
+      
+      "levels": {
+        "grounded": {
+          "value": "none",
+          "description": "Connected to earth - no elevation"
+        },
+        "floating": {
+          "value": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+          "description": "Gently lifted - subtle awareness"
+        },
+        "elevated": {
+          "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+          "description": "Rising consciousness - clear separation"
+        },
+        "soaring": {
+          "value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+          "description": "Transcendent state - significant elevation"
+        },
+        "transcendent": {
+          "value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+          "description": "Ultimate elevation - divine perspective"
+        }
+      }
+    },
+
+    "animation": {
+      "philosophy": "Motion that embodies flow state - natural, purposeful, never jarring",
+      
+      "durations": {
+        "instant": "0ms",
+        "breath": "150ms", 
+        "flow": "300ms",
+        "drift": "500ms",
+        "meditate": "1000ms",
+        "transcend": "2000ms"
+      },
+
+      "easings": {
+        "natural": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "organic": "cubic-bezier(0.165, 0.84, 0.44, 1)",
+        "flowing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "transcendent": "cubic-bezier(0.19, 1, 0.22, 1)"
+      }
+    },
+
+    "borders": {
+      "philosophy": "Boundaries that connect rather than separate - ubuntu in design",
+      
+      "radius": {
+        "none": "0",
+        "subtle": "2px",
+        "gentle": "4px", 
+        "flowing": "6px",
+        "organic": "8px",
+        "embracing": "12px",
+        "infinite": "9999px"
+      },
+
+      "width": {
+        "hair": "1px",
+        "breath": "2px", 
+        "presence": "4px",
+        "bold": "8px"
+      }
+    }
+  },
+
+  "components": {
+    "patterns": {
+      "flow-card": {
+        "description": "Cards that embody flow state principles",
+        "properties": {
+          "background": "semantic.surface",
+          "border": "borders.width.hair + semantic.text.tertiary", 
+          "borderRadius": "borders.radius.flowing",
+          "padding": "spacing.breathe-6",
+          "elevation": "elevation.floating",
+          "transition": "animation.durations.flow + animation.easings.natural"
+        }
+      },
+      
+      "ubuntu-button": {
+        "description": "Buttons that connect and unify (ubuntu principle)",
+        "properties": {
+          "background": "semantic.primary",
+          "color": "semantic.background",
+          "borderRadius": "borders.radius.gentle",
+          "padding": "spacing.breathe-3 spacing.breathe-6",
+          "fontSize": "typography.scales.moksha.base",
+          "fontWeight": "typography.weights.medium",
+          "transition": "animation.durations.breath + animation.easings.natural"
+        }
+      },
+
+      "moksha-container": {
+        "description": "Containers that provide liberation from constraints",
+        "properties": {
+          "maxWidth": "1280px",
+          "margin": "0 auto",
+          "padding": "spacing.breathe-4",
+          "background": "semantic.background"
+        }
+      }
+    }
+  },
+
+  "usage": {
+    "moksha-contexts": [
+      "Use flowing-gray palette for liberation from visual noise",
+      "Apply organic spacing to free content from rigid constraints",
+      "Employ transcendent shadows for elevated experiences"
+    ],
+    
+    "flow-contexts": [
+      "Use state-amber accents to indicate optimal performance zones",
+      "Apply flowing transitions for seamless user journeys", 
+      "Employ natural easings for uninterrupted experiences"
+    ],
+    
+    "ubuntu-contexts": [
+      "Use collective-blue for features that bring people together",
+      "Apply connected border styles for unified components",
+      "Employ shared spacing rhythms for collective harmony"
+    ],
+    
+    "nirvana-contexts": [
+      "Use enlightened-green for perfect balance indicators",
+      "Apply balanced typography scales for peaceful reading",
+      "Employ grounded shadows for stable, peaceful states"
+    ]
+  }
+}

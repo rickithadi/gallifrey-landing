@@ -41,53 +41,53 @@ export function PlatformAssessment() {
 
   const questions: AssessmentQuestion[] = [
     {
-      id: 'revenue_dependency',
-      question: 'What percentage of your revenue comes through platform-controlled channels?',
+      id: 'infrastructure_management',
+      question: 'How much time does your team spend on infrastructure management per week?',
       options: [
-        { text: '0-25% - I own most of my customer relationships', score: 1 },
-        { text: '26-50% - Mixed dependency with some platform risk', score: 3 },
-        { text: '51-75% - Heavily dependent on platforms for revenue', score: 6 },
-        { text: '76-100% - Almost entirely platform-dependent', score: 10 }
+        { text: '0-5 hours - Mostly automated with minimal intervention', score: 1 },
+        { text: '6-15 hours - Some automation but regular manual tasks', score: 3 },
+        { text: '16-30 hours - Significant manual infrastructure work', score: 6 },
+        { text: '30+ hours - Constant firefighting and manual operations', score: 10 }
       ]
     },
     {
-      id: 'content_ownership',
-      question: 'Where is your primary content and audience hosted?',
+      id: 'system_reliability',
+      question: 'What is your current system uptime and incident frequency?',
       options: [
-        { text: 'Own website/email list with platform syndication', score: 1 },
-        { text: 'Mix of owned and platform content', score: 3 },
-        { text: 'Primarily on social platforms with some owned media', score: 6 },
-        { text: 'Exclusively on social media platforms', score: 10 }
+        { text: '99.9%+ uptime with rare incidents', score: 1 },
+        { text: '99.5-99.8% uptime with monthly incidents', score: 3 },
+        { text: '99-99.4% uptime with weekly issues', score: 6 },
+        { text: 'Below 99% uptime with frequent outages', score: 10 }
       ]
     },
     {
-      id: 'search_results',
-      question: 'When someone Googles your name/business, what do they find?',
+      id: 'security_monitoring',
+      question: 'How do you currently handle security monitoring and threat detection?',
       options: [
-        { text: 'My own website and positive content I control', score: 1 },
-        { text: 'Mix of my content and positive third-party mentions', score: 3 },
-        { text: 'Some negative or outdated results mixed with good ones', score: 6 },
-        { text: 'Negative, outdated, or inaccurate information dominates', score: 10 }
+        { text: 'AI-powered real-time monitoring with automated response', score: 1 },
+        { text: 'Automated monitoring with manual threat response', score: 3 },
+        { text: 'Basic monitoring tools with delayed manual response', score: 6 },
+        { text: 'Manual monitoring or reactive security measures only', score: 10 }
       ]
     },
     {
-      id: 'crisis_preparedness',
-      question: 'If a major platform banned you tomorrow, how quickly could you recover?',
+      id: 'scaling_efficiency',
+      question: 'How does your infrastructure handle traffic spikes and resource demands?',
       options: [
-        { text: 'Immediately - I have direct customer relationships', score: 1 },
-        { text: '1-2 weeks - I have backup systems in place', score: 3 },
-        { text: '1-3 months - Would need to rebuild relationships', score: 6 },
-        { text: '6+ months or never - Would lose most connections', score: 10 }
+        { text: 'Predictive auto-scaling with AI optimization', score: 1 },
+        { text: 'Basic auto-scaling with some manual adjustment', score: 3 },
+        { text: 'Manual scaling during peak periods', score: 6 },
+        { text: 'No auto-scaling - frequent performance issues', score: 10 }
       ]
     },
     {
-      id: 'reputation_monitoring',
-      question: 'How often do you monitor your online reputation and digital footprint?',
+      id: 'cost_optimization',
+      question: 'How optimized are your cloud and infrastructure costs?',
       options: [
-        { text: 'Real-time monitoring with professional tools', score: 1 },
-        { text: 'Weekly Google searches and social media checks', score: 3 },
-        { text: 'Monthly or when I remember to check', score: 6 },
-        { text: 'Rarely or never - I hope for the best', score: 10 }
+        { text: 'AI-optimized with continuous cost reduction', score: 1 },
+        { text: 'Regular reviews with some optimization', score: 3 },
+        { text: 'Occasional cost reviews with limited optimization', score: 6 },
+        { text: 'No cost optimization - paying market rates or higher', score: 10 }
       ]
     }
   ];
@@ -101,77 +101,77 @@ export function PlatformAssessment() {
       return {
         score: totalScore,
         level: 'low',
-        title: 'Digital Security: Strong Foundation',
-        description: 'You have good digital wellness practices and platform independence. Your authentic presence is well-protected.',
+        title: 'Infrastructure Excellence: Strong Foundation',
+        description: 'You have excellent infrastructure practices with high automation and optimization. Your systems are well-positioned for AI enhancement.',
         recommendations: [
-          'Maintain your current platform independence practices',
-          'Consider advanced reputation monitoring for prevention',
-          'Share your knowledge to help others achieve digital security'
+          'Maintain your current automation and monitoring practices',
+          'Consider AI-powered predictive optimization for further efficiency',
+          'Explore advanced self-healing capabilities for ultimate autonomy'
         ],
         nextStep: {
-          title: 'Advanced Digital Protection',
-          description: 'Enhance your digital wellness with professional monitoring and crisis prevention.',
-          cta: 'Explore Professional Services',
-          ctaAction: 'assessment-low-risk-services'
+          title: 'AI-Powered Infrastructure Enhancement',
+          description: 'Take your already strong infrastructure to the next level with AI optimization and self-healing capabilities.',
+          cta: 'Explore AI Enhancement Services',
+          ctaAction: 'assessment-low-risk-ai-services'
         }
       };
     } else if (percentage <= 50) {
       return {
         score: totalScore,
         level: 'medium', 
-        title: 'Digital Dependency Risk Detected',
-        description: 'You have moderate platform dependency that could threaten your digital wellness. Time for strategic improvements.',
+        title: 'Infrastructure Optimization Opportunity',
+        description: 'You have moderate infrastructure efficiency with significant room for AI-powered improvement and cost reduction.',
         recommendations: [
-          'Diversify your digital presence away from platform dependency',
-          'Build owned media channels (website, email list)',
-          'Implement reputation monitoring and protection protocols',
-          'Create crisis response plans for platform disruptions'
+          'Implement intelligent automation to reduce manual operations',
+          'Deploy AI-powered monitoring and predictive maintenance',
+          'Optimize resource allocation with machine learning algorithms',
+          'Establish self-healing systems for critical infrastructure components'
         ],
         nextStep: {
-          title: 'Digital Strategy Analysis',
-          description: 'Get a comprehensive audit of your platform dependencies and independence roadmap.',
-          cta: 'Book $297 Strategy Session',
-          ctaAction: 'assessment-medium-risk-consultation'
+          title: 'Infrastructure Optimization Analysis',
+          description: 'Get a comprehensive audit of your infrastructure with AI optimization roadmap and cost reduction projections.',
+          cta: 'Book AI Infrastructure Consultation',
+          ctaAction: 'assessment-medium-risk-ai-consultation'
         }
       };
     } else if (percentage <= 75) {
       return {
         score: totalScore,
         level: 'high',
-        title: 'High Platform Dependency Risk',
-        description: 'Your digital security is compromised by dangerous platform dependency. Immediate action needed to restore protection.',
+        title: 'High Infrastructure Inefficiency Risk',
+        description: 'Your infrastructure operations are consuming significant resources with frequent issues. Immediate AI automation needed to restore efficiency.',
         recommendations: [
-          'Urgent: Begin platform independence strategy immediately',
-          'Establish owned media presence (website, email, direct relationships)',
-          'Implement comprehensive reputation monitoring',
-          'Create emergency communication channels with your audience',
-          'Develop crisis response protocols'
+          'Urgent: Deploy AI-powered automation to reduce manual operations by 70%',
+          'Implement self-healing systems to eliminate frequent outages',
+          'Deploy intelligent monitoring with predictive issue prevention',
+          'Establish automated scaling and cost optimization systems',
+          'Create AI-driven incident response and recovery protocols'
         ],
         nextStep: {
-          title: 'Digital Security Recovery Program',
-          description: 'Emergency consultation to restore your digital wellness and independence.',
-          cta: 'Schedule Emergency Consultation',
-          ctaAction: 'assessment-high-risk-emergency'
+          title: 'Infrastructure Transformation Program',
+          description: 'Emergency consultation to transform your infrastructure with AI automation and self-healing systems.',
+          cta: 'Schedule Infrastructure Emergency Consultation',
+          ctaAction: 'assessment-high-risk-ai-emergency'
         }
       };
     } else {
       return {
         score: totalScore,
         level: 'critical',
-        title: 'Critical Digital Health Emergency',
-        description: 'You are in digital platform prison with extreme vulnerability. Your business/reputation could disappear overnight.',
+        title: 'Critical Infrastructure Crisis',
+        description: 'Your infrastructure is in crisis mode with extreme inefficiency and instability. Business continuity is at risk without immediate AI intervention.',
         recommendations: [
-          'IMMEDIATE ACTION REQUIRED: You are one algorithm change away from losing everything',
-          'Emergency platform independence implementation',
-          'Crisis communication strategy with existing audience',
-          'Reputation protection and negative content mitigation',
-          'Legal preparation for platform disputes'
+          'IMMEDIATE ACTION REQUIRED: Deploy emergency AI automation to prevent total system failure',
+          'Emergency implementation of self-healing infrastructure',
+          'Crisis response with automated failover and recovery systems',
+          'Immediate cost optimization to prevent budget overruns',
+          'Deploy 24/7 AI monitoring with human oversight'
         ],
         nextStep: {
-          title: 'Digital Liberation Emergency Protocol',
-          description: 'Immediate intervention required to save your digital presence and business continuity.',
-          cta: 'Get Emergency Help Now',
-          ctaAction: 'assessment-critical-emergency'
+          title: 'Infrastructure Crisis Response Protocol',
+          description: 'Immediate AI-powered intervention required to stabilize your infrastructure and restore business continuity.',
+          cta: 'Get Emergency AI Infrastructure Help',
+          ctaAction: 'assessment-critical-ai-emergency'
         }
       };
     }
@@ -228,11 +228,11 @@ export function PlatformAssessment() {
             <div className="mb-8">
               <Target className="w-16 h-16 text-gallifrey-teal mx-auto mb-6" />
               <h2 id="assessment-heading" className="text-3xl md:text-4xl font-heading font-bold text-gallifrey-charcoal mb-6">
-                Free Platform Independence Assessment
+                Free AI Infrastructure Readiness Assessment
               </h2>
               <p className="text-lg text-gallifrey-charcoal/70 max-w-2xl mx-auto leading-relaxed mb-8">
-                Discover your <em>Digital Security</em> score and platform dependency risks. Like BrandYourself&rsquo;s free scan, 
-                but focused on authentic digital wellness and independence.
+                Discover your <em>Autonomous Operations</em> potential and infrastructure optimization opportunities. 
+                Evaluate how AI can reduce your operational costs by 70% while achieving 99.99% uptime.
               </p>
             </div>
 
@@ -264,7 +264,7 @@ export function PlatformAssessment() {
                   handleCTAClick('platform-assessment-start');
                 }}
               >
-                Start Your Digital Security Assessment
+                Start Your AI Infrastructure Assessment
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
 
@@ -339,7 +339,7 @@ export function PlatformAssessment() {
                 {result.title}
               </h2>
               <p className="text-lg text-gallifrey-charcoal/80">
-                Platform Dependency Score: <span className="font-bold">{result.score}/{questions.length * 10}</span>
+                Infrastructure Efficiency Score: <span className="font-bold">{result.score}/{questions.length * 10}</span>
               </p>
             </div>
 
