@@ -1,0 +1,11 @@
+{
+  "session_id": "98841579-5428-4210-86ff-5cccbcec5385",
+  "prompts": [
+    "model the messaging of the entire codebase off of https://byterover.com/what-we-do.html and https://www.warp.dev/?utm_source=google&utm_medium=search&utm_campaign=dev_productivity_tools_core&utm_term=computer%20programming%20companies&gad_source=1&gad_campaignid=22613699162&gclid=CjwKCAjwuePGBhBZEiwAIGCVS2ERTr5ejvA1RKOjLPaeDQPZqNGcB12zGivRJgjL2dOjBEJdWIWrlBoCF-oQAvD_BwE\n\n\nalso use concepts of flow, nirvana and moksha, ubuntu. Plan please",
+    "I love the messaging, personally. I think it's amazing. It might need to be tweaked because of the nature of the business\u2014it is spiritual and identity, and for what we know, but I'm not sure the people we're selling to might understand. Let's iterate on the messaging a little bit and make it a little bit more business-like. Whatever that means. ",
+    "This is fantastic! Also mention the cloud, AI, and self-healing AI systems so a VPS can be running Ubuntu or Kali and be able to manage its own resources and those of the clients. Frame this in a business-friendly positioning and we're close where they ",
+    "the byterover in question is https://www.byterover.dev/\n\nplease validate and continue",
+    "Apart from the messaging, come up with design systems and a design token document. Keep this messaging applied; put it in an HTML document with Gallifrey branding that will go on public that is the website. Also, keep a reference document. Give me a plan; this reference document can be internal",
+    "add all to source control and use byterover data store as well"
+  ]
+}

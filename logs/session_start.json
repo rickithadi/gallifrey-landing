@@ -75,5 +75,19 @@
     "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
     "hook_event_name": "SessionStart",
     "source": "compact"
+  },
+  {
+    "session_id": "98841579-5428-4210-86ff-5cccbcec5385",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/98841579-5428-4210-86ff-5cccbcec5385.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "SessionStart",
+    "source": "startup"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "SessionStart",
+    "source": "startup"
   }
 ]
