@@ -21,20 +21,28 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [calculatedWidth, setCalculatedWidth] = useState<number | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
   const measureRef = useRef<HTMLSpanElement>(null);
   const hiddenMeasureRef = useRef<HTMLSpanElement>(null);
   
-  // Calculate width for current word (simpler approach)
+  // Ensure component is mounted (client-side only)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  
+  // Calculate width for current word (only on client)
   useLayoutEffect(() => {
-    if (hiddenMeasureRef.current) {
+    if (isMounted && hiddenMeasureRef.current) {
       const width = hiddenMeasureRef.current.getBoundingClientRect().width;
       setCalculatedWidth(width);
     }
-  }, [currentIndex, className, adjectives]);
+  }, [currentIndex, className, adjectives, isMounted]);
 
 
 
   useEffect(() => {
+    if (!isMounted) return;
+    
     const interval = setInterval(() => {
       // Start fade out
       setIsVisible(false);
@@ -53,7 +61,16 @@ export const AnimatedAdjective = React.memo(function AnimatedAdjective({ classNa
     }, 4000); // Clean 4-second intervals
 
     return () => clearInterval(interval);
-  }, [adjectives.length]);
+  }, [adjectives.length, isMounted]);
+
+  // Render static version during SSR, animated version after mount
+  if (!isMounted) {
+    return (
+      <span className={`${adjectives[0]?.style || ''} ${className}`}>
+        {adjectives[0]?.word || 'refined'}
+      </span>
+    );
+  }
 
   return (
     <span className="relative inline-block">
