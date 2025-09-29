@@ -7,14 +7,22 @@ export function LanguageSwitcher() {
   const { t, i18n } = useTranslation('common');
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Ensure component is mounted (client-side only)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const languages = [
     { code: 'en', name: t('languages.en'), flag: '🇺🇸' },
     { code: 'id', name: t('languages.id'), flag: '🇮🇩' },
   ];
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  // Use router.locale as fallback during SSR to prevent hydration mismatch
+  const currentLanguageCode = isMounted ? i18n.language : (router.locale || 'en');
+  const currentLanguage = languages.find(lang => lang.code === currentLanguageCode) || languages[0];
 
   const handleLanguageChange = (languageCode: string) => {
     const { pathname, asPath, query } = router;
@@ -62,14 +70,14 @@ export function LanguageSwitcher() {
               key={language.code}
               onClick={() => handleLanguageChange(language.code)}
               className={`w-full px-4 py-2 text-left text-sm hover:bg-muted/50 transition-colors duration-200 flex items-center gap-3 ${
-                language.code === i18n.language ? 'bg-muted/30 text-primary font-medium' : 'text-muted-foreground'
+                language.code === currentLanguageCode ? 'bg-muted/30 text-primary font-medium' : 'text-muted-foreground'
               }`}
               role="option"
-              aria-selected={language.code === i18n.language}
+              aria-selected={language.code === currentLanguageCode}
             >
               <span className="text-base">{language.flag}</span>
               <span>{language.name}</span>
-              {language.code === i18n.language && (
+              {language.code === currentLanguageCode && (
                 <div className="ml-auto w-2 h-2 bg-accent rounded-full"></div>
               )}
             </button>

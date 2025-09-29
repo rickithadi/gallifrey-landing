@@ -19,11 +19,17 @@ export function CoinAnimation({
 }: CoinAnimationProps) {
   const [currentFace, setCurrentFace] = useState(0); // 0: SECURITY, 1: DEFENSE, 2: FREEDOM
   const [isHovered, setIsHovered] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const particlesRef = useRef<HTMLDivElement>(null);
   const scrollAnimation = useScrollAnimation<HTMLDivElement>({ 
     threshold: 0.3, 
     triggerOnce: false 
   });
+
+  // Ensure component is mounted (client-side only)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const coinSize = size === 'large' ? 'security-coin-large' : 'security-coin';
   
@@ -75,9 +81,9 @@ export function CoinAnimation({
     }
   }, [scrollAnimation.isVisible, scrollTrigger]);
 
-  // Particle effect on face change
+  // Particle effect on face change (client-side only)
   useEffect(() => {
-    if (!particlesRef.current) return;
+    if (!isMounted || !particlesRef.current) return;
     
     // Create particles on face change
     const particles = particlesRef.current;
@@ -90,7 +96,7 @@ export function CoinAnimation({
       particle.style.setProperty('--angle', `${i * 45}deg`);
       particles.appendChild(particle);
     }
-  }, [currentFace]);
+  }, [currentFace, isMounted]);
 
   const handleClick = () => {
     setCurrentFace(prev => (prev + 1) % 3); // Cycle to next face on click

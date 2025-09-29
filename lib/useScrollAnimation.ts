@@ -14,8 +14,16 @@ export function useScrollAnimation<T extends HTMLElement = HTMLElement>(
   const ref = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Ensure component is mounted (client-side only)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
+    if (!isMounted) return;
+    
     const element = ref.current;
     if (!element) return;
 
@@ -56,7 +64,7 @@ export function useScrollAnimation<T extends HTMLElement = HTMLElement>(
     return () => {
       observer.unobserve(element);
     };
-  }, [threshold, rootMargin, triggerOnce]);
+  }, [threshold, rootMargin, triggerOnce, isMounted]);
 
   return { ref, isVisible, hasAnimated };
 }

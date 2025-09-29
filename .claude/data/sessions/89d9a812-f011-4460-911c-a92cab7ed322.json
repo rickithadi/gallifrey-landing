@@ -5,6 +5,23 @@
     "--continue",
     "https://www.rfc-editor.org/rfc/inline-errata/rfc2026.html",
     "yes",
-    "yes please"
+    "yes please",
+    "deploy, ensure context ",
+    "deploy, both internal and external. same but different",
+    "beautiful thank you so much",
+    "concious technology is right",
+    "  Technology in service of consciousness, consciousness expressed through\n  technology.",
+    "show me the landing page please",
+    "throwOnHydrationMismatch@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:4431:11\nbeginWork@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:10772:17\nrunWithFiberInDEV@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:1523:13\nperformUnitOfWork@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:15133:22\nworkLoopSync@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:14957:58\nrenderRootSync@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:14937:11\nperformWorkOnRoot@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:14420:13\nperformWorkOnRootViaSchedulerTask@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:16217:24\nperformWorkUntilDeadline@webpack-internal:///(pages-dir-browser)/./node_modules/scheduler/cjs/scheduler.development.js:45:56\n",
+    "hydration errors are still there. restart the dev server and fix this now",
+    "Work iteratively using tools such as MCP servers to ensure that this hydration error is fixed. Form a team of dedicated, specialized sub-agents to help with this. ",
+    "ensure all messaging is referenced. look into byterover and apply universal principles",
+    "kill the dev server",
+    "Recoverable Error\n\nIn HTML, <a> cannot be a descendant of <a>.\nThis will cause a hydration error.",
+    " GET / 200 in 1554ms\ni18next: languageChanged en\nTime 2ms\n GET /_next/static/webpack/5e830024c27b3a73.webpack.hot-update.json 404 in 1234ms",
+    "integrated rasa",
+    "do not put a ceiling or roof over investment amounts",
+    "ensure this accounts for differences in language ",
+    "push"
   ]
 }

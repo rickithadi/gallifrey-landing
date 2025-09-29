@@ -694,5 +694,141 @@
     "permission_mode": "bypassPermissions",
     "hook_event_name": "UserPromptSubmit",
     "prompt": "yes please"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "deploy, ensure context "
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "deploy, both internal and external. same but different"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "beautiful thank you so much"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "concious technology is right"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "  Technology in service of consciousness, consciousness expressed through\n  technology."
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "show me the landing page please"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "throwOnHydrationMismatch@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:4431:11\nbeginWork@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:10772:17\nrunWithFiberInDEV@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:1523:13\nperformUnitOfWork@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:15133:22\nworkLoopSync@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:14957:58\nrenderRootSync@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:14937:11\nperformWorkOnRoot@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:14420:13\nperformWorkOnRootViaSchedulerTask@webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:16217:24\nperformWorkUntilDeadline@webpack-internal:///(pages-dir-browser)/./node_modules/scheduler/cjs/scheduler.development.js:45:56\n"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "hydration errors are still there. restart the dev server and fix this now"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "Work iteratively using tools such as MCP servers to ensure that this hydration error is fixed. Form a team of dedicated, specialized sub-agents to help with this. "
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "ensure all messaging is referenced. look into byterover and apply universal principles"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "kill the dev server"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "Recoverable Error\n\nIn HTML, <a> cannot be a descendant of <a>.\nThis will cause a hydration error."
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": " GET / 200 in 1554ms\ni18next: languageChanged en\nTime 2ms\n GET /_next/static/webpack/5e830024c27b3a73.webpack.hot-update.json 404 in 1234ms"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "integrated rasa"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "do not put a ceiling or roof over investment amounts"
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "ensure this accounts for differences in language "
+  },
+  {
+    "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/89d9a812-f011-4460-911c-a92cab7ed322.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "bypassPermissions",
+    "hook_event_name": "UserPromptSubmit",
+    "prompt": "push"
   }
 ]

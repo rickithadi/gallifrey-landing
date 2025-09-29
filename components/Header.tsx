@@ -117,11 +117,9 @@ const HeaderComponent = function Header() {
             <Button
               size="sm"
               className="hidden sm:block text-sm bg-primary hover:bg-primary/95 text-primary-foreground px-5 py-2 font-normal transition-colors duration-200 focus:ring-2 focus:ring-primary/20 focus:ring-offset-1"
-              asChild
+              onClick={() => window.open("https://calendly.com/rickithadi/30min", "_blank", "noopener,noreferrer")}
             >
-              <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer">
-                {t('navigation.getStarted')}
-              </a>
+              {t('navigation.getStarted')}
             </Button>
 
             {/* Mobile menu button */}
@@ -180,11 +178,12 @@ const HeaderComponent = function Header() {
             <div className="pt-6 border-t border-border/30">
               <Button
                 className="w-full text-sm bg-primary hover:bg-primary/95 text-primary-foreground py-3 font-normal transition-colors duration-200 focus:ring-2 focus:ring-primary/20 focus:ring-offset-1"
-                asChild
+                onClick={() => {
+                  closeMenu();
+                  window.open("https://calendly.com/rickithadi/30min", "_blank", "noopener,noreferrer");
+                }}
               >
-                <a href="https://calendly.com/rickithadi/30min" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                  {t('navigation.getStarted')}
-                </a>
+                {t('navigation.getStarted')}
               </Button>
             </div>
           </nav>
