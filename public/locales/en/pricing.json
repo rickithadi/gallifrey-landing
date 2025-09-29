@@ -7,12 +7,12 @@
   },
   "packages": [
     {
-      "name": "Smart Foundation",
-      "tagline": "Entry to self-managing infrastructure",
-      "description": "Basic AI-powered infrastructure with automated monitoring and self-healing capabilities",
-      "scope": "Ideal for: SMBs, startups, growing teams",
+      "name": "Moksha Foundation",
+      "tagline": "Begin your path to operational nirvana",
+      "description": "Entry-level moksha with ubuntu principles - first steps toward perfect operational balance through AI-powered liberation",
+      "scope": "Ideal for: SMBs, startups, growing teams seeking liberation from technical burden",
       "timeline": "1-2 weeks",
-      "cta": "Start Autonomous Operations",
+      "cta": "Begin Infrastructure Moksha",
       "investment": "$2,500/month",
       "features": [
         "Self-healing Ubuntu VPS infrastructure",
@@ -25,12 +25,12 @@
       ]
     },
     {
-      "name": "Intelligent Operations",
-      "tagline": "AI-optimized cloud management",
-      "description": "Self-managing cloud infrastructure with AI resource optimization and predictive scaling",
-      "scope": "Ideal for: Mid-market companies, scaling businesses, tech teams",
+      "name": "Ubuntu Operations",
+      "tagline": "Collective prosperity through intelligent flow",
+      "description": "Self-managing cloud infrastructure with ubuntu principles - achieving optimal flow state through AI resource optimization and collective security",
+      "scope": "Ideal for: Mid-market companies, scaling businesses, teams embracing collective prosperity",
       "timeline": "2-3 weeks",
-      "cta": "Experience AI Operations",
+      "cta": "Enter Flow State Operations",
       "investment": "$8,000/month",
       "popular": true,
       "features": [
@@ -44,12 +44,12 @@
       ]
     },
     {
-      "name": "Autonomous Enterprise",
-      "tagline": "Complete self-healing operations",
-      "description": "Fully autonomous infrastructure with AI-powered SOC, self-healing systems, and guaranteed 99.99% uptime",
-      "scope": "Ideal for: Enterprises, critical systems, high-availability requirements",
+      "name": "Digital Nirvana Enterprise",
+      "tagline": "Achieve perfect operational balance",
+      "description": "Complete digital nirvana through dharmic infrastructure practices - fully autonomous systems achieving 99.99% uptime perfection with righteous technology principles",
+      "scope": "Ideal for: Enterprises seeking operational perfection, critical systems, nirvana-level requirements",
       "timeline": "3-4 weeks",
-      "cta": "Deploy Autonomous Infrastructure",
+      "cta": "Achieve Digital Nirvana",
       "investment": "$15,000+/month",
       "features": [
         "Self-healing Ubuntu/Kali SOC infrastructure",
