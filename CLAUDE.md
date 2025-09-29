@@ -46,6 +46,20 @@ Gallifrey Consulting operates a dual-brand strategy (Nike-inspired model):
 - **Solution**: Platform independence, professional security, data protection
 - **Philosophy**: "Sophisticated minimalism that humanizes expertise"
 
+### Spiritual-Tech Documentation Framework
+Our unique approach integrates ancient wisdom with modern AI infrastructure:
+- **STRFCs (Spiritual-Tech Request for Comments)**: Technical specifications at `docs/strfc/`
+- **BCPs (Best Current Practices)**: Implementation guidance at `docs/bcp/`
+- **Global Standards**: Universally applicable across cultures and industries
+
+**Key Spiritual-Tech Concepts:**
+- **Moksha**: Liberation from operational burden through AI autonomy
+- **Ubuntu**: Collective security through shared wisdom ("I am because we are")
+- **Nirvana**: Perfect operational balance with zero business disruption
+- **Flow**: Seamless operations that adapt without interruption
+
+**Reference Implementation:** See `docs/spiritual-tech-messaging-reference.md` for comprehensive messaging guidelines.
+
 ## Project Architecture
 
 ### Tech Stack

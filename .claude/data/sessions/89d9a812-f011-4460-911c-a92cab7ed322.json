@@ -2,6 +2,9 @@
   "session_id": "89d9a812-f011-4460-911c-a92cab7ed322",
   "prompts": [
     "this instance crashed, please figure out where we left off",
-    "--continue"
+    "--continue",
+    "https://www.rfc-editor.org/rfc/inline-errata/rfc2026.html",
+    "yes",
+    "yes please"
   ]
 }

@@ -18,6 +18,21 @@ Drawing inspiration from Byterover's approach to humanizing technology through s
 - Differentiates through wisdom-based rather than feature-based positioning
 - Creates memorable, story-driven value propositions
 
+### Technical Documentation Framework
+Our spiritual-tech approach is formalized through comprehensive technical documentation:
+- **STRFCs (Spiritual-Tech Request for Comments)**: RFC-style technical specifications
+- **BCPs (Best Current Practices)**: Practical implementation guidance
+- **Global Standards**: Universally applicable across cultures and industries
+
+**Reference Documents:**
+- [STRFC-0001: Digital Moksha Infrastructure Protocol](./strfc/STRFC-0001-digital-moksha-infrastructure.md)
+- [STRFC-0002: Ubuntu Collective Security Standard](./strfc/STRFC-0002-ubuntu-collective-security.md)
+- [STRFC-0003: Flow State Operations Framework](./strfc/STRFC-0003-flow-state-operations.md)
+- [STRFC-0004: Nirvana Business Continuity Protocol](./strfc/STRFC-0004-nirvana-business-continuity.md)
+- [BCP-001: Implementing Ubuntu Principles in DevOps](./bcp/BCP-001-implementing-ubuntu-principles.md)
+- [BCP-002: Achieving Infrastructure Moksha Through AI](./bcp/BCP-002-achieving-infrastructure-moksha.md)
+- [BCP-003: Spiritual-Tech Client Onboarding Process](./bcp/BCP-003-spiritual-tech-client-onboarding.md)
+
 ### Business Translation Strategy
 Each spiritual concept has both **internal meaning** (philosophical depth) and **external translation** (business value):
 
