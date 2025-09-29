@@ -9,7 +9,8 @@ interface LogoProps {
 
 export function Logo({ className = "", width = 150, height = 46 }: LogoProps) {
   return (
-    <Link href="/" className={`group ${className}`}>
+    // <Link href="/" className={`group ${className}`}>
+    <div className={`group ${className}`}>
       <div className="flex items-center">
         <ImageWithFallback
           src="/gallifrey-logo.webp"
@@ -25,7 +26,7 @@ export function Logo({ className = "", width = 150, height = 46 }: LogoProps) {
           }}
         />
       </div>
-    </Link>
+    </div >
   );
 }
 
