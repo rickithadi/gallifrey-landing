@@ -86,6 +86,12 @@ export function Services() {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </p>
+                  
+                  {/* ROI Callout */}
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium mb-4">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span>{index === 0 ? "ROI: 300-500%" : index === 1 ? "Cost Savings: 70%" : "Risk Reduction: $500K+"}</span>
+                  </div>
                   <div className="space-y-2">
                     {service.details.map((detail, detailIndex) => (
                       <div key={detailIndex} className="flex items-center gap-2 text-sm text-muted-foreground/80">

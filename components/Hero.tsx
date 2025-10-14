@@ -1,5 +1,5 @@
 import React, { Suspense, useCallback } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Award, CheckCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { trackCTAClick } from "@/lib/analytics";
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
@@ -95,15 +95,40 @@ export const Hero = React.memo(function Hero() {
                 </a>
               </Button>
               
-              {/* Trust Indicators */}
-              <div className="mt-6 text-center lg:text-left">
-                <p className="text-xs text-gallifrey-charcoal/40 mb-2">{t('hero.trustIndicators.title')}</p>
-                <div className="flex items-center justify-center lg:justify-start gap-3 text-xs text-gallifrey-charcoal/50">
-                  <span>{t('hero.trustIndicators.iso')}</span>
-                  <span>•</span>
-                  <span>{t('hero.trustIndicators.soc')}</span>
-                  <span>•</span>
-                  <span>{t('hero.trustIndicators.gdpr')}</span>
+              {/* Enhanced Security Trust Indicators */}
+              <div className="mt-8 text-center lg:text-left">
+                <p className="text-xs text-gallifrey-charcoal/40 mb-3">{t('hero.trustIndicators.title')}</p>
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                  <div className="flex items-center gap-2 px-3 py-2 bg-gallifrey-teal/10 border border-gallifrey-teal/20 rounded-lg hover:bg-gallifrey-teal/15 transition-colors">
+                    <Shield className="w-4 h-4 text-gallifrey-teal" />
+                    <span className="text-xs font-medium text-gallifrey-teal">{t('hero.trustIndicators.iso')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-2 bg-gallifrey-teal/10 border border-gallifrey-teal/20 rounded-lg hover:bg-gallifrey-teal/15 transition-colors">
+                    <Award className="w-4 h-4 text-gallifrey-teal" />
+                    <span className="text-xs font-medium text-gallifrey-teal">{t('hero.trustIndicators.soc')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-2 bg-gallifrey-teal/10 border border-gallifrey-teal/20 rounded-lg hover:bg-gallifrey-teal/15 transition-colors">
+                    <CheckCircle className="w-4 h-4 text-gallifrey-teal" />
+                    <span className="text-xs font-medium text-gallifrey-teal">{t('hero.trustIndicators.gdpr')}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Security Metrics Dashboard */}
+              <div className="mt-6 bg-gallifrey-teal/5 border border-gallifrey-teal/20 rounded-xl p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-bold text-gallifrey-teal mb-1">99.99%</div>
+                    <div className="text-xs text-gallifrey-charcoal/60">Security Uptime</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-bold text-gallifrey-teal mb-1">0</div>
+                    <div className="text-xs text-gallifrey-charcoal/60">Security Breaches</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-bold text-gallifrey-teal mb-1">70%</div>
+                    <div className="text-xs text-gallifrey-charcoal/60">Cost Reduction</div>
+                  </div>
                 </div>
               </div>
             </div>
