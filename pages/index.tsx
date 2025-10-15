@@ -5,6 +5,7 @@ import { Hero } from '@/components/Hero'
 import { NextSeo } from 'next-seo'
 import { Services } from '@/components/Services'
 import { PlatformAssessment } from '@/components/PlatformAssessment'
+import { CaseStudies } from '@/components/CaseStudies'
 import { Testimonials } from '@/components/Testimonials'
 import { TrustAndSecurity } from '@/components/TrustAndSecurity'
 import dynamic from 'next/dynamic'
@@ -267,6 +268,7 @@ export default function Home() {
         <Hero />
         <PlatformAssessment />
         <Services />
+        <CaseStudies />
         <Testimonials />
         <TrustAndSecurity />
         <Pricing />
@@ -282,7 +284,7 @@ export default function Home() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common', 'home', 'services', 'pricing', 'faq'])),
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'home', 'services', 'case-studies', 'pricing', 'faq'])),
     },
   }
 }

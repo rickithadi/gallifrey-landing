@@ -1,19 +1,19 @@
 {
   "section": {
-    "label": "Autonomous Infrastructure Packages",
-    "title": "AI-powered solutions for",
-    "titleHighlight": " frictionless operations",
-    "subtitle": "Self-healing infrastructure that reduces operational costs by 70% while achieving 99.99% uptime. Investment scales with autonomous capabilities and infrastructure complexity."
+    "label": "Enterprise AI Security Solutions",
+    "title": "Scalable AI security and infrastructure for",
+    "titleHighlight": " enterprise operations",
+    "subtitle": "Comprehensive AI-powered security and infrastructure management delivering 70% cost reduction, 99.99% uptime, and enterprise-grade protection."
   },
   "packages": [
     {
       "name": "Moksha Foundation",
-      "tagline": "Begin your path to operational nirvana",
-      "description": "Entry-level moksha with ubuntu principles - first steps toward perfect operational balance through AI-powered liberation",
-      "scope": "Ideal for: SMBs, startups, growing teams seeking liberation from technical burden",
+      "tagline": "Essential AI security and infrastructure automation",
+      "description": "Comprehensive AI-powered infrastructure management with autonomous security operations, self-healing systems, and intelligent resource optimization.",
+      "scope": "Ideal for: SMBs, startups, growing teams seeking operational efficiency",
       "timeline": "1-2 weeks",
-      "cta": "Begin Infrastructure Moksha",
-      "investment": "$2,500/month",
+      "cta": "Start Moksha Foundation",
+      "investment": "Custom pricing",
       "features": [
         "Self-healing Ubuntu VPS infrastructure",
         "AI-powered security monitoring",
@@ -26,12 +26,12 @@
     },
     {
       "name": "Ubuntu Operations",
-      "tagline": "Collective prosperity through intelligent flow",
-      "description": "Self-managing cloud infrastructure with ubuntu principles - achieving optimal flow state through AI resource optimization and collective security",
-      "scope": "Ideal for: Mid-market companies, scaling businesses, teams embracing collective prosperity",
+      "tagline": "Advanced multi-cloud AI orchestration",
+      "description": "Enterprise-grade AI-powered cloud infrastructure management with collaborative security operations, predictive scaling, and intelligent resource optimization.",
+      "scope": "Ideal for: Mid-market companies, scaling businesses, complex infrastructure needs",
       "timeline": "2-3 weeks",
-      "cta": "Enter Flow State Operations",
-      "investment": "$8,000/month",
+      "cta": "Explore Ubuntu Operations",
+      "investment": "Enterprise pricing",
       "popular": true,
       "features": [
         "Multi-cloud AI orchestration",
@@ -44,13 +44,13 @@
       ]
     },
     {
-      "name": "Digital Nirvana Enterprise",
-      "tagline": "Achieve perfect operational balance",
-      "description": "Complete digital nirvana through dharmic infrastructure practices - fully autonomous systems achieving 99.99% uptime perfection with righteous technology principles",
-      "scope": "Ideal for: Enterprises seeking operational perfection, critical systems, nirvana-level requirements",
+      "name": "Dharma Enterprise",
+      "tagline": "Comprehensive AI security and governance",
+      "description": "Complete enterprise AI security and governance platform with autonomous threat response, regulatory compliance automation, and 99.99% uptime guarantee.",
+      "scope": "Ideal for: Large enterprises, critical systems, regulatory compliance requirements",
       "timeline": "3-4 weeks",
-      "cta": "Achieve Digital Nirvana",
-      "investment": "From $15,000/month",
+      "cta": "Discuss Dharma Enterprise",
+      "investment": "Strategic investment",
       "features": [
         "Self-healing Ubuntu/Kali SOC infrastructure",
         "AI-powered threat hunting and response",

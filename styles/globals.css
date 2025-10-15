@@ -239,7 +239,7 @@
       0 4px 6px -2px rgb(var(--oyn-stone-800) / 0.05);
   }
 
-  /* ===== HERO ANIMATIONS ===== */
+  /* ===== ENHANCED ENTERPRISE HERO ANIMATIONS ===== */
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -265,6 +265,20 @@
       opacity: 1; 
       transform: translateY(0); 
     }
+  }
+
+  @keyframes enterpriseGlow {
+    0%, 100% { 
+      box-shadow: 0 4px 20px rgba(var(--gallifrey-teal), 0.15); 
+    }
+    50% { 
+      box-shadow: 0 8px 40px rgba(var(--gallifrey-teal), 0.25); 
+    }
+  }
+
+  @keyframes subtleScale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
   }
 
   @keyframes cursor-blink {
@@ -374,6 +388,46 @@
     font-variant: small-caps;
     letter-spacing: 0.15em;
     font-weight: 500;
+  }
+
+  /* ===== ENTERPRISE HERO ENHANCEMENTS ===== */
+  .enterprise-cta {
+    position: relative;
+    overflow: hidden;
+    animation: enterpriseGlow 3s ease-in-out infinite;
+  }
+
+  .enterprise-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transition: left 0.7s ease-in-out;
+  }
+
+  .enterprise-cta:hover::before {
+    left: 100%;
+  }
+
+  .enterprise-heading {
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .enterprise-subheading {
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
   }
 
   /* ===== LEGACY UTILITIES (for backward compatibility) ===== */
@@ -512,6 +566,38 @@
     transition-delay: 600ms;
   }
 
+  /* Enhanced Enterprise UI Components */
+  .enterprise-cta {
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+  }
+
+  .enterprise-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .enterprise-cta:hover::before {
+    left: 100%;
+  }
+
+  .enterprise-cta:hover {
+    animation: enterpriseGlow 2s ease-in-out infinite;
+  }
+
   /* Performance optimizations with will-change */
   .animate-fade-up,
   .animate-scale-in,
@@ -540,7 +626,24 @@
     will-change: auto;
   }
 
-  /* Respect reduced motion preference - Comprehensive coverage */
+  /* Enhanced typography for enterprise appeal */
+  .enterprise-heading {
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .enterprise-subheading {
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Enhanced reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     .animate-fade-up,
     .animate-scale-in,
@@ -557,11 +660,18 @@
     .animate-fadeIn,
     .animate-cursor-blink,
     .hero-animation,
-    .security-pulse {
+    .security-pulse,
+    .enterprise-cta,
+    .enterpriseGlow,
+    .subtleScale {
       animation: none !important;
-      transition: none !important;
+      transition: opacity 0.2s ease !important;
       opacity: 1 !important;
       transform: none !important;
+    }
+
+    .enterprise-cta::before {
+      display: none;
     }
     
     /* Ensure visibility for elements that might be hidden by animations */
@@ -569,8 +679,15 @@
     .animate-scale-in,
     .animate-slide-left,
     .animate-fadeIn {
-      opacity: 1;
-      transform: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* Static state for enterprise components */
+    .enterprise-heading,
+    .enterprise-subheading {
+      opacity: 1 !important;
+      transform: none !important;
     }
     
     /* Google search animation - show final state immediately */

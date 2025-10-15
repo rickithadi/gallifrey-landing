@@ -1,31 +1,35 @@
 {
   "hero": {
-    "title": "Achieve Digital",
-    "titleHighlight": "Moksha Through AI",
-    "subtitle": "Liberation from operational burden through self-healing infrastructure that enters perfect flow state - ubuntu for all",
-    "cta": "Begin Your Infrastructure Moksha",
+    "title": "Enterprise AI Security",
+    "titleHighlight": "Leadership",
+    "subtitle": "Fortune 500-grade autonomous security operations eliminating 99.9% of threats while reducing infrastructure costs by 70% through self-healing AI systems",
+    "cta": "Secure Your Enterprise Infrastructure",
+    "secondaryCta": "Request Security Assessment",
     "metrics": {
-      "uptime": "99.99% Uptime",
-      "realtime": "Self-Healing",
-      "enterprise": "AI-Powered"
+      "uptime": "99.99% Security Uptime",
+      "threats": "Zero Breaches",
+      "savings": "70% Cost Reduction"
     },
     "statusIndicators": {
-      "secure": "AUTONOMOUS",
-      "monitored": "SELF-HEALING"
+      "secure": "AUTONOMOUS PROTECTION",
+      "monitored": "24/7 AI OPERATIONS"
     },
     "trustIndicators": {
-      "title": "Trusted by enterprises achieving zero-touch operations",
-      "iso": "Ubuntu/Kali SOC",
-      "soc": "AI-Optimized",
-      "gdpr": "Quantum-Secure"
+      "title": "Trusted by enterprises for mission-critical AI security infrastructure",
+      "iso": "Fortune 500 Standards",
+      "soc": "Enterprise Compliance",
+      "gdpr": "Regulatory Excellence"
+    },
+    "clientLogos": {
+      "title": "Protecting enterprise infrastructure globally"
     }
   },
   "testimonials": {
-    "title": "What Our Clients Say",
-    "subtitle": "Trusted by enterprises reducing operational costs by 70% with AI infrastructure"
+    "title": "Client Success Stories",
+    "subtitle": "Enterprises achieving 70% cost reduction through AI-powered security and infrastructure automation"
   },
   "trustAndSecurity": {
-    "title": "Self-Healing AI Infrastructure",
-    "subtitle": "Autonomous systems that predict, prevent, and resolve issues before they impact your business"
+    "title": "AI-Powered Enterprise Security",
+    "subtitle": "Advanced AI systems providing predictive threat detection, autonomous response, and proactive issue resolution"
   }
 }

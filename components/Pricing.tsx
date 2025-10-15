@@ -1,7 +1,31 @@
-import { ArrowRight, Check, MessageSquare, FileText, Code, Users } from "lucide-react";
+import { ArrowRight, Check, MessageSquare, FileText, Code, Users, Info } from "lucide-react";
 
 import { Button } from "./ui/button";
 import { useTranslation } from 'next-i18next';
+import { useState } from 'react';
+
+// Simple tooltip component
+function Tooltip({ children, content }: { children: React.ReactNode; content: string }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  return (
+    <div className="relative inline-block">
+      <div
+        onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)}
+        className="cursor-help"
+      >
+        {children}
+      </div>
+      {isVisible && (
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg whitespace-nowrap z-10">
+          {content}
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function Pricing() {
   const { t } = useTranslation('pricing');
@@ -19,8 +43,15 @@ export function Pricing() {
     popular?: boolean;
   }>).map((pkg, index) => ({
     ...pkg,
-    popular: index === 1 // Professional package is popular
+    popular: index === 1 // Ubuntu Operations package is popular
   })) : [];
+
+  // Floor pricing for tooltips
+  const floorPricing = [
+    "Starting from $2,500/month", // Moksha Foundation
+    "Starting from $8,000/month", // Ubuntu Operations  
+    "Starting from $15,000/month" // Dharma Enterprise
+  ];
 
   return (
     <section id="pricing" className="py-24 px-4" aria-labelledby="pricing-heading">
@@ -77,9 +108,12 @@ export function Pricing() {
                   <span className="text-xs text-muted-foreground/80 uppercase tracking-wider">
                     {t('timelineLabel')} {pkg.timeline}
                   </span>
-                  <span className="text-xs text-accent font-medium">
-                    {pkg.investment}
-                  </span>
+                  <Tooltip content={floorPricing[index]}>
+                    <span className="text-xs text-accent font-medium flex items-center gap-1">
+                      {pkg.investment}
+                      <Info className="w-3 h-3 opacity-60" />
+                    </span>
+                  </Tooltip>
                 </div>
                 <ul className="space-y-3">
                   {pkg.features.map((feature, featureIndex) => (

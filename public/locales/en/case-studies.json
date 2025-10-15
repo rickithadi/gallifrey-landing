@@ -1,0 +1,106 @@
+{
+  "section": {
+    "label": "AI Security Success Stories",
+    "title": "Enterprise transformations through",
+    "titleHighlight": " autonomous security operations",
+    "subtitle": "Real-world outcomes from our Ubuntu, Moksha, and Dharma AI security implementations delivering measurable business results.",
+    "viewAll": "View All Case Studies"
+  },
+  "homepage": {
+    "featured": [
+      {
+        "title": "Moksha Infrastructure Liberation",
+        "client": "Global Financial Services",
+        "industry": "Financial Technology",
+        "challenge": "Legacy security infrastructure creating operational bottlenecks and compliance risks across 15 global offices",
+        "solution": "Implemented autonomous Moksha infrastructure with self-healing Ubuntu security operations, reducing manual oversight by 95%",
+        "primaryMetric": {
+          "value": "99.99%",
+          "label": "Security Uptime",
+          "description": "Zero security incidents"
+        },
+        "secondaryMetrics": [
+          {
+            "value": "75%",
+            "label": "Cost Reduction"
+          },
+          {
+            "value": "24/7",
+            "label": "Autonomous Operations"
+          }
+        ],
+        "testimonial": {
+          "quote": "Moksha infrastructure eliminated our operational burden completely. The Ubuntu security principles delivered collective protection we never thought possible.",
+          "author": "Global CISO",
+          "company": "Fortune 500 Financial Services"
+        },
+        "tags": ["Moksha Infrastructure", "Ubuntu Security", "Financial Services"],
+        "cta": "View Transformation Details"
+      },
+      {
+        "title": "Ubuntu Collective Security Operations",
+        "client": "Enterprise Healthcare Network",
+        "industry": "Healthcare Technology",
+        "challenge": "Multi-facility healthcare network needed unified security operations with strict HIPAA compliance across distributed infrastructure",
+        "solution": "Deployed Ubuntu collective security framework with Dharma compliance automation, creating seamless protection across all facilities",
+        "primaryMetric": {
+          "value": "100%",
+          "label": "Compliance Score",
+          "description": "Perfect regulatory audit"
+        },
+        "secondaryMetrics": [
+          {
+            "value": "0",
+            "label": "Security Breaches"
+          },
+          {
+            "value": "60%",
+            "label": "Efficiency Gain"
+          }
+        ],
+        "testimonial": {
+          "quote": "Ubuntu principles transformed our security from isolated systems to collective intelligence. Dharma compliance automation saved us millions in audit costs.",
+          "author": "Chief Technology Officer",
+          "company": "Regional Healthcare Network"
+        },
+        "tags": ["Ubuntu Security", "Dharma Compliance", "Healthcare"],
+        "cta": "Explore Ubuntu Implementation"
+      },
+      {
+        "title": "Dharma Enterprise Governance",
+        "client": "International Manufacturing Corp",
+        "industry": "Advanced Manufacturing",
+        "challenge": "Complex multi-national operations requiring unified governance framework with autonomous compliance across 40+ regulatory jurisdictions",
+        "solution": "Implemented comprehensive Dharma governance platform with autonomous compliance monitoring and self-correcting regulatory frameworks",
+        "primaryMetric": {
+          "value": "$2.5M",
+          "label": "Compliance Savings",
+          "description": "Annual regulatory cost reduction"
+        },
+        "secondaryMetrics": [
+          {
+            "value": "40+",
+            "label": "Jurisdictions Covered"
+          },
+          {
+            "value": "90%",
+            "label": "Automation Rate"
+          }
+        ],
+        "testimonial": {
+          "quote": "Dharma governance gave us autonomous compliance across every jurisdiction. The righteous technology principles align perfectly with our corporate values.",
+          "author": "General Counsel",
+          "company": "Global Manufacturing Leader"
+        },
+        "tags": ["Dharma Governance", "Regulatory Compliance", "Manufacturing"],
+        "cta": "Learn About Dharma Solutions"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to achieve your enterprise AI security transformation?",
+    "subtitle": "Schedule a strategic assessment to discuss Ubuntu, Moksha, or Dharma implementations for your organization.",
+    "primaryButton": "Schedule Security Assessment",
+    "secondaryButton": "Explore All Case Studies"
+  }
+}
