@@ -20,6 +20,23 @@ module.exports = {
         "gallifrey-teal-light": "rgb(var(--gallifrey-teal-light))",
         "gallifrey-border": "rgb(var(--gallifrey-border))",
 
+        // ===== WORKOS-INSPIRED COLORS =====
+        "workos-purple": {
+          400: "#a163f1",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+        },
+        "workos-blue": {
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+        },
+        "workos-teal": {
+          400: "#40dfa3",
+          500: "#14b8a6",
+          600: "#0d9488",
+        },
+
         // ===== OWN YOUR NARRATIVE CAMPAIGN COLORS =====
         "oyn-stone": {
           50: "rgb(var(--oyn-stone-50))",
@@ -106,9 +123,46 @@ module.exports = {
             "background-position": "right center",
           },
         },
+        "gradient-xy": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "400% 400%",
+            "background-position": "right center",
+          },
+        },
+        "workos-pulse": {
+          "0%, 100%": {
+            "transform": "scale(1)",
+            "opacity": "0.8",
+          },
+          "50%": {
+            "transform": "scale(1.05)",
+            "opacity": "1",
+          },
+        },
+        "workos-float": {
+          "0%, 100%": {
+            "transform": "translateY(0px)",
+          },
+          "50%": {
+            "transform": "translateY(-10px)",
+          },
+        },
       },
       animation: {
         "gradient-x": "gradient-x 15s ease infinite",
+        "gradient-slow": "gradient-x 8s ease infinite",
+        "gradient-medium": "gradient-x 5s ease infinite",
+        "gradient-fast": "gradient-x 3s ease infinite",
+        "workos-pulse": "workos-pulse 3s ease-in-out infinite",
+        "workos-float": "workos-float 6s ease-in-out infinite",
+      },
+      backgroundSize: {
+        "size-200": "200% 200%",
+        "size-400": "400% 400%",
       },
     },
   },

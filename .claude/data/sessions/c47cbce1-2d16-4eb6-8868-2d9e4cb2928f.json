@@ -1,0 +1,20 @@
+{
+  "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+  "prompts": [
+    "@agent-agency-swarm-coordinator make the messaging more business and security focused. maintain aesthetics",
+    "focus on security, conduct design qa @agent-ui-designer-agent ",
+    "Come up with a plan and work iteratively to address these issues. ",
+    "push this up and merge into main",
+    "update hero section wording to not use moksha. rethink the wording",
+    "fix the typo in hero section. rethink the animation @agent-agency-swarm-coordinator ",
+    "@agent-agency-swarm-coordinator come up with a plan to make this a security focused landing page for a enterprise security consulting agency",
+    "keep the AI expertise, iterate",
+    "we do not have real case studies yet, keep subtle spirituality terminology like ubuntu",
+    "use the spriritual terms as names, less corny and more business, understated",
+    "do not put a price on the tiers. keep it classy",
+    "add tooltip with the floor pricing",
+    "@agent-web-dev-agent redesign hero section and case study section",
+    "clean up the hero animation, use typography, suggest update to animation, ensure clean and sleek UI. @agent-web-dev-agent ",
+    "push this up"
+  ]
+}

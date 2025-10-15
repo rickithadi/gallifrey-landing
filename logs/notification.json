@@ -579,5 +579,110 @@
     "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
     "hook_event_name": "Notification",
     "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use byterover-mcp - byterover-store-knowledge (MCP)"
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use "
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use "
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use "
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use "
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Bash"
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Bash"
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "7e21fb42-2aa6-4c69-8c35-0808d74a87d0",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/7e21fb42-2aa6-4c69-8c35-0808d74a87d0.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Fetch"
+  },
+  {
+    "session_id": "7e21fb42-2aa6-4c69-8c35-0808d74a87d0",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/7e21fb42-2aa6-4c69-8c35-0808d74a87d0.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use "
+  },
+  {
+    "session_id": "7e21fb42-2aa6-4c69-8c35-0808d74a87d0",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/7e21fb42-2aa6-4c69-8c35-0808d74a87d0.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
+  },
+  {
+    "session_id": "1cee9135-a520-4aa4-a142-a8f4bbedec93",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/1cee9135-a520-4aa4-a142-a8f4bbedec93.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Update"
+  },
+  {
+    "session_id": "1cee9135-a520-4aa4-a142-a8f4bbedec93",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/1cee9135-a520-4aa4-a142-a8f4bbedec93.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude needs your permission to use Update"
+  },
+  {
+    "session_id": "1cee9135-a520-4aa4-a142-a8f4bbedec93",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/1cee9135-a520-4aa4-a142-a8f4bbedec93.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "hook_event_name": "Notification",
+    "message": "Claude is waiting for your input"
   }
 ]

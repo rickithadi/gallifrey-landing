@@ -118,5 +118,37 @@
     "permission_mode": "bypassPermissions",
     "hook_event_name": "SubagentStop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "plan",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "c47cbce1-2d16-4eb6-8868-2d9e4cb2928f",
+    "transcript_path": "/Users/hadi.rickit/.claude/projects/-Users-hadi-rickit-dev-gallifrey-landing/c47cbce1-2d16-4eb6-8868-2d9e4cb2928f.jsonl",
+    "cwd": "/Users/hadi.rickit/dev/gallifrey landing",
+    "permission_mode": "acceptEdits",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false
   }
 ]
